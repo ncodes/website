@@ -20,7 +20,7 @@ type IconLinkProps = {
 
 const FooterTitle = ({ label }: TitleProps) => {
   return (
-    <p className="font-['Satoshi'] antialiased font-bold text-[30px] text-white mb-[15px] xl:mb-[22px] leading-[0.8] text-center xl:text-left">
+    <p className="font-['Satoshi'] antialiased font-bold text-[22px] text-white mb-[15px] xl:mb-[22px] leading-[0.8] text-center xl:text-left">
       {label}
     </p>
   )
@@ -28,13 +28,13 @@ const FooterTitle = ({ label }: TitleProps) => {
 
 const FooterLink = ({ title, href }: LinkProps) => {
   return (
-    <div className="text-center xl:text-left">
+    <li className="text-center md:text-left lg:text-left xl:text-left">
       <Link href={href}>
         <p className="font-['Satoshi'] antialiased font-regular text-[16px]  tracking-[0.22px] text-chinese-green cursor-pointer inline-block hover:underline">
           {title}
         </p>
       </Link>
-    </div>
+    </li>
   )
 }
 
@@ -57,7 +57,7 @@ const IconLink = ({ src, alt, href, width, height }: IconLinkProps) => {
 const Footer = () => {
   return (
     <section className="container mx-auto">
-      <div className="flex flex-col xl:flex-row xl:mx-[90px] mb-16">
+      <div className="flex flex-col xl:flex-row xl:mx-[90px] pb-16">
         <div className="w-full xl:w-[600px]">
           <Link href="/">
             <div className="relative overflow-hidden w-[154px] h-[25px] xl:w-[154px] xl:h-[25px] cursor-pointer mx-auto xl:mx-[unset]">
@@ -71,7 +71,7 @@ const Footer = () => {
             </div>
           </Link>
 
-          <p className="font-['Satoshi'] antialiased font-regular text-[16px] text-chinese-green tracking-[0.22px] mt-6 mb-11 text-center xl:text-left">
+          <p className="font-['Satoshi'] antialiased font-regular text-[16px] text-chinese-green tracking-[0.22px] mt-6 mb-6 text-center xl:text-left">
             © 2022 - All rights reserved
           </p>
 
@@ -128,43 +128,43 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col xl:flex-row mt-[92px] xl:mt-[unset] gap-y-12 xl:gap-y-[unset] justify-between w-full">
+        <div className="flex flex-col lg:px-[30px] xl:px-[unset] md:flex-row lg:flex-row xl:flex-row mt-[60px] lg:mt-[60px] xl:mt-[unset] gap-y-12 xl:gap-y-[unset] justify-between w-full">
           <div className="mx-auto lg:mx-[unset]">
             <FooterTitle label="Company" />
 
-            <div className="flex flex-col gap-y-[15px] xl:gap-y-[19px]">
+            <ul className="flex flex-col gap-y-[10px] list-none">
               <FooterLink title="Rewards" href="/rewards" />
               <FooterLink title="Feedback" href="/feedback" />
               <FooterLink title="Features" href="/features" />
-            </div>
+            </ul>
           </div>
 
           <div className="mx-auto lg:mx-[unset]">
             <FooterTitle label="Product" />
 
-            <div className="flex flex-col gap-y-[19px]">
+            <ul className="flex flex-col gap-y-[10px]">
               <FooterLink title="Rewards" href="/rewards" />
               <FooterLink title="Feedback" href="/feedback" />
               <FooterLink title="Features" href="/features" />
-            </div>
+            </ul>
           </div>
 
           <div className="mx-auto lg:mx-[unset]">
             <FooterTitle label="Developers" />
 
-            <div className="flex flex-col gap-y-[19px]">
+            <ul className="flex flex-col gap-y-[10px]">
               <FooterLink title="Documentation" href="/documentation" />
               <FooterLink title="Team" href="/team" />
-            </div>
+            </ul>
           </div>
 
           <div className="mx-auto lg:mx-[unset]">
             <FooterTitle label="Community" />
 
-            <div className="flex flex-col gap-y-[19px]">
+            <ul className="flex flex-col gap-y-[10px]">
               <FooterLink title="Get help" href="/help" />
               <FooterLink title="Terms of service" href="/terms-of-service" />
-            </div>
+            </ul>
           </div>
         </div>
       </div>

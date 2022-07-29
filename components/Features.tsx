@@ -25,7 +25,7 @@ const FeaturesItem = ({ imageSrc, title, description }: FeaturesItemProps) => {
       </div>
 
       <div className="flex flex-col">
-        <p className="font-['Satoshi'] antialiased font-black text-white text-[24px] leading-[26.25px] mb-[13px]">
+        <p className="font-['Satoshi'] antialiased font-black text-white text-[22px] mb-[5px] lg:text-[24px] leading-[26.25px] lg:mb-[13px]">
           {title}
         </p>
         <p className="font-['Raleway'] antialiased font-regular text-white text-[15px] leading-[26.25px]">

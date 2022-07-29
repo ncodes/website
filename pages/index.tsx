@@ -34,7 +34,10 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section id="page-content">
+      <section
+        id="page-content"
+        className="bg-[url('/logo-pattern.png')] bg-contain"
+      >
         <Statistics />
 
         <Trading />

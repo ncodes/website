@@ -25,7 +25,7 @@ const Partners = () => {
   return (
     <section className="container mx-auto mb-[100px] lg:mb-[150px]">
       <div className="mb-[100px]">
-        <p className="font-['Satoshi'] antialiased font-bold text-white tracking-[0.22px] mb-6 xl:mb-[28px] text-center text-[48px] xl:text-[72px] leading-[38px] xl:leading-[56px]">
+        <p className="font-['Satoshi'] antialiased font-bold text-center text-white text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-4 lg:mb-6">
           Partners
         </p>
         <p className="font-['Raleway'] antialiased font-regular text-[16px] text-white tracking-[0.22px] text-center w-[325px] xl:w-auto mx-auto">

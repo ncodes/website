@@ -108,7 +108,7 @@ const HeaderLink = ({ title, href }: LinkProps) => {
   const isActive = router.pathname === href
 
   return (
-    <div
+    <li
       className={`flex items-center cursor-pointer px-[15px] py-0.5 rounded-2xl ${
         isActive ? 'bg-chinese-green' : 'bg-transparent'
       }`}
@@ -122,7 +122,7 @@ const HeaderLink = ({ title, href }: LinkProps) => {
           {title}
         </p>
       </Link>
-    </div>
+    </li>
   )
 }
 /** HEADER LINK ITEM - Ends */
@@ -130,13 +130,13 @@ const HeaderLink = ({ title, href }: LinkProps) => {
 /** MOBILE LINK ITEM - Starts */
 const MobileLink = forwardRef<HTMLDivElement, LinkProps>((props, ref) => {
   return (
-    <div className="container px-4 py-4 mx-auto" ref={ref}>
+    <li className="container px-4 py-4 mx-auto" ref={ref}>
       <Link href={props.href}>
         <p className="font-['Satoshi'] antialiased text-[20px] tracking-[0.28px] leading-6 font-bold text-white inline-block cursor-pointer">
           {props.title}
         </p>
       </Link>
-    </div>
+    </li>
   )
 })
 
@@ -146,13 +146,13 @@ MobileLink.displayName = 'MobileLink'
 /** SUB MOBILE LINK ITEM - Starts */
 const SubMobileLink = forwardRef<HTMLDivElement, LinkProps>((props, ref) => {
   return (
-    <div className="container px-8 py-2 mx-auto" ref={ref}>
+    <li className="container px-8 py-2 mx-auto" ref={ref}>
       <Link href={props.href}>
         <p className="font-['Raleway'] antialiased text-[16px] tracking-[0.22px] leading-6 font-normal text-white inline-block cursor-pointer">
           {props.title}
         </p>
       </Link>
-    </div>
+    </li>
   )
 })
 
@@ -243,7 +243,7 @@ const Header = () => {
           {/* LANGUAGE SELECTOR - Ends */}
 
           {/* HEADER MENU ITEMS - Starts */}
-          <div className="hidden lg:flex flex-row gap-[18px]">
+          <ul className="hidden lg:flex flex-row gap-[18px]">
             <HeaderLink title="Company" href="/" />
             <HeaderLink title="About" href="/about" />
 
@@ -252,7 +252,7 @@ const Header = () => {
               {/* PRODUCTS MENU BUTTON - Starts */}
               <Menu.Button>
                 {({ open }) => (
-                  <div className="flex flex-row items-center">
+                  <li className="flex flex-row items-center">
                     <p className="font-['Satoshi'] antialiased text-[18px] tracking-[0.25px] text-white font-medium">
                       Products
                     </p>
@@ -271,7 +271,7 @@ const Header = () => {
                         priority
                       />
                     </div>
-                  </div>
+                  </li>
                 )}
               </Menu.Button>
               {/* PRODUCTS MENU BUTTON - Ends */}
@@ -312,16 +312,16 @@ const Header = () => {
                     <div className="hidden xl:block w-px min-h-full bg-gradient-to-t from-rich-blue via-[#CEEF66] to-rich-blue" />
 
                     <div>
-                      <div className="grid grid-cols-3 gap-x-7 gap-y-11 xl:ml-[52px]">
+                      <div className="grid grid-cols-3 gap-x-7 gap-y-[20px] xl:ml-[52px]">
                         {MenuItems.map((menuItem, i) => (
                           <Menu.Item
                             key={i}
                             as="div"
-                            className="flex flex-row items-start cursor-pointer basis-1/3 p-2 hover:bg-[#111C2C] hover:rounded-lg"
+                            className="flex flex-row items-start cursor-pointer basis-1/3 p-2 hover:bg-[#0d1c31] hover:rounded-lg"
                           >
                             <div className="relative w-16 h-16 mr-4 overflow-hidden">
                               <Image
-                                className="!relative object-cover w-full h-full"
+                                className="!relative object-cover w-full h-full bg-[#0d1c31] rounded-lg"
                                 src={menuItem.src}
                                 alt="caret-down"
                                 layout="fill"
@@ -330,11 +330,11 @@ const Header = () => {
                               />
                             </div>
 
-                            <div className="flex flex-col flex-1 gap-y-2">
-                              <p className="font-['Satoshi'] antialiased text-[20px] leading-[26px] text-white font-black">
+                            <div className="flex flex-col flex-1 gap-y-1">
+                              <p className="font-['Satoshi'] antialiased text-[20px] leading-[26px] text-white font-black -mt-1">
                                 {menuItem.title}
                               </p>
-                              <p className="font-['Raleway'] antialiased text-[12px] leading-5 text-white font-normal">
+                              <p className="font-['Raleway'] antialiased text-[12px] leading-5 text-[#bebebe] font-medium">
                                 {menuItem.description}
                               </p>
                             </div>
@@ -355,7 +355,7 @@ const Header = () => {
             <div className="hidden xl:block">
               <HeaderLink title="Community" href="community" />
             </div>
-          </div>
+          </ul>
           {/* HEADER MENU ITEMS - Ends */}
 
           {/* HEADER MOBILE MENU - Starts */}
@@ -398,7 +398,7 @@ const Header = () => {
               <Menu.Items as={Fragment}>
                 <div className="absolute left-0 right-0 top-0 !h-screen !w-full outline-0 bg-[#03050794] backdrop-blur-[28px] z-[2] pt-20 pb-[48px]">
                   <div className="flex flex-col flex-1 h-full ">
-                    <div className="flex flex-col flex-1 pb-3 overflow-scroll">
+                    <ul className="flex flex-col flex-1 pb-3 overflow-scroll">
                       <Menu.Item>
                         <MobileLink title="Company" href="/" />
                       </Menu.Item>
@@ -436,7 +436,7 @@ const Header = () => {
 
                         <Transition>
                           <Menu.Items>
-                            <div className="bg-eerie-black backdrop-blur-[28px] py-2">
+                            <ul className="bg-eerie-black backdrop-blur-[28px] py-2">
                               <Menu.Item>
                                 <SubMobileLink title="Trade" href="/" />
                               </Menu.Item>
@@ -464,7 +464,7 @@ const Header = () => {
                               <Menu.Item>
                                 <SubMobileLink title="Dispute" href="/" />
                               </Menu.Item>
-                            </div>
+                            </ul>
                           </Menu.Items>
                         </Transition>
                       </Menu>
@@ -476,7 +476,7 @@ const Header = () => {
                       <Menu.Item>
                         <MobileLink title="Community" href="/community" />
                       </Menu.Item>
-                    </div>
+                    </ul>
 
                     <div className="max-w-[364px] w-full mx-auto mb-[50px]">
                       <Button
