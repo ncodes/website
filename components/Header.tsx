@@ -128,7 +128,7 @@ const HeaderLink = ({ title, href }: LinkProps) => {
 /** HEADER LINK ITEM - Ends */
 
 /** MOBILE LINK ITEM - Starts */
-const MobileLink = forwardRef<HTMLDivElement, LinkProps>((props, ref) => {
+const MobileLink = forwardRef<HTMLLIElement, LinkProps>((props, ref) => {
   return (
     <li className="container px-4 py-4 mx-auto" ref={ref}>
       <Link href={props.href}>
@@ -144,7 +144,7 @@ MobileLink.displayName = 'MobileLink'
 /** Mobile LINK ITEM - Ends */
 
 /** SUB MOBILE LINK ITEM - Starts */
-const SubMobileLink = forwardRef<HTMLDivElement, LinkProps>((props, ref) => {
+const SubMobileLink = forwardRef<HTMLLIElement, LinkProps>((props, ref) => {
   return (
     <li className="container px-8 py-2 mx-auto" ref={ref}>
       <Link href={props.href}>
