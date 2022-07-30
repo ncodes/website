@@ -161,7 +161,7 @@ SubMobileLink.displayName = 'SubMobileLink'
 
 const Header = () => {
   return (
-    <section className="container mx-auto px-4 3xs:px-2 md:px-[30px] lg:px-[30px] xl:px-0">
+    <section className="container mx-auto px-4 sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] md:px-[30px] lg:px-[30px] xl:px-0">
       <header className="flex flex-row items-center py-5 xl:py-7">
         {/* HEADER LOGO - Starts */}
         <div>
@@ -408,9 +408,9 @@ const Header = () => {
                       </Menu.Item>
 
                       <Menu as={Fragment}>
-                        <Menu.Button className="w-[fit-content]">
+                        <Menu.Button>
                           {({ open }) => (
-                            <div className="container flex px-4 py-4 mx-auto">
+                            <li className="container flex px-4 py-4 mx-auto">
                               <p className="font-['Satoshi'] antialiased text-[20px] tracking-[0.28px] text-left leading-6 font-bold text-white inline-block cursor-pointer">
                                 Product
                               </p>
@@ -430,7 +430,7 @@ const Header = () => {
                                   priority
                                 />
                               </div>
-                            </div>
+                            </li>
                           )}
                         </Menu.Button>
 

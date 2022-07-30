@@ -23,7 +23,7 @@ const IconLink = ({ src, alt }: IconLinkProps) => {
 
 const Partners = () => {
   return (
-    <section className="container mx-auto mb-[100px] lg:mb-[150px]">
+    <section className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto mb-[100px] lg:mb-[150px]">
       <div className="mb-[100px]">
         <p className="font-['Satoshi'] antialiased font-bold text-center text-white text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-4 lg:mb-6">
           Partners
