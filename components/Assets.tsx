@@ -59,7 +59,7 @@ const AssetItem = () => {
 
 const Assets = () => {
   return (
-    <section className="container px-4 xl:px-[90px] mx-auto mt-[100px] mb-[100px] lg:mt-[150px] lg:mb-[150px]">
+    <section className="container px-4 xl:px-[90px] mx-auto mt-[100px] mb-[100px] lg:mt-[150px] lg:mb-[170px]">
       <div>
         <p className="font-['Satoshi'] antialiased font-medium text-center text-white text-[14px] lg:text-[16px] tracking-[2.63px] lg:tracking-[3px] leading-6 mb-0 lg:mb-[6px]">
           FEATURED MARKETS

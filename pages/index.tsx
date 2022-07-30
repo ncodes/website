@@ -36,7 +36,7 @@ const Home: NextPage = () => {
 
       <section
         id="page-content"
-        className="bg-[url('/logo-pattern.png')] bg-contain bg-fixed"
+        className="bg-[url('/logo-pattern.png')] bg-cover bg-fixed"
       >
         <Statistics />
 

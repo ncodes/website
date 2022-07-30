@@ -22,22 +22,22 @@ const StatisticItem = ({ label, value }: StatisticItemProps) => {
 const Statistics = () => {
   return (
     <section className="container px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mx-auto pt-[100px] mb-[100px] lg:pt-[150px] lg:mb-[150px]">
-      <div className="hidden lg:flex flex-row relative justify-between px-[65px] w-full h-[160px] lg:w-full md:w-[374px] md:h-[160px] lg:h-[186px] rounded-3xl border mx-auto border-blue-jeans items-center">
+      <div className="hidden lg:flex flex-row relative justify-between px-[65px] w-full h-[160px] lg:w-full md:w-[374px] md:h-[160px] lg:h-[186px] rounded-3xl border mx-auto border-chinese-green bg-[#060709] items-center">
         <StatisticItem label="Number of Markets" value="800+" />
         <StatisticItem label="Volume Transacted" value="$165m+" />
         <StatisticItem label="Number of Trades" value="165+" />
       </div>
 
       <div className="flex flex-col gap-y-[80px] lg:hidden">
-        <div className="flex flex-row relative justify-center px-[65px] w-full h-[150px] lg:w-full sm:w-[374px] md:w-[374px] md:h-[160px] lg:h-[186px] rounded-3xl border mx-auto border-blue-jeans items-center">
+        <div className="flex flex-row relative justify-center px-[65px] w-full h-[150px] lg:w-full sm:w-[374px] md:w-[374px] md:h-[160px] lg:h-[186px] rounded-3xl border mx-auto border-chinese-green bg-[#060709] items-center">
           <StatisticItem label="Number of Markets" value="800+" />
         </div>
 
-        <div className="flex flex-row relative justify-center px-[65px] w-full h-[150px] lg:w-full sm:w-[374px] md:w-[374px] md:h-[160px] lg:h-[186px] rounded-3xl border mx-auto border-blue-jeans items-center">
+        <div className="flex flex-row relative justify-center px-[65px] w-full h-[150px] lg:w-full sm:w-[374px] md:w-[374px] md:h-[160px] lg:h-[186px] rounded-3xl border mx-auto border-chinese-green bg-[#060709] items-center">
           <StatisticItem label="Volume Transacted" value="$165m+" />
         </div>
 
-        <div className="flex flex-row relative justify-center px-[65px] w-full h-[150px] lg:w-full sm:w-[374px] md:w-[374px] md:h-[160px] lg:h-[186px] rounded-3xl border mx-auto border-blue-jeans items-center">
+        <div className="flex flex-row relative justify-center px-[65px] w-full h-[150px] lg:w-full sm:w-[374px] md:w-[374px] md:h-[160px] lg:h-[186px] rounded-3xl border mx-auto border-chinese-green bg-[#060709] items-center">
           <StatisticItem label="Number of Trades" value="165+" />
         </div>
       </div>

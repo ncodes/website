@@ -43,7 +43,7 @@ const Features = () => {
         <p className="font-['Satoshi'] antialiased font-medium text-center text-white text-[14px] lg:text-[16px] tracking-[2.63px] lg:tracking-[3px] leading-6 mb-0 lg:mb-[6px]">
           MOST POWERFUL P2P ENGINE
         </p>
-        <p className="font-['Satoshi'] antialiased font-bold text-center text-white text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mx-auto mb-4 w-[316px] lg:mb-6 lg:w-[570px] xl:w-full">
+        <p className="font-['Satoshi'] antialiased font-bold text-center text-white text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mx-auto mb-4 w-[316px] md:w-[410px] lg:mb-6 lg:w-[570px] xl:w-full">
           The future of P2P trading is here
         </p>
         <p className="font-['Raleway'] antialiased font-regular text-center text-white text-[16px] tracking-[0.22px] leading-6 mx-auto w-[293px] xl:w-auto">
