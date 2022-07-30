@@ -32,7 +32,7 @@ const Hero = () => {
           UNSTOPPABLE P2P TRADING
         </p>
 
-        <p className="font-['Satoshi'] antialiased lg:w-[500px] lg:mx-auto text-center xl:text-left xxs:text-[40px] text-[48px] lg:text-[72px] xl:text-[72px] -tracking-[0.6px] xl:-tracking-[0.9px] leading-[56px xxs:leading-[45px] lg:leading-[72px] xl:leading-[72px] text-white font-bold mb-[16px] xl:mb-[27px]">
+        <p className="font-['Satoshi'] antialiased lg:w-[500px] lg:mx-auto text-center xl:text-left 3xs:text-[40px] text-[48px] lg:text-[72px] xl:text-[72px] -tracking-[0.6px] xl:-tracking-[0.9px] leading-[56px 3xs:leading-[45px] lg:leading-[72px] xl:leading-[72px] text-white font-bold mb-[16px] xl:mb-[27px]">
           Peer-to-Peer Trading, Decentralized
         </p>
 
@@ -54,7 +54,7 @@ const Hero = () => {
           />
         </div>
 
-        <div className="flex flex-row flex-wrap xxs:w-full w-[280px] mx-auto xl:w-auto mt-[28px] xl:mt-[30px] justify-center xl:justify-start gap-x-[30px] gap-y-[20px]">
+        <div className="flex flex-row flex-wrap 3xs:w-full w-[280px] mx-auto xl:w-auto mt-[28px] xl:mt-[30px] justify-center xl:justify-start gap-x-[30px] gap-y-[20px]">
           <HeroLink title="Visit Exchange" href="/" />
           <HeroLink title="Join Discord" href="/" />
           <HeroLink title="View Documentation" href="/" />

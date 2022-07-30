@@ -161,7 +161,7 @@ SubMobileLink.displayName = 'SubMobileLink'
 
 const Header = () => {
   return (
-    <section className="container mx-auto px-4 xxs:px-2 md:px-[30px] lg:px-[30px] xl:px-0">
+    <section className="container mx-auto px-4 3xs:px-2 md:px-[30px] lg:px-[30px] xl:px-0">
       <header className="flex flex-row items-center py-5 xl:py-7">
         {/* HEADER LOGO - Starts */}
         <div>
@@ -180,7 +180,7 @@ const Header = () => {
         </div>
         {/* HEADER LOGO - Ends */}
 
-        <div className="flex flex-row w-full xxs:ml-[10px] ml-[40px] xl:ml-[50px] items-center justify-end lg:justify-between">
+        <div className="flex flex-row w-full 3xs:ml-[10px] ml-[40px] xl:ml-[50px] items-center justify-end lg:justify-between">
           {/* LANGUAGE SELECTOR - Starts */}
           <Menu as="div" className="flex flex-col z-[3]">
             {/* LANGUAGE SELECTOR BUTTON - Starts */}
@@ -363,7 +363,7 @@ const Header = () => {
             {/* HEADER MOBILE MENU BUTTON - Starts */}
             <Menu.Button>
               {({ open }) => (
-                <div className="flex items-center justify-center w-10 h-10 xxs:ml-0 ml-2 rounded-lg xl:hidden bg-rich-blue sticky z-[3]">
+                <div className="flex items-center justify-center w-10 h-10 3xs:ml-0 ml-2 rounded-lg xl:hidden bg-rich-blue sticky z-[3]">
                   {open ? (
                     <Image
                       src="/icons/mobile-menu-close.png"
@@ -478,7 +478,7 @@ const Header = () => {
                       </Menu.Item>
                     </ul>
 
-                    <div className="max-w-[364px] w-full mx-auto mb-[50px]">
+                    <div className="max-w-[364px] 3xs:px-[40px] xs:px-[unset] w-full mx-auto mb-[50px]">
                       <Button
                         label="Start Trading"
                         variant="primary"

@@ -19,7 +19,8 @@ module.exports = {
       white: '#FFFFFF'
     },
     screens: {
-      xxs: '320px',
+      '3xs': '320px',
+      '2xs': '375px',
       xs: '425px',
       ...defaultTheme.screens
     },
