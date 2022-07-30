@@ -24,7 +24,7 @@ const Trading = () => {
     <section className="container mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mt-[52px] lg:mt-[65px] xl:mt-[77px] mb-[100px] sm:mb-16 lg:mb-3 xl:mb-3">
       <div className="flex flex-col-reverse lg:flex-row xl:flex-row items-center lg:gap-x-[70px] xl:gap-x-[145px] gap-y-8 sm:gap-y-6">
         <div className="w-full lg:w-[513px]">
-          <p className="font-['Satoshi'] antialiased font-bold text-[48px] lg:text-[72px] text-white text-center lg:text-left -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-[24px] lg:mb-[70px] xl:mb-[70px] w-[265px] mx-auto sm:mx-[unset] sm:w-full">
+          <p className="font-['Satoshi'] antialiased font-bold text-[48px] lg:text-[72px] text-white text-center lg:text-left -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-[24px] lg:mb-[40px] xl:mb-[40px] w-[265px] mx-auto sm:mx-[unset] sm:w-full">
             Unbounded P2P Trading
           </p>
           <p className="font-['Raleway'] antialiased font-regular text-[16px] text-white tracking-[0.22px] leading-6 mb-9 lg:mb-8 text-center lg:text-left w-full lg:w-[440px] px-10 xs:px-0 xxs:px-0 sm:px-6 lg:px-0">

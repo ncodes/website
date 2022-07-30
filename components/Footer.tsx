@@ -20,7 +20,7 @@ type IconLinkProps = {
 
 const FooterTitle = ({ label }: TitleProps) => {
   return (
-    <p className="font-['Satoshi'] antialiased font-bold text-[22px] text-white mb-[15px] xl:mb-[22px] leading-[0.8] text-center xl:text-left">
+    <p className="font-['Satoshi'] antialiased font-bold text-[22px] text-white mb-[15px] xl:mb-[22px] leading-[0.8] text-center md:text-left xl:text-left">
       {label}
     </p>
   )
@@ -128,8 +128,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:px-[30px] xl:px-[unset] md:flex-row lg:flex-row xl:flex-row mt-[60px] lg:mt-[60px] xl:mt-[unset] gap-y-12 xl:gap-y-[unset] justify-between w-full">
-          <div className="mx-auto lg:mx-[unset]">
+        <div className="flex flex-row flex-wrap md:px-[30px] lg:px-[30px] xl:px-[unset] md:flex-row lg:flex-row xl:flex-row mt-[60px] lg:mt-[60px] xl:mt-[unset] gap-y-12 xl:gap-y-[unset] justify-between w-full">
+          <div className="mx-auto basis-[50%] md:basis-[25%] flex-[1_0_100%] lg:mx-[unset]  lg:basis-[unset] lg:flex-[unset]">
             <FooterTitle label="Company" />
 
             <ul className="flex flex-col gap-y-[10px] list-none">
@@ -139,7 +139,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="mx-auto lg:mx-[unset]">
+          <div className="mx-auto basis-[50%] md:basis-[25%] flex-[1_0_100%] lg:mx-[unset] lg:basis-[unset] lg:flex-[unset]">
             <FooterTitle label="Product" />
 
             <ul className="flex flex-col gap-y-[10px]">
@@ -149,7 +149,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="mx-auto lg:mx-[unset]">
+          <div className="mx-auto basis-[50%] md:basis-[25%] flex-[1_0_100%] lg:mx-[unset] lg:basis-[unset] lg:flex-[unset]">
             <FooterTitle label="Developers" />
 
             <ul className="flex flex-col gap-y-[10px]">
@@ -158,7 +158,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="mx-auto lg:mx-[unset]">
+          <div className="mx-auto basis-[50%] md:basis-[25%] flex-[1_0_100%] lg:mx-[unset] lg:basis-[unset] lg:flex-[unset]">
             <FooterTitle label="Community" />
 
             <ul className="flex flex-col gap-y-[10px]">
