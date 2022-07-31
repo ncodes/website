@@ -161,8 +161,8 @@ SubMobileLink.displayName = 'SubMobileLink'
 
 const Header = () => {
   return (
-    <section className="container mx-auto px-4 sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] md:px-[30px] lg:px-[30px] xl:px-0">
-      <header className="flex flex-row items-center py-5 xl:py-7">
+    <section className="container mx-auto px-4 sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] md:px-[30px] lg:px-[30px] xl:px-0 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl    ">
+      <header className="flex flex-row items-center py-[10px] md:py-5 xl:py-7">
         {/* HEADER LOGO - Starts */}
         <div>
           <Link href="/">

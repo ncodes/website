@@ -21,7 +21,7 @@ const StatisticItem = ({ label, value }: StatisticItemProps) => {
 
 const Statistics = () => {
   return (
-    <section className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mx-auto pt-[100px] mb-[100px] lg:pt-[150px] lg:mb-[150px]">
+    <section className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mx-auto pt-[100px] mb-[100px] lg:pt-[150px] lg:mb-[150px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
       <div className="hidden lg:flex flex-row relative justify-between px-[65px] w-full h-[160px] lg:w-full md:w-[374px] md:h-[160px] lg:h-[186px] rounded-3xl border mx-auto border-chinese-green bg-[#060709] items-center">
         <StatisticItem label="Number of Markets" value="800+" />
         <StatisticItem label="Volume Transacted" value="$165m+" />
