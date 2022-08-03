@@ -43,7 +43,7 @@ const Trading = () => {
         <div className="relative w-[388px] h-[388px] 3xs:w-[300px] 3xs:h-[300px] sm:w-[500px] sm:h-[500px] md:w-[582px] md:h-[582px] lg:w-full lg:h-[520px] xl:w-[700px] xl:h-[700px] overflow-hidden">
           <Image
             className="!relative object-contain w-full h-full"
-            src="/unbounded-trading-illustration.png"
+            src="/unbounded-trading-illustration.webp"
             alt="unbounded-trading-illustration"
             layout="fill"
             quality={100}

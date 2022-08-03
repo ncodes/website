@@ -48,37 +48,37 @@ const MenuItems = [
   {
     title: 'Trade',
     description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/trade-menu.png'
+    src: '/trade-menu.webp'
   },
   {
     title: 'Markets',
     description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/market-menu.png'
+    src: '/market-menu.webp'
   },
   {
     title: 'Liquidity',
     description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/liquidity-menu.png'
+    src: '/liquidity-menu.webp'
   },
   {
     title: 'Mediation',
     description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/mediation-menu.png'
+    src: '/mediation-menu.webp'
   },
   {
     title: 'Disputes',
     description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/dispute-menu.png'
+    src: '/dispute-menu.webp'
   },
   {
     title: 'Mining',
     description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/mining-menu.png'
+    src: '/mining-menu.webp'
   },
   {
     title: 'Reward',
     description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/reward-menu.png'
+    src: '/reward-menu.webp'
   }
 ]
 /** MENU ITEM DATA - Ends */
@@ -187,7 +187,11 @@ const Header = () => {
             <Menu.Button className="outline-0">
               {({ open }) => (
                 <div className="flex w-[128px] xl:w-40">
-                  <div className="flex flex-row justify-between max-w-40 w-auto h-[40px] xl:h-[50px] pt-2 xl:pt-[11px] px-3 xl:px-5 rounded-lg bg-rich-blue">
+                  <div
+                    className={`flex flex-row justify-between max-w-40 w-auto h-[40px] xl:h-[50px] pt-2 xl:pt-[11px] px-3 xl:px-5 rounded-lg ${
+                      open ? 'bg-[#0d1c31]' : 'bg-rich-blue'
+                    }`}
+                  >
                     <p className="font-['Satoshi'] antialiased text-[13px] xl:text-[16px] tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold">
                       English&nbsp;🇬🇧
                     </p>
@@ -220,17 +224,17 @@ const Header = () => {
                   {Languages.map((language, i) => (
                     <Menu.Item key={i}>
                       {({ active }) => (
-                        <div
+                        <ul
                           className={`px-5 py-4 cursor-pointer ${
-                            active ? '' : 'bg-none'
+                            active ? 'hover:bg-[#0d1c31]' : 'bg-none'
                           }`}
                         >
-                          <p className="font-['Satoshi'] antialiased text-[13px] xl:text-[16px] tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold">
+                          <li className="font-['Satoshi'] antialiased text-[13px] xl:text-[16px] tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold">
                             {language.key === 'ar'
                               ? `${language.emoji} ${language.label}`
                               : `${language.label} ${language.emoji}`}
-                          </p>
-                        </div>
+                          </li>
+                        </ul>
                       )}
                     </Menu.Item>
                   ))}
@@ -254,7 +258,7 @@ const Header = () => {
                 {({ open }) => (
                   <li className="flex flex-row items-center">
                     <p className="font-['Satoshi'] antialiased text-[18px] tracking-[0.25px] text-white font-medium">
-                      Products
+                      Protocol
                     </p>
 
                     <div
@@ -412,7 +416,7 @@ const Header = () => {
                           {({ open }) => (
                             <li className="container flex px-4 py-4 mx-auto">
                               <p className="font-['Satoshi'] antialiased text-[20px] tracking-[0.28px] text-left leading-6 font-bold text-white inline-block cursor-pointer">
-                                Product
+                                Protocol
                               </p>
 
                               <div

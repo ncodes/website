@@ -19,14 +19,14 @@ const Home: NextPage = () => {
       </Head>
 
       <section id="page-header-hero">
-        <div className="bg-repeat bg-[url('/mobile-stars.png')] bg-contain bg-top xl:bg-bottom w-full">
+        <div className="bg-repeat bg-[url('/mobile-stars.webp')] bg-contain bg-top xl:bg-bottom w-full">
           <div className="sticky z-[3]">
             <Header />
 
             <Hero />
           </div>
 
-          <div className="xl:absolute xl:bottom-0 xl:bg-[url('/hero-bg.png')] mt-10 xl:mt-0 w-full h-[calc(100vw_*_0.356)] xl:h-[calc(100vw_*_0.5)] bg-[url('/mobile-hero-bg.png')] bg-no-repeat bg-top bg-[length:100%_auto] xl:bg-[length:100%_100%]">
+          <div className="xl:absolute xl:bottom-0 xl:bg-[url('/hero-bg.webp')] mt-10 xl:mt-0 w-full h-[calc(100vw_*_0.356)] xl:h-[calc(100vw_*_0.5)] bg-[url('/mobile-hero-bg.webp')] bg-no-repeat bg-top bg-[length:100%_auto] xl:bg-[length:100%_100%]">
             <div className="relative h-full">
               <div className="absolute bottom-0 w-full h-16 xl:h-52 bg-gradient-to-t from-rich-black to-transparent"></div>
             </div>
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
 
       <section
         id="page-content"
-        className="bg-[url('/logo-pattern.png')] bg-cover bg-fixed"
+        className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed"
       >
         <Statistics />
 

@@ -25,10 +25,10 @@ const FeaturesItem = ({ imageSrc, title, description }: FeaturesItemProps) => {
       </div>
 
       <div className="flex flex-col">
-        <p className="font-['Satoshi'] antialiased font-black text-white text-[22px] mb-[5px] lg:text-[24px] leading-[26.25px] lg:mb-[13px]">
+        <p className="font-['Satoshi'] antialiased font-black text-white text-[22px] mb-[5px] lg:text-[24px] leading-[26.25px] lg:mb-[10px]">
           {title}
         </p>
-        <p className="font-['Raleway'] antialiased font-regular text-white text-[15px] leading-[26.25px]">
+        <p className="font-['Raleway'] antialiased font-medium text-[#a5a5a5] text-[15px] tracking-wider leading-[26.25px]">
           {description}
         </p>
       </div>
@@ -53,38 +53,50 @@ const Features = () => {
 
       <div className="flex flex-col md:flex-row md:flex-wrap gap-y-[56px] md:gap-x-[40px] md:gap-y-[30px] lg:gap-y-[56px] w-auto xl:w-[1120px] justify-center md:justify-[unset] mx-auto mt-14 lg:mt-[60px] xl:mt-[100px]">
         <FeaturesItem
-          imageSrc="/fees.png"
+          imageSrc="/fees.webp"
           title="Low Fees"
           description="Trading fees are lower and predictable than centralized P2P alternatives."
         />
 
         <FeaturesItem
-          imageSrc="/multi-chain.png"
+          imageSrc="/multi-chain.webp"
           title="Multi-chain"
           description="Trade on multiple L1 and L2 chains. We support Ethereum Mainnet, Polygon and BSC."
         />
 
         <FeaturesItem
-          imageSrc="/uncapped-volume.png"
+          imageSrc="/uncapped-volume.webp"
           title="Uncapped Volume"
           description="Unlike other P2P trading platform, FiatX does not place a cap on your trading volume or activities."
         />
 
         <FeaturesItem
-          imageSrc="/privacy.png"
+          imageSrc="/privacy.webp"
           title="Privacy"
           description="Trade without the need to reveal your identity to platform operators. Your wallet is enough. "
         />
 
         <FeaturesItem
-          imageSrc="/unlimited-liquidity.png"
+          imageSrc="/unlimited-liquidity.webp"
           title="Unlimited Liquidity"
           description="Access unlimited liquidity for open markets created by people across the world. "
         />
 
         <FeaturesItem
-          imageSrc="/no-platform-risk.png"
+          imageSrc="/no-platform-risk.webp"
           title="No Platform-risk"
+          description="Your liquidity and earnings are yours to keep and control. No one can confisticate your funds for any reason."
+        />
+
+        <FeaturesItem
+          imageSrc="/encrypted-messaging.webp"
+          title="Encrypted Messaging"
+          description="Your liquidity and earnings are yours to keep and control. No one can confisticate your funds for any reason."
+        />
+
+        <FeaturesItem
+          imageSrc="/trading-reward.webp"
+          title="Trading Reward"
           description="Your liquidity and earnings are yours to keep and control. No one can confisticate your funds for any reason."
         />
       </div>

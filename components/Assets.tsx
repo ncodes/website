@@ -2,10 +2,13 @@ import Image from 'next/image'
 
 const AssetItem = () => {
   return (
-    <div className="flex flex-col justify-between p-4 w-[296px] h-[162px] rounded-lg bg-jet-black border border-space-cadet shadow-[0_0_7px_2px_rgba(224,255,134,0.07)] cursor-pointer">
+    <div
+      className={`relative hover:translate-y-1 flex flex-col justify-between p-4 w-[296px] h-[162px] rounded-lg bg-jet-black border border-space-cadet shadow-[0_0_7px_2px_rgba(224,255,134,0.07)] cursor-pointer`}
+    >
+      <div className="absolute bg-[#000000] opacity-10 hover:opacity-0 w-full h-full top-0 left-0 rounded-lg z-10"></div>
       <div className="flex flex-row items-center justify-between">
         <div className="flex flex-row items-center gap-x-[10px]">
-          <div className="relative overflow-hidden w-[40px] h-[40px]">
+          <div className="relative overflow-hidden w-[40px] h-[40px] z-0">
             <Image
               className="!relative object-cover w-full h-full"
               src="/icons/bitcoin.png"
