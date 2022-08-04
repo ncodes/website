@@ -103,22 +103,10 @@ type LinkProps = {
 
 /** HEADER LINK ITEM - Starts */
 const HeaderLink = ({ title, href }: LinkProps) => {
-  const router = useRouter()
-
-  const isActive = router.pathname === href
-
   return (
-    <li
-      className={`flex items-center cursor-pointer px-[15px] py-0.5 rounded-2xl ${
-        isActive ? 'bg-chinese-green' : 'bg-transparent'
-      }`}
-    >
+    <li className="flex items-center cursor-pointer px-[15px] py-0.5 rounded-2xl">
       <Link href={href}>
-        <p
-          className={`font-['Satoshi'] antialiased text-[18px] tracking-[0.25px] ${
-            isActive ? 'text-eerie-black font-bold' : 'text-white font-medium'
-          }`}
-        >
+        <p className="font-['Satoshi'] antialiased text-[18px] tracking-[0.25px] text-white font-medium">
           {title}
         </p>
       </Link>
@@ -330,6 +318,7 @@ const Header = () => {
                                 alt="caret-down"
                                 layout="fill"
                                 quality={100}
+                                loading="eager"
                                 priority
                               />
                             </div>

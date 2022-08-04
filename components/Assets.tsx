@@ -3,7 +3,7 @@ import Image from 'next/image'
 const AssetItem = () => {
   return (
     <div
-      className={`relative bg-[url('/assets-bg.webp')] bg-contain hover:translate-y-1 transition-all flex flex-col justify-between p-4 w-[296px] h-[162px] rounded-lg bg-jet-black border border-space-cadet shadow-[0_0_7px_2px_rgba(224,255,134,0.07)] cursor-pointer`}
+      className={`relative bg-[url('/assets-bg.webp')] bg-contain hover:translate-y-[2px] transition-all flex flex-col justify-between p-4 w-[296px] h-[162px] rounded-lg bg-jet-black border border-space-cadet shadow-[0_0_7px_2px_rgba(224,255,134,0.07)] cursor-pointer`}
     >
       <div className="absolute bg-[#000000] opacity-10 hover:opacity-0 w-full h-full top-0 left-0 rounded-lg z-10"></div>
       <div className="flex flex-row items-center justify-between">
