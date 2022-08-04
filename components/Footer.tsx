@@ -163,7 +163,7 @@ const Footer = () => {
 
             <ul className="flex flex-col gap-y-[10px]">
               <FooterLink title="Get help" href="/help" />
-              <FooterLink title="Terms of service" href="/terms-of-service" />
+              <FooterLink title="Terms of service" href="/terms" />
             </ul>
           </div>
         </div>
