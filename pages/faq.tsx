@@ -4,15 +4,36 @@ import Image from 'next/image'
 import { Tab } from '@headlessui/react'
 
 import Header from '../components/Header'
-import Partners from '../components/Partners'
+// import Partners from '../components/Partners'
 import Footer from '../components/Footer'
 import { useState } from 'react'
+
+/** TAB SELECTOR PROP TYPES - Starts */
+type TabSelectorProps = {
+  label: string
+  selected: boolean
+}
+/** TAB SELECTOR PROP TYPES - Ends */
+
+/** ACCORDION PROP TYPES - Starts */
+type AccordionProps = {
+  title?: string
+  children: React.ReactNode
+}
+/** ACCORDION PROP TYPES - Ends */
+
+/** FAQ LIST ITEM PROP TYPES - Starts */
+type FaqListItemType = {
+  title: string,
+  content: string
+}
+/** FAQ LIST ITEM PROP TYPES - Ends */
 
 const TabSelector = ({ label, selected }: TabSelectorProps) => {
   return (
     <div
       className={
-        selected ? 'px-[18px] py-[2.5px] bg-chinese-green rounded-[20px]' : ''
+        `px-[12px] py-[4px] ${selected ? 'bg-chinese-green rounded-[20px]' : ''}`
       }
     >
       <p
@@ -32,13 +53,10 @@ const Accordion = ({ title, children }: AccordionProps) => {
   const [opened, setOpened] = useState(false)
 
   return (
-    <div
-      onClick={() => setOpened(!opened)}
-      className="flex flex-col items-center justify-between border-b border-[#162944] px-4 lg:px-[unset]"
-    >
+    <div className="flex flex-col items-center justify-between border-b border-[#162944] px-4 lg:px-[unset]">
       <div></div>
 
-      <div className="flex flex-row items-center justify-between w-full">
+      <div onClick={() => setOpened(!opened)} className="flex flex-row items-center justify-between w-full cursor-pointer">
         <div className="hidden lg:block" />
         <p className="font-['Satoshi'] antialiased font-black text-white text-[18px] lg:text-[24px] leading-[19.7px] lg:leading-[26.25px] py-[18px] text-left lg:text-center">
           {title}
@@ -72,15 +90,61 @@ const Accordion = ({ title, children }: AccordionProps) => {
   )
 }
 
-const AccordionContent = ({ children }: AccordionContentProps) => {
+const AccordionContent = ({ children }: AccordionProps) => {
   return (
-    <p className="font-['Raleway'] antialiased font-normal text-white lg:text-[20px] text-[16px] leading-[20px] lg:leading-[26.25px] text-left lg:text-center lg:max-w-[905px] pb-10">
+    <p className="font-['Raleway'] antialiased font-normal text-white lg:text-[20px] text-[16px] leading-[20px] lg:leading-[26.25px] text-left lg:max-w-[905px] pb-10">
       {children}
     </p>
   )
 }
 
 const About: NextPage = () => {
+  const tabList = ["General", "Security", "NFT", "Reward"];
+
+  const generalFaqList: FaqListItemType[] = [
+    { 
+      "title": "General - What are CosmoPet NFTs?",
+      "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason. Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
+    },
+    { 
+      "title": "What are CosmoPet NFTs?",
+      "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
+    },
+  ];
+
+  const securityFaqList: FaqListItemType[] = [
+    { 
+      "title": "Security - What are CosmoPet NFTs?",
+      "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason. Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
+    },
+    { 
+      "title": "What are CosmoPet NFTs?",
+      "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
+    },
+  ];
+
+  const nftFaqList: FaqListItemType[] = [
+    { 
+      "title": "NFT - What are CosmoPet NFTs?",
+      "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason. Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
+    },
+    { 
+      "title": "What are CosmoPet NFTs?",
+      "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
+    },
+  ];
+
+  const rewardFaqList: FaqListItemType[] = [
+    { 
+      "title": "Reward - What are CosmoPet NFTs?",
+      "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason. Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
+    },
+    { 
+      "title": "What are CosmoPet NFTs?",
+      "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -100,7 +164,7 @@ const About: NextPage = () => {
         id="page-content"
         className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed"
       >
-        <section className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mb-[100px] sm:mb-16 lg:mb-3 xl:mb-[157px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+        <section className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mb-[100px] xl:mb-[157px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
           <div className="mt-[110px] mb-[47px] px-5 lg:px-[unset] lg:mb-[50px]">
             <p className="font-['Satoshi'] antialiased font-bold text-center text-white text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-4 lg:mb-6">
               Frequently Asked Questions
@@ -113,112 +177,48 @@ const About: NextPage = () => {
           <Tab.Group>
             <Tab.List
               as="div"
-              className="flex flex-row gap-x-[24px] justify-center mb-[40px] lg:mb-[64px] flex-wrap gap-y-[25px] lg:px-10"
+              className="flex flex-row gap-x-[12px] sm:gap-x-[24px] justify-center mb-[40px] lg:mb-[64px] flex-wrap gap-y-[15px] sm:gap-y-[25px] lg:px-10"
             >
-              <Tab>
-                {({ selected }) => (
-                  <TabSelector label="General" selected={selected} />
-                )}
-              </Tab>
-
-              <Tab>
-                {({ selected }) => (
-                  <TabSelector label="Security" selected={selected} />
-                )}
-              </Tab>
-
-              <Tab>
-                {({ selected }) => (
-                  <TabSelector label="NFT" selected={selected} />
-                )}
-              </Tab>
-
-              <Tab>
-                {({ selected }) => (
-                  <TabSelector label="Reward" selected={selected} />
-                )}
-              </Tab>
+              {tabList?.map((tabItem, index) => (
+                <Tab key={index}>
+                  {({ selected }) => (
+                    <TabSelector label={tabItem} selected={selected} />
+                  )}
+                </Tab>
+              ))}
             </Tab.List>
 
             <Tab.Panels>
               <Tab.Panel>
-                <Accordion title="What are CosmoPet NFTs?">
-                  <AccordionContent>
-                    Your liquidity and earnings are yours to keep and control.
-                    No one can confiscate your funds for any reason. Your
-                    liquidity and earnings are yours to keep and control. No one
-                    can confiscate your funds for any reason.
-                  </AccordionContent>
-                </Accordion>
-
-                <Accordion title="What are CosmoPet NFTs?">
-                  <AccordionContent>
-                    Your liquidity and earnings are yours to keep and control.
-                    No one can confiscate your funds for any reason. Your
-                    liquidity and earnings are yours to keep and control. No one
-                    can confiscate your funds for any reason.
-                  </AccordionContent>
-                </Accordion>
+                {generalFaqList?.map(({ title, content }, index) => (
+                  <Accordion key={index} title={title}>
+                    <AccordionContent>{content}</AccordionContent>
+                  </Accordion>
+                ))}
               </Tab.Panel>
 
               <Tab.Panel>
-                <Accordion title="What are CosmoPet NFTs?">
-                  <AccordionContent>
-                    Your liquidity and earnings are yours to keep and control.
-                    No one can confiscate your funds for any reason. Your
-                    liquidity and earnings are yours to keep and control. No one
-                    can confiscate your funds for any reason.
-                  </AccordionContent>
-                </Accordion>
-
-                <Accordion title="What are CosmoPet NFTs?">
-                  <AccordionContent>
-                    Your liquidity and earnings are yours to keep and control.
-                    No one can confiscate your funds for any reason. Your
-                    liquidity and earnings are yours to keep and control. No one
-                    can confiscate your funds for any reason.
-                  </AccordionContent>
-                </Accordion>
+                {securityFaqList?.map(({ title, content }, index) => (
+                  <Accordion key={index} title={title}>
+                    <AccordionContent>{content}</AccordionContent>
+                  </Accordion>
+                ))}
               </Tab.Panel>
 
               <Tab.Panel>
-                <Accordion title="What are CosmoPet NFTs?">
-                  <AccordionContent>
-                    Your liquidity and earnings are yours to keep and control.
-                    No one can confiscate your funds for any reason. Your
-                    liquidity and earnings are yours to keep and control. No one
-                    can confiscate your funds for any reason.
-                  </AccordionContent>
-                </Accordion>
-
-                <Accordion title="What are CosmoPet NFTs?">
-                  <AccordionContent>
-                    Your liquidity and earnings are yours to keep and control.
-                    No one can confiscate your funds for any reason. Your
-                    liquidity and earnings are yours to keep and control. No one
-                    can confiscate your funds for any reason.
-                  </AccordionContent>
-                </Accordion>
+                {nftFaqList?.map(({ title, content }, index) => (
+                  <Accordion key={index} title={title}>
+                    <AccordionContent>{content}</AccordionContent>
+                  </Accordion>
+                ))}
               </Tab.Panel>
 
               <Tab.Panel>
-                <Accordion title="What are CosmoPet NFTs?">
-                  <AccordionContent>
-                    Your liquidity and earnings are yours to keep and control.
-                    No one can confiscate your funds for any reason. Your
-                    liquidity and earnings are yours to keep and control. No one
-                    can confiscate your funds for any reason.
-                  </AccordionContent>
-                </Accordion>
-
-                <Accordion title="What are CosmoPet NFTs?">
-                  <AccordionContent>
-                    Your liquidity and earnings are yours to keep and control.
-                    No one can confiscate your funds for any reason. Your
-                    liquidity and earnings are yours to keep and control. No one
-                    can confiscate your funds for any reason.
-                  </AccordionContent>
-                </Accordion>
+                {rewardFaqList?.map(({ title, content }, index) => (
+                  <Accordion key={index} title={title}>
+                    <AccordionContent>{content}</AccordionContent>
+                  </Accordion>
+                ))}
               </Tab.Panel>
             </Tab.Panels>
           </Tab.Group>
