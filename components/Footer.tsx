@@ -30,7 +30,7 @@ const FooterLink = ({ title, href }: LinkProps) => {
   return (
     <li className="text-center md:text-left lg:text-left xl:text-left">
       <Link href={href}>
-        <p className="font-['Satoshi'] antialiased font-regular text-[16px]  tracking-[0.22px] text-chinese-green cursor-pointer inline-block hover:underline">
+        <p className="font-['Satoshi'] antialiased font-regular text-[16px]  tracking-[0.22px] text-white cursor-pointer inline-block hover:underline">
           {title}
         </p>
       </Link>
@@ -71,7 +71,7 @@ const Footer = () => {
             </div>
           </Link>
 
-          <p className="font-['Satoshi'] antialiased font-regular text-[16px] text-chinese-green tracking-[0.22px] mt-6 mb-6 text-center xl:text-left">
+          <p className="font-['Satoshi'] antialiased font-regular text-[16px] text-white tracking-[0.22px] mt-6 mb-6 text-center xl:text-left">
             © 2022 - All rights reserved
           </p>
 
@@ -153,7 +153,7 @@ const Footer = () => {
             <FooterTitle label="Developers" />
 
             <ul className="flex flex-col gap-y-[10px]">
-              <FooterLink title="Documentation" href="/documentation" />
+              <FooterLink title="Docs" href="/documentation" />
               <FooterLink title="Team" href="/team" />
             </ul>
           </div>
