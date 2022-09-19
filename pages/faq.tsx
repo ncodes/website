@@ -40,7 +40,7 @@ const TabSelector = ({ label, selected }: TabSelectorProps) => {
         className={`antialiased text-center text-[16px] tracking-[0.22px] leading-[24px] ${
           selected
             ? `font-['satoshi'] font-bold text-eerie-black`
-            : `font-['Raleway'] font-medium text-white`
+            : `font-['Mitr'] font-extralight text-white`
         }`}
       >
         {label}
@@ -58,7 +58,7 @@ const Accordion = ({ title, children }: AccordionProps) => {
 
       <div onClick={() => setOpened(!opened)} className="flex flex-row items-center justify-between w-full cursor-pointer">
         <div className="hidden lg:block" />
-        <p className="font-['Satoshi'] antialiased font-black text-white text-[18px] lg:text-[24px] leading-[19.7px] lg:leading-[26.25px] py-[18px] text-left lg:text-center">
+        <p className="font-['Mitr'] antialiased font-medium text-white text-[18px] lg:text-[24px] leading-[19.7px] lg:leading-[26.25px] py-[18px] text-left lg:text-center">
           {title}
         </p>
 
@@ -162,14 +162,14 @@ const About: NextPage = () => {
 
       <section
         id="page-content"
-        className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed"
+        className="2xl:h-screen bg-[url('/logo-pattern.webp')] bg-cover bg-fixed"
       >
         <section className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mb-[100px] xl:mb-[157px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
           <div className="mt-[110px] mb-[47px] px-5 lg:px-[unset] lg:mb-[50px]">
-            <p className="font-['Satoshi'] antialiased font-bold text-center text-white text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-4 lg:mb-6">
+            <p className="font-['Mitr'] antialiased font-bold text-center text-white text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-4 lg:mb-6">
               Frequently Asked Questions
             </p>
-            <p className="font-['Raleway'] antialiased font-regular text-[16px] text-white tracking-[0.22px] text-center w-[325px] xl:w-auto mx-auto">
+            <p className="font-['Mitr'] antialiased font-extralight text-[16px] text-white tracking-[0.22px] text-center max-w-[325px] xl:w-auto mx-auto">
               Here’s what you may need to know about FIATX.
             </p>
           </div>
@@ -177,7 +177,7 @@ const About: NextPage = () => {
           <Tab.Group>
             <Tab.List
               as="div"
-              className="flex flex-row gap-x-[12px] sm:gap-x-[24px] justify-center mb-[40px] lg:mb-[64px] flex-wrap gap-y-[15px] sm:gap-y-[25px] lg:px-10"
+              className="flex flex-row gap-x-[12px] sm:gap-x-[24px] overflow-x-auto whitespace-nowrap justify-center pl-[30px] 2xs:pl-0 mb-[40px] lg:mb-[64px] gap-y-[15px] sm:gap-y-[25px] lg:px-10"
             >
               {tabList?.map((tabItem, index) => (
                 <Tab key={index}>

@@ -59,6 +59,48 @@ a {
   }
 
   @font-face {
+    font-family: 'Mitr';
+    font-weight: 200;
+    font-style: normal;
+    src: url('/fonts/mitr/extralight.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Mitr';
+    font-weight: 300;
+    font-style: normal;
+    src: url('/fonts/mitr/light.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Mitr';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/mitr/regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Mitr';
+    font-weight: 500;
+    font-style: normal;
+    src: url('/fonts/mitr/medium.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Mitr';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/fonts/mitr/bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Mitr';
+    font-weight: 900;
+    font-style: normal;
+    src: url('/fonts/mitr/black.ttf') format('truetype');
+  }
+
+  @font-face {
     font-family: 'Raleway';
     font-weight: 400;
     font-style: normal;
