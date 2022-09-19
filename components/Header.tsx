@@ -257,7 +257,7 @@ const Header = () => {
                   {({ open }) => (
                     <li className="flex flex-row items-center">
                       <p className="font-['Satoshi'] antialiased text-[18px] tracking-[0.25px] text-white font-medium">
-                        Protocol
+                        Products
                       </p>
 
                       <div
@@ -295,7 +295,7 @@ const Header = () => {
                             Offerings
                           </p>
 
-                          <p className="font-['Satoshi'] antialiased text-[16px] tracking-[0.22px] leading-[24px] text-white font-normal mt-[25px]">
+                          <p className="font-['Satoshi'] antialiased text-[14px] tracking-[0.22px] leading-[24px] text-white font-normal mt-[25px]">
                             Learn how you can
                             <br />
                             make the most of FIATX
@@ -304,8 +304,7 @@ const Header = () => {
 
                         <Link href="/">
                           <p
-                            className="font-['Satoshi'] antialiased text-[16px] tracking-[0.22px] text-chinese-green font-bold cursor-pointer hover:underline after:content-[' '] after:inline-block 
-                      after:bg-[length:24px_24px] after:w-6 after:h-6 after:bg-[url('/icons/caret-down.png')] after:-scale-y-100 after:rotate-45 after:-ml-[7px] after:mb-0.5"
+                            className="font-['Satoshi'] antialiased text-[16px] tracking-[0.22px] text-chinese-green font-bold cursor-pointer hover:underline after:content-[' '] after:inline-block after:bg-[length:24px_24px] after:w-6 after:h-6 after:bg-[url('/icons/caret-down.png')] after:-scale-y-100 after:rotate-45 after:-ml-[7px] after:mb-0.5"
                           >
                             Join Discord
                           </p>
@@ -334,7 +333,7 @@ const Header = () => {
                                 <p className="font-['Satoshi'] antialiased text-[20px] leading-[26px] text-white font-black -mt-1">
                                   {menuItem.title}
                                 </p>
-                                <p className="font-['Raleway'] antialiased text-[12px] leading-5 text-[#bebebe] font-medium">
+                                <p className="font-['Raleway'] antialiased text-[14px] leading-5 text-[#bebebe] font-medium">
                                   {menuItem.description}
                                 </p>
                               </div>
