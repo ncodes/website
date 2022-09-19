@@ -57,7 +57,7 @@ const IconLink = ({ src, alt, href, width, height }: IconLinkProps) => {
 const Footer = () => {
   return (
     <section className="container mx-auto">
-      <div className="flex  flex-col xl:flex-row xl:mx-[90px] pb-16">
+      <div className="flex flex-col xl:flex-row xl:mx-[90px] pb-16">
         <div className="w-full xl:w-[600px]">
           <Link href="/">
             <div className="relative overflow-hidden w-[154px] h-[25px] xl:w-[154px] xl:h-[25px] cursor-pointer mx-auto xl:mx-[unset]">
@@ -128,7 +128,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="md:flex flex-row flex-wrap md:px-[30px] lg:px-[30px] xl:px-[unset] md:flex-row lg:flex-row xl:flex-row mt-[60px] lg:mt-[60px] xl:mt-[unset] gap-y-12 xl:gap-y-[unset] justify-between w-full">
+        <div className="flex flex-row flex-wrap md:px-[30px] lg:px-[30px] xl:px-[unset] md:flex-row lg:flex-row xl:flex-row mt-[60px] lg:mt-[60px] xl:mt-[unset] gap-y-12 xl:gap-y-[unset] justify-between w-full">
           <div className="mx-auto basis-[50%] md:basis-[25%] flex-[1_0_100%] lg:mx-[unset]  lg:basis-[unset] lg:flex-[unset]">
             <FooterTitle label="Company" />
 

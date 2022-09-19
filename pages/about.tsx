@@ -29,10 +29,10 @@ const About: NextPage = () => {
         <section className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mt-[52px] lg:mt-[65px] xl:mt-[77px] mb-[100px] sm:mb-16 lg:mb-3 xl:mb-[157px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
           <div className="flex flex-col justify-between lg:flex-row xl:flex-row items-center lg:gap-x-[70px] xl:gap-x-[145px] gap-y-[45px]">
             <div className="w-full lg:w-[513px]">
-              <p className="font-['Satoshi'] antialiased text-center xl:text-left text-[14px] xl:text-[16px] tracking-[2.63px] xl:tracking-[3px] leading-[24px] text-white font-medium xl:mb-[13px] mx-[40px] md:mx-[unset]">
+              <p className="font-mitr antialiased text-center xl:text-left text-[14px] xl:text-[16px] tracking-[2.63px] xl:tracking-[3px] leading-[24px] text-white font-medium xl:mb-[13px] mx-[40px] md:mx-[unset]">
                 THE RIGHT PEOPLE WITH THE RIGHT TOOLS
               </p>
-              <p className="font-['Satoshi'] antialiased font-bold text-[48px] lg:text-[72px] text-white text-center lg:text-left -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-[24px] lg:mb-[40px] xl:mb-[40px] w-[265px] mx-auto sm:mx-[unset] sm:w-full">
+              <p className="font-mitr antialiased font-bold text-[48px] lg:text-[72px] text-white text-center lg:text-left -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-[24px] lg:mb-[40px] xl:mb-[40px] w-[265px] mx-auto sm:mx-[unset] sm:w-full">
                 Anything is possible.
               </p>
             </div>

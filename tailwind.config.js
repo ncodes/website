@@ -24,7 +24,11 @@ module.exports = {
       xs: '425px',
       ...defaultTheme.screens
     },
-    extend: {}
+    extend: {
+      fontFamily: {
+        'mitr': ['Mitr', ' sans-serif'],
+      },
+    }
   },
   plugins: []
 }
