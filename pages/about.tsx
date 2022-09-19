@@ -61,7 +61,7 @@ const About: NextPage = () => {
               </div>
 
               <div className="flex flex-col flex-1 gap-y-[13px] max-w-[300px]">
-                <p className="font-['Satoshi'] antialiased text-[24px] leading-[26px] text-white font-black -mt-1">
+                <p className="font-mitr antialiased text-[24px] leading-[26px] text-white font-black -mt-1">
                   Our reward is the future
                 </p>
                 <p className="font-['Raleway'] antialiased text-[15px] leading-5 text-white font-normal">
@@ -81,7 +81,7 @@ const About: NextPage = () => {
               </div>
 
               <div className="flex flex-col flex-1 gap-y-[13px] max-w-[300px]">
-                <p className="font-['Satoshi'] antialiased text-[24px] leading-[26px] text-white font-black -mt-1">
+                <p className="font-mitr antialiased text-[24px] leading-[26px] text-white font-black -mt-1">
                   Our reward is the future
                 </p>
                 <p className="font-['Raleway'] antialiased text-[15px] leading-5 text-white font-normal">
@@ -101,7 +101,7 @@ const About: NextPage = () => {
               </div>
 
               <div className="flex flex-col flex-1 gap-y-[13px] max-w-[300px]">
-                <p className="font-['Satoshi'] antialiased text-[24px] leading-[26px] text-white font-black -mt-1">
+                <p className="font-mitr antialiased text-[24px] leading-[26px] text-white font-black -mt-1">
                   Our reward is the future
                 </p>
                 <p className="font-['Raleway'] antialiased text-[15px] leading-5 text-white font-normal">
