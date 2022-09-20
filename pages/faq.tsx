@@ -165,7 +165,6 @@ const About: NextPage = () => {
 
         <section
           id="page-content"
-          className="2xl:h-screen"
         >
           <section className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
             <div className="mt-[110px] mb-[71px] px-5 lg:px-[unset] lg:mb-[56px]">
