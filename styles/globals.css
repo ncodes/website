@@ -88,16 +88,16 @@ a {
 
   @font-face {
     font-family: 'Mitr';
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
-    src: url('/fonts/mitr/bold.ttf') format('truetype');
+    src: url('/fonts/mitr/semibold.ttf') format('truetype');
   }
 
   @font-face {
     font-family: 'Mitr';
-    font-weight: 900;
+    font-weight: 700;
     font-style: normal;
-    src: url('/fonts/mitr/black.ttf') format('truetype');
+    src: url('/fonts/mitr/bold.ttf') format('truetype');
   }
 
   @font-face {
