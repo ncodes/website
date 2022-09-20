@@ -17,13 +17,23 @@ type TabSelectorProps = {
 
 /** ACCORDION PROP TYPES - Starts */
 type AccordionProps = {
-  title?: string
+  opened: number
+  setOpened: any
+  id: number
+  title: string
   children: React.ReactNode
 }
 /** ACCORDION PROP TYPES - Ends */
 
+/** ACCORDION CONTENT PROP TYPES - Starts */
+type AccordionContentProps = {
+  children: React.ReactNode
+}
+/** ACCORDION CONTENT PROP TYPES - Ends */
+
 /** FAQ LIST ITEM PROP TYPES - Starts */
 type FaqListItemType = {
+  id: number,
   title: string,
   content: string
 }
@@ -49,21 +59,19 @@ const TabSelector = ({ label, selected }: TabSelectorProps) => {
   )
 }
 
-const Accordion = ({ title, children }: AccordionProps) => {
-  const [opened, setOpened] = useState(false)
-
+const Accordion = ({ opened, setOpened, id, title, children }: AccordionProps) => {
   return (
     <div className="flex flex-col items-center justify-between border-b last:border-none border-[#1A1D2B] px-4 lg:px-[unset]">
       <div></div>
 
-      <div onClick={() => setOpened(!opened)} className="flex flex-row items-center justify-between w-full cursor-pointer">
+      <div onClick={() => setOpened(id)} className="flex flex-row items-center justify-between w-full cursor-pointer">
         <div className="hidden lg:block" />
         <p className="font-['Mitr'] antialiased font-medium text-white text-[16px] lg:text-[24px] leading-[19.7px] lg:leading-[26.25px] py-[18px] text-left lg:text-center">
           {title}
         </p>
 
         <div className="ml-3">
-          {opened ? (
+          {opened === id ? (
             <Image
               src={'/accordion-up.png'}
               alt="asset-logo"
@@ -85,12 +93,12 @@ const Accordion = ({ title, children }: AccordionProps) => {
         </div>
       </div>
 
-      {opened && <div>{children}</div>}
+      {opened === id && <div>{children}</div>}
     </div>
   )
 }
 
-const AccordionContent = ({ children }: AccordionProps) => {
+const AccordionContent = ({ children }: AccordionContentProps) => {
   return (
     <p className="font-['Mitr'] antialiased font-extralight text-white lg:text-[16px] text-[14px] leading-[19.69px] lg:leading-[24px] text-left lg:max-w-[905px] pb-10">
       {children}
@@ -99,18 +107,23 @@ const AccordionContent = ({ children }: AccordionProps) => {
 }
 
 const About: NextPage = () => {
+  const [opened, setOpened] = useState(0)
+
   const tabList = ["General", "Security", "NFT", "Reward"];
 
   const generalFaqList: FaqListItemType[] = [
-    { 
+    {
+      "id": 1,
       "title": "General - What are CosmoPet NFTs?",
       "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason. Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
     },
     { 
+      "id": 2,
       "title": "What are CosmoPet NFTs?",
       "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
     },
     { 
+      "id": 3,
       "title": "What are CosmoPet NFTsssss?",
       "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
     },
@@ -118,10 +131,12 @@ const About: NextPage = () => {
 
   const securityFaqList: FaqListItemType[] = [
     { 
+      "id": 1,
       "title": "Security - What are CosmoPet NFTs?",
       "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason. Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
     },
     { 
+      "id": 2,
       "title": "What are CosmoPet NFTs?",
       "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
     },
@@ -129,10 +144,12 @@ const About: NextPage = () => {
 
   const nftFaqList: FaqListItemType[] = [
     { 
+      "id": 1,
       "title": "NFT - What are CosmoPet NFTs?",
       "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason. Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
     },
     { 
+      "id": 2,
       "title": "What are CosmoPet NFTs?",
       "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
     },
@@ -140,10 +157,12 @@ const About: NextPage = () => {
 
   const rewardFaqList: FaqListItemType[] = [
     { 
+      "id": 1,
       "title": "Reward - What are CosmoPet NFTs?",
       "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason. Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
     },
     { 
+      "id": 2,
       "title": "What are CosmoPet NFTs?",
       "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
     },
@@ -175,7 +194,7 @@ const About: NextPage = () => {
               className="flex flex-row gap-x-[12px] sm:gap-x-[24px] overflow-x-auto no-scrollbar whitespace-nowrap justify-center pl-[30px] 2xs:pl-0 mb-[74px] lg:mb-[50px] gap-y-[15px] sm:gap-y-[25px] lg:px-10"
             >
               {tabList?.map((tabItem, index) => (
-                <Tab key={index}>
+                <Tab key={index} onClick={() => setOpened(0)}>
                   {({ selected }) => (
                     <TabSelector label={tabItem} selected={selected} />
                   )}
@@ -185,32 +204,32 @@ const About: NextPage = () => {
 
             <Tab.Panels>
               <Tab.Panel>
-                {generalFaqList?.map(({ title, content }, index) => (
-                  <Accordion key={index} title={title}>
+                {generalFaqList?.map(({ id, title, content }, index) => (
+                  <Accordion key={index} opened={opened} setOpened={setOpened} id={id} title={title}>
                     <AccordionContent>{content}</AccordionContent>
                   </Accordion>
                 ))}
               </Tab.Panel>
 
               <Tab.Panel>
-                {securityFaqList?.map(({ title, content }, index) => (
-                  <Accordion key={index} title={title}>
+                {securityFaqList?.map(({ id, title, content }, index) => (
+                  <Accordion key={index} opened={opened} setOpened={setOpened} id={id} title={title}>
                     <AccordionContent>{content}</AccordionContent>
                   </Accordion>
                 ))}
               </Tab.Panel>
 
               <Tab.Panel>
-                {nftFaqList?.map(({ title, content }, index) => (
-                  <Accordion key={index} title={title}>
+                {nftFaqList?.map(({ id, title, content }, index) => (
+                  <Accordion key={index} opened={opened} setOpened={setOpened} id={id} title={title}>
                     <AccordionContent>{content}</AccordionContent>
                   </Accordion>
                 ))}
               </Tab.Panel>
 
               <Tab.Panel>
-                {rewardFaqList?.map(({ title, content }, index) => (
-                  <Accordion key={index} title={title}>
+                {rewardFaqList?.map(({ id, title, content }, index) => (
+                  <Accordion key={index} opened={opened} setOpened={setOpened} id={id} title={title}>
                     <AccordionContent>{content}</AccordionContent>
                   </Accordion>
                 ))}
