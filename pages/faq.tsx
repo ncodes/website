@@ -157,81 +157,73 @@ const About: NextPage = () => {
       </Head>
 
       <div className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed">
-        <section id="page-header-hero">
-          <div className="sticky z-[3]">
-            <Header />
+        <Header />
+
+        <section id="faq-section" className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+          <div className="mt-[78px] lg:mt-[110px] mb-[71px] lg:mb-[56px] lg:px-[unset]">
+            <p className="font-['Mitr'] antialiased font-semibold text-center text-white text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-[15px] lg:mb-[20px]">
+              Frequently Asked Questions
+            </p>
+            <p className="font-['Mitr'] antialiased font-extralight text-[14px] text-white tracking-[0.22px] text-center xl:w-auto mx-auto">
+              Here’s what you may need to know about FIATX.
+            </p>
           </div>
-        </section>
 
-        <section
-          id="page-content"
-        >
-          <section className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
-            <div className="mt-[110px] mb-[71px] px-5 lg:px-[unset] lg:mb-[56px]">
-              <p className="font-['Mitr'] antialiased font-semibold text-center text-white text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-[15px] lg:mb-[20px]">
-                Frequently Asked Questions
-              </p>
-              <p className="font-['Mitr'] antialiased font-extralight text-[14px] text-white tracking-[0.22px] text-center xl:w-auto mx-auto">
-                Here’s what you may need to know about FIATX.
-              </p>
-            </div>
+          <Tab.Group>
+            <Tab.List
+              as="div"
+              className="flex flex-row gap-x-[12px] sm:gap-x-[24px] overflow-x-auto no-scrollbar whitespace-nowrap justify-center pl-[30px] 2xs:pl-0 mb-[74px] lg:mb-[50px] gap-y-[15px] sm:gap-y-[25px] lg:px-10"
+            >
+              {tabList?.map((tabItem, index) => (
+                <Tab key={index}>
+                  {({ selected }) => (
+                    <TabSelector label={tabItem} selected={selected} />
+                  )}
+                </Tab>
+              ))}
+            </Tab.List>
 
-            <Tab.Group>
-              <Tab.List
-                as="div"
-                className="flex flex-row gap-x-[12px] sm:gap-x-[24px] overflow-x-auto whitespace-nowrap justify-center pl-[30px] 2xs:pl-0 mb-[74px] lg:mb-[50px] gap-y-[15px] sm:gap-y-[25px] lg:px-10"
-              >
-                {tabList?.map((tabItem, index) => (
-                  <Tab key={index}>
-                    {({ selected }) => (
-                      <TabSelector label={tabItem} selected={selected} />
-                    )}
-                  </Tab>
+            <Tab.Panels>
+              <Tab.Panel>
+                {generalFaqList?.map(({ title, content }, index) => (
+                  <Accordion key={index} title={title}>
+                    <AccordionContent>{content}</AccordionContent>
+                  </Accordion>
                 ))}
-              </Tab.List>
+              </Tab.Panel>
 
-              <Tab.Panels>
-                <Tab.Panel>
-                  {generalFaqList?.map(({ title, content }, index) => (
-                    <Accordion key={index} title={title}>
-                      <AccordionContent>{content}</AccordionContent>
-                    </Accordion>
-                  ))}
-                </Tab.Panel>
+              <Tab.Panel>
+                {securityFaqList?.map(({ title, content }, index) => (
+                  <Accordion key={index} title={title}>
+                    <AccordionContent>{content}</AccordionContent>
+                  </Accordion>
+                ))}
+              </Tab.Panel>
 
-                <Tab.Panel>
-                  {securityFaqList?.map(({ title, content }, index) => (
-                    <Accordion key={index} title={title}>
-                      <AccordionContent>{content}</AccordionContent>
-                    </Accordion>
-                  ))}
-                </Tab.Panel>
+              <Tab.Panel>
+                {nftFaqList?.map(({ title, content }, index) => (
+                  <Accordion key={index} title={title}>
+                    <AccordionContent>{content}</AccordionContent>
+                  </Accordion>
+                ))}
+              </Tab.Panel>
 
-                <Tab.Panel>
-                  {nftFaqList?.map(({ title, content }, index) => (
-                    <Accordion key={index} title={title}>
-                      <AccordionContent>{content}</AccordionContent>
-                    </Accordion>
-                  ))}
-                </Tab.Panel>
-
-                <Tab.Panel>
-                  {rewardFaqList?.map(({ title, content }, index) => (
-                    <Accordion key={index} title={title}>
-                      <AccordionContent>{content}</AccordionContent>
-                    </Accordion>
-                  ))}
-                </Tab.Panel>
-              </Tab.Panels>
-            </Tab.Group>
-          </section>
+              <Tab.Panel>
+                {rewardFaqList?.map(({ title, content }, index) => (
+                  <Accordion key={index} title={title}>
+                    <AccordionContent>{content}</AccordionContent>
+                  </Accordion>
+                ))}
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
           
-          <div className="container mx-auto mt-[97px] lg:mt-[135px] mb-[113px] lg:mb-[100px] px-4 lg:px-[60px] xl:px-[90px]">
+          <div className="container mx-auto mt-[97px] lg:mt-[135px] mb-[113px] lg:mb-[100px]">
             <div className="w-full h-px bg-gradient-to-r from-rich-blue via-[#CEEF66] to-rich-blue" />
           </div>
-
-          <Footer />
         </section>
+
+        <Footer />
       </div>
     </>
   )
