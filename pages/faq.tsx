@@ -116,7 +116,7 @@ const AccordionContent = ({ children }: AccordionContentProps) => {
   )
 }
 
-const Faq: NextPage = () => {
+const FAQ: NextPage = () => {
   const [selectedFaq, setSelectedFaq] = useState({
     id: 0,
     open: false
@@ -146,7 +146,7 @@ const Faq: NextPage = () => {
     {
       category: "Security",
       questions: [
-        { 
+        {
           "id": 1,
           "title": "Security - What are CosmoPet NFTs?",
           "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason. Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
@@ -161,12 +161,12 @@ const Faq: NextPage = () => {
     {
       category: "NFT",
       questions: [
-        { 
+        {
           "id": 1,
           "title": "NFT - What are CosmoPet NFTs?",
           "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason. Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
         },
-        { 
+        {
           "id": 2,
           "title": "What are CosmoPet NFTs?",
           "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
@@ -176,12 +176,12 @@ const Faq: NextPage = () => {
     {
       category: "Reward",
       questions: [
-        { 
+        {
           "id": 1,
           "title": "Reward - What are CosmoPet NFTs?",
           "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason. Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
         },
-        { 
+        {
           "id": 2,
           "title": "What are CosmoPet NFTs?",
           "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
@@ -201,11 +201,11 @@ const Faq: NextPage = () => {
         <Header />
 
         <section id="faq-section" className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
-          <div className="mt-[78px] lg:mt-[110px] mb-[71px] lg:mb-[56px] lg:px-[unset]">
-            <p className="font-['Mitr'] antialiased font-semibold text-center text-white text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-[15px] lg:mb-[20px]">
+          <div className="mt-[40px] lg:mt-[110px] mb-[50px] lg:mb-[56px] lg:px-[unset]">
+            <p className="font-['Mitr'] antialiased font-bold md:font-semibold text-center text-white text-[38px] md:text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[48px] md:leading-[56px] lg:leading-[72px] mb-[15px] lg:mb-[20px]">
               Frequently Asked Questions
             </p>
-            <p className="font-['Mitr'] antialiased font-extralight text-[14px] text-white tracking-[0.22px] text-center xl:w-auto mx-auto">
+            <p className="font-['Mitr'] antialiased font-light text-[16px] text-white tracking-[0.22px] text-center xl:w-auto mx-auto px-5 md:px-0">
               Here’s what you may need to know about FIATX.
             </p>
           </div>
@@ -213,7 +213,7 @@ const Faq: NextPage = () => {
           <Tab.Group>
             <Tab.List
               as="div"
-              className="flex flex-row gap-x-[12px] sm:gap-x-[24px] overflow-x-auto no-scrollbar whitespace-nowrap justify-center pl-[30px] 2xs:pl-0 mb-[74px] lg:mb-[50px] gap-y-[15px] sm:gap-y-[25px] lg:px-10"
+              className="flex flex-row gap-x-[12px] sm:gap-x-[24px] overflow-x-auto no-scrollbar whitespace-nowrap justify-center pl-[50px] md:pl-[30px] 2xs:pl-0 mb-[45px] lg:mb-[50px] gap-y-[15px] sm:gap-y-[25px] lg:px-10"
             >
               {faqInformation?.map((item, index) => (
                 <Tab key={index} onClick={() => setSelectedFaq({id: 0, open: false})}>
@@ -236,8 +236,8 @@ const Faq: NextPage = () => {
               ))}
             </Tab.Panels>
           </Tab.Group>
-          
-          <div className="container mx-auto mt-[97px] lg:mt-[135px] mb-[113px] lg:mb-[100px]">
+
+          <div className="container mx-auto mt-[60px]  lg:mt-[135px] mb-[113px] lg:mb-[100px]">
             <div className="w-full h-px bg-gradient-to-r from-rich-blue via-[#CEEF66] to-rich-blue" />
           </div>
         </section>
@@ -248,4 +248,4 @@ const Faq: NextPage = () => {
   )
 }
 
-export default Faq
+export default FAQ
