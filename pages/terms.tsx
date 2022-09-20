@@ -99,14 +99,10 @@ const Terms: NextPage = () => {
       </Head>
 
       <div className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed">
-        <section id="page-header-hero">
-          <div className="sticky z-[3]">
-            <Header />
-          </div>
-        </section>
+        <Header />
 
         <section id="page-content">
-          <div className="container md:flex justify-between pt-[110px] mb-[45px] sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+          <div className="container md:flex justify-between mt-[78px] lg:mt-[110px] mb-[45px] sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
             <div>
               <p className="font-['Raleway'] antialiased font-regular text-[14px] text-center md:text-left text-white tracking-[0.22px] mb-[5px] md:mb-[13px]">
                 LEGAL
@@ -139,12 +135,12 @@ const Terms: NextPage = () => {
             ))}
           </div>
 
-          <div className="container mx-auto mt-[91px] mb-[110px] px-4 lg:px-[60px] xl:px-[90px]">
+          <div className="container mx-auto px-4 lg:px-[60px] xl:px-[90px] mt-[91px] mb-[99px]">
             <div className="w-full h-px bg-gradient-to-r from-rich-blue via-[#CEEF66] to-rich-blue" />
           </div>
-
-          <Footer />
         </section>
+
+        <Footer />
       </div>
     </>
   )
