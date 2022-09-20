@@ -32,6 +32,7 @@ const TabSelector = ({ label, selected }: TabSelectorProps) => {
     <div
       className={
         `px-[9px] py-[3px] ${selected ? 'bg-chinese-green rounded-[20px]' : ''}`
+
       }
     >
       <p
@@ -52,6 +53,7 @@ const Accordion = ({ title, children }: AccordionProps) => {
 
   return (
     <div className="flex flex-col items-center justify-between border-b last:border-none border-[#1A1D2B] px-4 lg:px-[unset]">
+
       <div></div>
 
       <div onClick={() => setOpened(!opened)} className="flex flex-row items-center justify-between w-full cursor-pointer">
@@ -108,10 +110,6 @@ const About: NextPage = () => {
       "title": "What are CosmoPet NFTs?",
       "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
     },
-    { 
-      "title": "What are CosmoPet NFTsssss?",
-      "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
-    },
   ];
 
   const securityFaqList: FaqListItemType[] = [
@@ -160,7 +158,6 @@ const About: NextPage = () => {
             <Header />
           </div>
         </section>
-
         <section
           id="page-content"
         >
@@ -227,7 +224,6 @@ const About: NextPage = () => {
           <div className="container mx-auto mt-[97px] lg:mt-[135px] mb-[113px] lg:mb-[100px] px-4 lg:px-[60px] xl:px-[90px]">
             <div className="w-full h-px bg-gradient-to-r from-rich-blue via-[#CEEF66] to-rich-blue" />
           </div>
-
           <Footer />
         </section>
       </div>
