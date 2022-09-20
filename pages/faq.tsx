@@ -2,9 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Tab } from '@headlessui/react'
-
 import Header from '../components/Header'
-// import Partners from '../components/Partners'
 import Footer from '../components/Footer'
 import { useState } from 'react'
 
@@ -33,7 +31,8 @@ const TabSelector = ({ label, selected }: TabSelectorProps) => {
   return (
     <div
       className={
-        `px-[9px] py-[3px] ${selected ? 'bg-chinese-green rounded-[20px]' : ''}
+        `px-[9px] py-[3px] ${selected ? 'bg-chinese-green rounded-[20px]' : ''}`
+
       }
     >
       <p
@@ -54,6 +53,7 @@ const Accordion = ({ title, children }: AccordionProps) => {
 
   return (
     <div className="flex flex-col items-center justify-between border-b last:border-none border-[#1A1D2B] px-4 lg:px-[unset]">
+
       <div></div>
 
       <div onClick={() => setOpened(!opened)} className="flex flex-row items-center justify-between w-full cursor-pointer">
@@ -110,10 +110,6 @@ const About: NextPage = () => {
       "title": "What are CosmoPet NFTs?",
       "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
     },
-    { 
-      "title": "What are CosmoPet NFTsssss?",
-      "content": "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason."
-    },
   ];
 
   const securityFaqList: FaqListItemType[] = [
@@ -162,10 +158,8 @@ const About: NextPage = () => {
             <Header />
           </div>
         </section>
-
         <section
           id="page-content"
-          className="2xl:h-screen"
         >
           <section className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
             <div className="mt-[110px] mb-[71px] px-5 lg:px-[unset] lg:mb-[56px]">
@@ -230,70 +224,7 @@ const About: NextPage = () => {
           <div className="container mx-auto mt-[97px] lg:mt-[135px] mb-[113px] lg:mb-[100px] px-4 lg:px-[60px] xl:px-[90px]">
             <div className="w-full h-px bg-gradient-to-r from-rich-blue via-[#CEEF66] to-rich-blue" />
           </div>
-
           <Footer />
-      <section
-        id="page-content"
-        className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed"
-      >
-        <section className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mb-[100px] xl:mb-[157px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
-          <div className="mt-[110px] mb-[47px] px-5 lg:px-[unset] lg:mb-[50px]">
-            <p className="font-['Satoshi'] antialiased font-bold text-center text-white text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-4 lg:mb-6">
-              Frequently Asked Questions
-            </p>
-            <p className="font-['Raleway'] antialiased font-regular text-[16px] text-white tracking-[0.22px] text-center w-[325px] xl:w-auto mx-auto">
-              Here’s what you may need to know about FIATX.
-            </p>
-          </div>
-
-          <Tab.Group>
-            <Tab.List
-              as="div"
-              className="flex flex-row gap-x-[12px] sm:gap-x-[24px] justify-center mb-[40px] lg:mb-[64px] flex-wrap gap-y-[15px] sm:gap-y-[25px] lg:px-10"
-            >
-              {tabList?.map((tabItem, index) => (
-                <Tab key={index}>
-                  {({ selected }) => (
-                    <TabSelector label={tabItem} selected={selected} />
-                  )}
-                </Tab>
-              ))}
-            </Tab.List>
-
-            <Tab.Panels>
-              <Tab.Panel>
-                {generalFaqList?.map(({ title, content }, index) => (
-                  <Accordion key={index} title={title}>
-                    <AccordionContent>{content}</AccordionContent>
-                  </Accordion>
-                ))}
-              </Tab.Panel>
-
-              <Tab.Panel>
-                {securityFaqList?.map(({ title, content }, index) => (
-                  <Accordion key={index} title={title}>
-                    <AccordionContent>{content}</AccordionContent>
-                  </Accordion>
-                ))}
-              </Tab.Panel>
-
-              <Tab.Panel>
-                {nftFaqList?.map(({ title, content }, index) => (
-                  <Accordion key={index} title={title}>
-                    <AccordionContent>{content}</AccordionContent>
-                  </Accordion>
-                ))}
-              </Tab.Panel>
-
-              <Tab.Panel>
-                {rewardFaqList?.map(({ title, content }, index) => (
-                  <Accordion key={index} title={title}>
-                    <AccordionContent>{content}</AccordionContent>
-                  </Accordion>
-                ))}
-              </Tab.Panel>
-            </Tab.Panels>
-          </Tab.Group>
         </section>
       </div>
     </>
