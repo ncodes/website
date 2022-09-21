@@ -143,10 +143,7 @@ const SubMobileLink = forwardRef<HTMLLIElement, LinkProps>((props, ref) => {
   return (
     <li className="container px-8 py-2 mx-auto" ref={ref}>
       <Link href={props.href}>
-        <p
-          className="font-['Raleway'] antialiased text-[16px] tracking-[0.22px]
-          leading-6 font-normal text-white inline-block cursor-pointer"
-        >
+        <p className="font-['Mitr'] antialiased text-[14px] tracking-[0.22px] leading-[17.64px] font-extralight text-white inline-block cursor-pointer">
           {props.title}
         </p>
       </Link>
@@ -270,11 +267,8 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-center">
-                      <p
-                        className="font-['Satoshi'] antialiased
-                        text-[18px] tracking-[0.25px] text-white font-medium"
-                      >
-                        Protocol
+                      <p className="font-['Satoshi'] antialiased text-[18px] tracking-[0.25px] text-white font-medium">
+                        Products
                       </p>
 
                       <div className={`relative w-6 h-6 overflow-hidden mt-[3px] ${open && "-scale-y-100"}`}>
@@ -294,7 +288,7 @@ function Header() {
 
                 {/* PRODUCTS MENU CONTENT TRANSITION - Starts */}
                 <Transition as={Fragment} {...PopupTransition}>
-                  <div className="container absolute left-0 right-0 m-auto mt-14 outline-0">
+                  <div className="container absolute top-0 left-0 right-0 m-auto mt-[90px] outline-0">
                     {/* PRODUCTS MENU CONTENT - Starts */}
                     <Menu.Items
                       as="div"
@@ -312,11 +306,7 @@ function Header() {
                             Offerings
                           </p>
 
-                          <p
-                            className="font-['Satoshi'] antialiased text-[16px]
-                            tracking-[0.22px] leading-[24px] text-white
-                            font-normal mt-[25px]"
-                          >
+                          <p className="font-['Mitr'] antialiased text-[14px] tracking-[0.22px] leading-[17.64px] text-white font-extralight mt-[23.36px]">
                             Learn how you can
                             <br />
                             make the most of FIATX
@@ -325,29 +315,21 @@ function Header() {
 
                         <Link href="/">
                           <p
-                            className="font-['Satoshi'] antialiased text-[16px] tracking-[0.22px] text-chinese-green
-                            font-bold cursor-pointer hover:underline after:content-[' '] after:inline-block
-                            after:bg-[length:24px_24px] after:w-6 after:h-6 after:bg-[url('/icons/caret-down.png')]
-                            after:-scale-y-100 after:rotate-45 after:-ml-[7px] after:mb-0.5"
+                            className="font-['Mitr'] antialiased text-[16px] tracking-[0.22px] text-chinese-green font-semibold cursor-pointer hover:underline after:content-[' '] after:inline-block after:bg-[length:24px_24px] after:w-6 after:h-6 after:bg-[url('/icons/caret-down.png')] after:-scale-y-100 after:rotate-45 after:-ml-[7px] after:mb-0.5"
                           >
                             Join Discord
                           </p>
                         </Link>
                       </div>
 
-                      <div
-                        className="hidden xl:block w-px min-h-full bg-gradient-to-t
-                        from-rich-blue via-[#CEEF66] to-rich-blue"
-                      />
-
+                      <div className="hidden xl:block w-[2px] min-h-full bg-gradient-to-t from-rich-blue via-[#CEEF66] to-rich-blue" />
                       <div>
                         <div className="grid grid-cols-3 gap-x-7 gap-y-[20px] xl:ml-[52px]">
                           {MenuItems.map((menuItem) => (
                             <Menu.Item
                               key={Math.random() * Math.random()}
                               as="div"
-                              className="flex flex-row items-start cursor-pointer
-                              basis-1/3 p-2 hover:bg-[#0d1c31] hover:rounded-lg"
+                              className="flex flex-row items-start cursor-pointer basis-1/3 pt-[10px] px-[10px] pb-[15px] hover:bg-[#0d1c31] hover:rounded-lg"
                             >
                               <div className="relative w-16 h-16 mr-4 overflow-hidden">
                                 <img
@@ -357,18 +339,11 @@ function Header() {
                                   alt="caret-down"
                                 />
                               </div>
-
-                              <div className="flex flex-col flex-1 gap-y-1">
-                                <p
-                                  className="font-['Satoshi'] antialiased text-[20px]
-                                  leading-[26px] text-white font-black -mt-1"
-                                >
+                              <div className="flex flex-col flex-1 gap-y-[8px]">
+                                <p className="font-['Satoshi'] antialiased text-[20px] leading-[26px] text-white font-black">
                                   {menuItem.title}
                                 </p>
-                                <p
-                                  className="font-['Raleway'] antialiased text-[12px]
-                                  leading-5 text-[#bebebe] font-medium"
-                                >
+                                <p className="font-['Mitr'] antialiased text-[14px] leading-[17.67px] text-[#bebebe] font-extralight">
                                   {menuItem.description}
                                 </p>
                               </div>
