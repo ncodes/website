@@ -161,13 +161,13 @@ function Header() {
   return (
     <>
       <Head>
-        <link rel="preload" as="image" href="/trade-menu.webp" />
-        <link rel="preload" as="image" href="/market-menu.webp" />
-        <link rel="preload" as="image" href="/liquidity-menu.webp" />
-        <link rel="preload" as="image" href="/mediation-menu.webp" />
-        <link rel="preload" as="image" href="/dispute-menu.webp" />
-        <link rel="preload" as="image" href="/mining-menu.webp" />
-        <link rel="preload" as="image" href="/reward-menu.webp" />
+        <link rel="preload" as="image" href="/trade-menu.svg" />
+        <link rel="preload" as="image" href="/markets-menu.svg" />
+        <link rel="preload" as="image" href="/liquidity-menu.svg" />
+        <link rel="preload" as="image" href="/mediation-menu.svg" />
+        <link rel="preload" as="image" href="/disputes-menu.svg" />
+        <link rel="preload" as="image" href="/mining-menu.svg" />
+        <link rel="preload" as="image" href="/reward-menu.svg" />
       </Head>
       <section
         className="container mx-auto px-4 sm:max-w-full xs:max-w-full 2xs:max-w-full
