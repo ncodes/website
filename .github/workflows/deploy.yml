@@ -1,13 +1,11 @@
-name: Heroku Deploy
+name: Deploy
 
 on:
   push:
     branches:
-      # - develop
       - master
   pull_request:
     branches:
-      # - develop
       - master
 
 jobs:
@@ -46,38 +44,3 @@ jobs:
     - name: Lint Repo
       run: |
         yarn lint
-
-    # - name: yarn test
-    #   run: |
-    #     yarn test
-    #   env:
-    #     CI: true
-
-    - name: Build Development
-      run: |
-        yarn run build --if-present
-
-  deploy-heroku:
-    name: Deploy to Heroku
-    needs: build
-    runs-on: ubuntu-latest
-    if: contains('refs/heads/develop refs/heads/master', github.ref)
-      #   # Ensure test job passes before deploying to heroku platform
-    steps:
-      - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
-          heroku_email: ${{ secrets.HEROKU_EMAIL }}
-          usedocker: false
-    # steps:
-    # Add remote origin
-    # - name: Add remote origin
-    #   run: |
-    #     git remote add heroku https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git
-    # Add Instance to  Heroku
-    # - name: Deploy to Heroku
-    #   run: |
-    #     git push -f https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git HEAD:master
-      # git push heroku HEAD:master -f
