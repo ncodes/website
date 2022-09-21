@@ -20,3 +20,5 @@ src/setupTests.ts
 *.css
 *.svg
 *.config.js
+.next/**
+.prettierrc.json

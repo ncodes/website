@@ -7,13 +7,7 @@ type ButtonProps = {
   extraStyles?: any
 }
 
-function Button({
-  small,
-  label,
-  variant,
-  onClick,
-  extraStyles = null
-}: ButtonProps) {
+function Button({ small, label, variant, onClick, extraStyles = null }: ButtonProps) {
   return (
     <button
       className={`border-0 ${extraStyles} ${small ? "h-[45px]" : "h-[50px]"}
@@ -33,6 +27,6 @@ function Button({
 
 Button.defaultProps = {
   small: null,
-  extraStyles: null
+  extraStyles: null,
 }
 export default Button

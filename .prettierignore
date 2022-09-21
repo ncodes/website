@@ -19,3 +19,5 @@ commitlint.config.js
 *.css
 *.svg
 *.config.js
+.next/**
+.prettierrc.json

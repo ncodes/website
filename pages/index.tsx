@@ -27,9 +27,11 @@ const Home: NextPage = function () {
             <Hero />
           </div>
 
-          <div className="xl:absolute xl:bottom-0 xl:bg-[url('/hero-bg.webp')] mt-10 xl:mt-0 w-full h-[calc(100vw_*_0.356)]
+          <div
+            className="xl:absolute xl:bottom-0 xl:bg-[url('/hero-bg.webp')] mt-10 xl:mt-0 w-full h-[calc(100vw_*_0.356)]
           xl:h-[calc(100vw_*_0.5)] bg-[url('/mobile-hero-bg.webp')] bg-no-repeat
-          bg-top bg-[length:100%_auto] xl:bg-[length:100%_100%]">
+          bg-top bg-[length:100%_auto] xl:bg-[length:100%_100%]"
+          >
             <div className="relative h-full">
               <div className="absolute bottom-0 w-full h-16 xl:h-52 bg-gradient-to-t from-rich-black to-transparent" />
             </div>
@@ -37,10 +39,7 @@ const Home: NextPage = function () {
         </div>
       </section>
 
-      <section
-        id="page-content"
-        className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed"
-      >
+      <section id="page-content" className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed">
         <Statistics />
 
         <Trading />
