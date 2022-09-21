@@ -1,18 +1,17 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from "next"
+import Head from "next/head"
 
-import Header from '../components/Header'
-import Hero from '../components/Hero'
-import Statistics from '../components/Statistics'
-import Trading from '../components/Trading'
-import Assets from '../components/Assets'
-import Features from '../components/Features'
-import Rewards from '../components/Rewards'
-import NFT from '../components/NFT'
-import Partners from '../components/Partners'
-import Footer from '../components/Footer'
+import Header from "../components/Header"
+import Hero from "../components/Hero"
+import Statistics from "../components/Statistics"
+import Trading from "../components/Trading"
+import Assets from "../components/Assets"
+import Features from "../components/Features"
+import Rewards from "../components/Rewards"
+import Partners from "../components/Partners"
+import Footer from "../components/Footer"
 
-const Home: NextPage = () => {
+const Home: NextPage = function () {
   return (
     <>
       <Head>
@@ -28,18 +27,19 @@ const Home: NextPage = () => {
             <Hero />
           </div>
 
-          <div className="xl:absolute xl:bottom-0 xl:bg-[url('/hero-bg.webp')] mt-10 xl:mt-0 w-full h-[calc(100vw_*_0.356)] xl:h-[calc(100vw_*_0.5)] bg-[url('/mobile-hero-bg.webp')] bg-no-repeat bg-top bg-[length:100%_auto] xl:bg-[length:100%_100%]">
+          <div
+            className="xl:absolute xl:bottom-0 xl:bg-[url('/hero-bg.webp')] mt-10 xl:mt-0 w-full h-[calc(100vw_*_0.356)]
+          xl:h-[calc(100vw_*_0.5)] bg-[url('/mobile-hero-bg.webp')] bg-no-repeat
+          bg-top bg-[length:100%_auto] xl:bg-[length:100%_100%]"
+          >
             <div className="relative h-full">
-              <div className="absolute bottom-0 w-full h-16 xl:h-52 bg-gradient-to-t from-rich-black to-transparent"></div>
+              <div className="absolute bottom-0 w-full h-16 xl:h-52 bg-gradient-to-t from-rich-black to-transparent" />
             </div>
           </div>
         </div>
       </section>
 
-      <section
-        id="page-content"
-        className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed"
-      >
+      <section id="page-content" className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed">
         <Statistics />
 
         <Trading />
@@ -47,8 +47,6 @@ const Home: NextPage = () => {
         <Assets />
 
         <Features />
-
-        <NFT />
 
         <Rewards />
 
