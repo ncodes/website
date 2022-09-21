@@ -102,7 +102,7 @@ const Privacy: NextPage = () => {
         <Header />
 
         <section id="page-content">
-          <div className="container md:flex justify-between mt-[78px] lg:mt-[110px] mb-[45px] sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+          <div className="container md:flex justify-between mt-[40px] lg:mt-[110px] mb-[45px] sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
             <div>
               <p className="font-['Mitr'] antialiased font-extralight text-[14px] text-center md:text-left text-white tracking-[0.22px] mb-[5px] md:mb-[13px]">
                 LEGAL
