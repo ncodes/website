@@ -25,14 +25,14 @@ const Partners = () => {
   return (
     <section className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto mb-[100px] lg:mb-[150px]">
       <div className="mb-[100px]">
-        <p className="font-['Satoshi'] antialiased font-bold text-center text-white text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-4 lg:mb-6">
+        <p className="font-mitr antialiased font-bold text-center text-white text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-4 lg:mb-6">
           Partners
         </p>
-        <p className="font-['Raleway'] antialiased font-regular text-[16px] text-white tracking-[0.22px] text-center w-[325px] xl:w-auto mx-auto">
+        <p className="font-mitr antialiased font-regular text-[16px] text-white tracking-[0.22px] text-center w-[325px] xl:w-auto mx-auto">
           We are backed by the latest and best technology partners.
         </p>
       </div>
-
+      {/*  IMAGES*/}
       <div className="flex flex-wrap mx-auto px-[50px] md:w-[750px] lg:w-[850px] xl:w-[1010px] gap-y-[62px] justify-start md:justify-center lg:justify-center">
         <IconLink alt="vechain" src="/icons/vechain.png" />
 
