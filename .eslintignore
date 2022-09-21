@@ -19,4 +19,4 @@ commitlint.config.js
 src/setupTests.ts
 *.css
 *.svg
-tailwind.config.js
+*.config.js

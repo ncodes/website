@@ -1,45 +1,45 @@
 /* eslint-disable @next/next/no-img-element */
-import { Fragment, forwardRef } from 'react'
+import { Fragment, forwardRef } from "react"
 
-import Image from 'next/image'
-import Link from 'next/link'
-import Head from 'next/head'
+import Image from "next/image"
+import Link from "next/link"
+import Head from "next/head"
 
-import { Menu, Transition } from '@headlessui/react'
+import { Menu, Transition } from "@headlessui/react"
 
-import Button from './Button'
+import Button from "./Button"
 
 /** DUMMY LANGUAGE DATA - Starts */
 const Languages = [
   {
-    label: 'Espanyol',
-    key: 'esp',
-    emoji: '🇪🇸'
+    label: "Espanyol",
+    key: "esp",
+    emoji: "🇪🇸"
   },
   {
-    label: 'Francais',
-    key: 'fr',
-    emoji: '🇫🇷'
+    label: "Francais",
+    key: "fr",
+    emoji: "🇫🇷"
   },
   {
-    label: '中国人',
-    key: 'zh',
-    emoji: '🇨🇳'
+    label: "中国人",
+    key: "zh",
+    emoji: "🇨🇳"
   },
   {
-    label: '日本語',
-    key: 'ja',
-    emoji: '🇯🇵'
+    label: "日本語",
+    key: "ja",
+    emoji: "🇯🇵"
   },
   {
-    label: 'عربى',
-    key: 'ar',
-    emoji: '🇦🇪'
+    label: "عربى",
+    key: "ar",
+    emoji: "🇦🇪"
   },
   {
-    label: 'Pусский',
-    key: 'ru',
-    emoji: '🇷🇺'
+    label: "Pусский",
+    key: "ru",
+    emoji: "🇷🇺"
   }
 ]
 /** DUMMY LANGUAGE DATA - Ends */
@@ -47,51 +47,51 @@ const Languages = [
 /** MENU ITEM DATA - Starts */
 const MenuItems = [
   {
-    title: 'Trade',
-    description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/trade-menu.webp'
+    title: "Trade",
+    description: "Sign up today and buy 65+ cryptocurrencies in minutes.",
+    src: "/trade-menu.webp"
   },
   {
-    title: 'Markets',
-    description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/market-menu.webp'
+    title: "Markets",
+    description: "Sign up today and buy 65+ cryptocurrencies in minutes.",
+    src: "/market-menu.webp"
   },
   {
-    title: 'Liquidity',
-    description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/liquidity-menu.webp'
+    title: "Liquidity",
+    description: "Sign up today and buy 65+ cryptocurrencies in minutes.",
+    src: "/liquidity-menu.webp"
   },
   {
-    title: 'Mediation',
-    description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/mediation-menu.webp'
+    title: "Mediation",
+    description: "Sign up today and buy 65+ cryptocurrencies in minutes.",
+    src: "/mediation-menu.webp"
   },
   {
-    title: 'Disputes',
-    description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/dispute-menu.webp'
+    title: "Disputes",
+    description: "Sign up today and buy 65+ cryptocurrencies in minutes.",
+    src: "/dispute-menu.webp"
   },
   {
-    title: 'Mining',
-    description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/mining-menu.webp'
+    title: "Mining",
+    description: "Sign up today and buy 65+ cryptocurrencies in minutes.",
+    src: "/mining-menu.webp"
   },
   {
-    title: 'Reward',
-    description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/reward-menu.webp'
+    title: "Reward",
+    description: "Sign up today and buy 65+ cryptocurrencies in minutes.",
+    src: "/reward-menu.webp"
   }
 ]
 /** MENU ITEM DATA - Ends */
 
 /** POPUP TRANSITION DATA - Starts */
 const PopupTransition = {
-  enter: 'transition duration-100 ease-out',
-  enterFrom: 'transform scale-95 opacity-0',
-  enterTo: 'transform scale-100 opacity-100',
-  leave: 'transition duration-75 ease-out',
-  leaveFrom: 'transform scale-100 opacity-100',
-  leaveTo: 'transform scale-95 opacity-0'
+  enter: "transition duration-100 ease-out",
+  enterFrom: "transform scale-95 opacity-0",
+  enterTo: "transform scale-100 opacity-100",
+  leave: "transition duration-75 ease-out",
+  leaveFrom: "transform scale-100 opacity-100",
+  leaveTo: "transform scale-95 opacity-0"
 }
 /** POPUP TRANSITION DATA - Ends */
 
@@ -103,11 +103,13 @@ type LinkProps = {
 /** LINK ITEM PROP TYPES - Ends */
 
 /** HEADER LINK ITEM - Starts */
-const HeaderLink = ({ title, href }: LinkProps) => {
+function HeaderLink({ title, href }: LinkProps) {
   return (
     <li className="flex items-center cursor-pointer px-[15px] py-0.5 rounded-2xl">
       <Link href={href}>
-        <p className="font-['Satoshi'] antialiased text-[18px] tracking-[0.25px] text-white font-medium">
+        <p className="font-['Satoshi'] antialiased text-[18px]
+          tracking-[0.25px] text-white font-medium"
+        >
           {title}
         </p>
       </Link>
@@ -121,7 +123,9 @@ const MobileLink = forwardRef<HTMLLIElement, LinkProps>((props, ref) => {
   return (
     <li className="container px-4 py-4 mx-auto" ref={ref}>
       <Link href={props.href}>
-        <p className="font-['Satoshi'] antialiased text-[20px] tracking-[0.28px] leading-6 font-bold text-white inline-block cursor-pointer">
+        <p className="font-['Satoshi'] antialiased text-[20px] tracking-[0.28px]
+          leading-6 font-bold text-white inline-block cursor-pointer"
+        >
           {props.title}
         </p>
       </Link>
@@ -129,7 +133,7 @@ const MobileLink = forwardRef<HTMLLIElement, LinkProps>((props, ref) => {
   )
 })
 
-MobileLink.displayName = 'MobileLink'
+MobileLink.displayName = "MobileLink"
 /** Mobile LINK ITEM - Ends */
 
 /** SUB MOBILE LINK ITEM - Starts */
@@ -137,7 +141,9 @@ const SubMobileLink = forwardRef<HTMLLIElement, LinkProps>((props, ref) => {
   return (
     <li className="container px-8 py-2 mx-auto" ref={ref}>
       <Link href={props.href}>
-        <p className="font-['Raleway'] antialiased text-[16px] tracking-[0.22px] leading-6 font-normal text-white inline-block cursor-pointer">
+        <p className="font-['Raleway'] antialiased text-[16px] tracking-[0.22px]
+          leading-6 font-normal text-white inline-block cursor-pointer"
+        >
           {props.title}
         </p>
       </Link>
@@ -145,10 +151,10 @@ const SubMobileLink = forwardRef<HTMLLIElement, LinkProps>((props, ref) => {
   )
 })
 
-SubMobileLink.displayName = 'SubMobileLink'
+SubMobileLink.displayName = "SubMobileLink"
 /** SUB Mobile LINK ITEM - Ends */
 
-const Header = () => {
+function Header() {
   return (
     <>
       <Head>
@@ -160,7 +166,10 @@ const Header = () => {
         <link rel="preload" as="image" href="/mining-menu.webp" />
         <link rel="preload" as="image" href="/reward-menu.webp" />
       </Head>
-      <section className="container mx-auto px-4 sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] md:px-[30px] lg:px-[30px] xl:px-0 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+      <section className="container mx-auto px-4 sm:max-w-full xs:max-w-full 2xs:max-w-full
+        3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] md:px-[30px] lg:px-[30px] xl:px-0
+        md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
+      >
         <header className="flex flex-row items-center py-[10px] md:py-5 xl:py-7">
           {/* HEADER LOGO - Starts */}
           <div>
@@ -179,7 +188,9 @@ const Header = () => {
           </div>
           {/* HEADER LOGO - Ends */}
 
-          <div className="flex flex-row w-full 3xs:ml-[10px] ml-[40px] xl:ml-[50px] items-center justify-end lg:justify-between">
+          <div className="flex flex-row w-full 3xs:ml-[10px] ml-[40px]
+            xl:ml-[50px] items-center justify-end lg:justify-between"
+          >
             {/* LANGUAGE SELECTOR - Starts */}
             <Menu as="div" className="flex flex-col z-[3]">
               {/* LANGUAGE SELECTOR BUTTON - Starts */}
@@ -187,17 +198,20 @@ const Header = () => {
                 {({ open }) => (
                   <div className="flex w-[128px] xl:w-40">
                     <div
-                      className={`flex flex-row justify-between max-w-40 w-auto h-[40px] xl:h-[50px] pt-2 xl:pt-[11px] px-3 xl:px-5 rounded-lg ${
-                        open ? 'bg-[#0d1c31]' : 'bg-rich-blue'
+                      className={`flex flex-row justify-between max-w-40 w-auto
+                        h-[40px] xl:h-[50px] pt-2 xl:pt-[11px] px-3 xl:px-5 rounded-lg ${
+                        open ? "bg-[#0d1c31]" : "bg-rich-blue"
                       }`}
                     >
-                      <p className="font-['Satoshi'] antialiased text-[13px] xl:text-[16px] tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold">
+                      <p className="font-['Satoshi'] antialiased text-[13px] xl:text-[16px]
+                        tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold"
+                      >
                         English&nbsp;🇬🇧
                       </p>
                       &nbsp; &nbsp;
                       <div
                         className={`relative w-5 h-5 xl:w-6 xl:h-6 overflow-hidden ${
-                          open && '-scale-y-100'
+                          open && "-scale-y-100"
                         }`}
                       >
                         <Image
@@ -219,17 +233,21 @@ const Header = () => {
               <Transition as={Fragment} {...PopupTransition}>
                 {/* LANGUAGE SELECTOR CONTENT - Starts */}
                 <Menu.Items className="outline-0">
-                  <div className="absolute flex flex-col mt-[12px] xl:mt-[18px] w-[128px] xl:w-40 bg-rich-blue rounded-lg border-[1px] border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)]">
-                    {Languages.map((language, i) => (
-                      <Menu.Item key={i}>
+                  <div className="absolute flex flex-col mt-[12px] xl:mt-[18px] w-[128px] xl:w-40 bg-rich-blue
+                    rounded-lg border-[1px] border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)]"
+                  >
+                    {Languages.map((language) => (
+                      <Menu.Item key={Math.random() * Math.random()}>
                         {({ active }) => (
                           <ul
                             className={`px-5 py-4 cursor-pointer ${
-                              active ? 'hover:bg-[#0d1c31]' : 'bg-none'
+                              active ? "hover:bg-[#0d1c31]" : "bg-none"
                             }`}
                           >
-                            <li className="font-['Satoshi'] antialiased text-[13px] xl:text-[16px] tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold">
-                              {language.key === 'ar'
+                            <li className="font-['Satoshi'] antialiased text-[13px] xl:text-[16px]
+                              tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold"
+                            >
+                              {language.key === "ar"
                                 ? `${language.emoji} ${language.label}`
                                 : `${language.label} ${language.emoji}`}
                             </li>
@@ -256,13 +274,15 @@ const Header = () => {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-center">
-                      <p className="font-['Satoshi'] antialiased text-[18px] tracking-[0.25px] text-white font-medium">
+                      <p className="font-['Satoshi'] antialiased
+                        text-[18px] tracking-[0.25px] text-white font-medium"
+                      >
                         Protocol
                       </p>
 
                       <div
                         className={`relative w-6 h-6 overflow-hidden mt-[3px] ${
-                          open && '-scale-y-100'
+                          open && "-scale-y-100"
                         }`}
                       >
                         <Image
@@ -285,17 +305,23 @@ const Header = () => {
                     {/* PRODUCTS MENU CONTENT - Starts */}
                     <Menu.Items
                       as="div"
-                      className="flex flex-row mx-4 bg-rich-blue rounded-lg border-[1px] border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)] p-[50px]"
+                      className="flex flex-row mx-4 bg-rich-blue rounded-lg border-[1px]
+                      border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)] p-[50px]"
                     >
                       <div className="flex-col justify-between hidden xl:flex">
                         <div className="w-64">
-                          <p className="font-['Satoshi'] antialiased text-[24px] leading-[26px] text-white font-black">
+                          <p className="font-['Satoshi'] antialiased text-[24px]
+                            leading-[26px] text-white font-black"
+                          >
                             Product
                             <br />
                             Offerings
                           </p>
 
-                          <p className="font-['Satoshi'] antialiased text-[16px] tracking-[0.22px] leading-[24px] text-white font-normal mt-[25px]">
+                          <p className="font-['Satoshi'] antialiased text-[16px]
+                            tracking-[0.22px] leading-[24px] text-white
+                            font-normal mt-[25px]"
+                          >
                             Learn how you can
                             <br />
                             make the most of FIATX
@@ -304,37 +330,47 @@ const Header = () => {
 
                         <Link href="/">
                           <p
-                            className="font-['Satoshi'] antialiased text-[16px] tracking-[0.22px] text-chinese-green font-bold cursor-pointer hover:underline after:content-[' '] after:inline-block 
-                      after:bg-[length:24px_24px] after:w-6 after:h-6 after:bg-[url('/icons/caret-down.png')] after:-scale-y-100 after:rotate-45 after:-ml-[7px] after:mb-0.5"
+                            className="font-['Satoshi'] antialiased text-[16px] tracking-[0.22px] text-chinese-green
+                            font-bold cursor-pointer hover:underline after:content-[' '] after:inline-block
+                            after:bg-[length:24px_24px] after:w-6 after:h-6 after:bg-[url('/icons/caret-down.png')]
+                            after:-scale-y-100 after:rotate-45 after:-ml-[7px] after:mb-0.5"
                           >
                             Join Discord
                           </p>
                         </Link>
                       </div>
 
-                      <div className="hidden xl:block w-px min-h-full bg-gradient-to-t from-rich-blue via-[#CEEF66] to-rich-blue" />
+                      <div className="hidden xl:block w-px min-h-full bg-gradient-to-t
+                        from-rich-blue via-[#CEEF66] to-rich-blue"
+                      />
 
                       <div>
                         <div className="grid grid-cols-3 gap-x-7 gap-y-[20px] xl:ml-[52px]">
-                          {MenuItems.map((menuItem, i) => (
+                          {MenuItems.map((menuItem) => (
                             <Menu.Item
-                              key={i}
+                              key={Math.random() * Math.random()}
                               as="div"
-                              className="flex flex-row items-start cursor-pointer basis-1/3 p-2 hover:bg-[#0d1c31] hover:rounded-lg"
+                              className="flex flex-row items-start cursor-pointer
+                              basis-1/3 p-2 hover:bg-[#0d1c31] hover:rounded-lg"
                             >
                               <div className="relative w-16 h-16 mr-4 overflow-hidden">
                                 <img
-                                  className="!relative object-cover w-full h-full bg-[#0d1c31] rounded-lg"
+                                  className="!relative object-cover w-full
+                                  h-full bg-[#0d1c31] rounded-lg"
                                   src={menuItem.src}
                                   alt="caret-down"
                                 />
                               </div>
 
                               <div className="flex flex-col flex-1 gap-y-1">
-                                <p className="font-['Satoshi'] antialiased text-[20px] leading-[26px] text-white font-black -mt-1">
+                                <p className="font-['Satoshi'] antialiased text-[20px]
+                                  leading-[26px] text-white font-black -mt-1"
+                                >
                                   {menuItem.title}
                                 </p>
-                                <p className="font-['Raleway'] antialiased text-[12px] leading-5 text-[#bebebe] font-medium">
+                                <p className="font-['Raleway'] antialiased text-[12px]
+                                  leading-5 text-[#bebebe] font-medium"
+                                >
                                   {menuItem.description}
                                 </p>
                               </div>
@@ -363,7 +399,9 @@ const Header = () => {
               {/* HEADER MOBILE MENU BUTTON - Starts */}
               <Menu.Button>
                 {({ open }) => (
-                  <div className="flex items-center justify-center w-10 h-10 3xs:ml-0 ml-2 rounded-lg xl:hidden bg-rich-blue sticky z-[3]">
+                  <div className="flex items-center justify-center w-10 h-10
+                    3xs:ml-0 ml-2 rounded-lg xl:hidden bg-rich-blue sticky z-[3]"
+                  >
                     {open ? (
                       <Image
                         src="/icons/mobile-menu-close.png"
@@ -396,7 +434,9 @@ const Header = () => {
               <Transition as={Fragment} {...PopupTransition}>
                 {/* HEADER MOBILE MENU CONTENT - Starts */}
                 <Menu.Items as={Fragment}>
-                  <div className="absolute left-0 right-0 top-0 !h-screen !w-full outline-0 bg-[#03050794] backdrop-blur-[28px] z-[2] pt-20 pb-[48px]">
+                  <div className="absolute left-0 right-0 top-0 !h-screen !w-full
+                    outline-0 bg-[#03050794] backdrop-blur-[28px] z-[2] pt-20 pb-[48px]"
+                  >
                     <div className="flex flex-col flex-1 h-full ">
                       <ul className="flex flex-col flex-1 pb-3 overflow-scroll">
                         <Menu.Item>
@@ -411,13 +451,15 @@ const Header = () => {
                           <Menu.Button>
                             {({ open }) => (
                               <li className="container flex px-4 py-4 mx-auto">
-                                <p className="font-['Satoshi'] antialiased text-[20px] tracking-[0.28px] text-left leading-6 font-bold text-white inline-block cursor-pointer">
+                                <p className="font-['Satoshi'] antialiased text-[20px] tracking-[0.28px]
+                                  text-left leading-6 font-bold text-white inline-block cursor-pointer"
+                                >
                                   Protocol
                                 </p>
 
                                 <div
                                   className={`relative w-6 h-6 xl:w-6 xl:h-6 overflow-hidden ${
-                                    open && '-scale-y-100'
+                                    open && "-scale-y-100"
                                   }`}
                                 >
                                   &nbsp;

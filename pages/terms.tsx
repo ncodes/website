@@ -1,14 +1,14 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from "next"
+import Head from "next/head"
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 type ParagraphProps = {
   children: React.ReactNode
 }
 
-const ParagraphHeading = ({ children }: ParagraphProps) => {
+function ParagraphHeading({ children }: ParagraphProps) {
   return (
     <p className="font-['Raleway'] antialiased font-black text-white text-[24px] tracking-[0.22px] leading-[24px] mb-[27px]">
       {children}
@@ -16,7 +16,7 @@ const ParagraphHeading = ({ children }: ParagraphProps) => {
   )
 }
 
-const ParagraphContent = ({ children }: ParagraphProps) => {
+function ParagraphContent({ children }: ParagraphProps) {
   return (
     <p className="font-['Raleway'] antialiased font-regular text-white text-[16px] tracking-[0.22px] leading-[24px] mb-20">
       {children}
@@ -24,7 +24,7 @@ const ParagraphContent = ({ children }: ParagraphProps) => {
   )
 }
 
-const Terms: NextPage = () => {
+const Terms: NextPage = function () {
   return (
     <>
       <Head>
@@ -37,7 +37,9 @@ const Terms: NextPage = () => {
       </section>
 
       <section id="page-content">
-        <div className="container mx-auto 3xs:max-w-full 2xs:max-w-full xs:max-w-full sm:max-w-full md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl 3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mt-[52px] lg:mt-[65px] xl:mt-[77px] mb-[100px] sm:mb-16 lg:mb-3 xl:mb-3">
+        <div className="container mx-auto 3xs:max-w-full 2xs:max-w-full xs:max-w-full sm:max-w-full md:max-w-screen-md lg:max-w-screen-lg
+         xl:max-w-screen-xl 2xl:max-w-screen-2xl 3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px] lg:px-[30px] xl:px-[90px]
+         mt-[52px] lg:mt-[65px] xl:mt-[77px] mb-[100px] sm:mb-16 lg:mb-3 xl:mb-3">
           <div>
             <ParagraphHeading>Introduction</ParagraphHeading>
             <ParagraphContent>
