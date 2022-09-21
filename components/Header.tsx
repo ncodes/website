@@ -49,37 +49,37 @@ const MenuItems = [
   {
     title: 'Trade',
     description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/trade-menu.webp'
+    src: '/trade-menu.svg'
   },
   {
     title: 'Markets',
     description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/market-menu.webp'
+    src: '/markets-menu.svg'
   },
   {
     title: 'Liquidity',
     description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/liquidity-menu.webp'
+    src: '/liquidity-menu.svg'
   },
   {
     title: 'Mediation',
     description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/mediation-menu.webp'
+    src: '/mediation-menu.svg'
   },
   {
     title: 'Disputes',
     description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/dispute-menu.webp'
+    src: '/disputes-menu.svg'
   },
   {
     title: 'Mining',
     description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/mining-menu.webp'
+    src: '/mining-menu.svg'
   },
   {
     title: 'Reward',
     description: 'Sign up today and buy 65+ cryptocurrencies in minutes.',
-    src: '/reward-menu.webp'
+    src: '/reward-menu.svg'
   }
 ]
 /** MENU ITEM DATA - Ends */
@@ -152,13 +152,13 @@ const Header = () => {
   return (
     <>
       <Head>
-        <link rel="preload" as="image" href="/trade-menu.webp" />
-        <link rel="preload" as="image" href="/market-menu.webp" />
-        <link rel="preload" as="image" href="/liquidity-menu.webp" />
-        <link rel="preload" as="image" href="/mediation-menu.webp" />
-        <link rel="preload" as="image" href="/dispute-menu.webp" />
-        <link rel="preload" as="image" href="/mining-menu.webp" />
-        <link rel="preload" as="image" href="/reward-menu.webp" />
+        <link rel="preload" as="image" href="/trade-menu.svg" />
+        <link rel="preload" as="image" href="/markets-menu.svg" />
+        <link rel="preload" as="image" href="/liquidity-menu.svg" />
+        <link rel="preload" as="image" href="/mediation-menu.svg" />
+        <link rel="preload" as="image" href="/disputes-menu.svg" />
+        <link rel="preload" as="image" href="/mining-menu.svg" />
+        <link rel="preload" as="image" href="/reward-menu.svg" />
       </Head>
       <section className="container mx-auto px-4 sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] md:px-[30px] lg:px-[30px] xl:px-0 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
         <header className="flex flex-row items-center py-[10px] md:py-5 xl:py-7">
