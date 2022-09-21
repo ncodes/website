@@ -8,7 +8,6 @@ import Trading from '../components/Trading'
 import Assets from '../components/Assets'
 import Features from '../components/Features'
 import Rewards from '../components/Rewards'
-import NFT from '../components/NFT'
 import Partners from '../components/Partners'
 import Footer from '../components/Footer'
 
@@ -47,9 +46,7 @@ const Home: NextPage = () => {
         <Assets />
 
         <Features />
-
-        <NFT />
-
+        
         <Rewards />
 
         <Partners />
