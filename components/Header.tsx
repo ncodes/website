@@ -105,9 +105,9 @@ type LinkProps = {
 /** HEADER LINK ITEM - Starts */
 const HeaderLink = ({ title, href }: LinkProps) => {
   return (
-    <li className="flex items-center cursor-pointer px-[15px] py-0.5 rounded-2xl">
+    <li className="flex items-center cursor-pointer px-[5px] py-0.5 rounded-2xl">
       <Link href={href}>
-        <p className="font-['Satoshi'] antialiased text-[18px] tracking-[0.25px] text-white font-medium">
+        <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-medium">
           {title}
         </p>
       </Link>
@@ -121,7 +121,7 @@ const MobileLink = forwardRef<HTMLLIElement, LinkProps>((props, ref) => {
   return (
     <li className="container px-4 py-4 mx-auto" ref={ref}>
       <Link href={props.href}>
-        <p className="font-['Satoshi'] antialiased text-[20px] tracking-[0.28px] leading-6 font-bold text-white inline-block cursor-pointer">
+        <p className="font-mitr antialiased text-[20px] tracking-[0.28px] leading-6 font-bold text-white inline-block cursor-pointer">
           {props.title}
         </p>
       </Link>
@@ -137,7 +137,7 @@ const SubMobileLink = forwardRef<HTMLLIElement, LinkProps>((props, ref) => {
   return (
     <li className="container px-8 py-2 mx-auto" ref={ref}>
       <Link href={props.href}>
-        <p className="font-['Raleway'] antialiased text-[16px] tracking-[0.22px] leading-6 font-normal text-white inline-block cursor-pointer">
+        <p className="font-mitr antialiased text-[16px] tracking-[0.22px] leading-6 font-normal text-white inline-block cursor-pointer">
           {props.title}
         </p>
       </Link>
@@ -191,7 +191,7 @@ const Header = () => {
                         open ? 'bg-[#0d1c31]' : 'bg-rich-blue'
                       }`}
                     >
-                      <p className="font-['Satoshi'] antialiased text-[13px] xl:text-[16px] tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold">
+                      <p className="font-mitr antialiased text-[18px] xl:text-[16px] tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold">
                         English&nbsp;🇬🇧
                       </p>
                       &nbsp; &nbsp;
@@ -228,7 +228,7 @@ const Header = () => {
                               active ? 'hover:bg-[#0d1c31]' : 'bg-none'
                             }`}
                           >
-                            <li className="font-['Satoshi'] antialiased text-[13px] xl:text-[16px] tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold">
+                            <li className="font-mitr antialiased text-[18px] xl:text-[16px] tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold">
                               {language.key === 'ar'
                                 ? `${language.emoji} ${language.label}`
                                 : `${language.label} ${language.emoji}`}
@@ -251,12 +251,12 @@ const Header = () => {
               <HeaderLink title="About" href="/about" />
 
               {/* PRODUCTS MENU - Starts */}
-              <Menu as="div" className="flex flex-col mt-[3px]">
+              <Menu as="div" className="flex flex-col ">
                 {/* PRODUCTS MENU BUTTON - Starts */}
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-center">
-                      <p className="font-['Satoshi'] antialiased text-[18px] tracking-[0.25px] text-white font-medium">
+                      <p className="font-mitr antialiased  tracking-[0.25px] text-white font-medium">
                         Protocol
                       </p>
 
@@ -289,13 +289,13 @@ const Header = () => {
                     >
                       <div className="flex-col justify-between hidden xl:flex">
                         <div className="w-64">
-                          <p className="font-['Satoshi'] antialiased text-[24px] leading-[26px] text-white font-black">
+                          <p className="font-mitr antialiased text-[24px] leading-[26px] text-white font-black">
                             Product
                             <br />
                             Offerings
                           </p>
 
-                          <p className="font-['Satoshi'] antialiased text-[16px] tracking-[0.22px] leading-[24px] text-white font-normal mt-[25px]">
+                          <p className="font-mitr antialiased text-[16px] tracking-[0.22px] leading-[24px] text-white font-normal mt-[25px]">
                             Learn how you can
                             <br />
                             make the most of FIATX
@@ -304,7 +304,7 @@ const Header = () => {
 
                         <Link href="/">
                           <p
-                            className="font-['Satoshi'] antialiased text-[16px] tracking-[0.22px] text-chinese-green font-bold cursor-pointer hover:underline after:content-[' '] after:inline-block 
+                            className="font-mitr antialiased text-[16px] tracking-[0.22px] text-chinese-green font-bold cursor-pointer hover:underline after:content-[' '] after:inline-block 
                       after:bg-[length:24px_24px] after:w-6 after:h-6 after:bg-[url('/icons/caret-down.png')] after:-scale-y-100 after:rotate-45 after:-ml-[7px] after:mb-0.5"
                           >
                             Join Discord
@@ -331,10 +331,10 @@ const Header = () => {
                               </div>
 
                               <div className="flex flex-col flex-1 gap-y-1">
-                                <p className="font-['Satoshi'] antialiased text-[20px] leading-[26px] text-white font-black -mt-1">
+                                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black -mt-1">
                                   {menuItem.title}
                                 </p>
-                                <p className="font-['Raleway'] antialiased text-[12px] leading-5 text-[#bebebe] font-medium">
+                                <p className="font-mitr antialiased text-[12px] leading-5 text-[#bebebe] font-medium">
                                   {menuItem.description}
                                 </p>
                               </div>
@@ -350,13 +350,66 @@ const Header = () => {
               </Menu>
               {/* PRODUCTS MENU - Ends */}
 
-              <HeaderLink title="Developers" href="developers" />
+              <div>
+                 
+                    <li className="flex flex-row items-center">
+                      <p className="font-mitr antialiased  tracking-[0.25px] text-white font-medium">
+                        Developers
+                      </p>
 
-              <div className="hidden xl:block">
-                <HeaderLink title="Community" href="community" />
-              </div>
+                      <div
+                        className={`relative w-6 h-6 overflow-hidden mt-[3px]`}
+                      >
+                        <Image
+                          className="!relative object-cover w-full h-full"
+                          src="/icons/caret-down.png"
+                          alt="caret-down"
+                          layout="fill"
+                          quality={100}
+                          priority
+                        />
+                      </div>
+                    </li>
+                </div>
+                <div>
+                    <li className="flex flex-row items-center">
+                      <p className="font-mitr antialiased  tracking-[0.25px] text-white font-medium">
+                        Community
+                      </p>
+
+                      <div
+                        className={`relative w-6 h-6 overflow-hidden mt-[3px]`}
+                      >
+                        <Image
+                          className="!relative object-cover w-full h-full"
+                          src="/icons/caret-down.png"
+                          alt="caret-down"
+                          layout="fill"
+                          quality={100}
+                          priority
+                        />
+                      </div>
+                    </li>
+                </div>
             </ul>
             {/* HEADER MENU ITEMS - Ends */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             {/* HEADER MOBILE MENU - Starts */}
             <Menu as="div" className="lg:hidden">
@@ -392,6 +445,24 @@ const Header = () => {
               </Menu.Button>
               {/* HEADER MOBILE MENU BUTTON - Ends */}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               {/* HEADER MOBILE MENU CONTENT TRANSITION - Starts */}
               <Transition as={Fragment} {...PopupTransition}>
                 {/* HEADER MOBILE MENU CONTENT - Starts */}
@@ -411,7 +482,7 @@ const Header = () => {
                           <Menu.Button>
                             {({ open }) => (
                               <li className="container flex px-4 py-4 mx-auto">
-                                <p className="font-['Satoshi'] antialiased text-[20px] tracking-[0.28px] text-left leading-6 font-bold text-white inline-block cursor-pointer">
+                                <p className="font-mitr antialiased text-[16px] tracking-[0.28px] text-left leading-6 font-bold text-white inline-block cursor-pointer">
                                   Protocol
                                 </p>
 
@@ -504,6 +575,7 @@ const Header = () => {
                 label="&nbsp;&nbsp;Trade&nbsp;&nbsp;"
                 variant="primary"
                 onClick={() => undefined}
+                extraStyles="w-[200px]"
               />
             </div>
             {/* HEADER CTA BUTTON - Ends */}
