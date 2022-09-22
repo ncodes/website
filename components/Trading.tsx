@@ -42,8 +42,8 @@ function Trading() {
            text-white tracking-[0.22px] leading-6 mb-9 lg:mb-8 text-center
            lg:text-left w-full lg:w-[440px] px-10 xs:px-0 3xs:px-0 sm:px-6 lg:px-0"
           >
-            FiatX is a decentralized peer-to-peer trading protocol that allows you to trade cryptocurrencies and cash directly with
-            independent liquidity providers. FiatX is enabled by a series of smart contracts that together create an unstoppable trading
+            Joint is a decentralized peer-to-peer trading protocol that allows you to trade cryptocurrencies and cash directly with
+            independent liquidity providers. Joint is enabled by a series of smart contracts that together create an unstoppable trading
             engine.
           </p>
 

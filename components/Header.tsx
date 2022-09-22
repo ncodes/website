@@ -313,7 +313,7 @@ function Header() {
                           >
                             Learn how you can
                             <br />
-                            make the most of FIATX
+                            make the most of Joint
                           </p>
                         </div>
 

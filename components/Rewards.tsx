@@ -62,7 +62,7 @@ function Rewards() {
           className="font-['Raleway'] antialiased font-regular text-center text-white
           text-[16px] tracking-[0.22px] leading-6 mx-auto w-[293px] xl:w-auto"
         >
-          The FIATX protocol offers juicy rewards to users
+          The Joint protocol offers juicy rewards to users
         </p>
       </div>
 
