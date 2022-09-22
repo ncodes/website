@@ -45,10 +45,10 @@ const About: NextPage = function () {
               </p>
             </div>
 
-            <div className="relative w-[313px] h-[217px] overflow-hidden">
+            <div className="relative w-[313px] h-[317px] overflow-hidden">
               <Image
                 className="!relative object-contain w-full h-full"
-                src="/fiatx-about-logo.webp"
+                src="/imagecopy.png"
                 alt="nft-illustration"
                 layout="fill"
                 quality={100}
@@ -69,7 +69,7 @@ const About: NextPage = function () {
               </div>
 
               <div className="flex flex-col flex-1 gap-y-[13px] max-w-[300px]">
-                <p className="font-['Satoshi'] antialiased text-[24px] leading-[26px] text-white font-black -mt-1">
+                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black -mt-1">
                   Our reward is the future
                 </p>
                 <p className="font-['Raleway'] antialiased text-[15px] leading-5 text-white font-normal">
@@ -84,7 +84,7 @@ const About: NextPage = function () {
               </div>
 
               <div className="flex flex-col flex-1 gap-y-[13px] max-w-[300px]">
-                <p className="font-['Satoshi'] antialiased text-[24px] leading-[26px] text-white font-black -mt-1">
+                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black -mt-1">
                   Our reward is the future
                 </p>
                 <p className="font-['Raleway'] antialiased text-[15px] leading-5 text-white font-normal">
@@ -99,7 +99,7 @@ const About: NextPage = function () {
               </div>
 
               <div className="flex flex-col flex-1 gap-y-[13px] max-w-[300px]">
-                <p className="font-['Satoshi'] antialiased text-[24px] leading-[26px] text-white font-black -mt-1">
+                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black -mt-1">
                   Our reward is the future
                 </p>
                 <p className="font-['Raleway'] antialiased text-[15px] leading-5 text-white font-normal">
