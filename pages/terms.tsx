@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
+import type { NextPage } from "next"
+import Head from "next/head"
+import Link from "next/link"
 import { useRouter } from "next/router";
 
 import Header from "../components/Header"
@@ -12,7 +12,7 @@ type ContentProps = {
   children?: React.ReactNode
 }
 
-const Terms: NextPage = () => {
+const Terms: NextPage = function () {
   const router = useRouter();
   
   const termsInformation: ContentProps[] = [
@@ -102,19 +102,25 @@ const Terms: NextPage = () => {
         <Header />
 
         <section id="page-content">
-          <div className="container md:flex justify-between mt-[40px] lg:mt-[110px] mb-[45px] sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+          <div className="container md:flex justify-between mt-[40px] lg:mt-[110px] mb-[45px] sm:max-w-full xs:max-w-full
+           2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px]
+           md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
             <div>
-              <p className="font-['Mitr'] antialiased font-extralight text-[14px] text-center md:text-left text-white tracking-[0.22px] mb-[5px] md:mb-[13px]">
+              <p className="font-['Mitr'] antialiased font-extralight text-[14px] text-center md:text-left text-white
+               tracking-[0.22px] mb-[5px] md:mb-[13px]">
                 LEGAL
               </p>
-              <p className="font-['Mitr'] antialiased font-semibold text-white text-[48px] lg:text-[72px] text-center md:text-left -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px]">
+              <p className="font-['Mitr'] antialiased font-semibold text-white text-[48px] lg:text-[72px] text-center
+               md:text-left -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px]">
                 Terms of< br/>Service
               </p>
             </div>
             <div className="hidden md:flex flex-col space-y-1">
-              {termsInformation.map(({ id, title }, index) => (
-                <Link key={index} href={`#${id}`} scroll={false}>
-                  <a className={`font-['Mitr'] antialiased text-[16px] tracking-[0.25px] text-right font-extralight cursor-pointer text-white${router.asPath.includes(id) ? ` text-chinese-green font-medium` : ``}`}>
+              {termsInformation.map(({ id, title }) => (
+                <Link key={id} href={`#${id}`} scroll={false}>
+                  {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                  <a className={`font-['Mitr'] antialiased text-[16px] tracking-[0.25px] text-right font-extralight
+                  cursor-pointer text-white${router.asPath.includes(id) ? " text-chinese-green !font-medium" : ""}`}>
                     {title}
                   </a>
                 </Link>
@@ -122,9 +128,11 @@ const Terms: NextPage = () => {
             </div>
           </div>
 
-          <div className="container mx-auto sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl 3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px] lg:px-[30px] xl:px-[90px]">
-            {termsInformation.map(({id, title, children}, index) => (
-              <div key={index} id={id} className="mb-[80px] max-w-[990px] ">
+          <div className="container mx-auto sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full md:max-w-screen-md
+           lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl 3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px]
+           lg:px-[30px] xl:px-[90px]">
+            {termsInformation.map(({id, title, children}) => (
+              <div key={id} id={id} className="mb-[80px] max-w-[990px] ">
                 <p className="font-['Mitr'] antialiased font-extralight text-white text-[16px] tracking-[0.22px] leading-[24px] mb-[32px]">
                   {title}
                 </p>
