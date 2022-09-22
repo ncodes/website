@@ -369,14 +369,14 @@ function Header() {
               {/* PRODUCTS MENU - Ends */}
 
               <div>
-                 
+
                     <li className="flex flex-row items-center">
                       <p className="font-mitr antialiased  tracking-[0.25px] text-white font-medium">
                         Developers
                       </p>
 
                       <div
-                        className={`relative w-6 h-6 overflow-hidden mt-[3px]`}
+                        className="relative w-6 h-6 overflow-hidden mt-[3px]"
                       >
                         <Image
                           className="!relative object-cover w-full h-full"
@@ -396,7 +396,7 @@ function Header() {
                       </p>
 
                       <div
-                        className={`relative w-6 h-6 overflow-hidden mt-[3px]`}
+                        className="relative w-6 h-6 overflow-hidden mt-[3px]"
                       >
                         <Image
                           className="!relative object-cover w-full h-full"
@@ -506,7 +506,9 @@ function Header() {
                           <Menu.Button>
                             {({ open }) => (
                               <li className="container flex px-4 py-4 mx-auto">
-                                <p className="font-mitr antialiased text-[16px] tracking-[0.28px] text-left leading-6 font-bold text-white inline-block cursor-pointer">
+                                <p className="font-mitr antialiased text-[16px] tracking-[0.28px]
+                                  text-left leading-6 font-bold text-white inline-block cursor-pointer"
+                                >
                                   Protocol
                                 </p>
 
