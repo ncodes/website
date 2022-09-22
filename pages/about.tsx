@@ -31,15 +31,19 @@ const About: NextPage = function () {
         >
           <div className="flex flex-col justify-between lg:flex-row xl:flex-row items-center lg:gap-x-[70px] xl:gap-x-[145px] gap-y-[45px]">
             <div className="w-full lg:w-[513px]">
-              <p className="font-mitr antialiased text-center xl:text-left text-[14px] xl:text-[16px] 
+              <p
+                className="font-mitr antialiased text-center xl:text-left text-[14px] xl:text-[16px] 
               tracking-[2.63px] xl:tracking-[3px] leading-[24px]
-               text-white font-medium xl:mb-[13px] mx-[40px] md:mx-[unset]">
+               text-white font-medium xl:mb-[13px] mx-[40px] md:mx-[unset]"
+              >
                 THE RIGHT PEOPLE WITH THE RIGHT TOOLS
               </p>
-              <p className="font-mitr antialiased font-bold text-[48px] lg:text-[72px]
+              <p
+                className="font-mitr antialiased font-bold text-[48px] lg:text-[72px]
                text-white text-center lg:text-left -tracking-[0.6px] lg:-tracking-[0.9px]
                 leading-[56px] lg:leading-[72px] mb-[24px] lg:mb-[40px] xl:mb-[40px] w-[265px] 
-                mx-auto sm:mx-[unset] sm:w-full">
+                mx-auto sm:mx-[unset] sm:w-full"
+              >
                 Anything is possible.
               </p>
             </div>
@@ -68,12 +72,9 @@ const About: NextPage = function () {
               </div>
 
               <div className="flex flex-col flex-1 gap-y-[13px] max-w-[300px]">
-                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black -mt-1">
-                  Our reward is the future
-                </p>
+                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black -mt-1">Our reward is the future</p>
                 <p className="font-mitr antialiased text-[15px] leading-5 text-white font-normal">
-                  Trade without the need to reveal your identity to platform
-                  operators. Your wallet is enough.
+                  Trade without the need to reveal your identity to platform operators. Your wallet is enough.
                 </p>
               </div>
             </div>
@@ -84,12 +85,9 @@ const About: NextPage = function () {
               </div>
 
               <div className="flex flex-col flex-1 gap-y-[13px] max-w-[300px]">
-                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black -mt-1">
-                  Our reward is the future
-                </p>
+                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black -mt-1">Our reward is the future</p>
                 <p className="font-mitr antialiased text-[15px] leading-5 text-white font-normal">
-                  Trade without the need to reveal your identity to platform
-                  operators. Your wallet is enough.
+                  Trade without the need to reveal your identity to platform operators. Your wallet is enough.
                 </p>
               </div>
             </div>
@@ -100,12 +98,9 @@ const About: NextPage = function () {
               </div>
 
               <div className="flex flex-col flex-1 gap-y-[13px] max-w-[300px]">
-                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black -mt-1">
-                  Our reward is the future
-                </p>
+                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black -mt-1">Our reward is the future</p>
                 <p className="font-mitr antialiased text-[15px] leading-5 text-white font-normal">
-                  Trade without the need to reveal your identity to platform
-                  operators. Your wallet is enough.
+                  Trade without the need to reveal your identity to platform operators. Your wallet is enough.
                 </p>
               </div>
             </div>
