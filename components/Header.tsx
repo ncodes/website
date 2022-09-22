@@ -108,7 +108,7 @@ function HeaderLink({ title, href }: LinkProps) {
     <li className="flex items-center cursor-pointer px-[5px] py-0.5 rounded-2xl">
       <Link href={href}>
         <p
-          className="font-['Satoshi'] antialiased text-[18px]
+          className="font-mitr antialiased text-[18px]
           tracking-[0.25px] text-white font-medium"
         >
           {title}
@@ -125,7 +125,7 @@ const MobileLink = forwardRef<HTMLLIElement, LinkProps>((props, ref) => {
     <li className="container px-4 py-4 mx-auto" ref={ref}>
       <Link href={props.href}>
         <p
-          className="font-['Satoshi'] antialiased text-[20px] tracking-[0.28px]
+          className="font-mitr antialiased text-[20px] tracking-[0.28px]
           leading-6 font-bold text-white inline-block cursor-pointer"
         >
           {props.title}
@@ -181,8 +181,8 @@ function Header() {
               <div className="relative overflow-hidden w-[123px] h-[20px] xl:w-[154px] xl:h-[25px] cursor-pointer z-[3]">
                 <Image
                   className="!relative object-cover w-full h-full"
-                  src="/fiatx-logo.png"
-                  alt="fiatx-logo"
+                  src="/Joint.svg"
+                  alt="joint-logo"
                   layout="fill"
                   quality={100}
                   priority
@@ -207,8 +207,8 @@ function Header() {
                         h-[40px] xl:h-[50px] pt-2 xl:pt-[11px] px-3 xl:px-5 rounded-lg ${open ? "bg-[#0d1c31]" : "bg-rich-blue"}`}
                     >
                       <p
-                        className="font-['Satoshi'] antialiased text-[13px] xl:text-[16px]
-                        tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold"
+                        className="font-mitr antialiased text-[13px] xl:text-[16px]
+                        tracking-[0.18px] xl:tracking-[0.22px] text-white font-medium"
                       >
                         English&nbsp;🇬🇧
                       </p>
@@ -242,7 +242,7 @@ function Header() {
                         {({ active }) => (
                           <ul className={`px-5 py-4 cursor-pointer ${active ? "hover:bg-[#0d1c31]" : "bg-none"}`}>
                             <li
-                              className="font-['Satoshi'] antialiased text-[13px] xl:text-[16px]
+                              className="font-mitr antialiased text-[13px] xl:text-[16px]
                               tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold"
                             >
                               {language.key === "ar" ? `${language.emoji} ${language.label}` : `${language.label} ${language.emoji}`}
@@ -270,7 +270,7 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-center">
-                      <p className="font-['Satoshi'] antialiased text-[18px] tracking-[0.25px] text-white font-medium">Products</p>
+                      <p className="font-mitr antialiased text-[18px] tracking-[0.25px] text-white font-medium">Products</p>
 
                       <div className={`relative w-6 h-6 overflow-hidden mt-[3px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -299,7 +299,7 @@ function Header() {
                       <div className="flex-col justify-between hidden xl:flex">
                         <div className="w-64">
                           <p
-                            className="font-['Satoshi'] antialiased text-[24px]
+                            className="font-mitr antialiased text-[24px]
                             leading-[26px] text-white font-black"
                           >
                             Product
@@ -349,7 +349,7 @@ function Header() {
                                 />
                               </div>
                               <div className="flex flex-col flex-1 gap-y-[8px]">
-                                <p className="font-['Satoshi'] antialiased text-[20px] leading-[26px] text-white font-black">
+                                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black">
                                   {menuItem.title}
                                 </p>
                                 <p className="font-['Mitr'] antialiased text-[14px] leading-[17.67px] text-[#bebebe] font-extralight">
@@ -370,6 +370,7 @@ function Header() {
 
               <div>
 
+                 
                     <li className="flex flex-row items-center">
                       <p className="font-mitr antialiased  tracking-[0.25px] text-white font-medium">
                         Developers
@@ -506,7 +507,9 @@ function Header() {
                           <Menu.Button>
                             {({ open }) => (
                               <li className="container flex px-4 py-4 mx-auto">
-                                <p className="font-mitr antialiased text-[16px] tracking-[0.28px]
+
+                                <p
+                                  className="font-mitr antialiased text-[20px] tracking-[0.28px]
                                   text-left leading-6 font-bold text-white inline-block cursor-pointer"
                                 >
                                   Protocol

@@ -84,9 +84,9 @@ function Footer() {
           </div>
         </div>
 
-        <div
-          className="flex flex-col md:flex-row flex-wrap md:px-[30px] lg:px-[30px] xl:px-[unset]
-          md:flex-row lg:flex-row xl:flex-row mt-[60px] lg:mt-[60px] xl:mt-[unset] gap-y-12 xl:gap-y-[unset] justify-between  w-full"
+        <div className="flex flex-col md:flex-row flex-wrap md:px-[30px] lg:px-[30px] xl:px-[unset] md:flex-row
+          lg:flex-row xl:flex-row mt-[60px] lg:mt-[60px] xl:mt-[unset] gap-y-12
+          xl:gap-y-[unset] justify-between  w-full"
         >
           <div className="mx-auto basis-[50%] md:basis-[25%] flex-[1_0_100%] lg:mx-[unset]  lg:basis-[unset] lg:flex-[unset]">
             <FooterTitle label="Company" />
