@@ -32,13 +32,13 @@ function Partners() {
     >
       <div className="mb-[100px]">
         <p
-          className="font-['Satoshi'] antialiased font-bold text-center text-white text-[48px] lg:text-[72px]
+          className="font-mitr antialiased font-bold text-center text-white text-[48px] lg:text-[72px]
          -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-4 lg:mb-6"
         >
           Partners
         </p>
         <p
-          className="font-['Raleway'] antialiased font-regular text-[16px] text-white
+          className="font-mitr antialiased font-regular text-[16px] text-white
           tracking-[0.22px] text-center w-[325px] xl:w-auto mx-auto"
         >
           We are backed by the latest and best technology partners.
