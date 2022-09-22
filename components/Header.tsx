@@ -349,9 +349,7 @@ function Header() {
                                 />
                               </div>
                               <div className="flex flex-col flex-1 gap-y-[8px]">
-                                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black">
-                                  {menuItem.title}
-                                </p>
+                                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black">{menuItem.title}</p>
                                 <p className="font-['Mitr'] antialiased text-[14px] leading-[17.67px] text-white font-light">
                                   {menuItem.description}
                                 </p>
@@ -370,13 +368,9 @@ function Header() {
 
               <div>
                 <li className="flex flex-row items-center">
-                  <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-extralight">
-                    Developers
-                  </p>
+                  <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-extralight">Developers</p>
 
-                  <div
-                    className="relative w-6 h-6 overflow-hidden mt-[3px]"
-                  >
+                  <div className="relative w-6 h-6 overflow-hidden mt-[3px]">
                     <Image
                       className="!relative object-cover w-full h-full"
                       src="/icons/caret-down.png"
@@ -390,13 +384,9 @@ function Header() {
               </div>
               <div>
                 <li className="flex flex-row items-center">
-                  <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-extralight">
-                    Community
-                  </p>
+                  <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-extralight">Community</p>
 
-                  <div
-                    className="relative w-6 h-6 overflow-hidden mt-[3px]"
-                  >
+                  <div className="relative w-6 h-6 overflow-hidden mt-[3px]">
                     <Image
                       className="!relative object-cover w-full h-full"
                       src="/icons/caret-down.png"
