@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
@@ -30,25 +31,23 @@ const About: NextPage = function () {
         >
           <div className="flex flex-col justify-between lg:flex-row xl:flex-row items-center lg:gap-x-[70px] xl:gap-x-[145px] gap-y-[45px]">
             <div className="w-full lg:w-[513px]">
-              <p
-                className="font-['Satoshi'] antialiased text-center xl:text-left text-[14px] xl:text-[16px] tracking-[2.63px]
-               xl:tracking-[3px] leading-[24px] text-white font-medium xl:mb-[13px] mx-[40px] md:mx-[unset]"
-              >
+              <p className="font-mitr antialiased text-center xl:text-left text-[14px] xl:text-[16px] 
+              tracking-[2.63px] xl:tracking-[3px] leading-[24px]
+               text-white font-medium xl:mb-[13px] mx-[40px] md:mx-[unset]">
                 THE RIGHT PEOPLE WITH THE RIGHT TOOLS
               </p>
-              <p
-                className="font-['Satoshi'] antialiased font-bold text-[48px] lg:text-[72px] text-white text-center
-                lg:text-left -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-[24px] lg:mb-[40px]
-                xl:mb-[40px] w-[265px] mx-auto sm:mx-[unset] sm:w-full"
-              >
+              <p className="font-mitr antialiased font-bold text-[48px] lg:text-[72px]
+               text-white text-center lg:text-left -tracking-[0.6px] lg:-tracking-[0.9px]
+                leading-[56px] lg:leading-[72px] mb-[24px] lg:mb-[40px] xl:mb-[40px] w-[265px] 
+                mx-auto sm:mx-[unset] sm:w-full">
                 Anything is possible.
               </p>
             </div>
 
-            <div className="relative w-[313px] h-[217px] overflow-hidden">
+            <div className="relative w-[313px] h-[317px] overflow-hidden">
               <Image
                 className="!relative object-contain w-full h-full"
-                src="/fiatx-about-logo.webp"
+                src="/imagecopy.png"
                 alt="nft-illustration"
                 layout="fill"
                 quality={100}
@@ -69,11 +68,12 @@ const About: NextPage = function () {
               </div>
 
               <div className="flex flex-col flex-1 gap-y-[13px] max-w-[300px]">
-                <p className="font-['Satoshi'] antialiased text-[24px] leading-[26px] text-white font-black -mt-1">
+                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black -mt-1">
                   Our reward is the future
                 </p>
-                <p className="font-['Raleway'] antialiased text-[15px] leading-5 text-white font-normal">
-                  Trade without the need to reveal your identity to platform operators. Your wallet is enough.
+                <p className="font-mitr antialiased text-[15px] leading-5 text-white font-normal">
+                  Trade without the need to reveal your identity to platform
+                  operators. Your wallet is enough.
                 </p>
               </div>
             </div>
@@ -84,11 +84,12 @@ const About: NextPage = function () {
               </div>
 
               <div className="flex flex-col flex-1 gap-y-[13px] max-w-[300px]">
-                <p className="font-['Satoshi'] antialiased text-[24px] leading-[26px] text-white font-black -mt-1">
+                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black -mt-1">
                   Our reward is the future
                 </p>
-                <p className="font-['Raleway'] antialiased text-[15px] leading-5 text-white font-normal">
-                  Trade without the need to reveal your identity to platform operators. Your wallet is enough.
+                <p className="font-mitr antialiased text-[15px] leading-5 text-white font-normal">
+                  Trade without the need to reveal your identity to platform
+                  operators. Your wallet is enough.
                 </p>
               </div>
             </div>
@@ -99,11 +100,12 @@ const About: NextPage = function () {
               </div>
 
               <div className="flex flex-col flex-1 gap-y-[13px] max-w-[300px]">
-                <p className="font-['Satoshi'] antialiased text-[24px] leading-[26px] text-white font-black -mt-1">
+                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black -mt-1">
                   Our reward is the future
                 </p>
-                <p className="font-['Raleway'] antialiased text-[15px] leading-5 text-white font-normal">
-                  Trade without the need to reveal your identity to platform operators. Your wallet is enough.
+                <p className="font-mitr antialiased text-[15px] leading-5 text-white font-normal">
+                  Trade without the need to reveal your identity to platform
+                  operators. Your wallet is enough.
                 </p>
               </div>
             </div>
