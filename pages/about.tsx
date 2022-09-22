@@ -13,21 +13,21 @@ const About: NextPage = function () {
       id: 1,
       icon: "/trade-menu.webp",
       title: "Low Fees",
-      content: "Trading fees are lower and predictable than centralized P2P alternatives."
+      content: "Trading fees are lower and predictable than centralized P2P alternatives.",
     },
     {
       id: 2,
       icon: "/trade-menu.webp",
       title: "Uncapped Volume",
-      content: "Unlike other P2P trading platform, FiatX does not place a cap on your trading volume or activities."
+      content: "Unlike other P2P trading platform, FiatX does not place a cap on your trading volume or activities.",
     },
     {
       id: 3,
       icon: "/trade-menu.webp",
       title: "Unlimited Liquidity",
-      content: "Access unlimited liquidity for open markets created by people across the world. "
+      content: "Access unlimited liquidity for open markets created by people across the world. ",
     },
-  ];
+  ]
 
   return (
     <>
@@ -45,8 +45,10 @@ const About: NextPage = function () {
           mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mt-[52px] md:mt-[77px] mb-[40px]
           md:mb-[98px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
           >
-            <div className="flex flex-col justify-between lg:flex-row xl:flex-row items-center lg:gap-x-[70px]
-             xl:gap-x-[145px] gap-y-[34px]">
+            <div
+              className="flex flex-col justify-between lg:flex-row xl:flex-row items-center lg:gap-x-[70px]
+             xl:gap-x-[145px] gap-y-[34px]"
+            >
               <div className="w-full lg:w-[513px]">
                 <p
                   className="font-mitr antialiased text-center lg:text-left text-[14px] 
@@ -89,8 +91,12 @@ const About: NextPage = function () {
                   </div>
 
                   <div className="flex flex-col flex-1 gap-y-[13px] max-w-[300px]">
-                    <p className="font-mitr antialiased text-[24px] leading-[26px]
-                    text-white font-medium -mt-1">{title}</p>
+                    <p
+                      className="font-mitr antialiased text-[24px] leading-[26px]
+                    text-white font-medium -mt-1"
+                    >
+                      {title}
+                    </p>
                     <p className="font-mitr antialiased text-[15px] leading-5 text-white font-extralight">{content}</p>
                   </div>
                 </div>
