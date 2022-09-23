@@ -84,7 +84,8 @@ function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row flex-wrap md:px-[30px] lg:px-[30px] xl:px-[unset] md:flex-row
+        <div
+          className="flex flex-col md:flex-row flex-wrap md:px-[30px] lg:px-[30px] xl:px-[unset] md:flex-row
           lg:flex-row xl:flex-row mt-[60px] lg:mt-[60px] xl:mt-[unset] gap-y-12
           xl:gap-y-[unset] justify-between  w-full"
         >
