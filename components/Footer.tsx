@@ -62,7 +62,7 @@ function Footer() {
               className="relative overflow-hidden w-[154px] h-[25px]
               xl:w-[154px] xl:h-[25px] cursor-pointer mx-auto xl:mx-[unset]"
             >
-              <Image className="!relative object-cover w-full h-full" src="/fiatx-logo.png" alt="fiatx-logo" layout="fill" quality={100} />
+              <Image className="!relative object-cover w-full h-full" src="/Joint.svg" alt="joint-logo" layout="fill" quality={100} />
             </div>
           </Link>
 
@@ -84,7 +84,8 @@ function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row flex-wrap md:px-[30px] lg:px-[30px] xl:px-[unset] md:flex-row
+        <div
+          className="flex flex-col md:flex-row flex-wrap md:px-[30px] lg:px-[30px] xl:px-[unset] md:flex-row
           lg:flex-row xl:flex-row mt-[60px] lg:mt-[60px] xl:mt-[unset] gap-y-12
           xl:gap-y-[unset] justify-between  w-full"
         >
