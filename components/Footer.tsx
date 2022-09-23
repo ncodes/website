@@ -62,7 +62,7 @@ function Footer() {
               className="relative overflow-hidden w-[154px] h-[25px]
               xl:w-[154px] xl:h-[25px] cursor-pointer mx-auto xl:mx-[unset]"
             >
-              <Image className="!relative object-cover w-full h-full" src="/fiatx-logo.png" alt="fiatx-logo" layout="fill" quality={100} />
+              <Image className="!relative object-cover w-full h-full" src="/Joint.svg" alt="joint-logo" layout="fill" quality={100} />
             </div>
           </Link>
 

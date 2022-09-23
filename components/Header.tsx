@@ -313,7 +313,7 @@ function Header() {
                           >
                             Learn how you can
                             <br />
-                            make the most of FIATX
+                            make the most of Joint
                           </p>
                         </div>
 
@@ -506,6 +506,7 @@ function Header() {
                           <Menu.Button>
                             {({ open }) => (
                               <li className="container flex px-4 py-4 mx-auto">
+
                                 <p
                                   className="font-mitr antialiased text-[20px] tracking-[0.28px]
                                   text-left leading-6 font-bold text-white inline-block cursor-pointer"
