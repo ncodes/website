@@ -63,7 +63,7 @@ function Features() {
           className="font-['Raleway'] antialiased font-regular text-center
           text-white text-[16px] tracking-[0.22px] leading-6 mx-auto w-[293px] xl:w-auto"
         >
-          FiatX protocol is designed to replace existing p2p trading engines
+          Joint protocol is designed to replace existing p2p trading engines
         </p>
       </div>
 
@@ -87,7 +87,7 @@ function Features() {
         <FeaturesItem
           imageSrc="/uncapped-volume.webp"
           title="Uncapped Volume"
-          description="Unlike other P2P trading platform, FiatX does not place a cap on your trading volume or activities."
+          description="Unlike other P2P trading platform, Joint does not place a cap on your trading volume or activities."
         />
 
         <FeaturesItem
