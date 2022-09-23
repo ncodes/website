@@ -68,9 +68,8 @@ function Features() {
       </div>
 
       <div
-        className="flex flex-col md:flex-row md:flex-wrap gap-y-[56px] md:gap-x-[40px]
-        md:gap-y-[30px] lg:gap-y-[56px] w-auto xl:w-[1120px] justify-center
-        md:justify-[unset] mx-auto mt-14 lg:mt-[60px] xl:mt-[100px]"
+        className="flex flex-col md:flex-row md:flex-wrap gap-y-[56px] gap-x-[73px] md:gap-x-[120px]
+        w-auto xl:w-[1120px] justify-center md:justify-[unset] mx-auto mt-[100px] md:mt-[60px] lg:mt-[100px]"
       >
         <FeaturesItem
           imageSrc="/fees.webp"

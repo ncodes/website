@@ -75,8 +75,8 @@ function Assets() {
       </div>
 
       <div
-        className="flex flex-wrap gap-x-[30px] xl:gap-x-[50px] gap-y-[30px] xl:gap-y-[50px]
-        2xl:gap-x-[30px] 2xl:gap-y-[30px] justify-center md:mt-16 mt-14 lg:mt-[60px] xl:mt-[100px]"
+        className="flex flex-wrap gap-x-[30px] md:gap-x-[76px] gap-y-[30px] md:gap-y-[56px]
+        justify-center md:mt-16 mt-14 lg:mt-[60px] xl:mt-[100px]"
       >
         <AssetItem />
 
