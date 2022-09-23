@@ -349,7 +349,7 @@ function Header() {
                                 />
                               </div>
                               <div className="flex flex-col flex-1 gap-y-[8px]">
-                                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-black">{menuItem.title}</p>
+                                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-medium">{menuItem.title}</p>
                                 <p className="font-['Mitr'] antialiased text-[14px] leading-[17.67px] text-white font-light">
                                   {menuItem.description}
                                 </p>
@@ -460,7 +460,6 @@ function Header() {
                           <Menu.Button>
                             {({ open }) => (
                               <li className="container flex px-4 py-4 mx-auto">
-
                                 <p
                                   className="font-mitr antialiased text-[18px] tracking-[0.28px]
                                   text-left leading-6 font-semibold text-white inline-block cursor-pointer"
