@@ -188,7 +188,7 @@ const FAQ: NextPage = function () {
   return (
     <>
       <Head>
-        <title>FiatX - Decentralized P2P trading</title>
+        <title>Joint - Decentralized P2P trading</title>
         <link rel="icon" href="./favicon.ico" />
       </Head>
 
@@ -215,7 +215,7 @@ const FAQ: NextPage = function () {
               className="font-['Mitr'] antialiased font-light text-[16px] text-white
              tracking-[0.22px] text-center xl:w-auto mx-auto px-5 md:px-0"
             >
-              Here’s what you may need to know about FIATX.
+              Here’s what you may need to know about Joint.
             </p>
           </div>
 
