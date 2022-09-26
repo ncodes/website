@@ -7,16 +7,16 @@ function StatisticItem({ label, value }: StatisticItemProps) {
   return (
     <div className="flex justify-center">
       <p
-        className="font-['Satoshi'] antialiased font-bold text-[38px] md:text-[48px] lg:text-[72px]
-        text-white -tracking-[0.6px] lg:-tracking-[0.9px]"
+        className="font-mitr antialiased font-semibold text-[38px] md:text-[48px] lg:text-[72px]
+        text-white"
       >
         {value}
       </p>
 
       <div className="flex absolute -bottom-[11px]">
         <p
-          className="font-['Raleway'] antialiased font-regular text-[16px]
-          text-white tracking-[0.22px] px-3 bg-rich-black"
+          className="font-mitr antialiased font-light text-[16px]
+          text-white px-3 bg-rich-black"
         >
           {label}
         </p>
@@ -34,7 +34,7 @@ function Statistics() {
     >
       <div
         className="hidden lg:flex flex-row relative justify-between px-[65px] w-full h-[160px] lg:w-full md:w-[374px] md:h-[160px]
-        lg:h-[186px] rounded-3xl border mx-auto border-chinese-green bg-[#060709] items-center"
+        lg:h-[186px] rounded-3xl border mx-auto border-blue-jeans bg-[#060709] items-center"
       >
         <StatisticItem label="Number of Markets" value="800+" />
         <StatisticItem label="Volume Transacted" value="$165m+" />
@@ -43,8 +43,8 @@ function Statistics() {
 
       <div className="flex flex-col gap-y-[80px] md:gap-y-[90px] lg:hidden">
         <div
-          className="flex flex-row relative justify-center px-[65px] w-full h-[150px] lg:w-full sm:w-[374px] md:w-[374px]
-          lg:h-[186px] rounded-3xl border mx-auto border-chinese-green bg-[#060709] items-center"
+          className="flex flex-row relative justify-center px-[65px] w-full h-[90px] lg:w-full sm:w-[374px] md:w-[374px] md:h-[160px]
+          lg:h-[186px] rounded-3xl border mx-auto border-blue-jeans bg-[#060709] items-center"
         >
           <StatisticItem label="Number of Markets" value="800+" />
         </div>
