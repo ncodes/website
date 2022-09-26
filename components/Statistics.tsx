@@ -41,7 +41,7 @@ function Statistics() {
         <StatisticItem label="Number of Trades" value="165+" />
       </div>
 
-      <div className="flex flex-col gap-y-[40px] md:gap-y-[80px] lg:hidden">
+      <div className="flex flex-col gap-y-[80px] md:gap-y-[90px] lg:hidden">
         <div
           className="flex flex-row relative justify-center px-[65px] w-full h-[90px] lg:w-full sm:w-[374px] md:w-[374px] md:h-[160px]
           lg:h-[186px] rounded-3xl border mx-auto border-blue-jeans bg-[#060709] items-center"
@@ -50,15 +50,15 @@ function Statistics() {
         </div>
 
         <div
-          className="flex flex-row relative justify-center px-[65px] w-full h-[90px] lg:w-full sm:w-[374px] md:w-[374px] md:h-[160px]
+          className="flex flex-row relative justify-center px-[65px] w-full h-[150px] lg:w-full sm:w-[374px] md:w-[374px]
           lg:h-[186px] rounded-3xl border mx-auto border-chinese-green bg-[#060709] items-center"
         >
           <StatisticItem label="Volume Transacted" value="$165m+" />
         </div>
 
         <div
-          className="flex flex-row relative justify-center px-[65px] w-full h-[90px] lg:w-full sm:w-[374px] md:w-[374px]
-          md:h-[160px] lg:h-[186px] rounded-3xl border mx-auto border-chinese-green bg-[#060709] items-center"
+          className="flex flex-row relative justify-center px-[65px] w-full h-[150px] lg:w-full sm:w-[374px] md:w-[374px]
+          lg:h-[186px] rounded-3xl border mx-auto border-chinese-green bg-[#060709] items-center"
         >
           <StatisticItem label="Number of Trades" value="165+" />
         </div>

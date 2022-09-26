@@ -22,7 +22,7 @@ function FooterTitle({ label }: TitleProps) {
   return (
     <p
       className="font-['Satoshi'] antialiased font-bold text-[22px] text-white
-      mb-[15px] xl:mb-[22px] leading-[0.8] text-center md:text-left xl:text-left"
+      mb-[15px] xl:mb-[22px] leading-[0.8] text-center lg:text-left"
     >
       {label}
     </p>
@@ -31,7 +31,7 @@ function FooterTitle({ label }: TitleProps) {
 
 function FooterLink({ title, href }: LinkProps) {
   return (
-    <li className="text-center md:text-left lg:text-left xl:text-left">
+    <li className="text-center lg:text-left">
       <Link href={href}>
         <p
           className="font-['Satoshi'] antialiased font-regular text-[16px]
@@ -55,7 +55,7 @@ function IconLink({ src, alt, href, width, height }: IconLinkProps) {
 function Footer() {
   return (
     <section className="container mx-auto">
-      <div className="flex  flex-col xl:flex-row xl:mx-[90px] pb-16">
+      <div className="flex flex-col xl:flex-row xl:mx-[90px] pb-16">
         <div className="w-full xl:w-[600px]">
           <Link href="/">
             <div
@@ -85,11 +85,10 @@ function Footer() {
         </div>
 
         <div
-          className="flex flex-col md:flex-row flex-wrap md:px-[30px] lg:px-[30px] xl:px-[unset] md:flex-row
-          lg:flex-row xl:flex-row mt-[60px] lg:mt-[60px] xl:mt-[unset] gap-y-12
-          xl:gap-y-[unset] justify-between  w-full"
+          className="flex flex-col sm:flex-row mx-auto flex-wrap md:px-[30px] lg:px-[30px] xl:px-[unset]
+          mt-[60px] xl:mt-[unset] gap-y-12 xl:gap-y-[unset] justify-between w-full"
         >
-          <div className="mx-auto basis-[50%] md:basis-[25%] flex-[1_0_100%] lg:mx-[unset]  lg:basis-[unset] lg:flex-[unset]">
+          <div className="flex flex-col mx-auto items-center lg:items-start basis-[100%] sm:basis-1/2 lg:basis-0">
             <FooterTitle label="Company" />
 
             <ul className="flex flex-col gap-y-[10px] list-none">
@@ -99,7 +98,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="mx-auto basis-[50%] md:basis-[25%] flex-[1_0_100%] lg:mx-[unset] lg:basis-[unset] lg:flex-[unset]">
+          <div className="flex flex-col mx-auto items-center lg:items-start basis-[100%] sm:basis-1/2 lg:basis-0">
             <FooterTitle label="Product" />
 
             <ul className="flex flex-col gap-y-[10px]">
@@ -109,7 +108,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="mx-auto basis-[50%] md:basis-[25%] flex-[1_0_100%] lg:mx-[unset] lg:basis-[unset] lg:flex-[unset]">
+          <div className="flex flex-col mx-auto items-center lg:items-start basis-[100%] sm:basis-1/2 lg:basis-0">
             <FooterTitle label="Developers" />
 
             <ul className="flex flex-col gap-y-[10px]">
@@ -118,7 +117,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="mx-auto basis-[50%] md:basis-[25%] flex-[1_0_100%] lg:mx-[unset] lg:basis-[unset] lg:flex-[unset]">
+          <div className="flex flex-col mx-auto items-center lg:items-start basis-[100%] sm:basis-1/2 lg:basis-0">
             <FooterTitle label="Community" />
 
             <ul className="flex flex-col gap-y-[10px]">
