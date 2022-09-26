@@ -4,6 +4,7 @@ import Head from "next/head"
 import Image from "next/image"
 
 import Header from "../components/Header"
+import Team from "../components/Team"
 import Partners from "../components/Partners"
 import Footer from "../components/Footer"
 
@@ -32,7 +33,7 @@ const About: NextPage = function () {
   return (
     <>
       <Head>
-        <title>Joint - Decentralized P2P trading</title>
+        <title>FiatX - Decentralized P2P trading</title>
         <link rel="icon" href="./favicon.ico" />
       </Head>
 
@@ -103,6 +104,8 @@ const About: NextPage = function () {
               ))}
             </div>
           </section>
+
+          <Team />
 
           <Partners />
 
