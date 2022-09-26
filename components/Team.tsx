@@ -68,6 +68,18 @@ function Team() {
       name: "Trantor Nebuila",
       role: "Head of Ops",
     },
+    {
+      id: 7,
+      image: "/team-member.svg",
+      name: "Trantor Nebuila",
+      role: "Head of Ops",
+    },
+    {
+      id: 8,
+      image: "/team-member.svg",
+      name: "Trantor Nebuila",
+      role: "Head of Ops",
+    },
   ]
 
   return (
