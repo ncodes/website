@@ -8,7 +8,6 @@ import useSWR from "swr"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import test from "../markdown/terms.md"
 
 type ContentProps = {
   id: string
