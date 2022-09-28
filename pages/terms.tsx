@@ -27,8 +27,9 @@ const Terms: NextPage = function () {
     const h1 = $("h1")
 
     return Array.from(h1).map((elem) => {
-      const title = elem?.children?.length > 0 ? elem.children[0].data : elem.attribs?.id
-      return { id: elem.attribs?.id, title }
+      const id = elem.attribs?.id
+      const title = elem?.children?.length > 0 ? elem.children[0]?.data : id
+      return { id, title }
     })
   }, [markdown])
 
