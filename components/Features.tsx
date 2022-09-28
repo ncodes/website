@@ -22,7 +22,7 @@ function FeaturesItem({ imageSrc, title, description }: FeaturesItemProps) {
 
       <div className="flex flex-col">
         <p
-          className="font-['Satoshi'] antialiased font-black text-white
+          className="font-mitr antialiased font-medium text-white
           text-[22px] mb-[5px] lg:text-[24px] leading-[26.25px] lg:mb-[10px]"
         >
           {title}
@@ -47,30 +47,28 @@ function Features() {
     >
       <div className="w-auto md:w-[410px] lg:w-auto mx-auto">
         <p
-          className="font-['Satoshi'] antialiased font-medium text-center text-white text-[14px]
-          lg:text-[16px] tracking-[2.63px] lg:tracking-[3px] leading-6 mb-0 lg:mb-[6px]"
+          className="font-mitr antialiased font-light text-center text-white text-[14px]
+          lg:text-[16px] leading-6 mb-0 lg:mb-[6px]"
         >
           MOST POWERFUL P2P ENGINE
         </p>
         <p
-          className="font-['Satoshi'] antialiased font-bold text-center text-white text-[48px] lg:text-[72px]
-          -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] w-auto mx-auto
-          mb-4 sm:w-[316px] md:w-[410px] lg:mb-6 lg:w-[570px] xl:w-full"
+          className="font-mitr antialiased font-semibold text-center text-white text-[48px] lg:text-[72px]
+          leading-[56px] lg:leading-[72px] w-auto mx-auto mb-4 sm:w-[316px] md:w-[410px] lg:mb-6 lg:w-[570px] xl:w-full"
         >
           The future of P2P trading is here
         </p>
         <p
-          className="font-['Raleway'] antialiased font-regular text-center
-          text-white text-[16px] tracking-[0.22px] leading-6 mx-auto w-[293px] xl:w-auto"
+          className="font-mitr antialiased font-light text-center
+          text-white text-[16px] leading-6 mx-auto w-[293px] xl:w-auto"
         >
-          FiatX protocol is designed to replace existing p2p trading engines
+          Joint protocol is designed to replace existing p2p trading engines
         </p>
       </div>
 
       <div
-        className="flex flex-col md:flex-row md:flex-wrap gap-y-[56px] md:gap-x-[40px]
-        md:gap-y-[30px] lg:gap-y-[56px] w-auto xl:w-[1120px] justify-center
-        md:justify-[unset] mx-auto mt-14 lg:mt-[60px] xl:mt-[100px]"
+        className="flex flex-col md:flex-row md:flex-wrap gap-y-[56px] gap-x-[73px] md:gap-x-[120px]
+        w-auto xl:w-[1120px] justify-center md:justify-[unset] mx-auto mt-[100px] md:mt-[60px] lg:mt-[100px]"
       >
         <FeaturesItem
           imageSrc="/fees.webp"
@@ -87,7 +85,7 @@ function Features() {
         <FeaturesItem
           imageSrc="/uncapped-volume.webp"
           title="Uncapped Volume"
-          description="Unlike other P2P trading platform, FiatX does not place a cap on your trading volume or activities."
+          description="Unlike other P2P trading platform, Joint does not place a cap on your trading volume or activities."
         />
 
         <FeaturesItem
