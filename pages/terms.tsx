@@ -1,18 +1,19 @@
 import type { NextPage } from "next"
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { useRouter } from "next/router";
-import { marked } from 'marked';
-import ReactMarkdown from 'react-markdown'
-import ReactMarkdownToJSX from 'markdown-to-jsx';
+import { marked } from "marked";
+import ReactMarkdown from "react-markdown"
+import ReactMarkdownToJSX from "markdown-to-jsx";
+import md from "markdown-it";
 
-import remarkGfm from 'remark-gfm'
-import useSWR from 'swr';
+import remarkGfm from "remark-gfm"
+import useSWR from "swr";
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import test from "../markdown/test.md"
+import test from "../markdown/terms.md"
 
 type ContentProps = {
   id: string,
@@ -21,149 +22,65 @@ type ContentProps = {
 }
 
 const Terms: NextPage = function () {
-
   const router = useRouter();
-  const terms = `
-  # Introduction
-  Hagglex Limited (herein referred to as “HGX”, “Haggle”, “us”, “we”
-  or “our”) operates this website (“the Service”). We strive to
-  maintain the highest standards of integrity in all our operations.
-  Likewise, we are dedicated to protecting our customers’ and online
-  visitors’ privacy on our service.
 
-  This page informs you of our policies regarding the collection,
-  use, and disclosure of personal data when you use our Service and
-  the choices you have associated with that data. We use your data
-  to provide and improve the Service. Unless otherwise defined in
-  this Privacy Policy, terms used in this Privacy Policy have the
-  same meanings as in our Terms of Use, accessible from here.
+  const [markdown, setMarkdown] = useState("")
+  const { data, error } = useSWR("/api/static_data_terms", (url)=>fetch(url).then((res) => res.text()))
 
 
-  # Acceptance of Terms
-  Likewise, we are dedicated to protecting our customers’ and online
-  visitors’ privacy on our service.
-
-  This page informs you of our policies regarding the collection,
-  use, and disclosure of personal data when you use our Service and
-  the choices you have associated with that data.
-
-  # Amendment of Terms
-  Likewise, we are dedicated to protecting our customers’ and online
-  visitors’ privacy on our service.
-
-  This page informs you of our policies regarding the collection,
-  use, and disclosure of personal data when you use our Service and
-  the choices you have associated with that data.
-
-
-  # Eligibility
-  Likewise, we are dedicated to protecting our customers’ and online
-  visitors’ privacy on our service.
-
-  This page informs you of our policies regarding the collection,
-  use, and disclosure of personal data when you use our Service and
-  the choices you have associated with that data.
-
-
-  # Using this Service
-  Likewise, we are dedicated to protecting our customers’ and online
-  visitors’ privacy on our service.
-
-  This page informs you of our policies regarding the collection,
-  use, and disclosure of personal data when you use our Service and
-  the choices you have associated with that data.
-
-
-  # Service Availability
-  Likewise, we are dedicated to protecting our customers’ and online
-  visitors’ privacy on our service.
-  <br />
-  This page informs you of our policies regarding the collection,
-  use, and disclosure of personal data when you use our Service and
-  the choices you have associated with that data.
-  `
-  const [markdown, setMarkdown] = useState(null)
-
-useEffect(()=>{
-
-setMarkdown(marked(terms))
-
-},[])
+  useEffect(()=>{
+    if (data) setMarkdown(marked(data))
+  },[data])
 
 
   const termsInformation: ContentProps[] = [
     {
       id: "introduction",
-      title: "Introduction",
-      children: <>
-        Hagglex Limited (herein referred to as “HGX”, “Haggle”, “us”, “we”
-        or “our”) operates this website (“the Service”). We strive to
-        maintain the highest standards of integrity in all our operations.
-        Likewise, we are dedicated to protecting our customers’ and online
-        visitors’ privacy on our service.
-        <br />
-        This page informs you of our policies regarding the collection,
-        use, and disclosure of personal data when you use our Service and
-        the choices you have associated with that data. We use your data
-        to provide and improve the Service. Unless otherwise defined in
-        this Privacy Policy, terms used in this Privacy Policy have the
-        same meanings as in our Terms of Use, accessible from here.
-      </>
+      title: "Introduction"
     },
     {
-      id: "acceptance-of-terms",
-      title: "Acceptance of Terms",
-      children: <>
-      Likewise, we are dedicated to protecting our customers’ and online
-      visitors’ privacy on our service.
-      <br />
-      This page informs you of our policies regarding the collection,
-      use, and disclosure of personal data when you use our Service and
-      the choices you have associated with that data.</>
+      id: "information-collection-and-usage",
+      title: "Information Collection and Usage"
     },
     {
-      id: "amendment-of-terms",
-      title: "Amendment of Terms",
-      children: <>
-      Likewise, we are dedicated to protecting our customers’ and online
-      visitors’ privacy on our service.
-      <br />
-      This page informs you of our policies regarding the collection,
-      use, and disclosure of personal data when you use our Service and
-      the choices you have associated with that data.</>
+      id: "types-of-data-collection",
+      title: "Types of Data Collection"
     },
     {
-      id: "eligibility",
-      title: "Eligibility",
-      children: <>
-      Likewise, we are dedicated to protecting our customers’ and online
-      visitors’ privacy on our service.
-      <br />
-      This page informs you of our policies regarding the collection,
-      use, and disclosure of personal data when you use our Service and
-      the choices you have associated with that data.</>
+      id: "useprocessing-of-personal-data",
+      title: "Use/Processing of Personal Data"
     },
     {
-      id: "using-this-service",
-      title: "Using this Service",
-      children: <>
-      Likewise, we are dedicated to protecting our customers’ and online
-      visitors’ privacy on our service.
-      <br />
-      This page informs you of our policies regarding the collection,
-      use, and disclosure of personal data when you use our Service and
-      the choices you have associated with that data.</>
+      id: "transfer-of-data",
+      title: "Transfer of Data"
     },
     {
-      id: "service-availability",
-      title: "Service Availability",
-      children: <>
-      Likewise, we are dedicated to protecting our customers’ and online
-      visitors’ privacy on our service.
-      <br />
-      This page informs you of our policies regarding the collection,
-      use, and disclosure of personal data when you use our Service and
-      the choices you have associated with that data.</>
+      id: "storage-of-personal-data",
+      title: "Storage of Personal Data"
+    },
+    {
+      id: "disclosure-of-pesronal-data",
+      title: "Disclosure of Pesronal Data"
+    },
+    {
+      id: "service-providers",
+      title: "Service providers"
+    },
+    {
+      id: "external-sites",
+      title: "External sites"
+    },
+    {
+      id: "childrens-policy",
+      title: "Children's policy"
+    },
+    {
+      id: "changes-to-policy",
+      title: "Changes to policy"
+    },
+    {
+      id: "clients-liability",
+      title: "Client's liability"
     },
   ];
 
@@ -197,7 +114,7 @@ setMarkdown(marked(terms))
               {termsInformation.map(({ id, title }) => (
                 <Link key={id} href={`#${id}`} scroll={false}>
 
-                  <a className={`font-['Mitr'] antialiased text-[16px] tracking-[0.25px] text-right font-extralight
+                  <a href={`#${id}`} className={`font-['Mitr'] antialiased text-[16px] tracking-[0.25px] text-right font-extralight
                   cursor-pointer text-white${router.asPath.includes(id) ? " text-chinese-green !font-medium" : ""}`}>
                     {title}
                   </a>
@@ -206,28 +123,13 @@ setMarkdown(marked(terms))
             </div>
           </div>
 
-        {/*  <div className="container mx-auto sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full md:max-w-screen-md
-           lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl 3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px]
-           lg:px-[30px] xl:px-[90px]">
-            {termsInformation.map(({id, title, children}) => (
-              <div key={id} id={id} className="mb-[80px] max-w-[990px] ">
-                <p className="font-['Mitr'] antialiased font-extralight text-white text-[16px] tracking-[0.22px] leading-[24px] mb-[32px]">
-                  {title}
-                </p>
-                <p className="font-['Mitr'] antialiased font-extralight text-white text-[16px] tracking-[0.22px] leading-[24px]">
-                  {children}
-                </p>
-              </div>
-            ))}
-          </div> */}
-
           <div className="container mx-auto sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full md:max-w-screen-md
              lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl 3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px]
              lg:px-[30px] xl:px-[90px]">
 
 
              <div className="font-['Mitr'] antialiased font-extralight text-white mb-[32px]">
-                 <div className="[&>h1]:mb-8 [&>h1:not(:nth-child(1))]:mt-20" dangerouslySetInnerHTML={{__html: markdown}}></div>
+                 <div className="[&>h1]:mb-8 [&>h1:not(:nth-child(1))]:mt-20" dangerouslySetInnerHTML={{__html: markdown}} />
              </div>
 
           </div>
