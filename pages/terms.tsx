@@ -4,11 +4,6 @@ import Head from "next/head"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { marked } from "marked"
-import ReactMarkdown from "react-markdown"
-import ReactMarkdownToJSX from "markdown-to-jsx"
-import md from "markdown-it"
-
-import remarkGfm from "remark-gfm"
 import useSWR from "swr"
 
 import Header from "../components/Header"
