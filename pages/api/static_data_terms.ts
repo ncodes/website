@@ -1,7 +1,7 @@
 import path from "path"
 import { promises as fs } from "fs"
 
-export default async function handler(req: unknown, res: unknown): Promise<void> {
+export default async function handler(req: any, res: any): Promise<void> {
   // Find the absolute path of the json directory
   const markdownDirectory = path.join(process.cwd(), "markdown")
   // Read the json data file data.json
