@@ -105,11 +105,11 @@ type LinkProps = {
 /** HEADER LINK ITEM - Starts */
 function HeaderLink({ title, href }: LinkProps) {
   return (
-    <li className="flex items-center cursor-pointer px-[15px] py-0.5 rounded-2xl">
+    <li className="flex items-center cursor-pointer px-[5px] py-0.5 rounded-2xl">
       <Link href={href}>
         <p
-          className="font-['Satoshi'] antialiased text-[18px]
-          tracking-[0.25px] text-white font-medium"
+          className="font-mitr antialiased text-[16px]
+          tracking-[0.25px] text-white font-extralight"
         >
           {title}
         </p>
@@ -125,8 +125,8 @@ const MobileLink = forwardRef<HTMLLIElement, LinkProps>((props, ref) => {
     <li className="container px-4 py-4 mx-auto" ref={ref}>
       <Link href={props.href}>
         <p
-          className="font-['Satoshi'] antialiased text-[20px] tracking-[0.28px]
-          leading-6 font-bold text-white inline-block cursor-pointer"
+          className="font-mitr antialiased text-[18px] tracking-[0.28px]
+          leading-6 font-semibold text-white inline-block cursor-pointer"
         >
           {props.title}
         </p>
@@ -145,7 +145,7 @@ const SubMobileLink = forwardRef<HTMLLIElement, LinkProps>((props, ref) => {
       <Link href={props.href}>
         <p
           className="font-['Mitr'] antialiased text-[14px] tracking-[0.22px]
-          leading-[17.64px] font-extralight text-white inline-block cursor-pointer"
+          leading-[17.64px] font-light text-white inline-block cursor-pointer"
         >
           {props.title}
         </p>
@@ -181,8 +181,8 @@ function Header() {
               <div className="relative overflow-hidden w-[123px] h-[20px] xl:w-[154px] xl:h-[25px] cursor-pointer z-[3]">
                 <Image
                   className="!relative object-cover w-full h-full"
-                  src="/fiatx-logo.png"
-                  alt="fiatx-logo"
+                  src="/Joint.svg"
+                  alt="joint-logo"
                   layout="fill"
                   quality={100}
                   priority
@@ -204,16 +204,16 @@ function Header() {
                   <div className="flex w-[128px] xl:w-40">
                     <div
                       className={`flex flex-row justify-between max-w-40 w-auto
-                        h-[40px] xl:h-[50px] pt-2 xl:pt-[11px] px-3 xl:px-5 rounded-lg ${open ? "bg-[#0d1c31]" : "bg-rich-blue"}`}
+                        h-[40px] xl:h-[50px] pt-[10px] xl:pt-[11px] px-3 xl:px-5 rounded-lg ${open ? "bg-[#0d1c31]" : "bg-rich-blue"}`}
                     >
                       <p
-                        className="font-['Satoshi'] antialiased text-[13px] xl:text-[16px]
-                        tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold"
+                        className="font-mitr antialiased text-[13px] xl:text-[18px]
+                        tracking-[0.18px] xl:tracking-[0.22px] text-white font-medium"
                       >
                         English&nbsp;🇬🇧
                       </p>
                       &nbsp; &nbsp;
-                      <div className={`relative w-5 h-5 xl:w-6 xl:h-6 overflow-hidden ${open && "-scale-y-100"}`}>
+                      <div className={`relative w-5 h-5 xl:w-6 xl:h-6 mt-[0px] xl:mt-[2px] overflow-hidden ${open && "-scale-y-100"}`}>
                         <Image
                           className="!relative object-cover w-full h-full"
                           src="/icons/caret-down.png"
@@ -242,7 +242,7 @@ function Header() {
                         {({ active }) => (
                           <ul className={`px-5 py-4 cursor-pointer ${active ? "hover:bg-[#0d1c31]" : "bg-none"}`}>
                             <li
-                              className="font-['Satoshi'] antialiased text-[13px] xl:text-[16px]
+                              className="font-mitr antialiased text-[13px] xl:text-[16px]
                               tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold"
                             >
                               {language.key === "ar" ? `${language.emoji} ${language.label}` : `${language.label} ${language.emoji}`}
@@ -265,12 +265,12 @@ function Header() {
               <HeaderLink title="About" href="/about" />
 
               {/* PRODUCTS MENU - Starts */}
-              <Menu as="div" className="flex flex-col mt-[3px]">
+              <Menu as="div" className="flex flex-col ">
                 {/* PRODUCTS MENU BUTTON - Starts */}
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-center">
-                      <p className="font-['Satoshi'] antialiased text-[18px] tracking-[0.25px] text-white font-medium">Products</p>
+                      <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-extralight">Products</p>
 
                       <div className={`relative w-6 h-6 overflow-hidden mt-[3px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -299,8 +299,8 @@ function Header() {
                       <div className="flex-col justify-between hidden xl:flex">
                         <div className="w-64">
                           <p
-                            className="font-['Satoshi'] antialiased text-[24px]
-                            leading-[26px] text-white font-black"
+                            className="font-mitr antialiased text-[24px]
+                            leading-[30px] text-white font-medium"
                           >
                             Product
                             <br />
@@ -309,11 +309,11 @@ function Header() {
 
                           <p
                             className="font-['Mitr'] antialiased text-[14px] tracking-[0.22px]
-                            leading-[17.64px] text-white font-extralight mt-[23.36px]"
+                            leading-[17.64px] text-white font-light mt-[23.36px]"
                           >
                             Learn how you can
                             <br />
-                            make the most of FIATX
+                            make the most of Joint
                           </p>
                         </div>
 
@@ -349,10 +349,8 @@ function Header() {
                                 />
                               </div>
                               <div className="flex flex-col flex-1 gap-y-[8px]">
-                                <p className="font-['Satoshi'] antialiased text-[20px] leading-[26px] text-white font-black">
-                                  {menuItem.title}
-                                </p>
-                                <p className="font-['Mitr'] antialiased text-[14px] leading-[17.67px] text-[#bebebe] font-extralight">
+                                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-medium">{menuItem.title}</p>
+                                <p className="font-['Mitr'] antialiased text-[14px] leading-[17.67px] text-white font-light">
                                   {menuItem.description}
                                 </p>
                               </div>
@@ -368,10 +366,37 @@ function Header() {
               </Menu>
               {/* PRODUCTS MENU - Ends */}
 
-              <HeaderLink title="Developers" href="developers" />
+              <div>
+                <li className="flex flex-row items-center">
+                  <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-extralight">Developers</p>
 
-              <div className="hidden xl:block">
-                <HeaderLink title="Community" href="community" />
+                  <div className="relative w-6 h-6 overflow-hidden mt-[3px]">
+                    <Image
+                      className="!relative object-cover w-full h-full"
+                      src="/icons/caret-down.png"
+                      alt="caret-down"
+                      layout="fill"
+                      quality={100}
+                      priority
+                    />
+                  </div>
+                </li>
+              </div>
+              <div>
+                <li className="flex flex-row items-center">
+                  <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-extralight">Community</p>
+
+                  <div className="relative w-6 h-6 overflow-hidden mt-[3px]">
+                    <Image
+                      className="!relative object-cover w-full h-full"
+                      src="/icons/caret-down.png"
+                      alt="caret-down"
+                      layout="fill"
+                      quality={100}
+                      priority
+                    />
+                  </div>
+                </li>
               </div>
             </ul>
             {/* HEADER MENU ITEMS - Ends */}
@@ -436,8 +461,8 @@ function Header() {
                             {({ open }) => (
                               <li className="container flex px-4 py-4 mx-auto">
                                 <p
-                                  className="font-['Satoshi'] antialiased text-[20px] tracking-[0.28px]
-                                  text-left leading-6 font-bold text-white inline-block cursor-pointer"
+                                  className="font-mitr antialiased text-[18px] tracking-[0.28px]
+                                  text-left leading-6 font-semibold text-white inline-block cursor-pointer"
                                 >
                                   Protocol
                                 </p>

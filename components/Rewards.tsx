@@ -16,8 +16,8 @@ function TabSelector({ label, selected }: TabSelectorProps) {
   return (
     <div className={selected ? "px-[18px] py-[2.5px] bg-chinese-green rounded-[20px]" : ""}>
       <p
-        className={`antialiased text-center text-[16px] tracking-[0.22px] leading-[24px] ${
-          selected ? "font-['satoshi'] font-bold text-eerie-black" : "font-['Raleway'] font-medium text-white"
+        className={`font-mitr antialiased text-center text-[16px] tracking-[0.22px] leading-[24px] ${
+          selected ? "font-medium text-eerie-black" : "font-extralight text-white"
         }`}
       >
         {label}
@@ -46,23 +46,23 @@ function Rewards() {
     >
       <div className="w-auto md:w-[410px] lg:w-auto mx-auto">
         <p
-          className="font-['Satoshi'] antialiased font-medium text-center text-white text-[14px]
-          lg:text-[16px] tracking-[2.63px] lg:tracking-[3px] leading-6 mb-0 lg:mb-[6px]"
+          className="font-mitr antialiased font-light text-center text-white text-[14px]
+          lg:text-[16px] leading-6 mb-0 lg:mb-[6px]"
         >
           EARN PROTOCOL REWARDS
         </p>
         <p
-          className="font-['Satoshi'] antialiased font-bold text-center text-white text-[48px]
-          lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] w-auto mx-auto
+          className="font-mitr antialiased font-semibold text-center text-white text-[48px]
+          lg:text-[72px] leading-[56px] lg:leading-[72px] w-auto mx-auto
           mb-4 sm:w-[316px] md:w-[410px] lg:mb-6 lg:w-[570px] xl:w-full"
         >
           Rewards, Everywhere
         </p>
         <p
-          className="font-['Raleway'] antialiased font-regular text-center text-white
-          text-[16px] tracking-[0.22px] leading-6 mx-auto w-[293px] xl:w-auto"
+          className="font-mitr antialiased font-light text-center text-white
+          text-[14px] tracking-[0.22px] leading-6 mx-auto w-[293px] xl:w-auto"
         >
-          The FIATX protocol offers juicy rewards to users
+          The Joint protocol offers juicy rewards to users
         </p>
       </div>
 
@@ -83,7 +83,7 @@ function Rewards() {
           <Tab.Panels>
             <Tab.Panel>
               <p
-                className="font-['Satoshi'] antialiased font-black text-center
+                className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
                 Trading Rewards
@@ -107,7 +107,7 @@ function Rewards() {
 
             <Tab.Panel>
               <p
-                className="font-['Satoshi'] antialiased font-black text-center
+                className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
                 Mediation Rewards
@@ -124,7 +124,7 @@ function Rewards() {
 
             <Tab.Panel>
               <p
-                className="font-['Satoshi'] antialiased font-black text-center
+                className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
                 Liquidity Rewards
@@ -141,7 +141,7 @@ function Rewards() {
 
             <Tab.Panel>
               <p
-                className="font-['Satoshi'] antialiased font-black text-center
+                className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
                 Staking Rewards
@@ -158,7 +158,7 @@ function Rewards() {
 
             <Tab.Panel>
               <p
-                className="font-['Satoshi'] antialiased font-black text-center
+                className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
                 Markets Rewards

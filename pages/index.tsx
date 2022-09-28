@@ -15,7 +15,7 @@ const Home: NextPage = function () {
   return (
     <>
       <Head>
-        <title>FiatX - Decentralized P2P trading</title>
+        <title>Joint - Decentralized P2P trading</title>
         <link rel="icon" href="./favicon.ico" />
       </Head>
 
