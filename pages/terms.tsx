@@ -89,7 +89,7 @@ const Terms: NextPage = function () {
              lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl 3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px]
              lg:px-[30px] xl:px-[90px]"
           >
-            <div className="font-['Mitr'] antialiased font-extralight text-white mb-[32px]">
+            <div className="font-mitr text-[16px] leading-[24px] ffont-light antialiased font-extralight text-white mb-[32px]">
               <div className="[&>h1]:mb-8 [&>h1:not(:nth-child(1))]:mt-20" dangerouslySetInnerHTML={{ __html: markdown }} />
             </div>
           </div>
