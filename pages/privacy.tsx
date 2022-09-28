@@ -1,7 +1,10 @@
 import type { NextPage } from "next"
+import React, { useState, useEffect } from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import useSWR from "swr"
+import { marked } from "marked"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -13,83 +16,63 @@ type ContentProps = {
 }
 
 const Privacy: NextPage = function () {
+
+  const [markdown, setMarkdown] = useState("")
+  const { data, error } = useSWR("/api/static_data_privacy", (url) => fetch(url).then((res) => res.text()))
+
+  useEffect(() => {
+    if (data) setMarkdown(marked(data))
+  }, [data])
   const router = useRouter()
 
   const privacyInformation: ContentProps[] = [
     {
       id: "introduction",
       title: "Introduction",
-      children: (
-        <>
-          Hagglex Limited (herein referred to as “HGX”, “Haggle”, “us”, “we” or “our”) operates this website (“the Service”). We strive to
-          maintain the highest standards of integrity in all our operations. Likewise, we are dedicated to protecting our customers’ and
-          online visitors’ privacy on our service.
-          <br />
-          This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and
-          the choices you have associated with that data. We use your data to provide and improve the Service. Unless otherwise defined in
-          this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms of Use, accessible from here.
-        </>
-      ),
     },
     {
-      id: "acceptanceOfTerms",
-      title: "Acceptance of Terms",
-      children: (
-        <>
-          Likewise, we are dedicated to protecting our customers’ and online visitors’ privacy on our service.
-          <br />
-          This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and
-          the choices you have associated with that data.
-        </>
-      ),
+      id: "information-collection-and-usage",
+      title: "Information Collection and Usage",
     },
     {
-      id: "amendmentOfTerms",
-      title: "Amendment of Terms",
-      children: (
-        <>
-          Likewise, we are dedicated to protecting our customers’ and online visitors’ privacy on our service.
-          <br />
-          This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and
-          the choices you have associated with that data.
-        </>
-      ),
+      id: "types-of-data-collection",
+      title: "Types of Data Collection",
     },
     {
-      id: "eligibility",
-      title: "Eligibility",
-      children: (
-        <>
-          Likewise, we are dedicated to protecting our customers’ and online visitors’ privacy on our service.
-          <br />
-          This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and
-          the choices you have associated with that data.
-        </>
-      ),
+      id: "useprocessing-of-personal-data",
+      title: "Use/Processing of Personal Data",
     },
     {
-      id: "usingThisService",
-      title: "Using this Service",
-      children: (
-        <>
-          Likewise, we are dedicated to protecting our customers’ and online visitors’ privacy on our service.
-          <br />
-          This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and
-          the choices you have associated with that data.
-        </>
-      ),
+      id: "transfer-of-data",
+      title: "Transfer of Data",
     },
     {
-      id: "serviceAvailability",
-      title: "Service Availabilty",
-      children: (
-        <>
-          Likewise, we are dedicated to protecting our customers’ and online visitors’ privacy on our service.
-          <br />
-          This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and
-          the choices you have associated with that data.
-        </>
-      ),
+      id: "storage-of-personal-data",
+      title: "Storage of Personal Data",
+    },
+    {
+      id: "disclosure-of-pesronal-data",
+      title: "Disclosure of Pesronal Data",
+    },
+    {
+      id: "service-providers",
+      title: "Service providers",
+    },
+    {
+      id: "external-sites",
+      title: "External sites",
+    },
+    {
+      id: "childrens-policy",
+      title: "Children's policy",
+    },
+    {
+      id: "changes-to-policy",
+      title: "Changes to policy",
+    },
+    {
+      id: "clients-liability",
+      title: "Client's liability",
     },
   ]
 
@@ -145,20 +128,13 @@ const Privacy: NextPage = function () {
           </div>
 
           <div
-            className="container mx-auto sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full
-            md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl
-            3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px] lg:px-[30px] xl:px-[90px]"
+            className="container mx-auto sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full md:max-w-screen-md
+             lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl 3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px]
+             lg:px-[30px] xl:px-[90px]"
           >
-            {privacyInformation.map(({ id, title, children }) => (
-              <div key={Math.random() * Math.random()} id={id} className="mb-[80px] max-w-[990px] ">
-                <p className="font-['Mitr'] antialiased font-extralight text-white text-[16px] tracking-[0.22px] leading-[24px] mb-[32px]">
-                  {title}
-                </p>
-                <p className="font-['Mitr'] antialiased font-extralight text-white text-[16px] tracking-[0.22px] leading-[24px]">
-                  {children}
-                </p>
-              </div>
-            ))}
+            <div className="font-['Mitr'] antialiased font-extralight text-white mb-[32px]">
+              <div className="[&>h1]:mb-8 [&>h1:not(:nth-child(1))]:mt-20" dangerouslySetInnerHTML={{ __html: markdown }} />
+            </div>
           </div>
 
           <div className="container mx-auto px-4 lg:px-[60px] xl:px-[90px] mt-[91px] mb-[99px]">
