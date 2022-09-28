@@ -23,7 +23,7 @@ const Privacy: NextPage = function () {
     const $ = cheerio.load(markdown, null, false)
     const h1 = $("h1")
 
-    return Array.from(h1).map((elem) => {
+    return Array.from(h1).map((elem: any) => {
       const id = elem.attribs?.id
       const title = elem?.children?.length > 0 ? elem.children[0]?.data : id
       return { id, title }
