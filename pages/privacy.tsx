@@ -1,10 +1,12 @@
 import type { NextPage } from "next"
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useMemo } from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import useSWR from "swr"
 import { marked } from "marked"
+import * as cheerio from 'cheerio';
+
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -18,62 +20,21 @@ type ContentProps = {
 const Privacy: NextPage = function () {
   const [markdown, setMarkdown] = useState("")
   const { data } = useSWR("/api/static_data_privacy", (url) => fetch(url).then((res) => res.text()))
+  const titleHeaders = useMemo(() => {
+     const $ = cheerio.load(markdown, null, false)
+     const h1 =  $("h1")
+
+     return Array.from(h1).map((elem)=>{
+       const title = elem?.children?.length > 0 ? elem.children[0].data : elem.attribs?.id
+       return {id: elem.attribs?.id, title: title}
+     })
+  }, [markdown])
+
 
   useEffect(() => {
     if (data) setMarkdown(marked(data))
   }, [data])
   const router = useRouter()
-
-  const privacyInformation: ContentProps[] = [
-    {
-      id: "introduction",
-      title: "Introduction",
-    },
-    {
-      id: "information-collection-and-usage",
-      title: "Information Collection and Usage",
-    },
-    {
-      id: "types-of-data-collection",
-      title: "Types of Data Collection",
-    },
-    {
-      id: "useprocessing-of-personal-data",
-      title: "Use/Processing of Personal Data",
-    },
-    {
-      id: "transfer-of-data",
-      title: "Transfer of Data",
-    },
-    {
-      id: "storage-of-personal-data",
-      title: "Storage of Personal Data",
-    },
-    {
-      id: "disclosure-of-pesronal-data",
-      title: "Disclosure of Pesronal Data",
-    },
-    {
-      id: "service-providers",
-      title: "Service providers",
-    },
-    {
-      id: "external-sites",
-      title: "External sites",
-    },
-    {
-      id: "childrens-policy",
-      title: "Children's policy",
-    },
-    {
-      id: "changes-to-policy",
-      title: "Changes to policy",
-    },
-    {
-      id: "clients-liability",
-      title: "Client's liability",
-    },
-  ]
 
   return (
     <>
@@ -110,7 +71,7 @@ const Privacy: NextPage = function () {
               </p>
             </div>
             <div className="hidden md:flex flex-col space-y-1">
-              {privacyInformation.map(({ id, title }) => (
+              {titleHeaders.map(({ id, title }) => (
                 <Link key={Math.random() * Math.random()} href={`#${id}`} scroll={false}>
                   <a
                     className={`font-['Mitr'] antialiased text-[16px]
