@@ -20,7 +20,7 @@ const Terms: NextPage = function () {
   const router = useRouter()
 
   const [markdown, setMarkdown] = useState("")
-  const { data, error } = useSWR("/api/static_data_terms", (url) => fetch(url).then((res) => res.text()))
+  const { data } = useSWR("/api/static_data_terms", (url) => fetch(url).then((res) => res.text()))
 
   useEffect(() => {
     if (data) setMarkdown(marked(data))
