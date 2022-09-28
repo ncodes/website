@@ -5,8 +5,7 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import useSWR from "swr"
 import { marked } from "marked"
-import * as cheerio from 'cheerio';
-
+import * as cheerio from "cheerio"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -21,15 +20,14 @@ const Privacy: NextPage = function () {
   const [markdown, setMarkdown] = useState("")
   const { data } = useSWR("/api/static_data_privacy", (url) => fetch(url).then((res) => res.text()))
   const titleHeaders = useMemo(() => {
-     const $ = cheerio.load(markdown, null, false)
-     const h1 =  $("h1")
+    const $ = cheerio.load(markdown, null, false)
+    const h1 = $("h1")
 
-     return Array.from(h1).map((elem)=>{
-       const title = elem?.children?.length > 0 ? elem.children[0].data : elem.attribs?.id
-       return {id: elem.attribs?.id, title: title}
-     })
+    return Array.from(h1).map((elem) => {
+      const title = elem?.children?.length > 0 ? elem.children[0].data : elem.attribs?.id
+      return { id: elem.attribs?.id, title }
+    })
   }, [markdown])
-
 
   useEffect(() => {
     if (data) setMarkdown(marked(data))
