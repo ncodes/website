@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import type { NextPage } from "next"
 import React, { useState, useEffect, useMemo } from "react"
 import Head from "next/head"
@@ -9,12 +10,6 @@ import * as cheerio from "cheerio"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-
-type ContentProps = {
-  id: string
-  title: string
-  children?: React.ReactNode
-}
 
 const Terms: NextPage = function () {
   const router = useRouter()
@@ -90,7 +85,10 @@ const Terms: NextPage = function () {
              lg:px-[30px] xl:px-[90px]"
           >
             <div className="font-mitr text-[16px] leading-[24px] ffont-light antialiased font-extralight text-white mb-[32px]">
-              <div className="[&>h1]:mb-8 [&>h1:not(:nth-child(1))]:mt-20" dangerouslySetInnerHTML={{ __html: markdown }} />
+              <div
+                className="[&>h1]:font-semibold [&>h1]:text-3xl [&>h1]:mb-3 [&>h1:not(:nth-child(1))]:mt-20"
+                dangerouslySetInnerHTML={{ __html: markdown }}
+              />
             </div>
           </div>
 

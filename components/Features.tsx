@@ -15,7 +15,7 @@ function FeaturesItem({ imageSrc, title, description }: FeaturesItemProps) {
       xs-[500px] md:w-[330px] lg:w-[450px] xl:w-[500px]"
     >
       <div className="flex">
-        <div className="relative overflow-hidden w-[90px] h-[90px]">
+        <div className="relative overflow-hidden w-[80px] h-[80px]">
           <Image className="!relative object-cover w-full h-full" src={imageSrc} alt="asset-logo" layout="fill" quality={100} priority />
         </div>
       </div>
@@ -23,16 +23,11 @@ function FeaturesItem({ imageSrc, title, description }: FeaturesItemProps) {
       <div className="flex flex-col">
         <p
           className="font-mitr antialiased font-medium text-white
-          text-[22px] mb-[5px] lg:text-[24px] leading-[26.25px] lg:mb-[10px]"
+          text-[20px] xl:text-[22px] mb-[5px] lg:text-[24px] leading-[26.25px] lg:mb-[10px]"
         >
           {title}
         </p>
-        <p
-          className="font-['Raleway'] antialiased font-medium
-          text-[#a5a5a5] text-[15px] tracking-wider leading-[26.25px]"
-        >
-          {description}
-        </p>
+        <p className="font-mitr antialiased font-light text-gray-300 text-[15px] leading-[26.25px]">{description}</p>
       </div>
     </div>
   )
@@ -47,7 +42,7 @@ function Features() {
     >
       <div className="w-auto md:w-[410px] lg:w-auto mx-auto">
         <p
-          className="font-mitr antialiased font-light text-center text-white text-[14px]
+          className="font-mitr antialiased font-normal text-center text-white text-[14px]
           lg:text-[16px] leading-6 mb-0 lg:mb-[6px]"
         >
           MOST POWERFUL P2P ENGINE
@@ -66,56 +61,57 @@ function Features() {
         </p>
       </div>
 
-      <div
-        className="flex flex-col md:flex-row md:flex-wrap gap-y-[56px] gap-x-[73px] md:gap-x-[120px]
-        w-auto xl:w-[1120px] justify-center md:justify-[unset] mx-auto mt-[100px] md:mt-[60px] lg:mt-[100px]"
-      >
+      {/* <div */}
+      {/*   className="flex flex-col md:flex-row md:flex-wrap gap-y-[56px] gap-x-[73px] md:gap-x-[120px] */}
+      {/*   w-auto xl:w-[1120px] justify-center md:justify-[unset] mx-auto mt-[100px] md:mt-[60px] lg:mt-[100px]" */}
+      {/* > */}
+      <div className="w-auto xl:w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-7 mt-10">
         <FeaturesItem
           imageSrc="/fees.webp"
           title="Low Fees"
-          description="Trading fees are lower and predictable than centralized P2P alternatives."
+          description="Trading fees are lower, predictable and subsidized via protocol trading rewards."
         />
 
         <FeaturesItem
           imageSrc="/multi-chain.webp"
           title="Multi-chain"
-          description="Trade on multiple L1 and L2 chains. We support Ethereum Mainnet, Polygon and BSC."
+          description="We support multiple EVM-based chains via cross-chain P2P bridges."
         />
 
         <FeaturesItem
           imageSrc="/uncapped-volume.webp"
           title="Uncapped Volume"
-          description="Unlike other P2P trading platform, Joint does not place a cap on your trading volume or activities."
+          description="No trade volume limitations are imposed by the protocol. Access unlimited liquidity."
         />
 
         <FeaturesItem
           imageSrc="/privacy.webp"
           title="Privacy"
-          description="Trade without the need to reveal your identity to platform operators. Your wallet is enough. "
+          description="No KYC requirements are imposed by the protocol. Open markets are instantly usable."
         />
 
         <FeaturesItem
           imageSrc="/unlimited-liquidity.webp"
           title="Unlimited Liquidity"
-          description="Access unlimited liquidity for open markets created by people across the world. "
+          description="Unlimited liquidity sourced and accessible from all over the world."
         />
 
         <FeaturesItem
           imageSrc="/no-platform-risk.webp"
           title="No Platform-risk"
-          description="Your liquidity and earnings are yours to keep and control. No one can confisticate your funds for any reason."
+          description="No one can lock your funds. It is non-custodial. Enter or exit a market at will."
         />
 
         <FeaturesItem
           imageSrc="/encrypted-messaging.webp"
           title="Encrypted Messaging"
-          description="Your liquidity and earnings are yours to keep and control. No one can confisticate your funds for any reason."
+          description="End-to-end message encryption keep conversations private. "
         />
 
         <FeaturesItem
           imageSrc="/trading-reward.webp"
           title="Trading Reward"
-          description="Your liquidity and earnings are yours to keep and control. No one can confisticate your funds for any reason."
+          description="Earn rewards when you trade, provide liquidity or become a miner."
         />
       </div>
 

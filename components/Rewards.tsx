@@ -46,7 +46,7 @@ function Rewards() {
     >
       <div className="w-auto md:w-[410px] lg:w-auto mx-auto">
         <p
-          className="font-mitr antialiased font-light text-center text-white text-[14px]
+          className="font-mitr antialiased font-normal text-center text-white text-[14px]
           lg:text-[16px] leading-6 mb-0 lg:mb-[6px]"
         >
           EARN PROTOCOL REWARDS
@@ -89,7 +89,7 @@ function Rewards() {
                 Trading Rewards
               </p>
               <p
-                className="font-['Raleway'] antialiased font-normal text-center
+                className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-auto lg:w-[411px] mx-auto"
               >
                 Total reward earned from trades as a liquidity provider or as a taker.
@@ -113,7 +113,7 @@ function Rewards() {
                 Mediation Rewards
               </p>
               <p
-                className="font-['Raleway'] antialiased font-regular text-center
+                className="font-mitr antialiased font-regular text-center
                 text-white text-[16px] tracking-[0.22px] leading-6 mx-auto w-[293px] lg:w-[411px]"
               >
                 Total reward earned from trades as a liquidity provider or as a taker.
@@ -130,7 +130,7 @@ function Rewards() {
                 Liquidity Rewards
               </p>
               <p
-                className="font-['Raleway'] antialiased font-normal text-center
+                className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
               >
                 Total reward earned from trades as a liquidity provider or as a taker.
@@ -147,7 +147,7 @@ function Rewards() {
                 Staking Rewards
               </p>
               <p
-                className="font-['Raleway'] antialiased font-normal text-center
+                className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
               >
                 Total reward earned from trades as a liquidity provider or as a taker.
@@ -164,7 +164,7 @@ function Rewards() {
                 Markets Rewards
               </p>
               <p
-                className="font-['Raleway'] antialiased font-normal text-center
+                className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
               >
                 Total reward earned from trades as a liquidity provider or as a taker.

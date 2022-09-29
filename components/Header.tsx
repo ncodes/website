@@ -109,7 +109,7 @@ function HeaderLink({ title, href }: LinkProps) {
       <Link href={href}>
         <p
           className="font-mitr antialiased text-[16px]
-          tracking-[0.25px] text-white font-extralight"
+          tracking-[0.25px] text-white font-medium hover:text-chinese-green transition-colors duration-500"
         >
           {title}
         </p>
@@ -178,7 +178,7 @@ function Header() {
           {/* HEADER LOGO - Starts */}
           <div>
             <Link href="/">
-              <div className="relative overflow-hidden w-[123px] h-[20px] xl:w-[154px] xl:h-[25px] cursor-pointer z-[3]">
+              <div className="relative overflow-hidden w-[123px] h-[25px] xl:w-[154px] xl:h-[32px] cursor-pointer z-[3]">
                 <Image
                   className="!relative object-cover w-full h-full"
                   src="/Joint.svg"
@@ -260,7 +260,7 @@ function Header() {
             {/* LANGUAGE SELECTOR - Ends */}
 
             {/* HEADER MENU ITEMS - Starts */}
-            <ul className="hidden lg:flex flex-row gap-[18px]">
+            <ul className="hidden lg:flex flex-row gap-3 xl:gap-[40px]">
               <HeaderLink title="Company" href="/" />
               <HeaderLink title="About" href="/about" />
 
@@ -270,7 +270,12 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-center">
-                      <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-extralight">Products</p>
+                      <p
+                        className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-medium
+                      hover:text-chinese-green transition-colors duration-500"
+                      >
+                        Protocol
+                      </p>
 
                       <div className={`relative w-6 h-6 overflow-hidden mt-[3px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -302,18 +307,16 @@ function Header() {
                             className="font-mitr antialiased text-[24px]
                             leading-[30px] text-white font-medium"
                           >
-                            Product
+                            Protocol
                             <br />
-                            Offerings
+                            Features
                           </p>
 
                           <p
                             className="font-['Mitr'] antialiased text-[14px] tracking-[0.22px]
                             leading-[17.64px] text-white font-light mt-[23.36px]"
                           >
-                            Learn how you can
-                            <br />
-                            make the most of Joint
+                            Directly navigate to <br />a protocol feature
                           </p>
                         </div>
 
@@ -348,7 +351,7 @@ function Header() {
                                   alt="caret-down"
                                 />
                               </div>
-                              <div className="flex flex-col flex-1 gap-y-[8px]">
+                              <div className="flex flex-col flex-1 gap-y-[4px]">
                                 <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-medium">{menuItem.title}</p>
                                 <p className="font-['Mitr'] antialiased text-[14px] leading-[17.67px] text-white font-light">
                                   {menuItem.description}
@@ -368,7 +371,7 @@ function Header() {
 
               <div>
                 <li className="flex flex-row items-center">
-                  <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-extralight">Developers</p>
+                  <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-medium">Developers</p>
 
                   <div className="relative w-6 h-6 overflow-hidden mt-[3px]">
                     <Image
@@ -384,7 +387,7 @@ function Header() {
               </div>
               <div>
                 <li className="flex flex-row items-center">
-                  <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-extralight">Community</p>
+                  <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-medium">Community</p>
 
                   <div className="relative w-6 h-6 overflow-hidden mt-[3px]">
                     <Image
@@ -446,7 +449,7 @@ function Header() {
                     className="absolute left-0 right-0 top-0 !h-screen !w-full
                     outline-0 bg-[#03050794] backdrop-blur-[28px] z-[2] pt-20 pb-[48px]"
                   >
-                    <div className="flex flex-col flex-1 h-full ">
+                    <div className="flex flex-col flex-1 h-full">
                       <ul className="flex flex-col flex-1 pb-3 overflow-scroll">
                         <Menu.Item>
                           <MobileLink title="Company" href="/" />

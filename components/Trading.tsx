@@ -33,7 +33,7 @@ function Trading() {
           <p
             className="font-mitr antialiased font-semibold text-[48px] lg:text-[72px] text-white text-center
           lg:text-left leading-[56px] lg:leading-[72px] mb-[24px]
-          lg:mb-[40px] xl:mb-[70px] w-[265px] mx-auto sm:mx-[unset] sm:w-full"
+          lg:mb-[30px] xl:mb-[30px] w-[265px] mx-auto sm:mx-[unset] sm:w-full"
           >
             Unbounded P2P Trading
           </p>
