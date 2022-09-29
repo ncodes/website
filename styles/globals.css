@@ -37,6 +37,10 @@ a {
 }
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply bg-rich-black;
   }

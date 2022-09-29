@@ -1,7 +1,11 @@
 import type { NextPage } from "next"
+import React, { useState, useEffect, useMemo } from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import useSWR from "swr"
+import { marked } from "marked"
+import * as cheerio from "cheerio"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -13,85 +17,23 @@ type ContentProps = {
 }
 
 const Privacy: NextPage = function () {
-  const router = useRouter()
+  const [markdown, setMarkdown] = useState("")
+  const { data } = useSWR("/api/static_data_privacy", (url) => fetch(url).then((res) => res.text()))
+  const titleHeaders = useMemo(() => {
+    const $ = cheerio.load(markdown, null, false)
+    const h1 = $("h1")
 
-  const privacyInformation: ContentProps[] = [
-    {
-      id: "introduction",
-      title: "Introduction",
-      children: (
-        <>
-          Hagglex Limited (herein referred to as “HGX”, “Haggle”, “us”, “we” or “our”) operates this website (“the Service”). We strive to
-          maintain the highest standards of integrity in all our operations. Likewise, we are dedicated to protecting our customers’ and
-          online visitors’ privacy on our service.
-          <br />
-          This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and
-          the choices you have associated with that data. We use your data to provide and improve the Service. Unless otherwise defined in
-          this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms of Use, accessible from here.
-        </>
-      ),
-    },
-    {
-      id: "acceptanceOfTerms",
-      title: "Acceptance of Terms",
-      children: (
-        <>
-          Likewise, we are dedicated to protecting our customers’ and online visitors’ privacy on our service.
-          <br />
-          This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and
-          the choices you have associated with that data.
-        </>
-      ),
-    },
-    {
-      id: "amendmentOfTerms",
-      title: "Amendment of Terms",
-      children: (
-        <>
-          Likewise, we are dedicated to protecting our customers’ and online visitors’ privacy on our service.
-          <br />
-          This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and
-          the choices you have associated with that data.
-        </>
-      ),
-    },
-    {
-      id: "eligibility",
-      title: "Eligibility",
-      children: (
-        <>
-          Likewise, we are dedicated to protecting our customers’ and online visitors’ privacy on our service.
-          <br />
-          This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and
-          the choices you have associated with that data.
-        </>
-      ),
-    },
-    {
-      id: "usingThisService",
-      title: "Using this Service",
-      children: (
-        <>
-          Likewise, we are dedicated to protecting our customers’ and online visitors’ privacy on our service.
-          <br />
-          This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and
-          the choices you have associated with that data.
-        </>
-      ),
-    },
-    {
-      id: "serviceAvailability",
-      title: "Service Availabilty",
-      children: (
-        <>
-          Likewise, we are dedicated to protecting our customers’ and online visitors’ privacy on our service.
-          <br />
-          This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and
-          the choices you have associated with that data.
-        </>
-      ),
-    },
-  ]
+    return Array.from(h1).map((elem: any) => {
+      const id = elem.attribs?.id
+      const title = elem?.children?.length > 0 ? elem.children[0]?.data : id
+      return { id, title }
+    })
+  }, [markdown])
+
+  useEffect(() => {
+    if (data) setMarkdown(marked(data))
+  }, [data])
+  const router = useRouter()
 
   return (
     <>
@@ -128,7 +70,7 @@ const Privacy: NextPage = function () {
               </p>
             </div>
             <div className="hidden md:flex flex-col space-y-1">
-              {privacyInformation.map(({ id, title }) => (
+              {titleHeaders.map(({ id, title }) => (
                 <Link key={Math.random() * Math.random()} href={`#${id}`} scroll={false}>
                   <a
                     className={`font-['Mitr'] antialiased text-[16px]
@@ -145,20 +87,13 @@ const Privacy: NextPage = function () {
           </div>
 
           <div
-            className="container mx-auto sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full
-            md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl
-            3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px] lg:px-[30px] xl:px-[90px]"
+            className="container mx-auto sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full md:max-w-screen-md
+             lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl 3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px]
+             lg:px-[30px] xl:px-[90px]"
           >
-            {privacyInformation.map(({ id, title, children }) => (
-              <div key={Math.random() * Math.random()} id={id} className="mb-[80px] max-w-[990px] ">
-                <p className="font-['Mitr'] antialiased font-extralight text-white text-[16px] tracking-[0.22px] leading-[24px] mb-[32px]">
-                  {title}
-                </p>
-                <p className="font-['Mitr'] antialiased font-extralight text-white text-[16px] tracking-[0.22px] leading-[24px]">
-                  {children}
-                </p>
-              </div>
-            ))}
+            <div className="font-mitr text-[16px] leading-[24px] ffont-light antialiased font-extralight text-white mb-[32px]">
+              <div className="[&>h1]:mb-8 [&>h1:not(:nth-child(1))]:mt-20" dangerouslySetInnerHTML={{ __html: markdown }} />
+            </div>
           </div>
 
           <div className="container mx-auto px-4 lg:px-[60px] xl:px-[90px] mt-[91px] mb-[99px]">
