@@ -10,6 +10,7 @@ import Features from "../components/Features"
 import Rewards from "../components/Rewards"
 import Partners from "../components/Partners"
 import Footer from "../components/Footer"
+import NFT from "../components/NFT"
 
 const Home: NextPage = function () {
   return (
@@ -47,8 +48,11 @@ const Home: NextPage = function () {
         <Assets />
 
         <Features />
-
+        <div className="bg-[url('/Group33.svg')] bg-cover">
+        <NFT />
         <Rewards />
+        </div>
+      
 
         <Partners />
 
