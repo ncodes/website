@@ -53,7 +53,7 @@ function Hero() {
           className="font-mitr md:w-[532px] md:mx-auto antialiased text-center xl:text-left
           text-[16px] tracking-[0.32px] leading-6 font-light text-white mb-[24px] xl:mb-[33px]"
         >
-          Exchange cryptocurrencies for cash with anyone on the planet.&nbsp;
+          Exchange crypto for cash with anyone on the planet.&nbsp;
           {/* eslint-disable-next-line */}
           <b className="before:content-[''] xl:before:content-['\00000A'] xl:before:whitespace-pre-wrap">Low fees</b>,{" "}
           <b>unlimited liquidity</b>, <b>uncapped volume </b>

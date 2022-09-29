@@ -58,7 +58,7 @@ function Assets() {
     >
       <div>
         <p
-          className="font-mitr antialiased font-light text-center text-white text-[14px]
+          className="font-mitr antialiased font-normal text-center text-white text-[14px]
           leading-[17.64px] mb-0 lg:mb-[6px]"
         >
           FEATURED MARKETS
