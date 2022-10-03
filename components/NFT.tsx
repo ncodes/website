@@ -23,11 +23,11 @@ function NFT() {
             lg:text-left -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-[24px]
             lg:mb-[40px] xl:mb-[40px] w-[265px] mx-auto sm:mx-[unset] sm:w-full"
           >
-            Staked NFT for protocol Fee
+            NFT for protocol Fee
           </p>
           <p
             className="font-mitr antialiased font-regular text-[16px] text-white tracking-[0.22px]
-            leading-6 mb-[48px] lg:mb-[24px] text-center lg:text-left w-full lg:w-[440px] px-10
+            leading-6 mb-[38px] lg:mb-[24px] text-center lg:text-left w-full lg:w-[440px] px-10
               xs:px-0 3xs:px-12 sm:px-6 lg:px-0"
           >
             Collect the CosmosPet NFT to get a share of all protocol revenue for eternity

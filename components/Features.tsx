@@ -51,7 +51,7 @@ function Features() {
           className="font-mitr antialiased font-semibold text-center text-white text-[48px] lg:text-[72px]
           leading-[56px] lg:leading-[72px] w-auto mx-auto mb-4 sm:w-[316px] md:w-[410px] lg:mb-6 lg:w-[570px] xl:w-full"
         >
-          The future of P2P trading is here
+          The future of P2P trading
         </p>
         <p
           className="font-mitr antialiased font-light text-center
