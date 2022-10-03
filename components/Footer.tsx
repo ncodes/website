@@ -59,7 +59,7 @@ function Footer() {
         <div className="">
           <Link href="/">
             <div
-              className="relative overflow-hidden w-[154px] h-[25px]
+              className="relative overflow-hidden w-[154px] h-[32px]
               xl:w-[154px] xl:h-[32px] cursor-pointer mx-auto xl:mx-[unset]"
             >
               <Image className="!relative object-cover w-full h-full" src="/Joint.svg" alt="joint-logo" layout="fill" quality={100} />
