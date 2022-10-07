@@ -2,6 +2,7 @@ import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
 import { Tab } from "@headlessui/react"
+import { useSpring, animated } from "@react-spring/web"
 import { useState } from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -54,6 +55,19 @@ function TabSelector({ label, selected }: TabSelectorProps) {
 }
 
 function Accordion({ selectedFaq, setSelectedFaq, id, title, children }: AccordionProps) {
+  const openAnimation = useSpring({
+    from: {
+      opacity: 0,
+      maxHeight: "0px",
+      overflow: "hidden",
+    },
+    to: {
+      opacity: 1,
+      maxHeight: selectedFaq.id === id && selectedFaq.open ? "100%" : "0px",
+    },
+    config: { duration: 100 },
+  })
+
   const setOpenTo = selectedFaq.id === id ? !selectedFaq.open : true
 
   return (
@@ -83,7 +97,7 @@ function Accordion({ selectedFaq, setSelectedFaq, id, title, children }: Accordi
         </div>
       </div>
 
-      {selectedFaq.id === id && selectedFaq.open && <div>{children}</div>}
+      <animated.div style={openAnimation}>{children}</animated.div>
     </div>
   )
 }
