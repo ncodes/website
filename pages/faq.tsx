@@ -71,12 +71,15 @@ function Accordion({ selectedFaq, setSelectedFaq, id, title, children }: Accordi
   const setOpenTo = selectedFaq.id === id ? !selectedFaq.open : true
 
   return (
-    <div className="flex flex-col items-center justify-between border-b last:border-none border-[#1A1D2B] px-4 lg:px-[unset]">
+    <div
+      className="flex flex-col items-center justify-between border-b border-dashed last:border-none
+     border-gray-800 rounded-full px-4 lg:px-[unset]"
+    >
       <div />
 
       <div
         onClick={() => setSelectedFaq({ id, open: setOpenTo })}
-        className="flex flex-row items-center justify-between w-full cursor-pointer"
+        className="flex flex-row items-center justify-between w-full cursor-pointer pr-5"
         aria-hidden="true"
         role="button"
       >
