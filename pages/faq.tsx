@@ -85,7 +85,7 @@ function Accordion({ selectedFaq, setSelectedFaq, id, title, children }: Accordi
       >
         <div className="hidden lg:block" />
         <p
-          className="font-['Mitr'] antialiased font-medium text-white text-[16px]
+          className="font-['Mitr'] antialiased font-medium text-white break-word text-[16px]
           lg:text-[24px] leading-[19.7px] lg:leading-[26.25px] py-[18px] text-left lg:text-center"
         >
           {title}
@@ -108,7 +108,7 @@ function Accordion({ selectedFaq, setSelectedFaq, id, title, children }: Accordi
 function AccordionContent({ children }: AccordionContentProps) {
   return (
     <p
-      className="font-['Mitr'] antialiased font-extralight text-white lg:text-[16px]
+      className="font-['Mitr'] antialiased font-extralight text-white break-word lg:text-[16px]
       text-[14px] leading-[19.69px] lg:leading-[24px] text-left lg:max-w-[905px] pb-10"
     >
       {children}

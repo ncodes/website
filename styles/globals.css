@@ -51,6 +51,10 @@ a {
   border: 1px solid #055613;
 }
 
+.break-word {
+  word-break: break-word
+}
+
 @layer base {
   html {
     @apply scroll-smooth;
