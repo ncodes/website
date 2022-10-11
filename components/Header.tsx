@@ -96,7 +96,7 @@ const DeveloperMenuItems = [
     title: "Github",
     description: "Visit our github repository today.",
     src: "/market-menu.webp",
-  }
+  },
 ]
 /** DEVELOPER MENU ITEM DATA - Ends */
 
@@ -111,7 +111,7 @@ const CommunityMenuItems = [
     title: "Twitter",
     description: "Checkout the latest on our Twitter handle.",
     src: "/market-menu.webp",
-  }
+  },
 ]
 /** COMMUNITY MENU ITEM DATA - Ends */
 
@@ -448,7 +448,8 @@ function Header() {
                             className="font-['Mitr'] antialiased text-[14px] tracking-[0.22px]
                             leading-[17.64px] text-white font-light mt-[23.36px]"
                           >
-                            Directly navigate our <br />developer resources
+                            Directly navigate our <br />
+                            developer resources
                           </p>
                         </div>
                       </div>
@@ -534,7 +535,8 @@ function Header() {
                             className="font-['Mitr'] antialiased text-[14px] tracking-[0.22px]
                             leading-[17.64px] text-white font-light mt-[23.36px]"
                           >
-                            Directly navigate our <br />community to stay informed
+                            Directly navigate our <br />
+                            community to stay informed
                           </p>
                         </div>
                       </div>
