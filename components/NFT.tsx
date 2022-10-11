@@ -13,20 +13,20 @@ function NFT() {
       <div className="flex flex-col-reverse lg:flex-row xl:flex-row items-center lg:gap-x-[70px] xl:gap-x-[145px] gap-y-[51px]">
         <div className="w-full lg:w-[513px]">
           <p
-            className="font-mitr antialiased text-center xl:text-left text-[14px] xl:text-[16px]
-            tracking-[2.63px] xl:tracking-[3px] leading-[24px] text-white font-medium xl:mb-[13px]"
+            className="font-mitr antialiased text-center lg:text-left text-[14px]
+            tracking-[2.63px] xl:tracking-[3px] leading-[24px] text-white font-light xl:mb-[13px]"
           >
             MOST POWERFUL P2P ENGINE
           </p>
           <p
-            className="font-mitr antialiased font-bold text-[48px] lg:text-[72px] text-white text-center
+            className="font-mitr antialiased font-semibold text-[48px] lg:text-[72px] text-white text-center
             lg:text-left -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-[24px]
-            lg:mb-[40px] xl:mb-[40px] w-[265px] mx-auto sm:mx-[unset] sm:w-full"
+            lg:mb-[40px] w-[265px] mx-auto sm:mx-[unset] sm:w-full"
           >
-            NFT for protocol Fee
+            NFT for protocol Fee 
           </p>
           <p
-            className="font-mitr antialiased font-regular text-[16px] text-white tracking-[0.22px]
+            className="font-mitr antialiased font-light text-[14px] text-white tracking-[0.22px]
             leading-6 mb-[38px] lg:mb-[24px] text-center lg:text-left w-full lg:w-[440px] px-10
               xs:px-0 3xs:px-12 sm:px-6 lg:px-0"
           >

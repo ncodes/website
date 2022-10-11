@@ -209,7 +209,7 @@ const FAQ: NextPage = function () {
         <link rel="icon" href="./favicon.ico" />
       </Head>
 
-      <div className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed">
+      <div className="bg-[url('/page-bg.svg')] bg-contain bg-no-repeat bg-top">
         <Header />
 
         <section
@@ -268,7 +268,7 @@ const FAQ: NextPage = function () {
             </Tab.Panels>
           </Tab.Group>
 
-          <div className="container mx-auto mt-[60px]  lg:mt-[135px] mb-[113px] lg:mb-[100px]">
+          <div className="container mx-auto mt-[60px] lg:mt-[135px]">
             <div className="w-full h-px bg-gradient-to-r from-rich-blue via-[#CEEF66] to-rich-blue" />
           </div>
         </section>

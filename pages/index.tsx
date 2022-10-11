@@ -40,27 +40,26 @@ const Home: NextPage = function () {
         </div>
       </section>
 
-      <section id="page-content" className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed">
-        <Statistics />
+      <Statistics />
 
-        <Trading />
+      <Trading />
 
-        <Assets />
+      <Assets />
 
-        <Features />
-        <div className="bg-[url('/Group33.svg')] bg-cover">
-          <NFT />
-          <Rewards />
-        </div>
+      <Features />
+      
+      <div className="bg-[url('/Group33.svg')] bg-cover">
+        <NFT />
+        <Rewards />
+      </div>
 
-        <Partners />
+      <Partners />
 
-        <div className="container mx-auto mt-[100px] mt:mb-[150px] mb-[113px] lg:mb-[113px] xl:mb-[97px] px-4 lg:px-[60px] xl:px-[90px]">
-          <div className="w-full h-px bg-gradient-to-r from-rich-blue via-[#CEEF66] to-rich-blue" />
-        </div>
+      <div className="container mx-auto mt-[100px] px-4 lg:px-[60px] xl:px-[90px]">
+        <div className="w-full h-px bg-gradient-to-r from-rich-blue via-[#CEEF66] to-rich-blue" />
+      </div>
 
-        <Footer />
-      </section>
+      <Footer />
     </>
   )
 }

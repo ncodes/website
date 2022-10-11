@@ -35,6 +35,22 @@ a {
   scrollbar-width: none;  /* Firefox */
 }
 
+.asset-item:nth-child(1n) {
+  border: 1px solid #5AA0DB;
+}
+.asset-item:nth-child(2n) {
+  border: 1px solid #1B304B;
+}
+.asset-item:nth-child(3n) {
+  border: 1px solid #6E2F9F;
+}
+.asset-item:nth-child(4n) {
+  border: 1px solid #BE4C50;
+}
+.asset-item:nth-child(5n) {
+  border: 1px solid #055613;
+}
+
 @layer base {
   html {
     @apply scroll-smooth;

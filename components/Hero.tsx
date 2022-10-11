@@ -31,7 +31,7 @@ function Hero() {
   return (
     <section className="container mx-auto">
       <div
-        className="h-auto xl:w-[500px] xl:h-[calc(100vh_-_106px)] mx-10
+        className="h-auto xl:w-[500px] xl:h-[calc(100vh_-_106px)] mx-[10px]
           xl:mx-[90px] pt-[42px] md:pt-[25px] lg:pt-[50px] xl:pt-[110px]"
       >
         <p
@@ -42,9 +42,9 @@ function Hero() {
         </p>
 
         <p
-          className="font-mitr antialiased lg:w-[500px] lg:mx-auto text-center xl:text-left 3xs:text-[40px]
-          text-[48px] lg:text-[72px] xl:text-[72px] leading-[56px 3xs:leading-[45px] lg:leading-[72px]
-          xl:leading-[72px] text-white font-semibold mb-[16px] xl:mb-[27px]"
+          className="font-mitr antialiased lg:w-[500px] lg:mx-auto text-center xl:text-left
+          text-[40px] xs:text-[48px] lg:text-[72px] leading-[56px] lg:leading-[72px] text-white font-semibold
+          mb-[16px] xl:mb-[27px]"
         >
           Peer-to-Peer Trading, Decentralized
         </p>

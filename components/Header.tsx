@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Fragment, forwardRef } from "react"
 
+import { useRouter } from "next/router"
 import Image from "next/image"
 import Link from "next/link"
 import Head from "next/head"
@@ -104,12 +105,20 @@ type LinkProps = {
 
 /** HEADER LINK ITEM - Starts */
 function HeaderLink({ title, href }: LinkProps) {
+  const router = useRouter()
+
+  const isActive = router.pathname === href
+
   return (
-    <li className="flex items-center cursor-pointer px-[5px] py-0.5 rounded-2xl">
+    <li className="flex items-center cursor-pointer">
       <Link href={href}>
         <p
-          className="font-mitr antialiased text-[16px]
-          tracking-[0.25px] text-white font-medium hover:text-chinese-green transition-colors duration-500"
+          className={`font-mitr antialiased text-[16px] ${
+            isActive
+              ? `py-[3px] px-[25px] text-eerie-black font-medium
+            bg-chinese-green rounded-[15px]`
+              : "text-white font-light"
+          }`}
         >
           {title}
         </p>
@@ -260,8 +269,8 @@ function Header() {
             {/* LANGUAGE SELECTOR - Ends */}
 
             {/* HEADER MENU ITEMS - Starts */}
-            <ul className="hidden lg:flex flex-row gap-3 xl:gap-[40px]">
-              <HeaderLink title="Company" href="/" />
+            <ul className="hidden lg:flex flex-row gap-[25px] xl:gap-[40px]">
+              <HeaderLink title="Home" href="/" />
               <HeaderLink title="About" href="/about" />
 
               {/* PRODUCTS MENU - Starts */}
@@ -271,13 +280,12 @@ function Header() {
                   {({ open }) => (
                     <li className="flex flex-row items-center">
                       <p
-                        className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-medium
-                      hover:text-chinese-green transition-colors duration-500"
+                        className="font-mitr antialiased text-[16px] text-white font-light mt-[3px]"
                       >
                         Protocol
                       </p>
 
-                      <div className={`relative w-6 h-6 overflow-hidden mt-[3px] ${open && "-scale-y-100"}`}>
+                      <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
                           className="!relative object-cover w-full h-full"
                           src="/icons/caret-down.png"
@@ -369,38 +377,8 @@ function Header() {
               </Menu>
               {/* PRODUCTS MENU - Ends */}
 
-              <div>
-                <li className="flex flex-row items-center">
-                  <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-medium">Developers</p>
-
-                  <div className="relative w-6 h-6 overflow-hidden mt-[3px]">
-                    <Image
-                      className="!relative object-cover w-full h-full"
-                      src="/icons/caret-down.png"
-                      alt="caret-down"
-                      layout="fill"
-                      quality={100}
-                      priority
-                    />
-                  </div>
-                </li>
-              </div>
-              <div>
-                <li className="flex flex-row items-center">
-                  <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-medium">Community</p>
-
-                  <div className="relative w-6 h-6 overflow-hidden mt-[3px]">
-                    <Image
-                      className="!relative object-cover w-full h-full"
-                      src="/icons/caret-down.png"
-                      alt="caret-down"
-                      layout="fill"
-                      quality={100}
-                      priority
-                    />
-                  </div>
-                </li>
-              </div>
+              <HeaderLink title="FAQs" href="/faq" />
+              <HeaderLink title="Community" href="/community" />
             </ul>
             {/* HEADER MENU ITEMS - Ends */}
 
