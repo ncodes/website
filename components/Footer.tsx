@@ -95,6 +95,7 @@ function Footer() {
               <FooterLink title="About" href="/rewards" />
               <FooterLink title="Blog" href="/feedback" />
               <FooterLink title="Media" href="/feedback" />
+              <FooterLink title="FAQ" href="/faq" />
             </ul>
           </div>
 
