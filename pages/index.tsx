@@ -47,7 +47,7 @@ const Home: NextPage = function () {
       <Assets />
 
       <Features />
-      
+
       <div className="bg-[url('/Group33.svg')] bg-cover">
         <NFT />
         <Rewards />

@@ -279,11 +279,7 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-center">
-                      <p
-                        className="font-mitr antialiased text-[16px] text-white font-light mt-[3px]"
-                      >
-                        Protocol
-                      </p>
+                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[3px]">Protocol</p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image

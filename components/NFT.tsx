@@ -23,7 +23,7 @@ function NFT() {
             lg:text-left -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-[24px]
             lg:mb-[40px] w-[265px] mx-auto sm:mx-[unset] sm:w-full"
           >
-            NFT for protocol Fee 
+            NFT for protocol Fee
           </p>
           <p
             className="font-mitr antialiased font-light text-[14px] text-white tracking-[0.22px]
