@@ -123,7 +123,7 @@ function Footer() {
           <div className="flex flex-col mx-auto items-center md:items-start">
             <FooterTitle label="Legal" />
             <ul className="flex flex-col text-center md:text-left  gap-y-[10px]">
-              <FooterLink title="Protocol Disclaimer" href="/help" />
+              <FooterLink title="Protocol Disclaimer" href="/protocol" />
               <FooterLink title="Terms of service" href="/terms" />
               <FooterLink title="Privacy Policy" href="/privacy" />
             </ul>
