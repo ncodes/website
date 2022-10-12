@@ -16,7 +16,7 @@ function TeamMember({ id, image, name, role }: TeamMemberProps) {
       </div>
       <p
         className="font-mitr antialiased font-medium text-[14px] text-white text-center
-       leading-[17.64px] tracking-[0.19px]"
+       leading-[17.64px] tracking-[0.19px] mt-[24px]"
       >
         {name}
       </p>
@@ -34,51 +34,51 @@ function Team() {
   const teamMembers: TeamMemberProps[] = [
     {
       id: 1,
-      image: "/team-member.svg",
-      name: "Trantor Nebuila",
-      role: "Head of Ops",
+      image: "/odion-member.svg",
+      name: "Odion Olumhense",
+      role: "Sorcerer Supreme",
     },
     {
       id: 2,
-      image: "/team-member.svg",
-      name: "Trantor Nebuila",
-      role: "Head of Ops",
+      image: "/kennedy-member.svg",
+      name: "Kennedy Idialu",
+      role: "Guardian of The Galaxy",
     },
     {
       id: 3,
-      image: "/team-member.svg",
-      name: "Trantor Nebuila",
-      role: "Head of Ops",
+      image: "/vitalis-member.svg",
+      name: "Vitalis Nwenyi",
+      role: "The Illusionist",
     },
     {
       id: 4,
-      image: "/team-member.svg",
-      name: "Trantor Nebuila",
-      role: "Head of Ops",
+      image: "/michael-member.svg",
+      name: "Michael Azonobi",
+      role: "Technical Titan",
     },
     {
       id: 5,
-      image: "/team-member.svg",
-      name: "Trantor Nebuila",
-      role: "Head of Ops",
+      image: "/marvin-member.svg",
+      name: "Marvin Ogah",
+      role: "Cosmic Scavenger",
     },
     {
       id: 6,
-      image: "/team-member.svg",
-      name: "Trantor Nebuila",
-      role: "Head of Ops",
+      image: "/chris-member.svg",
+      name: "Chris Ezike",
+      role: "Samurai Stack",
     },
     {
       id: 7,
-      image: "/team-member.svg",
-      name: "Trantor Nebuila",
-      role: "Head of Ops",
+      image: "/samuel-member.svg",
+      name: "Samuel Bolu",
+      role: "Meteor Magnet",
     },
     {
       id: 8,
-      image: "/team-member.svg",
-      name: "Trantor Nebuila",
-      role: "Head of Ops",
+      image: "/ileke-member.svg",
+      name: "Ileke Airende",
+      role: "Content Machine",
     },
   ]
 

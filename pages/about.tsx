@@ -37,7 +37,7 @@ const About: NextPage = function () {
         <link rel="icon" href="./favicon.ico" />
       </Head>
 
-      <div className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed">
+      <div className="bg-[url('/page-bg.svg')] bg-contain bg-no-repeat bg-top">
         <Header />
 
         <section id="page-content">
@@ -53,8 +53,7 @@ const About: NextPage = function () {
               <div className="w-full lg:w-[513px]">
                 <p
                   className="font-mitr antialiased text-center lg:text-left text-[14px] 
-                tracking-[2.63px] xl:tracking-[3px] leading-[24px]
-                text-white font-light mb-[13px] mx-[40px] md:mx-[unset]"
+                leading-[18px] text-white font-light mb-[13px] mx-[40px] md:mx-[unset]"
                 >
                   THE RIGHT PEOPLE WITH THE RIGHT TOOLS
                 </p>
@@ -67,7 +66,7 @@ const About: NextPage = function () {
                 </p>
               </div>
 
-              <div className="relative w-[313px] h-[317px] -z-[1] overflow-hidden">
+              <div className="relative w-[313px] h-[317px] overflow-hidden">
                 <Image
                   className="!relative object-contain w-full h-full"
                   src="/imagecopy.png"
@@ -109,7 +108,7 @@ const About: NextPage = function () {
 
           <Partners />
 
-          <div className="container mx-auto mt-[100px] mt:mb-[150px] mb-[113px] lg:mb-[113px] xl:mb-[97px] px-4 lg:px-[60px] xl:px-[90px]">
+          <div className="container mx-auto mt-[100px] px-4 lg:px-[60px] xl:px-[90px]">
             <div className="w-full h-px bg-gradient-to-r from-rich-blue via-[#CEEF66] to-rich-blue" />
           </div>
         </section>

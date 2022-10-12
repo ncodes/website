@@ -3,9 +3,9 @@ import Image from "next/image"
 function AssetItem() {
   return (
     <div
-      className={`relative bg-[url('/assets-bg.webp')] bg-contain hover:translate-y-[2px]
+      className={`asset-item relative bg-[url('/assets-bg.webp')] bg-contain hover:translate-y-[2px]
       transition-all flex flex-col justify-between p-4 min-w-[250px] md:w-[296px] h-[162px] rounded-lg
-      bg-jet-black border border-space-cadet shadow-[0_0_7px_2px_rgba(224,255,134,0.07)] cursor-pointer`}
+      bg-jet-black shadow-[0_0_7px_2px_rgba(224,255,134,0.07)] cursor-pointer`}
     >
       <div className="absolute bg-[#000000] opacity-10 hover:opacity-0 w-full h-full top-0 left-0 rounded-lg z-10" />
       <div className="flex flex-row items-center justify-between">
@@ -54,7 +54,7 @@ function Assets() {
   return (
     <section
       className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px]
-      2xs:px-[15px] px-4 xl:px-[90px] mx-auto mt-[100px] mb-[100px] lg:mt-[150px] lg:mb-[170px]"
+      2xs:px-[15px] px-4 xl:px-[90px] mx-auto mb-[100px] lg:mb-[75px] mb-[100px] lg:mb-[170px]"
     >
       <div>
         <p

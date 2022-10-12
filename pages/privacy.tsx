@@ -37,7 +37,7 @@ const Privacy: NextPage = function () {
         <link rel="icon" href="./favicon.ico" />
       </Head>
 
-      <div className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed">
+      <div className="bg-[url('/page-bg.svg')] bg-contain bg-no-repeat bg-top">
         <Header />
 
         <section id="page-content">
@@ -95,7 +95,7 @@ const Privacy: NextPage = function () {
             </div>
           </div>
 
-          <div className="container mx-auto px-4 lg:px-[60px] xl:px-[90px] mt-[91px] mb-[99px]">
+          <div className="container mx-auto px-4 lg:px-[60px] xl:px-[90px] mt-[91px]">
             <div className="w-full h-px bg-gradient-to-r from-rich-blue via-[#CEEF66] to-rich-blue" />
           </div>
         </section>

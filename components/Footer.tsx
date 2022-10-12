@@ -21,8 +21,8 @@ type IconLinkProps = {
 function FooterTitle({ label }: TitleProps) {
   return (
     <p
-      className="font-mitr antialiased font-semibold text-[22px] text-white
-      mb-[15px] xl:mb-[22px] leading-[0.8] text-left"
+      className="font-mitr antialiased font-medium text-[22px] text-white
+      mb-[15px] xl:mb-[22px] text-left"
     >
       {label}
     </p>
@@ -54,8 +54,8 @@ function IconLink({ src, alt, href, width, height }: IconLinkProps) {
 
 function Footer() {
   return (
-    <section className="container mx-auto">
-      <div className="flex flex-col gap-x-[200px] xl:flex-row  pb-16">
+    <section className="container mx-auto bg-[url('/footer-bg.svg')] bg-cover bg-no-repeat bg-top">
+      <div className="flex flex-col xl:flex-row gap-x-[200px] py-[100px]">
         <div className="">
           <Link href="/">
             <div
@@ -95,6 +95,7 @@ function Footer() {
               <FooterLink title="About" href="/rewards" />
               <FooterLink title="Blog" href="/feedback" />
               <FooterLink title="Media" href="/feedback" />
+              <FooterLink title="FAQ" href="/faq" />
             </ul>
           </div>
 
@@ -123,7 +124,7 @@ function Footer() {
           <div className="flex flex-col mx-auto items-center md:items-start">
             <FooterTitle label="Legal" />
             <ul className="flex flex-col text-center md:text-left  gap-y-[10px]">
-              <FooterLink title="Protocol Disclaimer" href="/help" />
+              <FooterLink title="Protocol Disclaimer" href="/protocol" />
               <FooterLink title="Terms of service" href="/terms" />
               <FooterLink title="Privacy Policy" href="/privacy" />
             </ul>

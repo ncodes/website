@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Fragment, forwardRef } from "react"
 
+import { useRouter } from "next/router"
 import Image from "next/image"
 import Link from "next/link"
 import Head from "next/head"
@@ -84,6 +85,36 @@ const MenuItems = [
 ]
 /** MENU ITEM DATA - Ends */
 
+/** DEVELOPER MENU ITEM DATA - Starts */
+const DeveloperMenuItems = [
+  {
+    title: "Docs",
+    description: "Checkout our developer docs here.",
+    src: "/trade-menu.webp",
+  },
+  {
+    title: "Github",
+    description: "Visit our github repository today.",
+    src: "/market-menu.webp",
+  },
+]
+/** DEVELOPER MENU ITEM DATA - Ends */
+
+/** COMMUNITY MENU ITEM DATA - Starts */
+const CommunityMenuItems = [
+  {
+    title: "Discord",
+    description: "Checkout the latest on our Discord channel.",
+    src: "/trade-menu.webp",
+  },
+  {
+    title: "Twitter",
+    description: "Checkout the latest on our Twitter handle.",
+    src: "/market-menu.webp",
+  },
+]
+/** COMMUNITY MENU ITEM DATA - Ends */
+
 /** POPUP TRANSITION DATA - Starts */
 const PopupTransition = {
   enter: "transition duration-100 ease-out",
@@ -104,12 +135,20 @@ type LinkProps = {
 
 /** HEADER LINK ITEM - Starts */
 function HeaderLink({ title, href }: LinkProps) {
+  const router = useRouter()
+
+  const isActive = router.pathname === href
+
   return (
-    <li className="flex items-center cursor-pointer px-[5px] py-0.5 rounded-2xl">
+    <li className="flex items-center cursor-pointer">
       <Link href={href}>
         <p
-          className="font-mitr antialiased text-[16px]
-          tracking-[0.25px] text-white font-medium hover:text-chinese-green transition-colors duration-500"
+          className={`font-mitr antialiased text-[16px] ${
+            isActive
+              ? `py-[3px] px-[25px] text-eerie-black font-medium
+            bg-chinese-green rounded-[15px]`
+              : "text-white font-light"
+          }`}
         >
           {title}
         </p>
@@ -260,24 +299,19 @@ function Header() {
             {/* LANGUAGE SELECTOR - Ends */}
 
             {/* HEADER MENU ITEMS - Starts */}
-            <ul className="hidden lg:flex flex-row gap-3 xl:gap-[40px]">
-              <HeaderLink title="Company" href="/" />
+            <ul className="hidden lg:flex flex-row gap-[25px] xl:gap-[40px]">
+              <HeaderLink title="Home" href="/" />
               <HeaderLink title="About" href="/about" />
 
-              {/* PRODUCTS MENU - Starts */}
+              {/* PROTOCOL MENU - Starts */}
               <Menu as="div" className="flex flex-col ">
-                {/* PRODUCTS MENU BUTTON - Starts */}
+                {/* PROTOCOL MENU BUTTON - Starts */}
                 <Menu.Button>
                   {({ open }) => (
-                    <li className="flex flex-row items-center">
-                      <p
-                        className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-medium
-                      hover:text-chinese-green transition-colors duration-500"
-                      >
-                        Protocol
-                      </p>
+                    <li className="flex flex-row items-end">
+                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">Protocol</p>
 
-                      <div className={`relative w-6 h-6 overflow-hidden mt-[3px] ${open && "-scale-y-100"}`}>
+                      <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
                           className="!relative object-cover w-full h-full"
                           src="/icons/caret-down.png"
@@ -290,12 +324,12 @@ function Header() {
                     </li>
                   )}
                 </Menu.Button>
-                {/* PRODUCTS MENU BUTTON - Ends */}
+                {/* PROTOCOL MENU BUTTON - Ends */}
 
-                {/* PRODUCTS MENU CONTENT TRANSITION - Starts */}
+                {/* PROTOCOL MENU CONTENT TRANSITION - Starts */}
                 <Transition as={Fragment} {...PopupTransition}>
                   <div className="container absolute top-0 left-0 right-0 m-auto mt-[90px] outline-0">
-                    {/* PRODUCTS MENU CONTENT - Starts */}
+                    {/* PROTOCOL MENU CONTENT - Starts */}
                     <Menu.Items
                       as="div"
                       className="flex flex-row mx-4 bg-rich-blue rounded-lg border-[1px]
@@ -362,45 +396,186 @@ function Header() {
                         </div>
                       </div>
                     </Menu.Items>
-                    {/* PRODUCTS MENU CONTENT - Ends */}
+                    {/* PROTOCOL MENU CONTENT - Ends */}
                   </div>
                 </Transition>
-                {/* PRODUCTS MENU CONTENT TRANSITION - Ends */}
+                {/* PROTOCOL MENU CONTENT TRANSITION - Ends */}
               </Menu>
-              {/* PRODUCTS MENU - Ends */}
+              {/* PROTOCOL MENU - Ends */}
 
-              <div>
-                <li className="flex flex-row items-center">
-                  <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-medium">Developers</p>
+              {/* DEVELOPER MENU - Starts */}
+              <Menu as="div" className="flex flex-col ">
+                {/* DEVELOPER MENU BUTTON - Starts */}
+                <Menu.Button>
+                  {({ open }) => (
+                    <li className="flex flex-row items-end">
+                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">Developers</p>
 
-                  <div className="relative w-6 h-6 overflow-hidden mt-[3px]">
-                    <Image
-                      className="!relative object-cover w-full h-full"
-                      src="/icons/caret-down.png"
-                      alt="caret-down"
-                      layout="fill"
-                      quality={100}
-                      priority
-                    />
+                      <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
+                        <Image
+                          className="!relative object-cover w-full h-full"
+                          src="/icons/caret-down.png"
+                          alt="caret-down"
+                          layout="fill"
+                          quality={100}
+                          priority
+                        />
+                      </div>
+                    </li>
+                  )}
+                </Menu.Button>
+                {/* DEVELOPER MENU BUTTON - Ends */}
+
+                {/* DEVELOPER MENU CONTENT TRANSITION - Starts */}
+                <Transition as={Fragment} {...PopupTransition}>
+                  <div className="container absolute top-0 left-0 right-0 m-auto mt-[90px] outline-0">
+                    {/* DEVELOPER MENU CONTENT - Starts */}
+                    <Menu.Items
+                      as="div"
+                      className="flex flex-row mx-4 bg-rich-blue rounded-lg border-[1px]
+                      border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)] p-[50px]"
+                    >
+                      <div className="flex-col justify-between hidden xl:flex">
+                        <div className="w-64">
+                          <p
+                            className="font-mitr antialiased text-[24px]
+                            leading-[30px] text-white font-medium"
+                          >
+                            Developers
+                          </p>
+
+                          <p
+                            className="font-['Mitr'] antialiased text-[14px] tracking-[0.22px]
+                            leading-[17.64px] text-white font-light mt-[23.36px]"
+                          >
+                            Directly navigate our <br />
+                            developer resources
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="hidden xl:block w-[2px] min-h-full bg-gradient-to-t from-rich-blue via-[#CEEF66] to-rich-blue" />
+                      <div>
+                        <div className="grid grid-cols-3 gap-x-7 gap-y-[20px] xl:ml-[52px]">
+                          {DeveloperMenuItems.map((menuItem) => (
+                            <Menu.Item
+                              key={Math.random() * Math.random()}
+                              as="div"
+                              className="flex flex-row items-start cursor-pointer basis-1/3
+                              pt-[10px] px-[10px] pb-[15px] hover:bg-[#0d1c31] hover:rounded-lg"
+                            >
+                              <div className="relative w-16 h-16 mr-4 overflow-hidden">
+                                <img
+                                  className="!relative object-cover w-full
+                                  h-full bg-[#0d1c31] rounded-lg"
+                                  src={menuItem.src}
+                                  alt="caret-down"
+                                />
+                              </div>
+                              <div className="flex flex-col flex-1 gap-y-[4px]">
+                                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-medium">{menuItem.title}</p>
+                                <p className="font-['Mitr'] antialiased text-[14px] leading-[17.67px] text-white font-light">
+                                  {menuItem.description}
+                                </p>
+                              </div>
+                            </Menu.Item>
+                          ))}
+                        </div>
+                      </div>
+                    </Menu.Items>
+                    {/* DEVELOPER MENU CONTENT - Ends */}
                   </div>
-                </li>
-              </div>
-              <div>
-                <li className="flex flex-row items-center">
-                  <p className="font-mitr antialiased text-[16px] tracking-[0.25px] text-white font-medium">Community</p>
+                </Transition>
+                {/* DEVELOPER MENU CONTENT TRANSITION - Ends */}
+              </Menu>
+              {/* DEVELOPER MENU - Ends */}
 
-                  <div className="relative w-6 h-6 overflow-hidden mt-[3px]">
-                    <Image
-                      className="!relative object-cover w-full h-full"
-                      src="/icons/caret-down.png"
-                      alt="caret-down"
-                      layout="fill"
-                      quality={100}
-                      priority
-                    />
+              {/* COMMUNITY MENU - Starts */}
+              <Menu as="div" className="flex flex-col ">
+                {/* COMMUNITY MENU BUTTON - Starts */}
+                <Menu.Button>
+                  {({ open }) => (
+                    <li className="flex flex-row items-end">
+                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">Community</p>
+
+                      <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
+                        <Image
+                          className="!relative object-cover w-full h-full"
+                          src="/icons/caret-down.png"
+                          alt="caret-down"
+                          layout="fill"
+                          quality={100}
+                          priority
+                        />
+                      </div>
+                    </li>
+                  )}
+                </Menu.Button>
+                {/* COMMUNITY MENU BUTTON - Ends */}
+
+                {/* COMMUNITY MENU CONTENT TRANSITION - Starts */}
+                <Transition as={Fragment} {...PopupTransition}>
+                  <div className="container absolute top-0 left-0 right-0 m-auto mt-[90px] outline-0">
+                    {/* COMMUNITY MENU CONTENT - Starts */}
+                    <Menu.Items
+                      as="div"
+                      className="flex flex-row mx-4 bg-rich-blue rounded-lg border-[1px]
+                      border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)] p-[50px]"
+                    >
+                      <div className="flex-col justify-between hidden xl:flex">
+                        <div className="w-64">
+                          <p
+                            className="font-mitr antialiased text-[24px]
+                            leading-[30px] text-white font-medium"
+                          >
+                            Community
+                          </p>
+
+                          <p
+                            className="font-['Mitr'] antialiased text-[14px] tracking-[0.22px]
+                            leading-[17.64px] text-white font-light mt-[23.36px]"
+                          >
+                            Directly navigate our <br />
+                            community to stay informed
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="hidden xl:block w-[2px] min-h-full bg-gradient-to-t from-rich-blue via-[#CEEF66] to-rich-blue" />
+                      <div>
+                        <div className="grid grid-cols-3 gap-x-7 gap-y-[20px] xl:ml-[52px]">
+                          {CommunityMenuItems.map((menuItem) => (
+                            <Menu.Item
+                              key={Math.random() * Math.random()}
+                              as="div"
+                              className="flex flex-row items-start cursor-pointer basis-1/3
+                              pt-[10px] px-[10px] pb-[15px] hover:bg-[#0d1c31] hover:rounded-lg"
+                            >
+                              <div className="relative w-16 h-16 mr-4 overflow-hidden">
+                                <img
+                                  className="!relative object-cover w-full
+                                  h-full bg-[#0d1c31] rounded-lg"
+                                  src={menuItem.src}
+                                  alt="caret-down"
+                                />
+                              </div>
+                              <div className="flex flex-col flex-1 gap-y-[4px]">
+                                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-medium">{menuItem.title}</p>
+                                <p className="font-['Mitr'] antialiased text-[14px] leading-[17.67px] text-white font-light">
+                                  {menuItem.description}
+                                </p>
+                              </div>
+                            </Menu.Item>
+                          ))}
+                        </div>
+                      </div>
+                    </Menu.Items>
+                    {/* COMMUNITY MENU CONTENT - Ends */}
                   </div>
-                </li>
-              </div>
+                </Transition>
+                {/* COMMUNITY MENU CONTENT TRANSITION - Ends */}
+              </Menu>
+              {/* COMMUNITY MENU - Ends */}
             </ul>
             {/* HEADER MENU ITEMS - Ends */}
 
@@ -520,13 +695,87 @@ function Header() {
                           </Transition>
                         </Menu>
 
-                        <Menu.Item>
-                          <MobileLink title="Developers" href="/developers" />
-                        </Menu.Item>
+                        <Menu as={Fragment}>
+                          <Menu.Button>
+                            {({ open }) => (
+                              <li className="container flex px-4 py-4 mx-auto">
+                                <p
+                                  className="font-mitr antialiased text-[18px] tracking-[0.28px]
+                                  text-left leading-6 font-semibold text-white inline-block cursor-pointer"
+                                >
+                                  Developers
+                                </p>
 
-                        <Menu.Item>
-                          <MobileLink title="Community" href="/community" />
-                        </Menu.Item>
+                                <div className={`relative w-6 h-6 xl:w-6 xl:h-6 overflow-hidden ${open && "-scale-y-100"}`}>
+                                  &nbsp;
+                                  <Image
+                                    className="!relative object-cover w-full h-full"
+                                    src="/icons/caret-down.png"
+                                    alt="caret-down"
+                                    layout="fill"
+                                    quality={100}
+                                    priority
+                                  />
+                                </div>
+                              </li>
+                            )}
+                          </Menu.Button>
+
+                          <Transition>
+                            <Menu.Items>
+                              <ul className="bg-eerie-black backdrop-blur-[28px] py-2">
+                                <Menu.Item>
+                                  <SubMobileLink title="Docs" href="/" />
+                                </Menu.Item>
+
+                                <Menu.Item>
+                                  <SubMobileLink title="Github" href="/" />
+                                </Menu.Item>
+                              </ul>
+                            </Menu.Items>
+                          </Transition>
+                        </Menu>
+
+                        <Menu as={Fragment}>
+                          <Menu.Button>
+                            {({ open }) => (
+                              <li className="container flex px-4 py-4 mx-auto">
+                                <p
+                                  className="font-mitr antialiased text-[18px] tracking-[0.28px]
+                                  text-left leading-6 font-semibold text-white inline-block cursor-pointer"
+                                >
+                                  Community
+                                </p>
+
+                                <div className={`relative w-6 h-6 xl:w-6 xl:h-6 overflow-hidden ${open && "-scale-y-100"}`}>
+                                  &nbsp;
+                                  <Image
+                                    className="!relative object-cover w-full h-full"
+                                    src="/icons/caret-down.png"
+                                    alt="caret-down"
+                                    layout="fill"
+                                    quality={100}
+                                    priority
+                                  />
+                                </div>
+                              </li>
+                            )}
+                          </Menu.Button>
+
+                          <Transition>
+                            <Menu.Items>
+                              <ul className="bg-eerie-black backdrop-blur-[28px] py-2">
+                                <Menu.Item>
+                                  <SubMobileLink title="Discord" href="/" />
+                                </Menu.Item>
+
+                                <Menu.Item>
+                                  <SubMobileLink title="Twitter" href="/" />
+                                </Menu.Item>
+                              </ul>
+                            </Menu.Items>
+                          </Transition>
+                        </Menu>
                       </ul>
 
                       <div className="max-w-[364px] 3xs:px-[40px] xs:px-[unset] w-full mx-auto mb-[50px]">

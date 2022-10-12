@@ -26,7 +26,7 @@ function Trading() {
     <section
       className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full
       3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mt-[52px] lg:mt-[65px]
-      xl:mt-[77px] mb-[100px] sm:mb-16 lg:mb-3 xl:mb-3 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
+      xl:mt-[77px] mb-[100px] lg:mb-[75px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
     >
       <div className="flex flex-col-reverse lg:flex-row xl:flex-row items-center lg:gap-x-[70px] xl:gap-x-[145px] gap-y-8 sm:gap-y-6">
         <div className="w-full lg:w-[513px]">

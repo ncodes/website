@@ -85,7 +85,7 @@ function Accordion({ selectedFaq, setSelectedFaq, id, title, children }: Accordi
       >
         <div className="hidden lg:block" />
         <p
-          className="font-['Mitr'] antialiased font-medium text-white text-[16px]
+          className="font-['Mitr'] antialiased font-medium text-white break-word text-[16px]
           lg:text-[24px] leading-[19.7px] lg:leading-[26.25px] py-[18px] text-left lg:text-center"
         >
           {title}
@@ -108,7 +108,7 @@ function Accordion({ selectedFaq, setSelectedFaq, id, title, children }: Accordi
 function AccordionContent({ children }: AccordionContentProps) {
   return (
     <p
-      className="font-['Mitr'] antialiased font-extralight text-white lg:text-[16px]
+      className="font-['Mitr'] antialiased font-extralight text-white break-word lg:text-[16px]
       text-[14px] leading-[19.69px] lg:leading-[24px] text-left lg:max-w-[905px] pb-10"
     >
       {children}
@@ -209,7 +209,7 @@ const FAQ: NextPage = function () {
         <link rel="icon" href="./favicon.ico" />
       </Head>
 
-      <div className="bg-[url('/logo-pattern.webp')] bg-cover bg-fixed">
+      <div className="bg-[url('/page-bg.svg')] bg-contain bg-no-repeat bg-top">
         <Header />
 
         <section
@@ -268,7 +268,7 @@ const FAQ: NextPage = function () {
             </Tab.Panels>
           </Tab.Group>
 
-          <div className="container mx-auto mt-[60px]  lg:mt-[135px] mb-[113px] lg:mb-[100px]">
+          <div className="container mx-auto mt-[60px] lg:mt-[135px]">
             <div className="w-full h-px bg-gradient-to-r from-rich-blue via-[#CEEF66] to-rich-blue" />
           </div>
         </section>
