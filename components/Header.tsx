@@ -89,13 +89,11 @@ const MenuItems = [
 const DeveloperMenuItems = [
   {
     title: "Docs",
-    description: "Checkout our developer docs here.",
-    src: "/trade-menu.webp",
+    src: "/icons/docs.png",
   },
   {
     title: "Github",
-    description: "Visit our github repository today.",
-    src: "/market-menu.webp",
+    src: "/icons/github.png",
   },
 ]
 /** DEVELOPER MENU ITEM DATA - Ends */
@@ -103,14 +101,12 @@ const DeveloperMenuItems = [
 /** COMMUNITY MENU ITEM DATA - Starts */
 const CommunityMenuItems = [
   {
-    title: "Discord",
-    description: "Checkout the latest on our Discord channel.",
-    src: "/trade-menu.webp",
+    title: "Twitter",
+    src: "/icons/twitter.png",
   },
   {
-    title: "Twitter",
-    description: "Checkout the latest on our Twitter handle.",
-    src: "/market-menu.webp",
+    title: "Discord",
+    src: "/icons/discord.png",
   },
 ]
 /** COMMUNITY MENU ITEM DATA - Ends */
@@ -428,62 +424,33 @@ function Header() {
 
                 {/* DEVELOPER MENU CONTENT TRANSITION - Starts */}
                 <Transition as={Fragment} {...PopupTransition}>
-                  <div className="container absolute top-0 left-0 right-0 m-auto mt-[90px] outline-0">
-                    {/* DEVELOPER MENU CONTENT - Starts */}
+                  <div className="container absolute top-0 w-[180px] m-auto mt-[90px] outline-0 z-10">
+                    {/* COMMUNITY MENU CONTENT - Starts */}
                     <Menu.Items
                       as="div"
-                      className="flex flex-row mx-4 bg-rich-blue rounded-lg border-[1px]
-                      border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)] p-[50px]"
+                      className="flex flex-col space-y-[7px] bg-rich-blue rounded-lg border-[1px]
+                      border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)] px-[11px] pt-[14px] pb-[17px]"
                     >
-                      <div className="flex-col justify-between hidden xl:flex">
-                        <div className="w-64">
+                      {DeveloperMenuItems.map((menuItem) => (
+                        <Menu.Item
+                          key={Math.random() * Math.random()}
+                          as="div"
+                          className="flex items-center cursor-pointer py-[7px] px-[10px]
+                          hover:bg-[#0d1c31] hover:rounded-lg"
+                        >
+                          <div className="relative w-[20px] h-[20px] overflow-hidden">
+                            <img className="!relative object-contain w-full h-full" src={menuItem.src} alt="menu-icon" />
+                          </div>
                           <p
-                            className="font-mitr antialiased text-[24px]
-                            leading-[30px] text-white font-medium"
+                            className="font-mitr antialiased text-[16px] leading-[32px]
+                           tracking-[0.22px] text-white font-regular pl-[10px] "
                           >
-                            Developers
+                            {menuItem.title}
                           </p>
-
-                          <p
-                            className="font-['Mitr'] antialiased text-[14px] tracking-[0.22px]
-                            leading-[17.64px] text-white font-light mt-[23.36px]"
-                          >
-                            Directly navigate our <br />
-                            developer resources
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="hidden xl:block w-[2px] min-h-full bg-gradient-to-t from-rich-blue via-[#CEEF66] to-rich-blue" />
-                      <div>
-                        <div className="grid grid-cols-3 gap-x-7 gap-y-[20px] xl:ml-[52px]">
-                          {DeveloperMenuItems.map((menuItem) => (
-                            <Menu.Item
-                              key={Math.random() * Math.random()}
-                              as="div"
-                              className="flex flex-row items-start cursor-pointer basis-1/3
-                              pt-[10px] px-[10px] pb-[15px] hover:bg-[#0d1c31] hover:rounded-lg"
-                            >
-                              <div className="relative w-16 h-16 mr-4 overflow-hidden">
-                                <img
-                                  className="!relative object-cover w-full
-                                  h-full bg-[#0d1c31] rounded-lg"
-                                  src={menuItem.src}
-                                  alt="caret-down"
-                                />
-                              </div>
-                              <div className="flex flex-col flex-1 gap-y-[4px]">
-                                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-medium">{menuItem.title}</p>
-                                <p className="font-['Mitr'] antialiased text-[14px] leading-[17.67px] text-white font-light">
-                                  {menuItem.description}
-                                </p>
-                              </div>
-                            </Menu.Item>
-                          ))}
-                        </div>
-                      </div>
+                        </Menu.Item>
+                      ))}
                     </Menu.Items>
-                    {/* DEVELOPER MENU CONTENT - Ends */}
+                    {/* COMMUNITY MENU CONTENT - Ends */}
                   </div>
                 </Transition>
                 {/* DEVELOPER MENU CONTENT TRANSITION - Ends */}
@@ -515,60 +482,31 @@ function Header() {
 
                 {/* COMMUNITY MENU CONTENT TRANSITION - Starts */}
                 <Transition as={Fragment} {...PopupTransition}>
-                  <div className="container absolute top-0 left-0 right-0 m-auto mt-[90px] outline-0">
+                  <div className="container absolute top-0 w-[180px] m-auto mt-[90px] outline-0 z-10">
                     {/* COMMUNITY MENU CONTENT - Starts */}
                     <Menu.Items
                       as="div"
-                      className="flex flex-row mx-4 bg-rich-blue rounded-lg border-[1px]
-                      border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)] p-[50px]"
+                      className="flex flex-col space-y-[7px] bg-rich-blue rounded-lg border-[1px]
+                      border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)] px-[11px] pt-[14px] pb-[17px]"
                     >
-                      <div className="flex-col justify-between hidden xl:flex">
-                        <div className="w-64">
+                      {CommunityMenuItems.map((menuItem) => (
+                        <Menu.Item
+                          key={Math.random() * Math.random()}
+                          as="div"
+                          className="flex items-center cursor-pointer py-[7px] px-[10px]
+                          hover:bg-[#0d1c31] hover:rounded-lg"
+                        >
+                          <div className="relative w-[20px] h-[20px] overflow-hidden">
+                            <img className="!relative object-contain w-full h-full" src={menuItem.src} alt="menu-icon" />
+                          </div>
                           <p
-                            className="font-mitr antialiased text-[24px]
-                            leading-[30px] text-white font-medium"
+                            className="font-mitr antialiased text-[16px] leading-[32px]
+                           tracking-[0.22px] text-white font-regular pl-[10px] "
                           >
-                            Community
+                            {menuItem.title}
                           </p>
-
-                          <p
-                            className="font-['Mitr'] antialiased text-[14px] tracking-[0.22px]
-                            leading-[17.64px] text-white font-light mt-[23.36px]"
-                          >
-                            Directly navigate our <br />
-                            community to stay informed
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="hidden xl:block w-[2px] min-h-full bg-gradient-to-t from-rich-blue via-[#CEEF66] to-rich-blue" />
-                      <div>
-                        <div className="grid grid-cols-3 gap-x-7 gap-y-[20px] xl:ml-[52px]">
-                          {CommunityMenuItems.map((menuItem) => (
-                            <Menu.Item
-                              key={Math.random() * Math.random()}
-                              as="div"
-                              className="flex flex-row items-start cursor-pointer basis-1/3
-                              pt-[10px] px-[10px] pb-[15px] hover:bg-[#0d1c31] hover:rounded-lg"
-                            >
-                              <div className="relative w-16 h-16 mr-4 overflow-hidden">
-                                <img
-                                  className="!relative object-cover w-full
-                                  h-full bg-[#0d1c31] rounded-lg"
-                                  src={menuItem.src}
-                                  alt="caret-down"
-                                />
-                              </div>
-                              <div className="flex flex-col flex-1 gap-y-[4px]">
-                                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-medium">{menuItem.title}</p>
-                                <p className="font-['Mitr'] antialiased text-[14px] leading-[17.67px] text-white font-light">
-                                  {menuItem.description}
-                                </p>
-                              </div>
-                            </Menu.Item>
-                          ))}
-                        </div>
-                      </div>
+                        </Menu.Item>
+                      ))}
                     </Menu.Items>
                     {/* COMMUNITY MENU CONTENT - Ends */}
                   </div>
