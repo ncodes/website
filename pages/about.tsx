@@ -66,7 +66,7 @@ const About: NextPage = function () {
                 </p>
               </div>
 
-              <div className="relative w-[313px] h-[317px] overflow-hidden">
+              <div className="relative antialiased w-[313px] h-[317px] overflow-hidden">
                 <Image
                   className="!relative object-contain w-full h-full"
                   src="/imagecopy.png"
