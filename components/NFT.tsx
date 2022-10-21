@@ -44,7 +44,7 @@ function NFT() {
         >
           <Image
             className="!relative object-contain w-full h-full"
-            src="/nft-illustration.webp"
+            src="/nft-illustration2.webp"
             alt="nft-illustration"
             layout="fill"
             quality={100}
