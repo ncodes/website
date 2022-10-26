@@ -10,8 +10,10 @@ type TabSelectorProps = {
 
 function TabSelector({ label, selected, last }: TabSelectorProps) {
   return (
-    <div className={`py-[14px] lg:py-[17px] pt-[12px] lg:pt-[15px] px-[20px] lg:px-[2.5px] border border-[#0D1A2B]
-      w-full lg:w-[210px] border-t-0 odd:border-l-0 ${last ? "border-r-0" : ""}`}>
+    <div
+      className={`py-[14px] lg:py-[17px] pt-[12px] lg:pt-[15px] px-[20px] lg:px-[2.5px] border border-[#0D1A2B]
+      w-full lg:w-[210px] border-t-0 odd:border-l-0 ${last ? "border-r-0" : ""}`}
+    >
       <p
         className={`font-mitr antialiased text-center text-[19.2px] lg:text-[24px] tracking-[0.33px] ${
           selected ? "font-semibold text-chinese-green" : "font-light text-[#7E8FB1]"
@@ -28,30 +30,30 @@ function HowItWorks() {
     {
       icon: "/cart-icon.png",
       title: "Find a market",
-      content: "Choose from a variety of market pairs, between crypto and fiat currencues."
+      content: "Choose from a variety of market pairs, between crypto and fiat currencues.",
     },
     {
       icon: "/seller-icon.png",
       title: "Select Seller",
-      content: "The Liquidity Providers on our platform provides the liquidity needed for your exchange or swap."
+      content: "The Liquidity Providers on our platform provides the liquidity needed for your exchange or swap.",
     },
     {
       icon: "/amount-icon.png",
       title: "Set an Amount",
-      content: "The amount you set is paired up with a Liquidity Provider that accepts your trade."
+      content: "The amount you set is paired up with a Liquidity Provider that accepts your trade.",
     },
     {
       icon: "/swap-icon.png",
       title: "Create Swap",
-      content: "Swaps or exchanges can be instant or Synthetic based on preferred trade duration."
-    }
-  ];
+      content: "Swaps or exchanges can be instant or Synthetic based on preferred trade duration.",
+    },
+  ]
 
   const instantSwapInformation = [
     "Seller receives quote token instantly",
     "Buyer receives base token instantly",
-    "Seller and Buyer receive trade reward"
-  ];
+    "Seller and Buyer receive trade reward",
+  ]
 
   return (
     <section
@@ -102,12 +104,8 @@ function HowItWorks() {
                         priority
                       />
                     </div>
-                    <p className="font-mitr antialiased font-medium text-white text-[24px] mt-[16px]">
-                      {title}
-                    </p>
-                    <p className="font-mitr antialiased font-light text-white text-[16px] leading-[24px] mt-[12px]">
-                      {content}
-                    </p>
+                    <p className="font-mitr antialiased font-medium text-white text-[24px] mt-[16px]">{title}</p>
+                    <p className="font-mitr antialiased font-light text-white text-[16px] leading-[24px] mt-[12px]">{content}</p>
                   </div>
                 ))}
               </div>
@@ -132,10 +130,7 @@ function HowItWorks() {
                     key={Math.random() * Math.random()}
                     className="flex justify-center pt-[18px] pb-[16px] px-[16px] border border-solid border-space-cadet rounded-[16px]"
                   >
-                    ✅
-                    <p className="font-mitr antialiased ml-[7px] font-light text-white text-[16px] leading-[24px]">
-                      {item}
-                    </p>
+                    ✅<p className="font-mitr antialiased ml-[7px] font-light text-white text-[16px] leading-[24px]">{item}</p>
                   </div>
                 ))}
               </div>
