@@ -173,8 +173,10 @@ function HowItWorks() {
 
           <Tab.Panels>
             <Tab.Panel>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-y-[26px] md:gap-y-[0px] gap-x-[26px] lg:gap-x-[46px]
-                mx-auto max-w-[1300px]">
+              <div
+                className="grid grid-cols-1 md:grid-cols-3 gap-y-[26px] md:gap-y-[0px] gap-x-[26px] lg:gap-x-[46px]
+                mx-auto max-w-[1300px]"
+              >
                 {instantSwapInformation?.map((item) => (
                   <div
                     key={Math.random() * Math.random()}
@@ -186,10 +188,12 @@ function HowItWorks() {
                 ))}
               </div>
             </Tab.Panel>
-            
+
             <Tab.Panel>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-y-[26px] md:gap-y-[0px] gap-x-[26px] lg:gap-x-[46px]
-                mx-auto max-w-[1300px]">
+              <div
+                className="grid grid-cols-1 md:grid-cols-3 gap-y-[26px] md:gap-y-[0px] gap-x-[26px] lg:gap-x-[46px]
+                mx-auto max-w-[1300px]"
+              >
                 {cashSwapInformation?.map((item) => (
                   <div
                     key={Math.random() * Math.random()}
