@@ -49,10 +49,34 @@ function HowItWorks() {
     },
   ]
 
+  const sellInformation = [
+    {
+      icon: "/cart-icon.png",
+      title: "Find a market",
+      content: "Choose from a variety of market pairs, between crypto and fiat currencues.",
+    },
+    {
+      icon: "/liquidity-icon.png",
+      title: "Add Liquidity",
+      content: "Connect your wallets with adequate funds to facilitate Peer to Peer exchanges you accept.",
+    },
+    {
+      icon: "/swaps-icon.png",
+      title: "Accept Swaps",
+      content: "Choose from a list of active swaps that you want to provide liquidity needed for.",
+    },
+  ]
+
   const instantSwapInformation = [
     "Seller receives quote token instantly",
     "Buyer receives base token instantly",
     "Seller and Buyer receive trade reward",
+  ]
+
+  const cashSwapInformation = [
+    "Buyer sends payment.",
+    "Seller verifies payment and release token.",
+    "Seller and buyer receive trade reward.",
   ]
 
   return (
@@ -87,11 +111,36 @@ function HowItWorks() {
 
           <Tab.Panels>
             <Tab.Panel>
-              <div className="flex gap-x-[26px] lg:gap-x-[40px] overflow-x-scroll no-scrollbar">
+              <div className="flex xl:justify-center gap-x-[26px] lg:gap-x-[40px] overflow-x-scroll no-scrollbar">
                 {buyInformation?.map(({ icon, title, content }) => (
                   <div
                     key={Math.random() * Math.random()}
-                    className="relativetext-center pt-[53px] pb-[46px] px-[26px] text-center min-w-[270px]
+                    className="relative text-center pt-[53px] pb-[46px] px-[26px] text-center min-w-[270px] max-w-[270px]
+                    border-dashed border-2 border-chinese-green-border rounded-[40px] bg-[#030507]"
+                  >
+                    <div className="relative overflow-hidden w-[75px] h-[75px] mx-auto">
+                      <Image
+                        className="!relative object-contain w-full h-full"
+                        src={icon}
+                        alt="asset-logo"
+                        layout="fill"
+                        quality={100}
+                        priority
+                      />
+                    </div>
+                    <p className="font-mitr antialiased font-medium text-white text-[24px] mt-[16px]">{title}</p>
+                    <p className="font-mitr antialiased font-light text-white text-[16px] leading-[24px] mt-[12px]">{content}</p>
+                  </div>
+                ))}
+              </div>
+            </Tab.Panel>
+
+            <Tab.Panel>
+              <div className="flex xl:justify-center gap-x-[26px] lg:gap-x-[40px] overflow-x-scroll no-scrollbar">
+                {sellInformation?.map(({ icon, title, content }) => (
+                  <div
+                    key={Math.random() * Math.random()}
+                    className="relative text-center pt-[53px] pb-[46px] px-[26px] text-center min-w-[270px] max-w-[270px]
                     border-dashed border-2 border-chinese-green-border rounded-[40px] bg-[#030507]"
                   >
                     <div className="relative overflow-hidden w-[75px] h-[75px] mx-auto">
@@ -124,11 +173,28 @@ function HowItWorks() {
 
           <Tab.Panels>
             <Tab.Panel>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-y-[26px] md:gap-y-[0px] gap-x-[26px] lg:gap-x-[46px]">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-y-[26px] md:gap-y-[0px] gap-x-[26px] lg:gap-x-[46px]
+                mx-auto max-w-[1300px]">
                 {instantSwapInformation?.map((item) => (
                   <div
                     key={Math.random() * Math.random()}
-                    className="flex justify-center pt-[18px] pb-[16px] px-[16px] border border-solid border-space-cadet rounded-[16px]"
+                    className="flex justify-center w-fit pt-[18px] pb-[16px] px-[16px] border border-solid
+                      mx-auto border-space-cadet rounded-[16px]"
+                  >
+                    ✅<p className="font-mitr antialiased ml-[7px] font-light text-white text-[16px] leading-[24px]">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </Tab.Panel>
+            
+            <Tab.Panel>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-y-[26px] md:gap-y-[0px] gap-x-[26px] lg:gap-x-[46px]
+                mx-auto max-w-[1300px]">
+                {cashSwapInformation?.map((item) => (
+                  <div
+                    key={Math.random() * Math.random()}
+                    className="flex justify-center w-fit pt-[18px] pb-[16px] px-[16px] border border-solid
+                      mx-auto border-space-cadet rounded-[16px]"
                   >
                     ✅<p className="font-mitr antialiased ml-[7px] font-light text-white text-[16px] leading-[24px]">{item}</p>
                   </div>
