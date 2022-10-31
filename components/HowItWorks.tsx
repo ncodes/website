@@ -181,7 +181,7 @@ function HowItWorks() {
                   <div
                     key={Math.random() * Math.random()}
                     className="flex justify-center w-fit pt-[18px] pb-[16px] px-[16px] border border-solid
-                      mx-auto border-space-cadet rounded-[16px]"
+                      mx-auto border-space-cadet rounded-[16px] bg-jet-black"
                   >
                     ✅<p className="font-mitr antialiased ml-[7px] font-light text-white text-[16px] leading-[24px]">{item}</p>
                   </div>
@@ -198,7 +198,7 @@ function HowItWorks() {
                   <div
                     key={Math.random() * Math.random()}
                     className="flex justify-center w-fit pt-[18px] pb-[16px] px-[16px] border border-solid
-                      mx-auto border-space-cadet rounded-[16px]"
+                      mx-auto border-space-cadet rounded-[16px] bg-jet-black"
                   >
                     ✅<p className="font-mitr antialiased ml-[7px] font-light text-white text-[16px] leading-[24px]">{item}</p>
                   </div>
