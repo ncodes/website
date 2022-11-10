@@ -4,19 +4,23 @@ import Link from "next/link"
 type HeroLinkProps = {
   title: string
   href: string
+  target: string
 }
 
-function TradingLink({ title, href }: HeroLinkProps) {
+function TradingLink({ title, href, target }: HeroLinkProps) {
   return (
-    <Link href={href}>
-      <p
-        className="font-mitr antialiased text-[16px] tracking-[0.22px]
+    <Link passHref href={href}>
+      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+      <a target={target}>
+        <p
+          className="font-mitr antialiased text-[16px] tracking-[0.22px]
         text-chinese-green font-semibold cursor-pointer hover:underline after:content-[' '] after:inline-block
         after:bg-[length:24px_24px] after:w-6 after:h-6 after:bg-[url('/icons/caret-down.png')]
         after:-scale-y-100 after:rotate-45 after:-ml-[7px] after:mb-0.5 after:relative after:-z-[1]"
-      >
-        {title}
-      </p>
+        >
+          {title}
+        </p>
+      </a>
     </Link>
   )
 }
@@ -42,14 +46,14 @@ function Trading() {
            text-white leading-6 mb-9 lg:mb-8 text-center
            lg:text-left w-full lg:w-[440px] px-10 xs:px-0 3xs:px-0 sm:px-6 lg:px-0"
           >
-            Joint is a decentralized peer-to-peer trading protocol that allows you to trade cryptocurrencies and cash directly with
-            independent liquidity providers. Joint is enabled by a series of smart contracts that together create an unstoppable trading
-            engine.
+            Joint is a decentralized peer-to-peer trading protocol that allows you to trade cryptocurrencies for cash or cash for
+            cryptocurrencies directly with liquidity providers. No middleperson. Joint is enabled by a series of smart contracts that
+            together create an unstoppable trading engine.
           </p>
 
           <div className="flex flex-row gap-x-[30px] justify-center lg:justify-start">
-            <TradingLink title="Visit Exchange" href="/" />
-            <TradingLink title="Join Discord" href="/" />
+            <TradingLink title="Visit Exchange" href="https://app.joint.exchange" target="_blank" />
+            <TradingLink title="Join Discord" href="https://discord.gg/jfAPEjQ3HD" target="_blank" />
           </div>
         </div>
 

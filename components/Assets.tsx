@@ -53,7 +53,7 @@ function AssetItem() {
 function Assets() {
   return (
     <section
-      className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px]
+      className="hidden container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px]
       2xs:px-[15px] px-4 xl:px-[90px] mx-auto mb-[100px] lg:mb-[75px] mb-[100px] lg:mb-[170px]"
     >
       <div>

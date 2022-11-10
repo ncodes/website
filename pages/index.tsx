@@ -17,7 +17,7 @@ const Home: NextPage = function () {
   return (
     <>
       <Head>
-        <title>Joint - Decentralized P2P trading</title>
+        <title>Home | Joint Protocol</title>
         <link rel="icon" href="./favicon.ico" />
       </Head>
 
@@ -49,12 +49,12 @@ const Home: NextPage = function () {
 
       <Features />
 
+      <HowItWorks />
+
       <div className="bg-[url('/Group33.svg')] bg-cover">
         <NFT />
         <Rewards />
       </div>
-
-      <HowItWorks />
 
       <Partners />
 
