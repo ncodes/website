@@ -27,7 +27,7 @@ function IconLink({ src, alt }: IconLinkProps) {
 function Partners() {
   return (
     <section
-      className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full
+      className="hidden container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full
       3xs:px-[10px] 2xs:px-[15px] mx-auto mb-[100px] lg:mb-[150px]"
     >
       <div className="mb-[100px]">
@@ -41,7 +41,7 @@ function Partners() {
           className="font-mitr antialiased font-light text-[16px] text-white
           tracking-[0.22px] text-center w-[325px] xl:w-auto mx-auto"
         >
-          We are backed by the latest and best technology partners.
+          We are backed by the latest and best technologies.
         </p>
       </div>
 

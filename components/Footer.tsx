@@ -92,9 +92,9 @@ function Footer() {
           <div className="flex flex-col mx-auto items-center md:items-start">
             <FooterTitle label="Company" />
             <ul className="flex flex-col gap-y-[10px] list-none">
-              <FooterLink title="About" href="/rewards" />
-              <FooterLink title="Blog" href="/feedback" />
-              <FooterLink title="Media" href="/feedback" />
+              <FooterLink title="About" href="/about" />
+              <FooterLink title="Blog" href="https://medium.com/0xjoint" />
+              {/* <FooterLink title="Media" href="#" /> */}
               <FooterLink title="FAQ" href="/faq" />
             </ul>
           </div>
@@ -116,17 +116,17 @@ function Footer() {
             <FooterTitle label="Developers" />
 
             <ul className="flex flex-col text-center md:text-left  gap-y-[10px] ">
-              <FooterLink title="Documentation" href="/documentation" />
-              <FooterLink title="GitHub" href="/team" />
+              <FooterLink title="Documentation" href="https://docs.joint.exchange" />
+              <FooterLink title="GitHub" href="https://github.com/jointlabs" />
             </ul>
           </div>
 
           <div className="flex flex-col mx-auto items-center md:items-start">
             <FooterTitle label="Legal" />
             <ul className="flex flex-col text-center md:text-left  gap-y-[10px]">
-              <FooterLink title="Protocol Disclaimer" href="/protocol" />
-              <FooterLink title="Terms of service" href="/terms" />
-              <FooterLink title="Privacy Policy" href="/privacy" />
+              <FooterLink title="Protocol Disclaimer" href="#" />
+              <FooterLink title="Terms of service" href="#" />
+              <FooterLink title="Privacy Policy" href="#" />
             </ul>
           </div>
         </div>

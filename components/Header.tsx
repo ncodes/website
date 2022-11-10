@@ -49,37 +49,37 @@ const Languages = [
 const MenuItems = [
   {
     title: "Trade",
-    description: "Sign up today and buy 65+ cryptocurrencies in minutes.",
+    description: "Swap between cryptocurrencies and cash now.",
     src: "/trade-menu.webp",
   },
   {
     title: "Markets",
-    description: "Sign up today and buy 65+ cryptocurrencies in minutes.",
+    description: "Browse markets to trade cash and cryptocurrencies.",
     src: "/market-menu.webp",
   },
   {
     title: "Liquidity",
-    description: "Sign up today and buy 65+ cryptocurrencies in minutes.",
+    description: "Browse or provide liquidity to cash or cryptocurrency markets.",
     src: "/liquidity-menu.webp",
   },
   {
     title: "Mediation",
-    description: "Sign up today and buy 65+ cryptocurrencies in minutes.",
+    description: "Earn protocol rewards by solving trade disputes as a mediator.",
     src: "/mediation-menu.webp",
   },
   {
     title: "Disputes",
-    description: "Sign up today and buy 65+ cryptocurrencies in minutes.",
+    description: "Browse disputes you are involved in as a trader or mediator.",
     src: "/dispute-menu.webp",
   },
   {
     title: "Mining",
-    description: "Sign up today and buy 65+ cryptocurrencies in minutes.",
+    description: "Earn rewards by executing public protocol operations.",
     src: "/mining-menu.webp",
   },
   {
     title: "Reward",
-    description: "Sign up today and buy 65+ cryptocurrencies in minutes.",
+    description: "Check your reward balances and withdraw into your wallet.",
     src: "/reward-menu.webp",
   },
 ]
@@ -90,10 +90,14 @@ const DeveloperMenuItems = [
   {
     title: "Docs",
     src: "/icons/docs.png",
+    href: "https://docs.joint.exchange",
+    target: "_blank",
   },
   {
     title: "Github",
     src: "/icons/github.png",
+    href: "https://github.com/jointlabs",
+    target: "_blank",
   },
 ]
 /** DEVELOPER MENU ITEM DATA - Ends */
@@ -103,10 +107,14 @@ const CommunityMenuItems = [
   {
     title: "Twitter",
     src: "/icons/twitter.png",
+    href: "https://twitter.com/0xJoint",
+    target: "_blank",
   },
   {
     title: "Discord",
     src: "/icons/discord.png",
+    href: "https://discord.gg/jfAPEjQ3HD",
+    target: "_blank",
   },
 ]
 /** COMMUNITY MENU ITEM DATA - Ends */
@@ -346,20 +354,23 @@ function Header() {
                             className="font-['Mitr'] antialiased text-[14px] tracking-[0.22px]
                             leading-[17.64px] text-white font-light mt-[23.36px]"
                           >
-                            Directly navigate to <br />a protocol feature
+                            Directly navigate to <br />a protocol feature.
                           </p>
                         </div>
 
-                        <Link href="/">
-                          <p
-                            className="font-['Mitr'] antialiased text-[16px] tracking-[0.22px] text-chinese-green
+                        <Link passHref href="https://discord.gg/jfAPEjQ3HD">
+                          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                          <a target="_blank">
+                            <p
+                              className="font-['Mitr'] antialiased text-[16px] tracking-[0.22px] text-chinese-green
                             font-semibold cursor-pointer hover:underline after:content-[' ']
                             after:inline-block after:bg-[length:24px_24px] after:w-6 after:h-6
                             after:bg-[url('/icons/caret-down.png')] after:-scale-y-100 after:rotate-45
                             after:-ml-[7px] after:mb-0.5"
-                          >
-                            Join Discord
-                          </p>
+                            >
+                              Join Discord
+                            </p>
+                          </a>
                         </Link>
                       </div>
 
@@ -432,21 +443,23 @@ function Header() {
                       border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)] px-[11px] pt-[14px] pb-[17px]"
                     >
                       {DeveloperMenuItems.map((menuItem) => (
-                        <Menu.Item
-                          key={Math.random() * Math.random()}
-                          as="div"
-                          className="flex items-center cursor-pointer py-[7px] px-[10px]
+                        <Menu.Item key={Math.random() * Math.random()} as="div">
+                          <a
+                            href={menuItem.href}
+                            target={menuItem.target}
+                            className="flex items-center cursor-pointer py-[7px] px-[10px]
                           hover:bg-[#0d1c31] hover:rounded-lg"
-                        >
-                          <div className="relative w-[20px] h-[20px] overflow-hidden">
-                            <img className="!relative object-contain w-full h-full" src={menuItem.src} alt="menu-icon" />
-                          </div>
-                          <p
-                            className="font-mitr antialiased text-[16px] leading-[32px]
-                           tracking-[0.22px] text-white font-regular pl-[10px] "
                           >
-                            {menuItem.title}
-                          </p>
+                            <div className="relative w-[20px] h-[20px] overflow-hidden">
+                              <img className="!relative object-contain w-full h-full" src={menuItem.src} alt="menu-icon" />
+                            </div>
+                            <p
+                              className="font-mitr antialiased text-[16px] leading-[32px]
+                           tracking-[0.22px] text-white font-regular pl-[10px] "
+                            >
+                              {menuItem.title}
+                            </p>
+                          </a>
                         </Menu.Item>
                       ))}
                     </Menu.Items>
@@ -496,15 +509,22 @@ function Header() {
                           className="flex items-center cursor-pointer py-[7px] px-[10px]
                           hover:bg-[#0d1c31] hover:rounded-lg"
                         >
-                          <div className="relative w-[20px] h-[20px] overflow-hidden">
-                            <img className="!relative object-contain w-full h-full" src={menuItem.src} alt="menu-icon" />
-                          </div>
-                          <p
-                            className="font-mitr antialiased text-[16px] leading-[32px]
-                           tracking-[0.22px] text-white font-regular pl-[10px] "
+                          <a
+                            href={menuItem.href}
+                            target={menuItem.target}
+                            className="flex items-center cursor-pointer py-[7px] px-[10px]
+                          hover:bg-[#0d1c31] hover:rounded-lg"
                           >
-                            {menuItem.title}
-                          </p>
+                            <div className="relative w-[20px] h-[20px] overflow-hidden">
+                              <img className="!relative object-contain w-full h-full" src={menuItem.src} alt="menu-icon" />
+                            </div>
+                            <p
+                              className="font-mitr antialiased text-[16px] leading-[32px]
+                           tracking-[0.22px] text-white font-regular pl-[10px] "
+                            >
+                              {menuItem.title}
+                            </p>
+                          </a>
                         </Menu.Item>
                       ))}
                     </Menu.Items>
@@ -663,11 +683,11 @@ function Header() {
                             <Menu.Items>
                               <ul className="bg-eerie-black backdrop-blur-[28px] py-2">
                                 <Menu.Item>
-                                  <SubMobileLink title="Docs" href="/" />
+                                  <SubMobileLink title="Docs" href="https://docs.joint.exchange" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Github" href="/" />
+                                  <SubMobileLink title="Github" href="https://github.com/jointlabs" />
                                 </Menu.Item>
                               </ul>
                             </Menu.Items>

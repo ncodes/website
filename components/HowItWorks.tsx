@@ -30,22 +30,22 @@ function HowItWorks() {
     {
       icon: "/cart-icon.png",
       title: "Find a market",
-      content: "Choose from a variety of market pairs, between crypto and fiat currencues.",
+      content: "Choose from a variety of market pairs between cryptocurrency and fiat currencies.",
     },
     {
       icon: "/seller-icon.png",
       title: "Select Seller",
-      content: "The Liquidity Providers on our platform provides the liquidity needed for your exchange or swap.",
+      content: "Browse liquidity providers in the market and pick your choice based on their success rate.",
     },
     {
       icon: "/amount-icon.png",
       title: "Set an Amount",
-      content: "The amount you set is paired up with a Liquidity Provider that accepts your trade.",
+      content: "Enter the amount of liquidity you want from the liquidity provider.",
     },
     {
       icon: "/swap-icon.png",
-      title: "Create Swap",
-      content: "Swaps or exchanges can be instant or Synthetic based on preferred trade duration.",
+      title: "Start Swap",
+      content: "Swap between on-chain assets is instantaneous, others will start a P2P order",
     },
   ]
 
@@ -53,30 +53,30 @@ function HowItWorks() {
     {
       icon: "/cart-icon.png",
       title: "Find a market",
-      content: "Choose from a variety of market pairs, between crypto and fiat currencues.",
+      content: "Choose from a variety of market pairs between cryptocurrencies and fiat currencies.",
     },
     {
       icon: "/liquidity-icon.png",
       title: "Add Liquidity",
-      content: "Connect your wallets with adequate funds to facilitate Peer to Peer exchanges you accept.",
+      content: "Connect your wallets and deposit any amount of the market's base asset (crypto or cash).",
     },
     {
       icon: "/swaps-icon.png",
-      title: "Accept Swaps",
-      content: "Choose from a list of active swaps that you want to provide liquidity needed for.",
+      title: "Wait for Swaps",
+      content: "Swap between on-chain assets is instantaneous, others will start a P2P order.",
     },
   ]
 
   const instantSwapInformation = [
-    "Seller receives quote token instantly",
-    "Buyer receives base token instantly",
-    "Seller and Buyer receive trade reward",
+    "Maker receives quote asset instantly",
+    "Buyer receives base asset instantly",
+    "Maker and Buyer receive trade reward",
   ]
 
   const cashSwapInformation = [
-    "Buyer sends payment.",
-    "Seller verifies payment and release token.",
-    "Seller and buyer receive trade reward.",
+    "Party with cash sends payment and waits for confirmation",
+    "Party with on-chain asset verifies payment and release asset.",
+    "Both parties receive trade reward from the protocol.",
   ]
 
   return (
@@ -90,7 +90,7 @@ function HowItWorks() {
           className="font-mitr antialiased font-light text-center text-white text-[14px]
           mb-[16px]"
         >
-          IT WAS HARD, BUT WE DID IT ANYWAYS
+          IT&apos;S FAMILIAR, BUT DECENTRALIZED AND BETTER
         </p>
         <p
           className="font-mitr antialiased font-semibold text-center text-white text-[48px]

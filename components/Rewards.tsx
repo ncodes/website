@@ -56,13 +56,13 @@ function Rewards() {
           lg:text-[72px] leading-[56px] lg:leading-[72px] w-auto mx-auto
           mb-4 sm:w-[316px] md:w-[410px] lg:mb-6 lg:w-[570px] xl:w-full"
         >
-          Rewards, Everywhere
+          Protocol Rewards
         </p>
         <p
           className="font-mitr antialiased font-light text-center text-white
           text-[14px] tracking-[0.22px] leading-6 mx-auto w-[293px] xl:w-auto"
         >
-          The Joint protocol offers juicy rewards to users
+          The Joint Protocol is distributing its initial token supply via various reward programs for the community.
         </p>
       </div>
 
@@ -71,13 +71,15 @@ function Rewards() {
           <Tab.List as="div" className="flex flex-row gap-x-[24px] justify-center mb-[40px] lg:mb-[64px] flex-wrap gap-y-[25px] px-10">
             <Tab>{({ selected }) => <TabSelector label="Trade" selected={selected} />}</Tab>
 
-            <Tab>{({ selected }) => <TabSelector label="Mediation" selected={selected} />}</Tab>
+            <Tab>{({ selected }) => <TabSelector label="Listing" selected={selected} />}</Tab>
 
-            <Tab>{({ selected }) => <TabSelector label="Liquidity" selected={selected} />}</Tab>
+            <Tab>{({ selected }) => <TabSelector label="Mediation" selected={selected} />}</Tab>
 
             <Tab>{({ selected }) => <TabSelector label="Staking" selected={selected} />}</Tab>
 
-            <Tab>{({ selected }) => <TabSelector label="Markets" selected={selected} />}</Tab>
+            <Tab>{({ selected }) => <TabSelector label="Fee" selected={selected} />}</Tab>
+
+            <Tab>{({ selected }) => <TabSelector label="Liquidity" selected={selected} />}</Tab>
           </Tab.List>
 
           <Tab.Panels>
@@ -92,9 +94,13 @@ function Rewards() {
                 className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-auto lg:w-[411px] mx-auto"
               >
-                Total reward earned from trades as a liquidity provider or as a taker.
+                Earn trading reward for completing a trade as a liquidity provider or buyer.
               </p>
-
+              <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
+                <a href="https://docs.joint.exchange/learn/rewards/trading-reward" className="hover:text-chinese-green">
+                  Learn more
+                </a>
+              </div>
               <div
                 className="flex gap-x-[12px] lg:gap-x-[37px]
                 justify-center mt-[40px] lg:mt-[54.5px]"
@@ -110,15 +116,108 @@ function Rewards() {
                 className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
+                Listing Rewards
+              </p>
+              <p
+                className="font-mitr antialiased font-normal text-center
+                text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
+              >
+                Provide liquidity to a market and start earning from a special listing pool.
+              </p>
+              <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
+                <a href="https://docs.joint.exchange/learn/rewards/listing-reward" className="hover:text-chinese-green">
+                  Learn more
+                </a>
+              </div>
+              <div
+                className="flex gap-x-[12px] lg:gap-x-[37px]
+                justify-center mt-[40px] lg:mt-[54.5px]"
+              >
+                <CustomImage src="/reward-p2p.webp" />
+              </div>
+              <div />
+            </Tab.Panel>
+
+            <Tab.Panel>
+              <p
+                className="font-mitr antialiased font-medium text-center
+                text-white text-[24px] leading-[26.25px] mb-[11px]"
+              >
                 Mediation Rewards
               </p>
               <p
                 className="font-mitr antialiased font-regular text-center
                 text-white text-[16px] tracking-[0.22px] leading-6 mx-auto w-[293px] lg:w-[411px]"
               >
-                Total reward earned from trades as a liquidity provider or as a taker.
+                Earn mediation reward for helping to resolve trading disputes
               </p>
+              <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
+                <a href="https://docs.joint.exchange/learn/concepts/dispute-mediation" className="hover:text-chinese-green">
+                  Learn more
+                </a>
+              </div>
+              <div />
+              <div
+                className="flex gap-x-[12px] lg:gap-x-[37px]
+                justify-center mt-[40px] lg:mt-[54.5px]"
+              >
+                <CustomImage src="/reward-p2p.webp" />
+              </div>
+            </Tab.Panel>
 
+            <Tab.Panel>
+              <p
+                className="font-mitr antialiased font-medium text-center
+                text-white text-[24px] leading-[26.25px] mb-[11px]"
+              >
+                Staking Rewards
+              </p>
+              <p
+                className="font-mitr antialiased font-normal text-center
+                text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
+              >
+                Earn more P2P tokens when you stake your P2P tokens into the official staking pool.
+              </p>
+              <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
+                <a href="https://docs.joint.exchange/learn/rewards/staking" className="hover:text-chinese-green">
+                  Learn more
+                </a>
+              </div>
+              <div
+                className="flex gap-x-[12px] lg:gap-x-[37px]
+                justify-center mt-[40px] lg:mt-[54.5px]"
+              >
+                <CustomImage src="/reward-p2p.webp" />
+              </div>
+              <div />
+            </Tab.Panel>
+
+            <Tab.Panel>
+              <p
+                className="font-mitr antialiased font-medium text-center
+                text-white text-[24px] leading-[26.25px] mb-[11px]"
+              >
+                Fee Rewards
+              </p>
+              <p
+                className="font-mitr antialiased font-normal text-center
+                text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
+              >
+                Earn a share of protocol revenue when you stake into the official staking pool or hold DroidPD NFT.
+              </p>
+              <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
+                <a href="https://jointdocs.vercel.app/learn/rewards/protocol-fee" className="hover:text-chinese-green">
+                  Learn more
+                </a>
+              </div>
+              <div
+                className="flex gap-x-[12px] lg:gap-x-[37px]
+                justify-center mt-[40px] lg:mt-[54.5px]"
+              >
+                <CustomImage src="/reward-btc.webp" />
+                <CustomImage src="/reward-p2p.webp" />
+                <CustomImage src="/reward-uni.webp" />
+              </div>
               <div />
             </Tab.Panel>
 
@@ -133,43 +232,19 @@ function Rewards() {
                 className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
               >
-                Total reward earned from trades as a liquidity provider or as a taker.
+                Earn reward for providing liquidity to P2P-ETH pool on Uniswap.
               </p>
-
-              <div />
-            </Tab.Panel>
-
-            <Tab.Panel>
-              <p
-                className="font-mitr antialiased font-medium text-center
-                text-white text-[24px] leading-[26.25px] mb-[11px]"
+              <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
+                <a href="https://docs.joint.exchange/learn/rewards/liquidity-reward" className="hover:text-chinese-green">
+                  Learn more
+                </a>
+              </div>
+              <div
+                className="flex gap-x-[12px] lg:gap-x-[37px]
+                justify-center mt-[40px] lg:mt-[54.5px]"
               >
-                Staking Rewards
-              </p>
-              <p
-                className="font-mitr antialiased font-normal text-center
-                text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
-              >
-                Total reward earned from trades as a liquidity provider or as a taker.
-              </p>
-
-              <div />
-            </Tab.Panel>
-
-            <Tab.Panel>
-              <p
-                className="font-mitr antialiased font-medium text-center
-                text-white text-[24px] leading-[26.25px] mb-[11px]"
-              >
-                Markets Rewards
-              </p>
-              <p
-                className="font-mitr antialiased font-normal text-center
-                text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
-              >
-                Total reward earned from trades as a liquidity provider or as a taker.
-              </p>
-
+                <CustomImage src="/reward-p2p.webp" />
+              </div>
               <div />
             </Tab.Panel>
           </Tab.Panels>
