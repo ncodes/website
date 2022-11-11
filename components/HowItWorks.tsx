@@ -81,9 +81,9 @@ function HowItWorks() {
 
   return (
     <section
-      className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px]
-      2xs:px-[15px] mx-auto px-4 md:px-[30px] lg:px-[30px] xl:px-[90px] xs:mx-auto mt-[100px] mb-[100px]
-      lg:mt-[150px] lg:mb-[150px]"
+      className="container max-w-fit 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[30px] lg:px-[30px]
+      xl:px-[90px] xs:mx-auto mt-[100px] mb-[100px] lg:mt-[150px] lg:mb-[150px] xl:bg-[url('/dashed-arrow-bg.svg')]
+      xl:bg-no-repeat xl:bg-[right_-50px_bottom_200px] 2xl:bg-[right_bottom_180px]"
     >
       <div className="w-auto md:w-[410px] lg:w-auto mx-auto">
         <p
@@ -111,12 +111,12 @@ function HowItWorks() {
 
           <Tab.Panels>
             <Tab.Panel>
-              <div className="flex xl:justify-center gap-x-[26px] lg:gap-x-[40px] overflow-x-scroll no-scrollbar">
+              <div className="flex 2xl:justify-center gap-x-[26px] lg:gap-x-[40px] overflow-x-scroll no-scrollbar">
                 {buyInformation?.map(({ icon, title, content }) => (
                   <div
                     key={Math.random() * Math.random()}
-                    className="relative text-center pt-[53px] pb-[46px] px-[26px] text-center min-w-[270px] max-w-[270px]
-                    border-dashed border-2 border-chinese-green-border rounded-[40px] bg-[#030507]"
+                    className="relative text-center pt-[53px] pb-[46px] pl-[20px] pr-[56px] text-center
+                    min-w-[290px] max-w-[290px] bg-[url('/how-it-works-card-bg.svg')] bg-no-repeat"
                   >
                     <div className="relative overflow-hidden w-[75px] h-[75px] mx-auto">
                       <Image
