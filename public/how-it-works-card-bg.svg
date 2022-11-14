@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="270px" height="320px" viewBox="0 0 270 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle</title>
+    <defs>
+        <path d="M40,0 L210,0 C232.09139,-4.05812251e-15 250,17.90861 250,40 L250,139.05766 L250,139.05766 L270,161 L250,181.204392 L250,280 C250,302.09139 232.09139,320 210,320 L40,320 C17.90861,320 9.81084236e-15,302.09139 0,280 L0,40 C-2.705415e-15,17.90861 17.90861,4.05812251e-15 40,0 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="270" height="320" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.195717948" stroke-dasharray="3.2">
+        <g id="Home" transform="translate(-980.000000, -6088.000000)" stroke="#C8ED5A" stroke-width="4.8">
+            <g id="Group-51" transform="translate(360.000000, 5843.000000)">
+                <g id="Group-46" transform="translate(0.000000, 245.000000)">
+                    <g id="Group-5-Copy-3" transform="translate(620.000000, 0.000000)">
+                        <use id="Rectangle" mask="url(#mask-2)" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
