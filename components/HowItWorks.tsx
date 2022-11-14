@@ -1,4 +1,5 @@
 /* eslint-disable react/require-default-props */
+import { useState } from "react"
 import { Tab } from "@headlessui/react"
 import Image from "next/image"
 
@@ -26,6 +27,8 @@ function TabSelector({ label, selected, last }: TabSelectorProps) {
 }
 
 function HowItWorks() {
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
   const buyInformation = [
     {
       icon: "/cart-icon.png",
@@ -81,9 +84,11 @@ function HowItWorks() {
 
   return (
     <section
-      className="container max-w-fit 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[30px] lg:px-[30px]
+      className={`container max-w-fit 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[30px] lg:px-[30px]
       xl:px-[90px] xs:mx-auto mt-[100px] mb-[100px] lg:mt-[150px] lg:mb-[150px] xl:bg-[url('/dashed-arrow-bg.svg')]
-      xl:bg-no-repeat xl:bg-[right_-50px_bottom_200px] 2xl:bg-[right_bottom_180px]"
+      xl:bg-no-repeat
+      ${selectedIndex === 0 ? "xl:bg-[right_-10px_bottom_190px] 2xl:bg-[right_-20px_bottom_140px] bg-[length:57%]"
+      : "xl:bg-[right_50px_bottom_210px] 2xl:bg-[right_50px_bottom_190px] bg-[length:40%]"}`}
     >
       <div className="w-auto md:w-[410px] lg:w-auto mx-auto">
         <p
@@ -102,7 +107,7 @@ function HowItWorks() {
       </div>
 
       <div className="mt-[32px]">
-        <Tab.Group>
+        <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
           <Tab.List as="div" className="flex flex-row justify-center mb-[40px] lg:mb-[40px]">
             <Tab>{({ selected }) => <TabSelector label="Buy" selected={selected} />}</Tab>
 
@@ -136,7 +141,7 @@ function HowItWorks() {
             </Tab.Panel>
 
             <Tab.Panel>
-              <div className="flex lg:justify-between gap-x-[26px] lg:gap-x-[40px] overflow-x-scroll no-scrollbar">
+              <div className="flex lg:justify-center gap-x-[26px] lg:gap-x-[70px] overflow-x-scroll no-scrollbar">
                 {sellInformation?.map(({ icon, title, content }) => (
                   <div
                     key={Math.random() * Math.random()}
