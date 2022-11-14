@@ -12,8 +12,10 @@ const WorkInProgress: NextPage = function () {
       </Head>
 
       <section>
-        <div className="flex justify-center items-center bg-repeat bg-[url('/mobile-stars.webp')]
-          bg-contain bg-top xl:bg-bottom px-[12px] w-[100vw] h-[100vh]">
+        <div
+          className="flex justify-center items-center bg-repeat bg-[url('/mobile-stars.webp')]
+          bg-contain bg-top xl:bg-bottom px-[12px] w-[100vw] h-[100vh]"
+        >
           <div className="relative overflow-hidden w-[250px] 2xs:w-[345px] h-[380px] 2xs:h-[523px]">
             <Image
               className="!relative object-cover w-full h-full"
