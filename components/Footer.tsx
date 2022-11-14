@@ -102,13 +102,13 @@ function Footer() {
           <div className="flex flex-col mx-auto items-center md:items-start">
             <FooterTitle label="Protocol" />
             <ul className="flex flex-col text-center md:text-left gap-y-[10px]">
-              <FooterLink title="Trade" href="/rewards" />
-              <FooterLink title="Markets" href="/feedback" />
-              <FooterLink title="Liquidity" href="/features" />
-              <FooterLink title="Mediation" href="/features" />
-              <FooterLink title="Disputes" href="/features" />
-              <FooterLink title="Mining" href="/features" />
-              <FooterLink title="Rewards" href="/features" />
+              <FooterLink title="Trade" href="/work-in-progress" />
+              <FooterLink title="Markets" href="/work-in-progress" />
+              <FooterLink title="Liquidity" href="/work-in-progress" />
+              <FooterLink title="Mediation" href="/work-in-progress" />
+              <FooterLink title="Disputes" href="/work-in-progress" />
+              <FooterLink title="Mining" href="/work-in-progress" />
+              <FooterLink title="Rewards" href="/work-in-progress" />
             </ul>
           </div>
 
