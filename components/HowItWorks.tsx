@@ -87,8 +87,11 @@ function HowItWorks() {
       className={`container max-w-fit 3xs:px-[10px] 2xs:px-[15px] mx-auto px-4 md:px-[30px] lg:px-[30px]
       xl:px-[90px] xs:mx-auto mt-[100px] mb-[100px] lg:mt-[150px] lg:mb-[150px] xl:bg-[url('/dashed-arrow-bg.svg')]
       xl:bg-no-repeat
-      ${selectedIndex === 0 ? "xl:bg-[right_-10px_bottom_190px] 2xl:bg-[right_-20px_bottom_140px] bg-[length:57%]"
-      : "xl:bg-[right_50px_bottom_210px] 2xl:bg-[right_50px_bottom_190px] bg-[length:40%]"}`}
+      ${
+        selectedIndex === 0
+          ? "xl:bg-[right_-10px_bottom_190px] 2xl:bg-[right_-20px_bottom_140px] bg-[length:57%]"
+          : "xl:bg-[right_50px_bottom_210px] 2xl:bg-[right_50px_bottom_190px] bg-[length:40%]"
+      }`}
     >
       <div className="w-auto md:w-[410px] lg:w-auto mx-auto">
         <p
