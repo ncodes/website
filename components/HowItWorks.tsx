@@ -136,7 +136,7 @@ function HowItWorks() {
             </Tab.Panel>
 
             <Tab.Panel>
-              <div className="flex xl:justify-center gap-x-[26px] lg:gap-x-[40px] overflow-x-scroll no-scrollbar">
+              <div className="flex lg:justify-between gap-x-[26px] lg:gap-x-[40px] overflow-x-scroll no-scrollbar">
                 {sellInformation?.map(({ icon, title, content }) => (
                   <div
                     key={Math.random() * Math.random()}
