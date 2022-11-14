@@ -44,7 +44,7 @@ function HowItWorks() {
     },
     {
       icon: "/swap-icon.png",
-      title: "Start Swap",
+      title: "Create Swap",
       content: "Swap between on-chain assets is instantaneous, others will start a P2P order",
     },
   ]
@@ -62,7 +62,7 @@ function HowItWorks() {
     },
     {
       icon: "/swaps-icon.png",
-      title: "Wait for Swaps",
+      title: "Accept Swaps",
       content: "Swap between on-chain assets is instantaneous, others will start a P2P order.",
     },
   ]
