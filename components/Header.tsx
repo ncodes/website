@@ -51,36 +51,43 @@ const MenuItems = [
     title: "Trade",
     description: "Swap between cryptocurrencies and cash now.",
     src: "/trade-menu.webp",
+    href: "/work-in-progress"
   },
   {
     title: "Markets",
     description: "Browse markets to trade cash and cryptocurrencies.",
     src: "/market-menu.webp",
+    href: "/work-in-progress"
   },
   {
     title: "Liquidity",
     description: "Browse or provide liquidity to cash or cryptocurrency markets.",
     src: "/liquidity-menu.webp",
+    href: "/work-in-progress"
   },
   {
     title: "Mediation",
     description: "Earn protocol rewards by solving trade disputes as a mediator.",
     src: "/mediation-menu.webp",
+    href: "/work-in-progress"
   },
   {
     title: "Disputes",
     description: "Browse disputes you are involved in as a trader or mediator.",
     src: "/dispute-menu.webp",
+    href: "/work-in-progress"
   },
   {
     title: "Mining",
     description: "Earn rewards by executing public protocol operations.",
     src: "/mining-menu.webp",
+    href: "/work-in-progress"
   },
   {
     title: "Reward",
     description: "Check your reward balances and withdraw into your wallet.",
     src: "/reward-menu.webp",
+    href: "/work-in-progress"
   },
 ]
 /** MENU ITEM DATA - Ends */
@@ -201,6 +208,8 @@ SubMobileLink.displayName = "SubMobileLink"
 /** SUB Mobile LINK ITEM - Ends */
 
 function Header() {
+  const router = useRouter()
+
   return (
     <>
       <Head>
@@ -332,7 +341,7 @@ function Header() {
 
                 {/* PROTOCOL MENU CONTENT TRANSITION - Starts */}
                 <Transition as={Fragment} {...PopupTransition}>
-                  <div className="container absolute top-0 left-0 right-0 m-auto mt-[90px] outline-0">
+                  <div className="container absolute top-0 left-0 right-0 m-auto mt-[90px] outline-0 z-[1]">
                     {/* PROTOCOL MENU CONTENT - Starts */}
                     <Menu.Items
                       as="div"
@@ -383,6 +392,7 @@ function Header() {
                               as="div"
                               className="flex flex-row items-start cursor-pointer basis-1/3
                               pt-[10px] px-[10px] pb-[15px] hover:bg-[#0d1c31] hover:rounded-lg"
+                              onClick={() => router.push(menuItem.href, undefined, { shallow: true })}
                             >
                               <div className="relative w-16 h-16 mr-4 overflow-hidden">
                                 <img
@@ -622,31 +632,31 @@ function Header() {
                             <Menu.Items>
                               <ul className="bg-eerie-black backdrop-blur-[28px] py-2">
                                 <Menu.Item>
-                                  <SubMobileLink title="Trade" href="/" />
+                                  <SubMobileLink title="Trade" href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Market" href="/" />
+                                  <SubMobileLink title="Market" href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Liquidity" href="/" />
+                                  <SubMobileLink title="Liquidity" href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Mediation" href="/" />
+                                  <SubMobileLink title="Mediation" href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Mining" href="/mining" />
+                                  <SubMobileLink title="Mining" href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Rewards" href="/" />
+                                  <SubMobileLink title="Rewards" href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Dispute" href="/" />
+                                  <SubMobileLink title="Dispute" href="/work-in-progress" />
                                 </Menu.Item>
                               </ul>
                             </Menu.Items>
@@ -724,11 +734,11 @@ function Header() {
                             <Menu.Items>
                               <ul className="bg-eerie-black backdrop-blur-[28px] py-2">
                                 <Menu.Item>
-                                  <SubMobileLink title="Discord" href="/" />
+                                  <SubMobileLink title="Discord" href="https://twitter.com/0xJoint" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Twitter" href="/" />
+                                  <SubMobileLink title="Twitter" href="https://discord.gg/jfAPEjQ3HD" />
                                 </Menu.Item>
                               </ul>
                             </Menu.Items>
