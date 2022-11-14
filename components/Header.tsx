@@ -51,43 +51,43 @@ const MenuItems = [
     title: "Trade",
     description: "Swap between cryptocurrencies and cash now.",
     src: "/trade-menu.webp",
-    href: "/work-in-progress"
+    href: "/work-in-progress",
   },
   {
     title: "Markets",
     description: "Browse markets to trade cash and cryptocurrencies.",
     src: "/market-menu.webp",
-    href: "/work-in-progress"
+    href: "/work-in-progress",
   },
   {
     title: "Liquidity",
     description: "Browse or provide liquidity to cash or cryptocurrency markets.",
     src: "/liquidity-menu.webp",
-    href: "/work-in-progress"
+    href: "/work-in-progress",
   },
   {
     title: "Mediation",
     description: "Earn protocol rewards by solving trade disputes as a mediator.",
     src: "/mediation-menu.webp",
-    href: "/work-in-progress"
+    href: "/work-in-progress",
   },
   {
     title: "Disputes",
     description: "Browse disputes you are involved in as a trader or mediator.",
     src: "/dispute-menu.webp",
-    href: "/work-in-progress"
+    href: "/work-in-progress",
   },
   {
     title: "Mining",
     description: "Earn rewards by executing public protocol operations.",
     src: "/mining-menu.webp",
-    href: "/work-in-progress"
+    href: "/work-in-progress",
   },
   {
     title: "Reward",
     description: "Check your reward balances and withdraw into your wallet.",
     src: "/reward-menu.webp",
-    href: "/work-in-progress"
+    href: "/work-in-progress",
   },
 ]
 /** MENU ITEM DATA - Ends */
