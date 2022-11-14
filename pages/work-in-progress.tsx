@@ -2,6 +2,7 @@
 import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
+import Link from "next/link"
 
 const WorkInProgress: NextPage = function () {
   return (
@@ -11,11 +12,19 @@ const WorkInProgress: NextPage = function () {
         <link rel="icon" href="./favicon.ico" />
       </Head>
 
-      <section>
-        <div
-          className="flex justify-center items-center bg-repeat bg-[url('/mobile-stars.webp')]
+      <section
+        className="bg-repeat bg-[url('/mobile-stars.webp')]
           bg-contain bg-top xl:bg-bottom px-[12px] w-[100vw] h-[100vh]"
-        >
+      >
+        <div className="text-center text-white pt-10">
+          <Link passHref href="/">
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+            <a className="hover:text-chinese-green" href="/">
+              {"<"} Back to Home
+            </a>
+          </Link>
+        </div>
+        <div className="flex justify-center items-center w-[100vw] h-[100vh]">
           <div className="relative overflow-hidden w-[250px] 2xs:w-[345px] h-[380px] 2xs:h-[523px]">
             <Image
               className="!relative object-cover w-full h-full"

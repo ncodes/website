@@ -140,8 +140,8 @@ function HowItWorks() {
                 {sellInformation?.map(({ icon, title, content }) => (
                   <div
                     key={Math.random() * Math.random()}
-                    className="relative text-center pt-[53px] pb-[46px] px-[26px] text-center min-w-[270px] max-w-[270px]
-                    border-dashed border-2 border-chinese-green-border rounded-[40px] bg-[#030507]"
+                    className="relative text-center pt-[53px] pb-[46px] pl-[20px] pr-[56px] text-center
+                    min-w-[290px] max-w-[290px] bg-[url('/how-it-works-card-bg.svg')] bg-no-repeat"
                   >
                     <div className="relative overflow-hidden w-[75px] h-[75px] mx-auto">
                       <Image
