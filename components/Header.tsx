@@ -747,7 +747,13 @@ function Header() {
                       </ul>
 
                       <div className="max-w-[364px] 3xs:px-[40px] xs:px-[unset] w-full mx-auto mb-[50px]">
-                        <Button label="Start Trading" variant="primary" onClick={() => undefined} extraStyles="w-full" />
+                        <Button
+                          label="Start Trading"
+                          variant="primary"
+                          onClick={() => undefined}
+                          extraStyles="w-full"
+                          href="/work-in-progress"
+                        />
                       </div>
                     </div>
                   </div>
@@ -760,7 +766,7 @@ function Header() {
 
             {/* HEADER CTA BUTTON - Starts */}
             <div className="hidden lg:block">
-              <Button label="&nbsp;&nbsp;Trade&nbsp;&nbsp;" variant="primary" onClick={() => undefined} />
+              <Button label="&nbsp;&nbsp;Trade&nbsp;&nbsp;" variant="primary" href="/work-in-progress" />
             </div>
             {/* HEADER CTA BUTTON - Ends */}
           </div>

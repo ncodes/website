@@ -1,7 +1,5 @@
 import Image from "next/image"
 
-import Button from "./Button"
-
 type FeaturesItemProps = {
   imageSrc: string
   title: string
@@ -116,7 +114,7 @@ function Features() {
       </div>
 
       <div className="text-center mt-[60px] lg:mt-[97px]">
-        <Button label="Start Trading" variant="primary" onClick={() => undefined} extraStyles="w-[246px]" />
+        {/* <Button label="Start Trading" variant="primary" extraStyles="w-[246px]" href="/work-in-progress" /> */}
       </div>
     </section>
   )

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 function AssetItem() {
   return (
@@ -63,12 +64,14 @@ function Assets() {
         >
           FEATURED MARKETS
         </p>
-        <p
-          className="font-mitr antialiased font-semibold text-center text-white text-[48px]
+        <Link href="/work-in-progress">
+          <p
+            className="font-mitr antialiased font-semibold text-center text-white text-[48px]
           lg:text-[72px] leading-[56px] lg:leading-[72px] mb-4 lg:mb-6"
-        >
-          Start trading today
-        </p>
+          >
+            Start trading today
+          </p>
+        </Link>
         <p className="font-mitr antialiased font-light text-center text-white text-[16px] leading-6">
           Pick an asset to begin trading without limits
         </p>

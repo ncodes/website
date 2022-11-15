@@ -61,7 +61,7 @@ function Hero() {
         </p>
 
         <div className="text-center xl:text-left">
-          <Button label="Start Trading" variant="primary" onClick={() => undefined} extraStyles="w-[246px]" />
+          <Button label="Start Trading" variant="primary" onClick={() => undefined} extraStyles="w-[246px]" href="/work-in-progress" />
         </div>
 
         <div
