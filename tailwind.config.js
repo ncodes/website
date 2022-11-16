@@ -24,7 +24,8 @@ module.exports = {
         'chinese-green': '#C8ED5A',
         'chinese-green-border': 'rgba(200, 237, 90, 0.2)',
         'space-cadet': '#1B304B',
-        white: '#FFFFFF'
+        white: '#FFFFFF',
+        'green-border-opacity': 'rgba(200, 237, 90, 0.2)'
       },
       fontFamily: {
         'mitr': ['Mitr', ' sans-serif'],
