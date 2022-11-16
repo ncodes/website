@@ -54,8 +54,10 @@ type SwapProps = {
 
 function Swap({ instantSwapInformation, cashSwapInformation }: SwapProps) {
   return (
-    <div className="ml-[24px] py-[31px] pb-[50px] px-[37px] min-w-[450px] w-[450px] border border-green-border-opacity
-      border-dashed border-[2.4px] rounded-[40px]">
+    <div
+      className="ml-[24px] py-[31px] pb-[50px] px-[37px] min-w-[450px] w-[450px] border border-green-border-opacity
+      border-dashed border-[2.4px] rounded-[40px]"
+    >
       <Tab.Group>
         <Tab.List as="div" className="flex flex-row justify-center mb-[25px]">
           <Tab>{({ selected }) => <TabSelector label="Instant Swap" selected={selected} small />}</Tab>
@@ -65,9 +67,7 @@ function Swap({ instantSwapInformation, cashSwapInformation }: SwapProps) {
 
         <Tab.Panels>
           <Tab.Panel>
-            <div
-              className="space-y-[15px]"
-            >
+            <div className="space-y-[15px]">
               {instantSwapInformation?.map((item: ReactFragment) => (
                 <div
                   key={Math.random() * Math.random()}
@@ -81,9 +81,7 @@ function Swap({ instantSwapInformation, cashSwapInformation }: SwapProps) {
           </Tab.Panel>
 
           <Tab.Panel>
-            <div
-              className="space-y-[15px]"
-            >
+            <div className="space-y-[15px]">
               {cashSwapInformation?.map((item: ReactFragment) => (
                 <div
                   key={Math.random() * Math.random()}
@@ -102,7 +100,7 @@ function Swap({ instantSwapInformation, cashSwapInformation }: SwapProps) {
 }
 
 function HowItWorks() {
-  const [ selected, setSelected ] = useState("buy");
+  const [selected, setSelected] = useState("buy")
 
   const buyInformation = [
     {
@@ -183,7 +181,7 @@ function HowItWorks() {
         <TabSelector label="Sell" selected={selected === "sell"} onClick={() => setSelected("sell")} last />
       </div>
 
-      {selected === "buy" ?
+      {selected === "buy" ? (
         <div className="flex items-center overflow-x-scroll no-scrollbar">
           <div className="flex gap-x-[26px] lg:gap-x-[40px]">
             {buyInformation?.map(({ icon, title, content }) => (
@@ -210,12 +208,9 @@ function HowItWorks() {
 
           <DashedArrow />
 
-          <Swap
-            instantSwapInformation={instantSwapInformation}
-            cashSwapInformation={cashSwapInformation}
-          />
+          <Swap instantSwapInformation={instantSwapInformation} cashSwapInformation={cashSwapInformation} />
         </div>
-        :
+      ) : (
         <div className="flex items-center overflow-x-scroll no-scrollbar">
           <div className="flex gap-x-[26px] lg:gap-x-[40px]">
             {sellInformation?.map(({ icon, title, content }) => (
@@ -242,12 +237,9 @@ function HowItWorks() {
 
           <DashedArrow />
 
-          <Swap
-            instantSwapInformation={instantSwapInformation}
-            cashSwapInformation={cashSwapInformation}
-          />
+          <Swap instantSwapInformation={instantSwapInformation} cashSwapInformation={cashSwapInformation} />
         </div>
-      }
+      )}
     </section>
   )
 }
