@@ -479,8 +479,7 @@ function Header() {
                 {/* DEVELOPER MENU CONTENT TRANSITION - Ends */}
               </Menu>
               {/* DEVELOPER MENU - Ends */}
-              
-              
+
               {/* FAQ MENU - Starts */}
               <HeaderLink title="FAQs" href="/faq" />
 
@@ -550,10 +549,6 @@ function Header() {
                 {/* COMMUNITY MENU CONTENT TRANSITION - Ends */}
               </Menu>
 
-
-
-
-
               {/* COMMUNITY MENU - Ends */}
             </ul>
             {/* HEADER MENU ITEMS - Ends */}
@@ -605,12 +600,12 @@ function Header() {
                   >
                     <div className="flex flex-col flex-1 h-full">
                       <ul className="flex flex-col flex-1 pb-3 overflow-scroll">
-                      <Menu.Item>
-                      <MobileLink title="Home" href="/about" />
-                    </Menu.Item>
-                    <Menu.Item>
-                    <MobileLink title="About" href="/about" />
-                  </Menu.Item>
+                        <Menu.Item>
+                          <MobileLink title="Home" href="/about" />
+                        </Menu.Item>
+                        <Menu.Item>
+                          <MobileLink title="About" href="/about" />
+                        </Menu.Item>
 
                         <Menu.Item>
                           <MobileLink title="Company" href="/" />
