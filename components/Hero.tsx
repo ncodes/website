@@ -46,7 +46,7 @@ function Hero() {
           text-[40px] xs:text-[48px] lg:text-[72px] leading-[56px] lg:leading-[72px] text-white font-semibold
           mb-[16px] xl:mb-[27px]"
         >
-          Peer-to-Peer Trading, Decentralized
+          Crypto to Cash Trading, Decentralized
         </p>
 
         <p
@@ -55,22 +55,22 @@ function Hero() {
         >
           Exchange crypto for cash with anyone on the planet.&nbsp;
           {/* eslint-disable-next-line */}
-          <b className="before:content-[''] xl:before:content-['\00000A'] xl:before:whitespace-pre-wrap">Low fees</b>,{" "}
+          <span className="before:content-[''] xl:before:content-['\00000A'] xl:before:whitespace-pre-wrap">Enjoy</span> <b>low fees</b>,{" "}
           <b>unlimited liquidity</b>, <b>uncapped volume </b>
           and <b>privacy</b>.
         </p>
 
         <div className="text-center xl:text-left">
-          <Button label="Start Trading" variant="primary" onClick={() => undefined} extraStyles="w-[246px]" />
+          <Button label="Start Trading" variant="primary" onClick={() => undefined} extraStyles="w-[246px]" href="/work-in-progress" />
         </div>
 
         <div
           className="flex flex-row flex-wrap 3xs:w-full w-[280px] mx-auto xl:w-auto mt-[28px]
           xl:mt-[30px] justify-center xl:justify-start gap-x-[30px] gap-y-[20px]"
         >
-          <HeroLink title="Visit Exchange" href="/" />
-          <HeroLink title="Join Discord" href="/" />
-          <HeroLink title="View Documentation" href="/" />
+          <HeroLink title="Visit Exchange" href="https://app.joint.exchange" />
+          <HeroLink title="Join Discord" href="https://discord.gg/jfAPEjQ3HD" />
+          <HeroLink title="View Documentation" href="https://docs.joint.exchange" />
         </div>
       </div>
     </section>

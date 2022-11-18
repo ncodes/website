@@ -1,14 +1,15 @@
 import Image from "next/image"
 
-type TeamMemberProps = {
+interface TeamMemberProps {
   id: number
   image: string
   name: string
   role: string
+  link: undefined | string
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function TeamMember({ id, image, name, role }: TeamMemberProps) {
+function TeamMember({ id, image, name, role, link }: TeamMemberProps) {
   return (
     <div className="flex flex-col justify-end basis-[100%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
       <div className="relative mx-auto w-[212px] h-[253px]">
@@ -24,7 +25,12 @@ function TeamMember({ id, image, name, role }: TeamMemberProps) {
         className="font-mitr antialiased font-light text-[14px] text-white text-center
        mt-[3.49px] leading-[17.64px]"
       >
-        {role}
+        {link && (
+          <a href={link} target="_blank" rel="noreferrer" className="hover:text-chinese-green">
+            {role}
+          </a>
+        )}
+        {!link && <span>{role}</span>}
       </p>
     </div>
   )
@@ -34,51 +40,59 @@ function Team() {
   const teamMembers: TeamMemberProps[] = [
     {
       id: 1,
-      image: "/odion-member.svg",
-      name: "Odion Olumhense",
-      role: "Sorcerer Supreme",
+      image: "/kennedy-member.svg",
+      name: "Kennedy Idialu",
+      role: "CEO",
+      link: "https://linktr.ee/ncodes",
     },
     {
       id: 2,
-      image: "/kennedy-member.svg",
-      name: "Kennedy Idialu",
-      role: "Guardian of The Galaxy",
+      image: "/odion-member.svg",
+      name: "Odion Olumhense",
+      role: "COO",
+      link: undefined,
     },
     {
       id: 3,
       image: "/vitalis-member.svg",
       name: "Vitalis Nwenyi",
-      role: "The Illusionist",
+      role: "Designer",
+      link: undefined,
     },
     {
       id: 4,
       image: "/michael-member.svg",
       name: "Michael Azonobi",
-      role: "Technical Titan",
+      role: "Developer",
+      link: undefined,
     },
     {
       id: 5,
       image: "/marvin-member.svg",
       name: "Marvin Ogah",
-      role: "Cosmic Scavenger",
+      role: "UI/UX Designer",
+      link: undefined,
     },
     {
       id: 6,
       image: "/chris-member.svg",
       name: "Chris Ezike",
-      role: "Samurai Stack",
+      role: "Developer",
+      link: undefined,
     },
     {
       id: 7,
       image: "/samuel-member.svg",
       name: "Samuel Bolu",
-      role: "Meteor Magnet",
+      role: "Researcher",
+      link: undefined,
     },
     {
       id: 8,
       image: "/ileke-member.svg",
       name: "Ileke Airende",
-      role: "Content Machine",
+      role: "Marketing",
+      link: undefined,
     },
   ]
 
@@ -95,17 +109,9 @@ function Team() {
         Meet the Team
       </p>
 
-      <p
-        className="font-mitr antialiased font-light text-[14px] text-white text-center
-       mt-[23.36px] leading-[17.64px] -tracking-[0.6px]
-       lg:-tracking-[0.9px]"
-      >
-        We are backed by the industries best.
-      </p>
-
       <div className="flex flex-row flex-wrap mx-auto justify-start align-start space-y-[64px] lg:space-y-[90px] mt-[72px] sm:mt-[0px]">
-        {teamMembers.map(({ id, image, name, role }) => (
-          <TeamMember key={id} id={id} image={image} name={name} role={role} />
+        {teamMembers.map(({ id, image, name, role, link }) => (
+          <TeamMember key={id} id={id} image={image} name={name} role={role} link={link} />
         ))}
       </div>
     </section>

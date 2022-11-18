@@ -28,7 +28,7 @@ function StatisticItem({ label, value }: StatisticItemProps) {
 function Statistics() {
   return (
     <section
-      className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px]
+      className="hidden container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] px-4 md:px-[20px]
       lg:px-[30px] xl:px-[90px] mx-auto pt-[100px] mb-[100px] lg:mb-[75px] lg:pt-[150px] md:max-w-screen-md lg:max-w-screen-lg
       xl:max-w-screen-xl 2xl:max-w-screen-2xl"
     >

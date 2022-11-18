@@ -52,17 +52,17 @@ const About: NextPage = function () {
             >
               <div className="w-full lg:w-[513px]">
                 <p
-                  className="font-mitr antialiased text-center lg:text-left text-[14px] 
+                  className="font-mitr antialiased text-center lg:text-left text-[14px]
                 leading-[18px] text-white font-light mb-[13px] mx-[40px] md:mx-[unset]"
                 >
-                  THE RIGHT PEOPLE WITH THE RIGHT TOOLS
+                  PASSIONATE, EXPERIENCED & DRIVEN
                 </p>
                 <p
-                  className="font-mitr antialiased font-semibold text-[48px] lg:text-[72px]
+                  className="font-mitr antialiased font-semibold text-[48px] lg:text-[35px]
                   text-white text-center lg:text-left -tracking-[0.6px] lg:-tracking-[0.9px]
-                  leading-[56px] lg:leading-[72px] w-[265px] mx-auto sm:mx-[unset] sm:w-full"
+                  leading-[56px] lg:leading-[35px] w-[265px] mx-auto sm:mx-[unset] sm:w-full"
                 >
-                  Anything is possible.
+                  We are passionate about blockchain technologies that enable free trade across borders.
                 </p>
               </div>
 
@@ -79,7 +79,7 @@ const About: NextPage = function () {
           </section>
 
           <section
-            className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px]
+            className="hidden container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px]
             2xs:px-[15px] mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mb-[63px] lg:mb-[143px]
             md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
           >

@@ -1,7 +1,5 @@
 import Image from "next/image"
 
-import Button from "./Button"
-
 type FeaturesItemProps = {
   imageSrc: string
   title: string
@@ -45,7 +43,7 @@ function Features() {
           className="font-mitr antialiased font-normal text-center text-white text-[14px]
           lg:text-[16px] leading-6 mb-0 lg:mb-[6px]"
         >
-          MOST POWERFUL P2P ENGINE
+          MOST POWERFUL P2P TRADING ENGINE
         </p>
         <p
           className="font-mitr antialiased font-semibold text-center text-white text-[48px] lg:text-[72px]
@@ -57,7 +55,7 @@ function Features() {
           className="font-mitr antialiased font-light text-center
           text-white text-[16px] leading-6 mx-auto w-[293px] xl:w-auto"
         >
-          Joint protocol is designed to replace existing p2p trading engines
+          Joint protocol is designed to replace centralized P2P trading platforms
         </p>
       </div>
 
@@ -87,25 +85,25 @@ function Features() {
         <FeaturesItem
           imageSrc="/privacy.webp"
           title="Privacy"
-          description="No KYC requirements are imposed by the protocol. Open markets are instantly usable."
+          description="No KYC requirements are imposed by the protocol. Your right to privacy is protected."
         />
 
         <FeaturesItem
           imageSrc="/unlimited-liquidity.webp"
           title="Unlimited Liquidity"
-          description="Unlimited liquidity sourced and accessible from all over the world."
+          description="Unlimited liquidity provided by users and accessible from anywhere in the world."
         />
 
         <FeaturesItem
           imageSrc="/no-platform-risk.webp"
           title="No Platform-risk"
-          description="No one can lock your funds. It is non-custodial. Enter or exit a market at will."
+          description="Joint Protocol is completely non-custodian. No one can control or lock your funds."
         />
 
         <FeaturesItem
           imageSrc="/encrypted-messaging.webp"
           title="Encrypted Messaging"
-          description="End-to-end message encryption keep conversations private. "
+          description="Communicate with traders securely with end-to-end encryption messaging system."
         />
 
         <FeaturesItem
@@ -116,7 +114,7 @@ function Features() {
       </div>
 
       <div className="text-center mt-[60px] lg:mt-[97px]">
-        <Button label="Start Trading" variant="primary" onClick={() => undefined} extraStyles="w-[246px]" />
+        {/* <Button label="Start Trading" variant="primary" extraStyles="w-[246px]" href="/work-in-progress" /> */}
       </div>
     </section>
   )

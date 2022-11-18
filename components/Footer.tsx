@@ -74,13 +74,13 @@ function Footer() {
           </p>
 
           <div className="flex flex-row items-center justify-center xl:justify-start gap-x-6">
-            <IconLink alt="github" src="/icons/github.png" width={18} height={18} href="/" />
-            <IconLink alt="linkedin" src="/icons/linkedin.png" width={18} height={18} href="/" />
+            <IconLink alt="github" src="/icons/github.png" width={18} height={18} href="https://github.com/jointlabs" />
+            <IconLink alt="linkedin" src="/icons/linkedin.png" width={18} height={18} href="https://www.linkedin.com/company/jointlabs/" />
             <IconLink alt="reddit" src="/icons/reddit.png" width={18} height={18} href="/" />
-            <IconLink alt="twitter" src="/icons/twitter.png" width={18} height={21} href="/" />
+            <IconLink alt="twitter" src="/icons/twitter.png" width={18} height={21} href="https://twitter.com/0xJoint" />
             <IconLink alt="wechat" src="/icons/wechat.png" width={18} height={21} href="/" />
             <IconLink alt="youtube" src="/icons/youtube.png" width={18} height={25} href="/" />
-            <IconLink alt="disord" src="/icons/discord.png" width={18} height={16} href="/" />
+            <IconLink alt="disord" src="/icons/discord.png" width={18} height={16} href="https://discord.gg/jfAPEjQ3HD" />
           </div>
         </div>
 
@@ -92,23 +92,23 @@ function Footer() {
           <div className="flex flex-col mx-auto items-center md:items-start">
             <FooterTitle label="Company" />
             <ul className="flex flex-col gap-y-[10px] list-none">
-              <FooterLink title="About" href="/rewards" />
-              <FooterLink title="Blog" href="/feedback" />
-              <FooterLink title="Media" href="/feedback" />
-              <FooterLink title="FAQ" href="/faq" />
+              <FooterLink title="About" href="/about" />
+              <FooterLink title="Blog" href="https://medium.com/0xjoint" />
+              {/* <FooterLink title="Media" href="#" /> */}
+              {/* <FooterLink title="FAQ" href="/faq" /> */}
             </ul>
           </div>
 
           <div className="flex flex-col mx-auto items-center md:items-start">
             <FooterTitle label="Protocol" />
             <ul className="flex flex-col text-center md:text-left gap-y-[10px]">
-              <FooterLink title="Trade" href="/rewards" />
-              <FooterLink title="Markets" href="/feedback" />
-              <FooterLink title="Liquidity" href="/features" />
-              <FooterLink title="Mediation" href="/features" />
-              <FooterLink title="Disputes" href="/features" />
-              <FooterLink title="Mining" href="/features" />
-              <FooterLink title="Rewards" href="/features" />
+              <FooterLink title="Trade" href="/work-in-progress" />
+              <FooterLink title="Markets" href="/work-in-progress" />
+              <FooterLink title="Liquidity" href="/work-in-progress" />
+              <FooterLink title="Mediation" href="/work-in-progress" />
+              <FooterLink title="Disputes" href="/work-in-progress" />
+              <FooterLink title="Mining" href="/work-in-progress" />
+              <FooterLink title="Rewards" href="/work-in-progress" />
             </ul>
           </div>
 
@@ -116,17 +116,17 @@ function Footer() {
             <FooterTitle label="Developers" />
 
             <ul className="flex flex-col text-center md:text-left  gap-y-[10px] ">
-              <FooterLink title="Documentation" href="/documentation" />
-              <FooterLink title="GitHub" href="/team" />
+              <FooterLink title="Documentation" href="https://docs.joint.exchange" />
+              <FooterLink title="GitHub" href="https://github.com/jointlabs" />
             </ul>
           </div>
 
           <div className="flex flex-col mx-auto items-center md:items-start">
             <FooterTitle label="Legal" />
             <ul className="flex flex-col text-center md:text-left  gap-y-[10px]">
-              <FooterLink title="Protocol Disclaimer" href="/protocol" />
-              <FooterLink title="Terms of service" href="/terms" />
-              <FooterLink title="Privacy Policy" href="/privacy" />
+              <FooterLink title="Protocol Disclaimer" href="#" />
+              <FooterLink title="Terms of service" href="#" />
+              <FooterLink title="Privacy Policy" href="#" />
             </ul>
           </div>
         </div>

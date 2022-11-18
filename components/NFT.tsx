@@ -16,7 +16,7 @@ function NFT() {
             className="font-mitr antialiased text-center lg:text-left text-[14px]
             tracking-[2.63px] xl:tracking-[3px] leading-[24px] text-white font-light xl:mb-[13px]"
           >
-            MOST POWERFUL P2P ENGINE
+            EXPLORE JOINT PROTOCOL UNIVERSE
           </p>
           <p
             className="font-mitr antialiased font-semibold text-[48px] lg:text-[72px] text-white text-center
@@ -30,11 +30,11 @@ function NFT() {
             leading-6 mb-[38px] lg:mb-[24px] text-center lg:text-left w-full lg:w-[440px] px-10
               xs:px-0 3xs:px-12 sm:px-6 lg:px-0"
           >
-            Collect the CosmosPet NFT to get a share of all protocol revenue for eternity
+            Collect the DroidPD NFT to participate in governance and earn a share of Joint Protocol revenue for eternity.
           </p>
 
           <div className="text-center lg:text-left">
-            <Button label="Explore Collections" variant="primary" onClick={() => undefined} />
+            <Button label="Coming Soon" variant="primary" onClick={() => undefined} />
           </div>
         </div>
 
