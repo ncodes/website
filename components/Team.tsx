@@ -94,6 +94,48 @@ function Team() {
       role: "Marketing",
       link: undefined,
     },
+    {
+      id: 9,
+      image: "/Edwin.svg",
+      name: "Edwin Achebo",
+      role: "Community",
+      link: undefined,
+    },
+    {
+      id: 10,
+      image: "/Mona Faith.svg",
+      name: "Alumona Faith ",
+      role: "Content",
+      link: undefined,
+    },
+    {
+      id: 11,
+      image: "/Sam Godfrey.svg",
+      name: "Sammuel Godfrey",
+      role: "Design",
+      link: undefined,
+    },
+    {
+      id: 12,
+      image: "/Coker.svg",
+      name: "Coker Ayodeji",
+      role: "Community",
+      link: undefined,
+    },
+    {
+      id: 13,
+      image: "/Mercy B.svg",
+      name: "Ajayi Mercy",
+      role: "Community",
+      link: undefined,
+    },
+    {
+      id: 14,
+      image: "/Juwon.svg",
+      name: "Adigun Olorunjuwon",
+      role: "Community",
+      link: undefined,
+    },
   ]
 
   return (
