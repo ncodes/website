@@ -110,7 +110,7 @@ function Team() {
     },
     {
       id: 11,
-      image: "/Sam Godfrey.png",
+      image: "/samg.png",
       name: "Sammuel Godfrey",
       role: "Design",
       link: undefined,
@@ -124,7 +124,7 @@ function Team() {
     },
     {
       id: 13,
-      image: "/Mercy B.png",
+      image: "/mercy.png",
       name: "Ajayi Mercy",
       role: "Community",
       link: undefined,
