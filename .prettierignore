@@ -23,3 +23,5 @@ commitlint.config.js
 .prettierrc.json
 markdown/**
 locales/**
+key.json
+source.json

@@ -24,3 +24,5 @@ src/setupTests.ts
 .prettierrc.json
 markdown/**
 locales/**
+key.json
+source.json
