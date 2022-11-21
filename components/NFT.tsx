@@ -1,9 +1,12 @@
 import Image from "next/image"
+import { useTranslation } from "next-i18next"
 // import { Tab } from "@headlessui/react"
 
 import Button from "./Button"
 
 function NFT() {
+  const { t } = useTranslation()
+
   return (
     <section
       className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px]
@@ -16,25 +19,25 @@ function NFT() {
             className="font-mitr antialiased text-center lg:text-left text-[14px]
             tracking-[2.63px] xl:tracking-[3px] leading-[24px] text-white font-light xl:mb-[13px]"
           >
-            EXPLORE JOINT PROTOCOL UNIVERSE
+            {t("nft.section.title")}
           </p>
           <p
             className="font-mitr antialiased font-semibold text-[48px] lg:text-[72px] text-white text-center
             lg:text-left -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-[24px]
             lg:mb-[40px] w-[265px] mx-auto sm:mx-[unset] sm:w-full"
           >
-            NFT for protocol Fee
+            {t("nft.section.head")}
           </p>
           <p
             className="font-mitr antialiased font-light text-[14px] text-white tracking-[0.22px]
             leading-6 mb-[38px] lg:mb-[24px] text-center lg:text-left w-full lg:w-[440px] px-10
               xs:px-0 3xs:px-12 sm:px-6 lg:px-0"
           >
-            Collect the DroidPD NFT to participate in governance and earn a share of Joint Protocol revenue for eternity.
+            {t("nft.section.content")}
           </p>
 
           <div className="text-center lg:text-left">
-            <Button label="Coming Soon" variant="primary" onClick={() => undefined} />
+            <Button label={t("nft.section.button")} variant="primary" onClick={() => undefined} />
           </div>
         </div>
 

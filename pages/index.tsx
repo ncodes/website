@@ -1,5 +1,7 @@
-import type { NextPage } from "next"
+/* eslint-disable @next/next/no-img-element, object-curly-newline */
+import type { NextPage, GetStaticProps } from "next"
 import Head from "next/head"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import Header from "../components/Header"
 import Hero from "../components/Hero"
@@ -12,6 +14,11 @@ import HowItWorks from "../components/HowItWorks"
 import Partners from "../components/Partners"
 import Footer from "../components/Footer"
 import NFT from "../components/NFT"
+
+/* eslint-disable-next-line */
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: { ...(await serverSideTranslations(locale as string, ["common"])) }
+})
 
 const Home: NextPage = function () {
   return (

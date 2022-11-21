@@ -7,85 +7,94 @@ import Link from "next/link"
 import Head from "next/head"
 
 import { Menu, Transition } from "@headlessui/react"
+import { useTranslation } from "next-i18next"
+import useLocale from "../shared/hooks/useLocale"
 
 import Button from "./Button"
 
 /** DUMMY LANGUAGE DATA - Starts */
-const Languages = [
-  {
-    label: "Espanyol",
-    key: "esp",
-    emoji: "🇪🇸",
-  },
-  {
-    label: "Francais",
-    key: "fr",
-    emoji: "🇫🇷",
-  },
-  {
-    label: "中国人",
-    key: "zh",
-    emoji: "🇨🇳",
-  },
-  {
-    label: "日本語",
-    key: "ja",
-    emoji: "🇯🇵",
-  },
-  {
+const localeInfo: any = {
+  ar: {
     label: "عربى",
     key: "ar",
     emoji: "🇦🇪",
   },
-  {
+  en: {
+    label: "English",
+    key: "en",
+    emoji: "🇬🇧",
+  },
+  es: {
+    label: "Espanyol",
+    key: "es",
+    emoji: "🇪🇸",
+  },
+  fr: {
+    label: "Francais",
+    key: "fr",
+    emoji: "🇫🇷",
+  },
+  ja: {
+    label: "日本語",
+    key: "ja",
+    emoji: "🇯🇵",
+  },
+  ru: {
     label: "Pусский",
     key: "ru",
     emoji: "🇷🇺",
   },
-]
+  zh: {
+    label: "中国人",
+    key: "zh",
+    emoji: "🇨🇳",
+  },
+  default: "Undefined ❌",
+}
+
 /** DUMMY LANGUAGE DATA - Ends */
 
 /** MENU ITEM DATA - Starts */
-const MenuItems = [
+const MenuItems = (t: any) => [
   {
-    title: "Trade",
-    description: "Swap between cryptocurrencies and cash now.",
+    title: `${t("header.trade")}`,
+    description: t("header.trade.description"),
     src: "/trade-menu.webp",
     href: "/work-in-progress",
   },
   {
-    title: "Markets",
-    description: "Browse markets to trade cash and cryptocurrencies.",
+    title: t("header.markets"),
+    description: t("header.markets.description"),
     src: "/market-menu.webp",
     href: "/work-in-progress",
   },
   {
-    title: "Liquidity",
-    description: "Browse or provide liquidity to cash or cryptocurrency markets.",
+    title: t("header.liquidity"),
+    description: t("header.liquidity.description"),
     src: "/liquidity-menu.webp",
     href: "/work-in-progress",
   },
   {
-    title: "Mediation",
-    description: "Earn protocol rewards by solving trade disputes as a mediator.",
+    title: t("header.mediation"),
+    description: t("header.mediation.description"),
     src: "/mediation-menu.webp",
     href: "/work-in-progress",
   },
   {
-    title: "Disputes",
-    description: "Browse disputes you are involved in as a trader or mediator.",
+    title: t("header.disputes"),
+    description: t("header.disputes.description"),
     src: "/dispute-menu.webp",
     href: "/work-in-progress",
   },
   {
-    title: "Mining",
-    description: "Earn rewards by executing public protocol operations.",
+    title: t("mining"),
+    description: t("header.mining.description"),
     src: "/mining-menu.webp",
     href: "/work-in-progress",
   },
   {
-    title: "Reward",
-    description: "Check your reward balances and withdraw into your wallet.",
+    title: t("rewards"),
+    description: t("header.rewards.description"),
     src: "/reward-menu.webp",
     href: "/work-in-progress",
   },
@@ -93,15 +102,15 @@ const MenuItems = [
 /** MENU ITEM DATA - Ends */
 
 /** DEVELOPER MENU ITEM DATA - Starts */
-const DeveloperMenuItems = [
+const DeveloperMenuItems = (t: any) => [
   {
-    title: "Docs",
+    title: `${t("docs")}`,
     src: "/icons/docs.png",
     href: "https://docs.joint.exchange",
     target: "_blank",
   },
   {
-    title: "Github",
+    title: `${t("github")}`,
     src: "/icons/github.png",
     href: "https://github.com/jointlabs",
     target: "_blank",
@@ -110,15 +119,15 @@ const DeveloperMenuItems = [
 /** DEVELOPER MENU ITEM DATA - Ends */
 
 /** COMMUNITY MENU ITEM DATA - Starts */
-const CommunityMenuItems = [
+const CommunityMenuItems = (t: any) => [
   {
-    title: "Twitter",
+    title: `${t("twitter")}`,
     src: "/icons/twitter.png",
     href: "https://twitter.com/0xJoint",
     target: "_blank",
   },
   {
-    title: "Discord",
+    title: `${t("discord")}`,
     src: "/icons/discord.png",
     href: "https://discord.gg/jfAPEjQ3HD",
     target: "_blank",
@@ -208,7 +217,14 @@ SubMobileLink.displayName = "SubMobileLink"
 /** SUB Mobile LINK ITEM - Ends */
 
 function Header() {
+  const { t } = useTranslation()
   const router = useRouter()
+  const { locale, locales, LocaleLink, setLocale }: any = useLocale()
+
+  const label = (language = locale as string) =>
+    locale === "ar"
+      ? `${localeInfo[language].emoji} ${localeInfo[language].label}`
+      : `${localeInfo[language].label} ${localeInfo[language].emoji}`
 
   return (
     <>
@@ -253,27 +269,31 @@ function Header() {
               {/* LANGUAGE SELECTOR BUTTON - Starts */}
               <Menu.Button className="outline-0">
                 {({ open }) => (
-                  <div className="flex w-[128px] xl:w-40">
+                  <div className="flex w-[120px] 2xs:w-[185px] xl:w-52">
                     <div
-                      className={`flex flex-row justify-between max-w-40 w-auto
-                        h-[40px] xl:h-[50px] pt-[10px] xl:pt-[11px] px-3 xl:px-5 rounded-lg ${open ? "bg-[#0d1c31]" : "bg-rich-blue"}`}
+                      className={`flex flex-row justify-between max-w-48 w-auto h-[40px] lg:h-[50px]
+                      pt-[8px] lg:pt-[11px] px-4 lg:px-5 rounded-lg ${open ? "bg-[#0d1c31]" : "bg-rich-blue"}`}
                     >
                       <p
-                        className="font-mitr antialiased text-[13px] xl:text-[18px]
+                        className="font-mitr antialiased text-[16px] lg:text-[18px]
                         tracking-[0.18px] xl:tracking-[0.22px] text-white font-medium"
                       >
-                        English&nbsp;🇬🇧
+                        {/* English&nbsp;🇬🇧 */}
+
+                        {label()}
                       </p>
-                      &nbsp; &nbsp;
-                      <div className={`relative w-5 h-5 xl:w-6 xl:h-6 mt-[0px] xl:mt-[2px] overflow-hidden ${open && "-scale-y-100"}`}>
-                        <Image
-                          className="!relative object-cover w-full h-full"
-                          src="/icons/caret-down.png"
-                          alt="caret-down"
-                          layout="fill"
-                          quality={100}
-                          priority
-                        />
+                      <div className="hidden 2xs:flex">
+                        &nbsp; &nbsp;
+                        <div className={`relative w-6 lg:w-7 h-6 lg:h-7 overflow-hidden ${open && "-scale-y-100"}`}>
+                          <Image
+                            className="!relative object-cover w-full h-full"
+                            src="/icons/caret-down.png"
+                            alt="caret-down"
+                            layout="fill"
+                            quality={100}
+                            priority
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -289,20 +309,31 @@ function Header() {
                     className="absolute flex flex-col mt-[12px] xl:mt-[18px] w-[128px] xl:w-40 bg-rich-blue
                     rounded-lg border-[1px] border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)]"
                   >
-                    {Languages.map((language) => (
-                      <Menu.Item key={Math.random() * Math.random()}>
-                        {({ active }) => (
-                          <ul className={`px-5 py-4 cursor-pointer ${active ? "hover:bg-[#0d1c31]" : "bg-none"}`}>
-                            <li
-                              className="font-mitr antialiased text-[13px] xl:text-[16px]
-                              tracking-[0.18px] xl:tracking-[0.22px] text-white font-bold"
+                    {locales.map((language: string) => {
+                      if (localeInfo[language].key === locale) return null
+                      return (
+                        <Menu.Item key={localeInfo[language].key}>
+                          {({ active }) => (
+                            // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions
+                            <ul
+                              className={`px-5 py-4 cursor-pointer
+                          ${active || localeInfo[language].key === locale ? "hover:bg-[#0d1c31]" : "bg-none"}`}
+                              onClick={() => {
+                                setLocale(localeInfo[language].key)
+                                router.push(router.pathname, router.asPath, { locale: localeInfo[language].key })
+                              }}
                             >
-                              {language.key === "ar" ? `${language.emoji} ${language.label}` : `${language.label} ${language.emoji}`}
-                            </li>
-                          </ul>
-                        )}
-                      </Menu.Item>
-                    ))}
+                              <span
+                                className={`font-mitr antialiased text-[13px] xl:text-[16px] tracking-[0.18px]
+                              xl:tracking-[0.22px] text-white font-medium`}
+                              >
+                                <LocaleLink locale={localeInfo[language].key}>{label(localeInfo[language].key)}</LocaleLink>
+                              </span>
+                            </ul>
+                          )}
+                        </Menu.Item>
+                      )
+                    })}
                   </div>
                 </Menu.Items>
                 {/* LANGUAGE SELECTOR CONTENT - Ends */}
@@ -312,17 +343,17 @@ function Header() {
             {/* LANGUAGE SELECTOR - Ends */}
 
             {/* HEADER MENU ITEMS - Starts */}
-            <ul className="hidden lg:flex flex-row gap-[25px] xl:gap-[40px]">
-              <HeaderLink title="Home" href="/" />
-              <HeaderLink title="About" href="/about" />
+            <ul className="hidden lg:flex flex-row gap-[25px] xl:gap-[40px] capitalize">
+              <HeaderLink title={t("header.home")} href="/" />
+              <HeaderLink title={t("header.about")} href="/about" />
 
               {/* PROTOCOL MENU - Starts */}
-              <Menu as="div" className="flex flex-col ">
+              <Menu as="div" className="flex flex-col">
                 {/* PROTOCOL MENU BUTTON - Starts */}
                 <Menu.Button>
                   {({ open }) => (
-                    <li className="flex flex-row items-end">
-                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">Protocol</p>
+                    <li className="flex flex-row items-end capitalize">
+                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t("header.protocol")}</p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -354,16 +385,16 @@ function Header() {
                             className="font-mitr antialiased text-[24px]
                             leading-[30px] text-white font-medium"
                           >
-                            Protocol
+                            {t("header.protocol")}
                             <br />
-                            Features
+                            {t("header.features")}
                           </p>
 
                           <p
                             className="font-['Mitr'] antialiased text-[14px] tracking-[0.22px]
-                            leading-[17.64px] text-white font-light mt-[23.36px]"
+                            leading-[17.64px] text-white font-light mt-[23.36px] capitalize"
                           >
-                            Directly navigate to <br />a protocol feature.
+                            {t("header.directly")} <br /> {t("header.protocol.feature")}.
                           </p>
                         </div>
 
@@ -371,13 +402,13 @@ function Header() {
                           {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                           <a target="_blank">
                             <p
-                              className="font-['Mitr'] antialiased text-[16px] tracking-[0.22px] text-chinese-green
+                              className="capitalize font-['Mitr'] antialiased text-[16px] tracking-[0.22px] text-chinese-green
                             font-semibold cursor-pointer hover:underline after:content-[' ']
                             after:inline-block after:bg-[length:24px_24px] after:w-6 after:h-6
                             after:bg-[url('/icons/caret-down.png')] after:-scale-y-100 after:rotate-45
                             after:-ml-[7px] after:mb-0.5"
                             >
-                              Join Discord
+                              {t("header.join.discord")}
                             </p>
                           </a>
                         </Link>
@@ -386,7 +417,7 @@ function Header() {
                       <div className="hidden xl:block w-[2px] min-h-full bg-gradient-to-t from-rich-blue via-[#CEEF66] to-rich-blue" />
                       <div>
                         <div className="grid grid-cols-3 gap-x-7 gap-y-[20px] xl:ml-[52px]">
-                          {MenuItems.map((menuItem) => (
+                          {MenuItems(t).map((menuItem) => (
                             <Menu.Item
                               key={Math.random() * Math.random()}
                               as="div"
@@ -403,7 +434,12 @@ function Header() {
                                 />
                               </div>
                               <div className="flex flex-col flex-1 gap-y-[4px]">
-                                <p className="font-mitr antialiased text-[20px] leading-[26px] text-white font-medium">{menuItem.title}</p>
+                                <p
+                                  className="font-mitr antialiased text-[20px] leading-[26px]
+                                   text-white font-medium capitalize"
+                                >
+                                  {menuItem.title}
+                                </p>
                                 <p className="font-['Mitr'] antialiased text-[14px] leading-[17.67px] text-white font-light">
                                   {menuItem.description}
                                 </p>
@@ -421,12 +457,12 @@ function Header() {
               {/* PROTOCOL MENU - Ends */}
 
               {/* DEVELOPER MENU - Starts */}
-              <Menu as="div" className="flex flex-col ">
+              <Menu as="div" className="flex flex-col">
                 {/* DEVELOPER MENU BUTTON - Starts */}
                 <Menu.Button>
                   {({ open }) => (
-                    <li className="flex flex-row items-end">
-                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">Developers</p>
+                    <li className="flex flex-row items-end capitalize">
+                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t("header.developers")}</p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -452,13 +488,13 @@ function Header() {
                       className="flex flex-col space-y-[7px] bg-rich-blue rounded-lg border-[1px]
                       border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)] px-[11px] pt-[14px] pb-[17px]"
                     >
-                      {DeveloperMenuItems.map((menuItem) => (
+                      {DeveloperMenuItems(t).map((menuItem) => (
                         <Menu.Item key={Math.random() * Math.random()} as="div">
                           <a
                             href={menuItem.href}
                             target={menuItem.target}
                             className="flex items-center cursor-pointer py-[7px] px-[10px]
-                          hover:bg-[#0d1c31] hover:rounded-lg"
+                          hover:bg-[#0d1c31] hover:rounded-lg capitalize"
                           >
                             <div className="relative w-[20px] h-[20px] overflow-hidden">
                               <img className="!relative object-contain w-full h-full" src={menuItem.src} alt="menu-icon" />
@@ -490,8 +526,8 @@ function Header() {
                 {/* COMMUNITY MENU BUTTON - Starts */}
                 <Menu.Button>
                   {({ open }) => (
-                    <li className="flex flex-row items-end">
-                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">Community</p>
+                    <li className="flex flex-row items-end capitalize">
+                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t("header.community")}</p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -517,7 +553,7 @@ function Header() {
                       className="flex flex-col space-y-[7px] bg-rich-blue rounded-lg border-[1px]
                       border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)] px-[11px] pt-[14px] pb-[17px]"
                     >
-                      {CommunityMenuItems.map((menuItem) => (
+                      {CommunityMenuItems(t).map((menuItem) => (
                         <Menu.Item
                           key={Math.random() * Math.random()}
                           as="div"
@@ -528,7 +564,7 @@ function Header() {
                             href={menuItem.href}
                             target={menuItem.target}
                             className="flex items-center cursor-pointer py-[7px] px-[10px]
-                          hover:bg-[#0d1c31] hover:rounded-lg"
+                          hover:bg-[#0d1c31] hover:rounded-lg capitalize"
                           >
                             <div className="relative w-[20px] h-[20px] overflow-hidden">
                               <img className="!relative object-contain w-full h-full" src={menuItem.src} alt="menu-icon" />
@@ -599,31 +635,24 @@ function Header() {
                     outline-0 bg-[#03050794] backdrop-blur-[28px] z-[2] pt-20 pb-[48px]"
                   >
                     <div className="flex flex-col flex-1 h-full">
-                      <ul className="flex flex-col flex-1 pb-3 overflow-scroll">
+                      <ul className="flex flex-col flex-1 pb-3 overflow-scroll capitalize">
                         <Menu.Item>
-                          <MobileLink title="Home" href="/about" />
-                        </Menu.Item>
-                        <Menu.Item>
-                          <MobileLink title="About" href="/about" />
+                          <MobileLink title={t("header.community")} href="/" />
                         </Menu.Item>
 
                         <Menu.Item>
-                          <MobileLink title="Company" href="/" />
-                        </Menu.Item>
-
-                        <Menu.Item>
-                          <MobileLink title="FAQ" href="/faq" />
+                          <MobileLink title={t("header.about")} href="/about" />
                         </Menu.Item>
 
                         <Menu as={Fragment}>
                           <Menu.Button>
                             {({ open }) => (
-                              <li className="container flex px-4 py-4 mx-auto">
+                              <li className="container flex px-4 py-4 mx-auto capitalize">
                                 <p
                                   className="font-mitr antialiased text-[18px] tracking-[0.28px]
                                   text-left leading-6 font-semibold text-white inline-block cursor-pointer"
                                 >
-                                  Protocol
+                                  {t("header.protocol")}
                                 </p>
 
                                 <div className={`relative w-6 h-6 xl:w-6 xl:h-6 overflow-hidden ${open && "-scale-y-100"}`}>
@@ -645,31 +674,31 @@ function Header() {
                             <Menu.Items>
                               <ul className="bg-eerie-black backdrop-blur-[28px] py-2">
                                 <Menu.Item>
-                                  <SubMobileLink title="Trade" href="/work-in-progress" />
+                                  <SubMobileLink title={t("header.trade")} href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Market" href="/work-in-progress" />
+                                  <SubMobileLink title={t("header.markets")} href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Liquidity" href="/work-in-progress" />
+                                  <SubMobileLink title={t("header.liquidity")} href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Mediation" href="/work-in-progress" />
+                                  <SubMobileLink title={t("header.mediation")} href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Mining" href="/work-in-progress" />
+                                  <SubMobileLink title={t("header.mining")} href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Rewards" href="/work-in-progress" />
+                                  <SubMobileLink title={t("header.rewards")} href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Dispute" href="/work-in-progress" />
+                                  <SubMobileLink title={t("header.disputes")} href="/work-in-progress" />
                                 </Menu.Item>
                               </ul>
                             </Menu.Items>
@@ -679,12 +708,12 @@ function Header() {
                         <Menu as={Fragment}>
                           <Menu.Button>
                             {({ open }) => (
-                              <li className="container flex px-4 py-4 mx-auto">
+                              <li className="container flex px-4 py-4 mx-auto capitalize">
                                 <p
                                   className="font-mitr antialiased text-[18px] tracking-[0.28px]
                                   text-left leading-6 font-semibold text-white inline-block cursor-pointer"
                                 >
-                                  Developers
+                                  {t("header.developers")}
                                 </p>
 
                                 <div className={`relative w-6 h-6 xl:w-6 xl:h-6 overflow-hidden ${open && "-scale-y-100"}`}>
@@ -706,11 +735,11 @@ function Header() {
                             <Menu.Items>
                               <ul className="bg-eerie-black backdrop-blur-[28px] py-2">
                                 <Menu.Item>
-                                  <SubMobileLink title="Docs" href="https://docs.joint.exchange" />
+                                  <SubMobileLink title={t("docs")} href="https://docs.joint.exchange" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Github" href="https://github.com/jointlabs" />
+                                  <SubMobileLink title={t("github")} href="https://github.com/jointlabs" />
                                 </Menu.Item>
                               </ul>
                             </Menu.Items>
@@ -720,12 +749,12 @@ function Header() {
                         <Menu as={Fragment}>
                           <Menu.Button>
                             {({ open }) => (
-                              <li className="container flex px-4 py-4 mx-auto">
+                              <li className="container flex px-4 py-4 mx-auto capitalize">
                                 <p
                                   className="font-mitr antialiased text-[18px] tracking-[0.28px]
                                   text-left leading-6 font-semibold text-white inline-block cursor-pointer"
                                 >
-                                  Community
+                                  {t("header.community")}
                                 </p>
 
                                 <div className={`relative w-6 h-6 xl:w-6 xl:h-6 overflow-hidden ${open && "-scale-y-100"}`}>
@@ -745,13 +774,13 @@ function Header() {
 
                           <Transition>
                             <Menu.Items>
-                              <ul className="bg-eerie-black backdrop-blur-[28px] py-2">
+                              <ul className="bg-eerie-black backdrop-blur-[28px] py-2 capitalize">
                                 <Menu.Item>
-                                  <SubMobileLink title="Discord" href="https://twitter.com/0xJoint" />
+                                  <SubMobileLink title={t("discord")} href="https://twitter.com/0xJoint" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title="Twitter" href="https://discord.gg/jfAPEjQ3HD" />
+                                  <SubMobileLink title={t("twitter")} href="https://discord.gg/jfAPEjQ3HD" />
                                 </Menu.Item>
                               </ul>
                             </Menu.Items>
@@ -759,9 +788,9 @@ function Header() {
                         </Menu>
                       </ul>
 
-                      <div className="max-w-[364px] 3xs:px-[40px] xs:px-[unset] w-full mx-auto mb-[50px]">
+                      <div className="max-w-[364px] 3xs:px-[40px] xs:px-[unset] w-full mx-auto mb-[50px] capitalize">
                         <Button
-                          label="Start Trading"
+                          label={t("header.start.trading")}
                           variant="primary"
                           onClick={() => undefined}
                           extraStyles="w-full"
@@ -778,8 +807,8 @@ function Header() {
             {/* HEADER MOBILE MENU - Ends */}
 
             {/* HEADER CTA BUTTON - Starts */}
-            <div className="hidden lg:block">
-              <Button label="&nbsp;&nbsp;Trade&nbsp;&nbsp;" variant="primary" href="/work-in-progress" />
+            <div className="hidden lg:block capitalize">
+              <Button label={t("header.trade")} variant="primary" href="/work-in-progress" />
             </div>
             {/* HEADER CTA BUTTON - Ends */}
           </div>
