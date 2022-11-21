@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { useTranslation } from "next-i18next"
 
 type IconLinkProps = {
   src: string
@@ -25,6 +26,8 @@ function IconLink({ src, alt }: IconLinkProps) {
 }
 
 function Partners() {
+  const { t } = useTranslation()
+
   return (
     <section
       className="hidden container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full
@@ -35,13 +38,13 @@ function Partners() {
           className="font-mitr antialiased font-semibold text-center text-white text-[48px] lg:text-[72px]
          -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-4 lg:mb-6"
         >
-          Partners
+          {t("about.partners.title")}
         </p>
         <p
           className="font-mitr antialiased font-light text-[16px] text-white
           tracking-[0.22px] text-center w-[325px] xl:w-auto mx-auto"
         >
-          We are backed by the latest and best technologies.
+          {t("about.partners.subtitle")}
         </p>
       </div>
 

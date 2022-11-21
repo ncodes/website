@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useTranslation } from "next-i18next"
 
 type TitleProps = {
   label: string
@@ -53,6 +54,8 @@ function IconLink({ src, alt, href, width, height }: IconLinkProps) {
 }
 
 function Footer() {
+  const { t } = useTranslation()
+
   return (
     <section className="container mx-auto bg-[url('/footer-bg.svg')] bg-cover bg-no-repeat bg-top">
       <div className="flex flex-col xl:flex-row gap-x-[200px] py-[100px]">
@@ -70,7 +73,7 @@ function Footer() {
             className="font-mitr antialiased font-light text-[16px]
             text-white tracking-[0.22px] mt-3 mb-4 text-center xl:text-left"
           >
-            © 2022 - Joint Labs Inc.
+            {t("footer.copyright")}
           </p>
 
           <div className="flex flex-row items-center justify-center xl:justify-start gap-x-6">
@@ -90,43 +93,43 @@ function Footer() {
         {/* > */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-y-10 md:gap-y-0 flex-1 justify-end mt-14 xl:mt-0">
           <div className="flex flex-col mx-auto items-center md:items-start">
-            <FooterTitle label="Company" />
+            <FooterTitle label={t("footer.section.company")} />
             <ul className="flex flex-col gap-y-[10px] list-none">
-              <FooterLink title="About" href="/about" />
-              <FooterLink title="Blog" href="https://medium.com/0xjoint" />
+              <FooterLink title={t("footer.link.about")} href="/about" />
+              <FooterLink title={t("footer.link.blog")} href="https://medium.com/0xjoint" />
               {/* <FooterLink title="Media" href="#" /> */}
               {/* <FooterLink title="FAQ" href="/faq" /> */}
             </ul>
           </div>
 
           <div className="flex flex-col mx-auto items-center md:items-start">
-            <FooterTitle label="Protocol" />
+            <FooterTitle label={t("footer.section.protocol")} />
             <ul className="flex flex-col text-center md:text-left gap-y-[10px]">
-              <FooterLink title="Trade" href="/work-in-progress" />
-              <FooterLink title="Markets" href="/work-in-progress" />
-              <FooterLink title="Liquidity" href="/work-in-progress" />
-              <FooterLink title="Mediation" href="/work-in-progress" />
-              <FooterLink title="Disputes" href="/work-in-progress" />
-              <FooterLink title="Mining" href="/work-in-progress" />
-              <FooterLink title="Rewards" href="/work-in-progress" />
+              <FooterLink title={t("footer.link.trade")} href="/work-in-progress" />
+              <FooterLink title={t("footer.link.markets")} href="/work-in-progress" />
+              <FooterLink title={t("footer.link.liquidity")} href="/work-in-progress" />
+              <FooterLink title={t("footer.link.mediation")} href="/work-in-progress" />
+              <FooterLink title={t("footer.link.disputes")} href="/work-in-progress" />
+              <FooterLink title={t("footer.link.mining")} href="/work-in-progress" />
+              <FooterLink title={t("footer.link.rewards")} href="/work-in-progress" />
             </ul>
           </div>
 
           <div className="flex flex-col mx-auto items-center md:items-start">
-            <FooterTitle label="Developers" />
+            <FooterTitle label={t("footer.section.developers")} />
 
             <ul className="flex flex-col text-center md:text-left  gap-y-[10px] ">
-              <FooterLink title="Documentation" href="https://docs.joint.exchange" />
-              <FooterLink title="GitHub" href="https://github.com/jointlabs" />
+              <FooterLink title={t("footer.link.documentation")} href="https://docs.joint.exchange" />
+              <FooterLink title={t("footer.link.github")} href="https://github.com/jointlabs" />
             </ul>
           </div>
 
           <div className="flex flex-col mx-auto items-center md:items-start">
-            <FooterTitle label="Legal" />
+            <FooterTitle label={t("footer.section.legal")} />
             <ul className="flex flex-col text-center md:text-left  gap-y-[10px]">
-              <FooterLink title="Protocol Disclaimer" href="#" />
-              <FooterLink title="Terms of service" href="#" />
-              <FooterLink title="Privacy Policy" href="#" />
+              <FooterLink title={t("footer.link.protocol")} href="#" />
+              <FooterLink title={t("footer.link.terms")} href="#" />
+              <FooterLink title={t("footer.link.privacy")} href="#" />
             </ul>
           </div>
         </div>

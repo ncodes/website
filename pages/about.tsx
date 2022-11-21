@@ -3,6 +3,7 @@ import type { NextPage, GetStaticProps } from "next"
 import Head from "next/head"
 import Image from "next/image"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useTranslation } from "next-i18next"
 
 import Header from "../components/Header"
 import Team from "../components/Team"
@@ -14,24 +15,26 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: { ...(await serverSideTranslations(locale as string, ["common"])) },})
 
 const About: NextPage = function () {
+  const { t } = useTranslation()
+
   const highlights = [
     {
       id: 1,
       icon: "/trade-menu.webp",
-      title: "Low Fees",
-      content: "Trading fees are lower and predictable than centralized P2P alternatives.",
+      title: t("about.highlight.title-1"),
+      content: t("about.highlight.content-1"),
     },
     {
       id: 2,
       icon: "/trade-menu.webp",
-      title: "Uncapped Volume",
-      content: "Unlike other P2P trading platform, FiatX does not place a cap on your trading volume or activities.",
+      title: t("about.highlight.title-2"),
+      content: t("about.highlight.content-2"),
     },
     {
       id: 3,
       icon: "/trade-menu.webp",
-      title: "Unlimited Liquidity",
-      content: "Access unlimited liquidity for open markets created by people across the world. ",
+      title: t("about.highlight.title-3"),
+      content: t("about.highlight.content-3")
     },
   ]
 
@@ -48,8 +51,8 @@ const About: NextPage = function () {
         <section id="page-content">
           <section
             className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px]
-          mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mt-[52px] md:mt-[77px] mb-[40px]
-          md:mb-[98px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
+            mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mt-[52px] md:mt-[77px] mb-[40px]
+            md:mb-[98px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
           >
             <div
               className="flex flex-col justify-between lg:flex-row xl:flex-row items-center lg:gap-x-[70px]
@@ -60,14 +63,14 @@ const About: NextPage = function () {
                   className="font-mitr antialiased text-center lg:text-left text-[14px]
                 leading-[18px] text-white font-light mb-[13px] mx-[40px] md:mx-[unset]"
                 >
-                  PASSIONATE, EXPERIENCED & DRIVEN
+                  {t("about.hero.subtitle")}
                 </p>
                 <p
                   className="font-mitr antialiased font-semibold text-[48px] lg:text-[35px]
                   text-white text-center lg:text-left -tracking-[0.6px] lg:-tracking-[0.9px]
                   leading-[56px] lg:leading-[35px] w-[265px] mx-auto sm:mx-[unset] sm:w-full"
                 >
-                  We are passionate about blockchain technologies that enable free trade across borders.
+                  {t("about.hero.title")}
                 </p>
               </div>
 
