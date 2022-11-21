@@ -28,7 +28,6 @@
   "header.directly": "directly navigate to",
   "header.protocol.feature": "a protocol feature",
   "header.features": "features",
-<<<<<<< HEAD
   "nft.section.title": " EXPLORE JOINT PROTOCOL UNIVERSE",
   "nft.section.head": " NFT for protocol Fee",
   "nft.section.content": "Collect the DroidPD NFT to participate in governance and earn a share of Joint Protocol revenue for eternity.",
@@ -49,13 +48,13 @@
   "reward.section.droid": " Earn a share of protocol revenue when you stake into the official staking pool or hold DroidPD NFT.",
   "reward.section.liquidity": " Liquidity Rewards",
   "reward.section.uniswap": "Earn reward for providing liquidity to P2P-ETH pool on Uniswap.",
+  "reward.see.reward":"See Rewards",
   "tab.trade": "Trade",
   "tab.listing": "Listing",
   "tab.mediation": "Mediation",
   "tab.staking": "Staking",
   "tab.fee": "Fee",
-  "tab.liquidity": "Liquidity"
-=======
+  "tab.liquidity": "Liquidity",
   "about.hero.subtitle": "PASSIONATE, EXPERIENCED & DRIVEN",
   "about.hero.title": "We are passionate about blockchain technologies that enable free trade across borders.",
   "about.highlight.title-1": "Low Fees",
@@ -155,5 +154,4 @@
   "howitworks.cashswapinformation.three": "Both parties receive trade reward from the protocol.",
   "howitworks.its.familiar": "IT'S FAMILIAR, BUT DECENTRALIZED AND BETTER",
   "howitworks.how.it.works":"How it Works"
->>>>>>> ce1809dd88651e9a89fb267dfdccf7565e9cada9
 }
