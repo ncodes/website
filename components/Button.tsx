@@ -3,7 +3,7 @@ type ButtonProps = {
   small?: boolean
   label: string
   variant: "primary"
-  onClick?: () => void
+  onClick?: (e: any) => void
   extraStyles?: any
   href?: string
 }
