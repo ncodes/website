@@ -54,6 +54,7 @@ type SwapProps = {
 }
 
 function Swap({ instantSwapInformation, cashSwapInformation }: SwapProps) {
+  const { t } = useTranslation()
   return (
     <div
       className="ml-[24px] py-[31px] pb-[50px] px-[37px] min-w-[450px] w-[450px] border border-green-border-opacity
@@ -61,9 +62,9 @@ function Swap({ instantSwapInformation, cashSwapInformation }: SwapProps) {
     >
       <Tab.Group>
         <Tab.List as="div" className="flex flex-row justify-center mb-[25px]">
-          <Tab>{({ selected }) => <TabSelector label="Instant Swap" selected={selected} small />}</Tab>
+          <Tab>{({ selected }) => <TabSelector label={t("howitworks.instant.swap")} selected={selected} small />}</Tab>
 
-          <Tab>{({ selected }) => <TabSelector label="Cash Swap" selected={selected} small last />}</Tab>
+          <Tab>{({ selected }) => <TabSelector label={t("howitworks.cash.swap")} selected={selected} small last />}</Tab>
         </Tab.List>
 
         <Tab.Panels>
@@ -179,8 +180,8 @@ function HowItWorks() {
       </div>
 
       <div className="flex justify-center mx-auto max-w-[417px] mt-[32px] mb-[40px]">
-        <TabSelector label="Buy" selected={selected === "buy"} onClick={() => setSelected("buy")} />
-        <TabSelector label="Sell" selected={selected === "sell"} onClick={() => setSelected("sell")} last />
+        <TabSelector label={t("howitworks.buy")} selected={selected === "buy"} onClick={() => setSelected("buy")} />
+        <TabSelector label={t("howitworks.sell")} selected={selected === "sell"} onClick={() => setSelected("sell")} last />
       </div>
 
       {selected === "buy" ? (
