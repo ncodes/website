@@ -34,7 +34,7 @@ const About: NextPage = function () {
       id: 3,
       icon: "/trade-menu.webp",
       title: t("about.highlight.title-3"),
-      content: t("about.highlight.content-3")
+      content: t("about.highlight.content-3"),
     },
   ]
 
