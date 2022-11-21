@@ -198,7 +198,7 @@ const FAQ: NextPage = function () {
           id: 10,
           title: "How will Joint protocol be governed?",
           content:
-            "The Joint Labs team will initially develop the Joint Protocol. When the protocol matures, a co-governance system between the protocol inventors and the community will be set up to manage the protocol. Before maturity, Joint Labs will use snapshot for temperature and consensus checks.",
+            "The Joint Team will initially develop the Joint Protocol. When the protocol matures, a co-governance system between the protocol inventors and the community will be set up to manage the protocol. Before maturity, Joint Team will use snapshot for temperature and consensus checks.",
         },
       ],
     },

@@ -254,7 +254,13 @@ function Rewards() {
       </div>
 
       <div className="text-center">
-        <Button label={t("reward.see.reward")} variant="primary" onClick={() => undefined} extraStyles="w-[246px]" />
+        <Button
+          label={t("reward.see.reward")}
+          variant="primary"
+          onClick={() => undefined}
+          href="https://docs.joint.exchange/learn/rewards"
+          extraStyles="w-[246px]"
+        />
       </div>
     </section>
   )

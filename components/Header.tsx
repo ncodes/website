@@ -345,7 +345,7 @@ function Header() {
             {/* HEADER MENU ITEMS - Starts */}
             <ul className="hidden lg:flex flex-row gap-[25px] xl:gap-[40px] capitalize">
               <HeaderLink title={t("header.home")} href="/" />
-              <HeaderLink title={t("header.about")} href="/about" />
+              {/* <HeaderLink title={t("header.about")} href="/about" /> */}
 
               {/* PROTOCOL MENU - Starts */}
               <Menu as="div" className="flex flex-col">
@@ -517,7 +517,7 @@ function Header() {
               {/* DEVELOPER MENU - Ends */}
 
               {/* FAQ MENU - Starts */}
-              <HeaderLink title={t("header.faqs")} href="/faq" />
+              {/* <HeaderLink title={t("header.faqs")} href="/faq" /> */}
 
               {/* FAQ MENU - Ends */}
 
@@ -637,16 +637,16 @@ function Header() {
                     <div className="flex flex-col flex-1 h-full">
                       <ul className="flex flex-col flex-1 pb-3 overflow-scroll capitalize">
                         <Menu.Item>
-                          <MobileLink title={t("header.community")} href="/" />
+                          <MobileLink title={t("header.home")} href="/" />
                         </Menu.Item>
 
-                        <Menu.Item>
+                        {/* <Menu.Item>
                           <MobileLink title={t("header.about")} href="/about" />
-                        </Menu.Item>
+                        </Menu.Item> */}
 
-                        <Menu.Item>
+                        {/*  <Menu.Item>
                           <MobileLink title={t("header.faqs")} href="/faq" />
-                        </Menu.Item>
+                        </Menu.Item> */}
 
                         <Menu as={Fragment}>
                           <Menu.Button>
