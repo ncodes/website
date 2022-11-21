@@ -1,8 +1,10 @@
 /* eslint-disable react/require-default-props */
 import { useState, ReactFragment } from "react"
+import cn from "classnames"
 import { Tab } from "@headlessui/react"
 import Image from "next/image"
 import { useTranslation } from "next-i18next"
+import useLocale from "../shared/hooks/useLocale"
 
 type TabSelectorProps = {
   label: string
@@ -104,6 +106,7 @@ function Swap({ instantSwapInformation, cashSwapInformation }: SwapProps) {
 function HowItWorks() {
   const { t } = useTranslation()
   const [selected, setSelected] = useState("buy")
+  const { locale } = useLocale()
 
   const buyInformation = [
     {
@@ -190,8 +193,11 @@ function HowItWorks() {
             {buyInformation?.map(({ icon, title, content }) => (
               <div
                 key={Math.random() * Math.random()}
-                className="relative text-center pt-[53px] pb-[46px] pl-[20px] pr-[56px] text-center
-                min-w-[290px] max-w-[290px] bg-[url('/how-it-works-card-bg.svg')] bg-no-repeat"
+                className={cn(
+                  `relative text-center pt-[53px] pb-[46px] pl-[20px] pr-[56px] text-center
+                min-w-[290px] max-w-[290px] bg-[url('/how-it-works-card-bg.svg')] bg-no-repeat`,
+                  { "!pt-[16px]": locale === "fr" }
+                )}
               >
                 <div className="relative overflow-hidden w-[75px] h-[75px] mx-auto">
                   <Image
