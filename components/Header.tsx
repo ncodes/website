@@ -644,7 +644,7 @@ function Header() {
                           <MobileLink title={t("header.about")} href="/about" />
                         </Menu.Item> */}
 
-                      {/*  <Menu.Item>
+                        {/*  <Menu.Item>
                           <MobileLink title={t("header.faqs")} href="/faq" />
                         </Menu.Item> */}
 
