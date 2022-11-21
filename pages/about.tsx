@@ -1,12 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
-import type { NextPage } from "next"
+import type { NextPage, GetStaticProps } from "next"
 import Head from "next/head"
 import Image from "next/image"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import Header from "../components/Header"
 import Team from "../components/Team"
 import Partners from "../components/Partners"
 import Footer from "../components/Footer"
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({ props: { ...(await serverSideTranslations(locale, ["common"])) } })
 
 const About: NextPage = function () {
   const highlights = [

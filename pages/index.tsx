@@ -1,5 +1,6 @@
-import type { NextPage } from "next"
+import type { NextPage, GetStaticProps } from "next"
 import Head from "next/head"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import Header from "../components/Header"
 import Hero from "../components/Hero"
@@ -12,6 +13,9 @@ import HowItWorks from "../components/HowItWorks"
 import Partners from "../components/Partners"
 import Footer from "../components/Footer"
 import NFT from "../components/NFT"
+
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({ props: { ...(await serverSideTranslations(locale, ["common"])) } })
 
 const Home: NextPage = function () {
   return (
