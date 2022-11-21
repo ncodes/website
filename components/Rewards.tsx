@@ -1,7 +1,8 @@
 import Image from "next/image"
 import { Tab } from "@headlessui/react"
-
+import { useTranslation } from "next-i18next"
 import Button from "./Button"
+
 
 type TabSelectorProps = {
   label: string
@@ -38,6 +39,8 @@ function CustomImage({ src }: CustomImageProps) {
 }
 
 function Rewards() {
+  const { t } = useTranslation()
+
   return (
     <section
       className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px]
@@ -49,37 +52,37 @@ function Rewards() {
           className="font-mitr antialiased font-normal text-center text-white text-[14px]
           lg:text-[16px] leading-6 mb-0 lg:mb-[6px]"
         >
-          EARN PROTOCOL REWARDS
+         {t("reward.section.title")}
         </p>
         <p
           className="font-mitr antialiased font-semibold text-center text-white text-[48px]
           lg:text-[72px] leading-[56px] lg:leading-[72px] w-auto mx-auto
           mb-4 sm:w-[316px] md:w-[410px] lg:mb-6 lg:w-[570px] xl:w-full"
         >
-          Protocol Rewards
+          {t("reward.section.protocol")} 
         </p>
         <p
           className="font-mitr antialiased font-light text-center text-white
           text-[14px] tracking-[0.22px] leading-6 mx-auto w-[293px] xl:w-auto"
         >
-          The Joint Protocol is distributing its initial token supply via various reward programs for the community.
+              {t("reward.section.distribute")} 
         </p>
       </div>
 
       <div className="mt-[44px] mb-[50px] lg:mt-[54.5px] lg:mb-[90px]">
         <Tab.Group>
           <Tab.List as="div" className="flex flex-row gap-x-[24px] justify-center mb-[40px] lg:mb-[64px] flex-wrap gap-y-[25px] px-10">
-            <Tab>{({ selected }) => <TabSelector label="Trade" selected={selected} />}</Tab>
+            <Tab>{({ selected }) => <TabSelector label={t("tab.trade")} selected={selected} />}</Tab>
 
-            <Tab>{({ selected }) => <TabSelector label="Listing" selected={selected} />}</Tab>
+            <Tab>{({ selected }) => <TabSelector label={t("tab.listing")} selected={selected} />}</Tab>
 
-            <Tab>{({ selected }) => <TabSelector label="Mediation" selected={selected} />}</Tab>
+            <Tab>{({ selected }) => <TabSelector label={t("tab.mediation")} selected={selected} />}</Tab>
 
-            <Tab>{({ selected }) => <TabSelector label="Staking" selected={selected} />}</Tab>
+            <Tab>{({ selected }) => <TabSelector label={t("tab.staking")}  selected={selected} />}</Tab>
 
-            <Tab>{({ selected }) => <TabSelector label="Fee" selected={selected} />}</Tab>
+            <Tab>{({ selected }) => <TabSelector label={t("tab.fee")} selected={selected} />}</Tab>
 
-            <Tab>{({ selected }) => <TabSelector label="Liquidity" selected={selected} />}</Tab>
+            <Tab>{({ selected }) => <TabSelector label={t("tab.liquidity")}  selected={selected} />}</Tab>
           </Tab.List>
 
           <Tab.Panels>
@@ -88,17 +91,17 @@ function Rewards() {
                 className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
-                Trading Rewards
+              {t("reward.section.trading")} 
               </p>
               <p
                 className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-auto lg:w-[411px] mx-auto"
               >
-                Earn trading reward for completing a trade as a liquidity provider or buyer.
+             {t("reward.section.earn")}
               </p>
               <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
                 <a href="https://docs.joint.exchange/learn/rewards/trading-reward" className="hover:text-chinese-green">
-                  Learn more
+                {t("reward.section.learn")} 
                 </a>
               </div>
               <div
@@ -116,17 +119,17 @@ function Rewards() {
                 className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
-                Listing Rewards
+                 {t("reward.section.listing")} 
               </p>
               <p
                 className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
               >
-                Provide liquidity to a market and start earning from a special listing pool.
+             {t("reward.section.pool")} 
               </p>
               <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
                 <a href="https://docs.joint.exchange/learn/rewards/listing-reward" className="hover:text-chinese-green">
-                  Learn more
+                {t("reward.section.learn")} 
                 </a>
               </div>
               <div
@@ -143,17 +146,17 @@ function Rewards() {
                 className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
-                Mediation Rewards
+              {t("reward.section.mediation")} 
               </p>
               <p
                 className="font-mitr antialiased font-regular text-center
                 text-white text-[16px] tracking-[0.22px] leading-6 mx-auto w-[293px] lg:w-[411px]"
               >
-                Earn mediation reward for helping to resolve trading disputes
+                  {t("reward.section.disputes")}  
               </p>
               <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
                 <a href="https://docs.joint.exchange/learn/concepts/dispute-mediation" className="hover:text-chinese-green">
-                  Learn more
+                {t("reward.section.learn")} 
                 </a>
               </div>
               <div />
@@ -170,17 +173,17 @@ function Rewards() {
                 className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
-                Staking Rewards
+              {t("reward.section.staking")}  
               </p>
               <p
                 className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
               >
-                Earn more P2P tokens when you stake your P2P tokens into the official staking pool.
+                {t("reward.section.p2p")}
               </p>
               <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
                 <a href="https://docs.joint.exchange/learn/rewards/staking" className="hover:text-chinese-green">
-                  Learn more
+                {t("reward.section.learn")} 
                 </a>
               </div>
               <div
@@ -197,17 +200,17 @@ function Rewards() {
                 className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
-                Fee Rewards
+                   {t("reward.section.free")} 
               </p>
               <p
                 className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
               >
-                Earn a share of protocol revenue when you stake into the official staking pool or hold DroidPD NFT.
+              {t("reward.section.droid")} 
               </p>
               <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
                 <a href="https://jointdocs.vercel.app/learn/rewards/protocol-fee" className="hover:text-chinese-green">
-                  Learn more
+                {t("reward.section.learn")} 
                 </a>
               </div>
               <div
@@ -226,17 +229,17 @@ function Rewards() {
                 className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
-                Liquidity Rewards
+                {t("reward.section.liquidity")}
               </p>
               <p
                 className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
               >
-                Earn reward for providing liquidity to P2P-ETH pool on Uniswap.
+             {t("reward.section.uniswap")} 
               </p>
               <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
                 <a href="https://docs.joint.exchange/learn/rewards/liquidity-reward" className="hover:text-chinese-green">
-                  Learn more
+                {t("reward.section.learn")} 
                 </a>
               </div>
               <div
