@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { useTranslation } from "next-i18next"
 
 interface TeamMemberProps {
   id: number
@@ -17,7 +18,7 @@ function TeamMember({ id, image, name, role, link }: TeamMemberProps) {
       </div>
       <p
         className="font-mitr antialiased font-medium text-[14px] text-white text-center
-       leading-[17.64px] tracking-[0.19px] mt-[24px]"
+        leading-[17.64px] tracking-[0.19px] mt-[24px]"
       >
         {name}
       </p>
@@ -37,61 +38,63 @@ function TeamMember({ id, image, name, role, link }: TeamMemberProps) {
 }
 
 function Team() {
+  const { t } = useTranslation()
+
   const teamMembers: TeamMemberProps[] = [
     {
       id: 1,
       image: "/kennedy-member.svg",
       name: "Kennedy Idialu",
-      role: "CEO",
+      role: t("about.team.role.ceo"),
       link: "https://linktr.ee/ncodes",
     },
     {
       id: 2,
       image: "/odion-member.svg",
       name: "Odion Olumhense",
-      role: "COO",
+      role: t("about.team.role.coo"),
       link: undefined,
     },
     {
       id: 3,
       image: "/vitalis-member.svg",
       name: "Vitalis Nwenyi",
-      role: "Designer",
+      role: t("about.team.role.designer"),
       link: undefined,
     },
     {
       id: 4,
       image: "/michael-member.svg",
       name: "Michael Azonobi",
-      role: "Developer",
+      role: t("about.team.role.developer"),
       link: undefined,
     },
     {
       id: 5,
       image: "/marvin-member.svg",
       name: "Marvin Ogah",
-      role: "UI/UX Designer",
+      role: t("about.team.role.ui-designer"),
       link: undefined,
     },
     {
       id: 6,
       image: "/chris-member.svg",
       name: "Chris Ezike",
-      role: "Developer",
+      role: t("about.team.role.developer"),
       link: undefined,
     },
     {
       id: 7,
       image: "/samuel-member.svg",
       name: "Samuel Bolu",
-      role: "Researcher",
+      role: t("about.team.role.researcher"),
       link: undefined,
     },
     {
       id: 8,
       image: "/ileke-member.svg",
       name: "Ileke Airende",
-      role: "Marketing",
+      role: t("about.team.role.marketing"),
       link: undefined,
     },
   ]
@@ -106,7 +109,7 @@ function Team() {
         className="font-mitr antialiased font-semibold text-[48px] lg:text-[72px] leading-[48px] lg:leading-[72px]
        text-white text-center -tracking-[0.6px] lg:-tracking-[0.9px]"
       >
-        Meet the Team
+        {t("about.team.title")}
       </p>
 
       <div className="flex flex-row flex-wrap mx-auto justify-start align-start space-y-[64px] lg:space-y-[90px] mt-[72px] sm:mt-[0px]">
