@@ -83,7 +83,7 @@ function Footer() {
             <IconLink alt="twitter" src="/icons/twitter.png" width={18} height={21} href="https://twitter.com/0xJoint" />
             <IconLink alt="wechat" src="/icons/wechat.png" width={18} height={21} href="/" />
             <IconLink alt="youtube" src="/icons/youtube.png" width={18} height={25} href="/" />
-            <IconLink alt="disord" src="/icons/discord.png" width={18} height={16} href="https://discord.gg/jfAPEjQ3HD" />
+            <IconLink alt="discord" src="/icons/discord.png" width={18} height={16} href="https://discord.gg/jfAPEjQ3HD" />
           </div>
         </div>
 
@@ -95,7 +95,7 @@ function Footer() {
           <div className="flex flex-col mx-auto items-center md:items-start">
             <FooterTitle label={t("footer.section.company")} />
             <ul className="flex flex-col gap-y-[10px] list-none">
-              <FooterLink title={t("disord")} href="/about" />
+              <FooterLink title={t("discord")} href="/about" />
               <FooterLink title={t("twitter")} href="https://twitter.com/0xJoint" />
               <FooterLink title={t("footer.link.blog")} href="https://medium.com/0xjoint" />
               {/* <FooterLink title="Media" href="#" /> */}
