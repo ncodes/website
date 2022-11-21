@@ -516,6 +516,11 @@ function Header() {
               </Menu>
               {/* DEVELOPER MENU - Ends */}
 
+              {/* FAQ MENU - Starts */}
+              <HeaderLink title="FAQs" href="/faq" />
+
+              {/* FAQ MENU - Ends */}
+
               {/* COMMUNITY MENU - Starts */}
               <Menu as="div" className="flex flex-col ">
                 {/* COMMUNITY MENU BUTTON - Starts */}
@@ -579,6 +584,7 @@ function Header() {
                 </Transition>
                 {/* COMMUNITY MENU CONTENT TRANSITION - Ends */}
               </Menu>
+
               {/* COMMUNITY MENU - Ends */}
             </ul>
             {/* HEADER MENU ITEMS - Ends */}
