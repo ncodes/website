@@ -19,7 +19,7 @@ function NFT() {
             className="font-mitr antialiased text-center lg:text-left text-[14px]
             tracking-[2.63px] xl:tracking-[3px] leading-[24px] text-white font-light xl:mb-[13px]"
           >
-            {t("nft.section.title")} 
+            {t("nft.section.title")}
           </p>
           <p
             className="font-mitr antialiased font-semibold text-[48px] lg:text-[72px] text-white text-center
@@ -37,7 +37,7 @@ function NFT() {
           </p>
 
           <div className="text-center lg:text-left">
-            <Button label=  {t("nft.section.button")} variant="primary" onClick={() => undefined} />
+            <Button label={t("nft.section.button")} variant="primary" onClick={() => undefined} />
           </div>
         </div>
 

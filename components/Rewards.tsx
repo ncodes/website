@@ -3,7 +3,6 @@ import { Tab } from "@headlessui/react"
 import { useTranslation } from "next-i18next"
 import Button from "./Button"
 
-
 type TabSelectorProps = {
   label: string
   selected: boolean
@@ -52,20 +51,20 @@ function Rewards() {
           className="font-mitr antialiased font-normal text-center text-white text-[14px]
           lg:text-[16px] leading-6 mb-0 lg:mb-[6px]"
         >
-         {t("reward.section.title")}
+          {t("reward.section.title")}
         </p>
         <p
           className="font-mitr antialiased font-semibold text-center text-white text-[48px]
           lg:text-[72px] leading-[56px] lg:leading-[72px] w-auto mx-auto
           mb-4 sm:w-[316px] md:w-[410px] lg:mb-6 lg:w-[570px] xl:w-full"
         >
-          {t("reward.section.protocol")} 
+          {t("reward.section.protocol")}
         </p>
         <p
           className="font-mitr antialiased font-light text-center text-white
           text-[14px] tracking-[0.22px] leading-6 mx-auto w-[293px] xl:w-auto"
         >
-              {t("reward.section.distribute")} 
+          {t("reward.section.distribute")}
         </p>
       </div>
 
@@ -78,11 +77,11 @@ function Rewards() {
 
             <Tab>{({ selected }) => <TabSelector label={t("tab.mediation")} selected={selected} />}</Tab>
 
-            <Tab>{({ selected }) => <TabSelector label={t("tab.staking")}  selected={selected} />}</Tab>
+            <Tab>{({ selected }) => <TabSelector label={t("tab.staking")} selected={selected} />}</Tab>
 
             <Tab>{({ selected }) => <TabSelector label={t("tab.fee")} selected={selected} />}</Tab>
 
-            <Tab>{({ selected }) => <TabSelector label={t("tab.liquidity")}  selected={selected} />}</Tab>
+            <Tab>{({ selected }) => <TabSelector label={t("tab.liquidity")} selected={selected} />}</Tab>
           </Tab.List>
 
           <Tab.Panels>
@@ -91,17 +90,17 @@ function Rewards() {
                 className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
-              {t("reward.section.trading")} 
+                {t("reward.section.trading")}
               </p>
               <p
                 className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-auto lg:w-[411px] mx-auto"
               >
-             {t("reward.section.earn")}
+                {t("reward.section.earn")}
               </p>
               <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
                 <a href="https://docs.joint.exchange/learn/rewards/trading-reward" className="hover:text-chinese-green">
-                {t("reward.section.learn")} 
+                  {t("reward.section.learn")}
                 </a>
               </div>
               <div
@@ -119,17 +118,17 @@ function Rewards() {
                 className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
-                 {t("reward.section.listing")} 
+                {t("reward.section.listing")}
               </p>
               <p
                 className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
               >
-             {t("reward.section.pool")} 
+                {t("reward.section.pool")}
               </p>
               <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
                 <a href="https://docs.joint.exchange/learn/rewards/listing-reward" className="hover:text-chinese-green">
-                {t("reward.section.learn")} 
+                  {t("reward.section.learn")}
                 </a>
               </div>
               <div
@@ -146,17 +145,17 @@ function Rewards() {
                 className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
-              {t("reward.section.mediation")} 
+                {t("reward.section.mediation")}
               </p>
               <p
                 className="font-mitr antialiased font-regular text-center
                 text-white text-[16px] tracking-[0.22px] leading-6 mx-auto w-[293px] lg:w-[411px]"
               >
-                  {t("reward.section.disputes")}  
+                {t("reward.section.disputes")}
               </p>
               <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
                 <a href="https://docs.joint.exchange/learn/concepts/dispute-mediation" className="hover:text-chinese-green">
-                {t("reward.section.learn")} 
+                  {t("reward.section.learn")}
                 </a>
               </div>
               <div />
@@ -173,7 +172,7 @@ function Rewards() {
                 className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
-              {t("reward.section.staking")}  
+                {t("reward.section.staking")}
               </p>
               <p
                 className="font-mitr antialiased font-normal text-center
@@ -183,7 +182,7 @@ function Rewards() {
               </p>
               <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
                 <a href="https://docs.joint.exchange/learn/rewards/staking" className="hover:text-chinese-green">
-                {t("reward.section.learn")} 
+                  {t("reward.section.learn")}
                 </a>
               </div>
               <div
@@ -200,17 +199,17 @@ function Rewards() {
                 className="font-mitr antialiased font-medium text-center
                 text-white text-[24px] leading-[26.25px] mb-[11px]"
               >
-                   {t("reward.section.free")} 
+                {t("reward.section.free")}
               </p>
               <p
                 className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
               >
-              {t("reward.section.droid")} 
+                {t("reward.section.droid")}
               </p>
               <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
                 <a href="https://jointdocs.vercel.app/learn/rewards/protocol-fee" className="hover:text-chinese-green">
-                {t("reward.section.learn")} 
+                  {t("reward.section.learn")}
                 </a>
               </div>
               <div
@@ -235,11 +234,11 @@ function Rewards() {
                 className="font-mitr antialiased font-normal text-center
                 text-white text-[17px] leading-[26.25px] w-[411px] mx-auto"
               >
-             {t("reward.section.uniswap")} 
+                {t("reward.section.uniswap")}
               </p>
               <div className="flex gap-x-[5px] text-gray-400 justify-center mt-3 font-light">
                 <a href="https://docs.joint.exchange/learn/rewards/liquidity-reward" className="hover:text-chinese-green">
-                {t("reward.section.learn")} 
+                  {t("reward.section.learn")}
                 </a>
               </div>
               <div
