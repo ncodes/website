@@ -12,7 +12,7 @@ import Footer from "../components/Footer"
 
 /* eslint-disable-next-line */
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
-  props: { ...(await serverSideTranslations(locale as string, ["common"])) }})
+  props: { ...(await serverSideTranslations(locale as string, ["common"])) },})
 
 const About: NextPage = function () {
   const { t } = useTranslation()
