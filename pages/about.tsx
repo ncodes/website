@@ -9,7 +9,9 @@ import Team from "../components/Team"
 import Partners from "../components/Partners"
 import Footer from "../components/Footer"
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => ({ props: { ...(await serverSideTranslations(locale, ["common"])) } })
+/* eslint-disable-next-line */
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: { ...(await serverSideTranslations(locale as string, ["common"])) },})
 
 const About: NextPage = function () {
   const highlights = [

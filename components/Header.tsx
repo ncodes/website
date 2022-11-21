@@ -13,7 +13,7 @@ import useLocale from "../shared/hooks/useLocale"
 import Button from "./Button"
 
 /** DUMMY LANGUAGE DATA - Starts */
-const localeInfo = {
+const localeInfo: any = {
   ar: {
     label: "عربى",
     key: "ar",
@@ -52,88 +52,87 @@ const localeInfo = {
   default: "Undefined ❌",
 }
 
-
 /** DUMMY LANGUAGE DATA - Ends */
 
 /** MENU ITEM DATA - Starts */
-const MenuItems = (t:any)=>([
+const MenuItems = (t: any) => [
   {
-    title: `${t('header.trade')}`,
-    description: t('header.trade.description'),
+    title: `${t("header.trade")}`,
+    description: t("header.trade.description"),
     src: "/trade-menu.webp",
     href: "/work-in-progress",
   },
   {
-    title: t('header.markets'),
-    description: t('header.markets.description'),
+    title: t("header.markets"),
+    description: t("header.markets.description"),
     src: "/market-menu.webp",
     href: "/work-in-progress",
   },
   {
-    title: t('header.liquidity'),
-    description: t('header.liquidity.description'),
+    title: t("header.liquidity"),
+    description: t("header.liquidity.description"),
     src: "/liquidity-menu.webp",
     href: "/work-in-progress",
   },
   {
-    title: t('header.mediation'),
-    description: t('header.mediation.description'),
+    title: t("header.mediation"),
+    description: t("header.mediation.description"),
     src: "/mediation-menu.webp",
     href: "/work-in-progress",
   },
   {
-    title: t('header.disputes'),
-    description: t('header.disputes.description'),
+    title: t("header.disputes"),
+    description: t("header.disputes.description"),
     src: "/dispute-menu.webp",
     href: "/work-in-progress",
   },
   {
-    title: t('mining'),
-    description: t('header.mining.description'),
+    title: t("mining"),
+    description: t("header.mining.description"),
     src: "/mining-menu.webp",
     href: "/work-in-progress",
   },
   {
-    title: t('rewards'),
-    description: t('header.rewards.description'),
+    title: t("rewards"),
+    description: t("header.rewards.description"),
     src: "/reward-menu.webp",
     href: "/work-in-progress",
   },
-])
+]
 /** MENU ITEM DATA - Ends */
 
 /** DEVELOPER MENU ITEM DATA - Starts */
-const DeveloperMenuItems =(t:any)=> ([
+const DeveloperMenuItems = (t: any) => [
   {
-    title: `${t('docs')}`,
+    title: `${t("docs")}`,
     src: "/icons/docs.png",
     href: "https://docs.joint.exchange",
     target: "_blank",
   },
   {
-    title: `${t('github')}`,
+    title: `${t("github")}`,
     src: "/icons/github.png",
     href: "https://github.com/jointlabs",
     target: "_blank",
   },
-])
+]
 /** DEVELOPER MENU ITEM DATA - Ends */
 
 /** COMMUNITY MENU ITEM DATA - Starts */
-const CommunityMenuItems = (t: any)=>([
+const CommunityMenuItems = (t: any) => [
   {
-    title: `${t('twitter')}`,
+    title: `${t("twitter")}`,
     src: "/icons/twitter.png",
     href: "https://twitter.com/0xJoint",
     target: "_blank",
   },
   {
-    title: `${t('discord')}`,
+    title: `${t("discord")}`,
     src: "/icons/discord.png",
     href: "https://discord.gg/jfAPEjQ3HD",
     target: "_blank",
   },
-])
+]
 /** COMMUNITY MENU ITEM DATA - Ends */
 
 /** POPUP TRANSITION DATA - Starts */
@@ -220,10 +219,9 @@ SubMobileLink.displayName = "SubMobileLink"
 function Header() {
   const { t } = useTranslation()
   const router = useRouter()
-  const { locale, locales, LocaleLink, setLocale } = useLocale()
+  const { locale, locales, LocaleLink, setLocale }: any = useLocale()
 
-
-  const label = (language = locale) =>
+  const label = (language = locale as string) =>
     locale === "ar"
       ? `${localeInfo[language].emoji} ${localeInfo[language].label}`
       : `${localeInfo[language].label} ${localeInfo[language].emoji}`
@@ -311,31 +309,31 @@ function Header() {
                     className="absolute flex flex-col mt-[12px] xl:mt-[18px] w-[128px] xl:w-40 bg-rich-blue
                     rounded-lg border-[1px] border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)]"
                   >
-                  {locales.map((language) => {
-                    if (localeInfo[language].key === locale) return null
-                    return(
-                      <Menu.Item key={localeInfo[language].key}>
-                      {({ active }) => (
-                        // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions
-                        <ul
-                          className={`px-5 py-4 cursor-pointer
+                    {locales.map((language: string) => {
+                      if (localeInfo[language].key === locale) return null
+                      return (
+                        <Menu.Item key={localeInfo[language].key}>
+                          {({ active }) => (
+                            // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions
+                            <ul
+                              className={`px-5 py-4 cursor-pointer
                           ${active || localeInfo[language].key === locale ? "hover:bg-[#0d1c31]" : "bg-none"}`}
-                          onClick={() => {
-                            setLocale(localeInfo[language].key)
-                            router.push(router.pathname, router.asPath, { locale: localeInfo[language].key })
-                          }}
-                        >
-                          <span
-                            className={`font-mitr antialiased text-[13px] xl:text-[16px] tracking-[0.18px]
+                              onClick={() => {
+                                setLocale(localeInfo[language].key)
+                                router.push(router.pathname, router.asPath, { locale: localeInfo[language].key })
+                              }}
+                            >
+                              <span
+                                className={`font-mitr antialiased text-[13px] xl:text-[16px] tracking-[0.18px]
                               xl:tracking-[0.22px] text-white font-medium`}
-                          >
-                            <LocaleLink locale={localeInfo[language].key}>{label(localeInfo[language].key)}</LocaleLink>
-                          </span>
-                        </ul>
-                      )}
-                    </Menu.Item>
-                  )
-                  })}
+                              >
+                                <LocaleLink locale={localeInfo[language].key}>{label(localeInfo[language].key)}</LocaleLink>
+                              </span>
+                            </ul>
+                          )}
+                        </Menu.Item>
+                      )
+                    })}
                   </div>
                 </Menu.Items>
                 {/* LANGUAGE SELECTOR CONTENT - Ends */}
@@ -346,8 +344,8 @@ function Header() {
 
             {/* HEADER MENU ITEMS - Starts */}
             <ul className="hidden lg:flex flex-row gap-[25px] xl:gap-[40px] capitalize">
-              <HeaderLink title={t('header.home')} href="/" />
-              <HeaderLink title={t('header.about')} href="/about" />
+              <HeaderLink title={t("header.home")} href="/" />
+              <HeaderLink title={t("header.about")} href="/about" />
 
               {/* PROTOCOL MENU - Starts */}
               <Menu as="div" className="flex flex-col">
@@ -355,7 +353,7 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-end capitalize">
-                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t('header.protocol')}</p>
+                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t("header.protocol")}</p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -387,16 +385,16 @@ function Header() {
                             className="font-mitr antialiased text-[24px]
                             leading-[30px] text-white font-medium"
                           >
-                            {t('header.protocol')}
+                            {t("header.protocol")}
                             <br />
-                            {t('header.features')}
+                            {t("header.features")}
                           </p>
 
                           <p
                             className="font-['Mitr'] antialiased text-[14px] tracking-[0.22px]
                             leading-[17.64px] text-white font-light mt-[23.36px] capitalize"
                           >
-                            {t('header.directly')} <br /> {t('header.protocol.feature')}.
+                            {t("header.directly")} <br /> {t("header.protocol.feature")}.
                           </p>
                         </div>
 
@@ -410,7 +408,7 @@ function Header() {
                             after:bg-[url('/icons/caret-down.png')] after:-scale-y-100 after:rotate-45
                             after:-ml-[7px] after:mb-0.5"
                             >
-                              {t('header.join.discord')}
+                              {t("header.join.discord")}
                             </p>
                           </a>
                         </Link>
@@ -436,9 +434,12 @@ function Header() {
                                 />
                               </div>
                               <div className="flex flex-col flex-1 gap-y-[4px]">
-                                <p className="font-mitr antialiased text-[20px] leading-[26px]
+                                <p
+                                  className="font-mitr antialiased text-[20px] leading-[26px]
                                    text-white font-medium capitalize"
-                                >{menuItem.title}</p>
+                                >
+                                  {menuItem.title}
+                                </p>
                                 <p className="font-['Mitr'] antialiased text-[14px] leading-[17.67px] text-white font-light">
                                   {menuItem.description}
                                 </p>
@@ -461,7 +462,7 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-end capitalize">
-                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t('header.developers')}</p>
+                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t("header.developers")}</p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -521,7 +522,7 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-end capitalize">
-                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t('header.community')}</p>
+                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t("header.community")}</p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -630,11 +631,11 @@ function Header() {
                     <div className="flex flex-col flex-1 h-full">
                       <ul className="flex flex-col flex-1 pb-3 overflow-scroll capitalize">
                         <Menu.Item>
-                          <MobileLink title={t('header.community')} href="/" />
+                          <MobileLink title={t("header.community")} href="/" />
                         </Menu.Item>
 
                         <Menu.Item>
-                          <MobileLink title={t('header.about')} href="/about" />
+                          <MobileLink title={t("header.about")} href="/about" />
                         </Menu.Item>
 
                         <Menu as={Fragment}>
@@ -645,7 +646,7 @@ function Header() {
                                   className="font-mitr antialiased text-[18px] tracking-[0.28px]
                                   text-left leading-6 font-semibold text-white inline-block cursor-pointer"
                                 >
-                                  {t('header.protocol')}
+                                  {t("header.protocol")}
                                 </p>
 
                                 <div className={`relative w-6 h-6 xl:w-6 xl:h-6 overflow-hidden ${open && "-scale-y-100"}`}>
@@ -667,31 +668,31 @@ function Header() {
                             <Menu.Items>
                               <ul className="bg-eerie-black backdrop-blur-[28px] py-2">
                                 <Menu.Item>
-                                  <SubMobileLink title={t('header.trade')} href="/work-in-progress" />
+                                  <SubMobileLink title={t("header.trade")} href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title={t('header.markets')} href="/work-in-progress" />
+                                  <SubMobileLink title={t("header.markets")} href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title={t('header.liquidity')} href="/work-in-progress" />
+                                  <SubMobileLink title={t("header.liquidity")} href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title={t('header.mediation')} href="/work-in-progress" />
+                                  <SubMobileLink title={t("header.mediation")} href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title={t('header.mining')} href="/work-in-progress" />
+                                  <SubMobileLink title={t("header.mining")} href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title={t('header.rewards')} href="/work-in-progress" />
+                                  <SubMobileLink title={t("header.rewards")} href="/work-in-progress" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title={t('header.disputes')} href="/work-in-progress" />
+                                  <SubMobileLink title={t("header.disputes")} href="/work-in-progress" />
                                 </Menu.Item>
                               </ul>
                             </Menu.Items>
@@ -706,7 +707,7 @@ function Header() {
                                   className="font-mitr antialiased text-[18px] tracking-[0.28px]
                                   text-left leading-6 font-semibold text-white inline-block cursor-pointer"
                                 >
-                                  {t('header.developers')}
+                                  {t("header.developers")}
                                 </p>
 
                                 <div className={`relative w-6 h-6 xl:w-6 xl:h-6 overflow-hidden ${open && "-scale-y-100"}`}>
@@ -728,11 +729,11 @@ function Header() {
                             <Menu.Items>
                               <ul className="bg-eerie-black backdrop-blur-[28px] py-2">
                                 <Menu.Item>
-                                  <SubMobileLink title={t('docs')} href="https://docs.joint.exchange" />
+                                  <SubMobileLink title={t("docs")} href="https://docs.joint.exchange" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title={t('github')} href="https://github.com/jointlabs" />
+                                  <SubMobileLink title={t("github")} href="https://github.com/jointlabs" />
                                 </Menu.Item>
                               </ul>
                             </Menu.Items>
@@ -747,7 +748,7 @@ function Header() {
                                   className="font-mitr antialiased text-[18px] tracking-[0.28px]
                                   text-left leading-6 font-semibold text-white inline-block cursor-pointer"
                                 >
-                                  {t('header.community')}
+                                  {t("header.community")}
                                 </p>
 
                                 <div className={`relative w-6 h-6 xl:w-6 xl:h-6 overflow-hidden ${open && "-scale-y-100"}`}>
@@ -769,11 +770,11 @@ function Header() {
                             <Menu.Items>
                               <ul className="bg-eerie-black backdrop-blur-[28px] py-2 capitalize">
                                 <Menu.Item>
-                                  <SubMobileLink title={t('discord')} href="https://twitter.com/0xJoint" />
+                                  <SubMobileLink title={t("discord")} href="https://twitter.com/0xJoint" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title={t('twitter')} href="https://discord.gg/jfAPEjQ3HD" />
+                                  <SubMobileLink title={t("twitter")} href="https://discord.gg/jfAPEjQ3HD" />
                                 </Menu.Item>
                               </ul>
                             </Menu.Items>
@@ -783,7 +784,7 @@ function Header() {
 
                       <div className="max-w-[364px] 3xs:px-[40px] xs:px-[unset] w-full mx-auto mb-[50px] capitalize">
                         <Button
-                          label={t('header.start.trading')}
+                          label={t("header.start.trading")}
                           variant="primary"
                           onClick={() => undefined}
                           extraStyles="w-full"
@@ -801,7 +802,7 @@ function Header() {
 
             {/* HEADER CTA BUTTON - Starts */}
             <div className="hidden lg:block capitalize">
-              <Button label={t('header.trade')} variant="primary" href="/work-in-progress" />
+              <Button label={t("header.trade")} variant="primary" href="/work-in-progress" />
             </div>
             {/* HEADER CTA BUTTON - Ends */}
           </div>

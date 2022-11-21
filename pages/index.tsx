@@ -14,8 +14,9 @@ import Partners from "../components/Partners"
 import Footer from "../components/Footer"
 import NFT from "../components/NFT"
 
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => ({ props: { ...(await serverSideTranslations(locale, ["common"])) } })
+/* eslint-disable-next-line */
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: { ...(await serverSideTranslations(locale as string, ["common"])) },})
 
 const Home: NextPage = function () {
   return (

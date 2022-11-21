@@ -1,6 +1,6 @@
 import _ from "lodash"
 
-const localeInfo = {
+const localeInfo: any = {
   ar: {
     label: "عربى",
     key: "ar",
@@ -39,6 +39,6 @@ const localeInfo = {
   default: "Undefined ❌",
 }
 
-const getLocaleInfo: any = (locale: string) => (!_.isEmpty(localeInfo[locale]) ? localeInfo[locale] : localeInfo.default)
+const getLocaleInfo: any = (locale: string) => (!_.isEmpty(localeInfo[locale as string]) ? localeInfo[locale] : localeInfo.default)
 
 export default getLocaleInfo
