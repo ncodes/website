@@ -1,8 +1,5 @@
 import Image from "next/image"
 import { useTranslation } from "next-i18next"
-// import { Tab } from "@headlessui/react"
-
-import Button from "./Button"
 
 function NFT() {
   const { t } = useTranslation()
@@ -37,7 +34,15 @@ function NFT() {
           </p>
 
           <div className="text-center lg:text-left">
-            <Button label={t("nft.section.button")} variant="primary" onClick={() => undefined} />
+            <button
+              type="button"
+              className="bg-chinese-green px-10 rounded-lg font-mitr antialiased text-[18px]
+            tracking-[0.25px] text-eerie-black font-semibold
+             py-2.5"
+            >
+              {t("nft.section.button")}
+            </button>
+            {/* <Button label={t("nft.section.button")} variant="primary" onClick={() => undefined} /> */}
           </div>
         </div>
 
