@@ -87,13 +87,13 @@ const MenuItems = (t: any) => [
     href: "/work-in-progress",
   },
   {
-    title: t("mining"),
+    title: t("header.mining"),
     description: t("header.mining.description"),
     src: "/mining-menu.webp",
     href: "/work-in-progress",
   },
   {
-    title: t("rewards"),
+    title: t("header.rewards"),
     description: t("header.rewards.description"),
     src: "/reward-menu.webp",
     href: "/work-in-progress",
@@ -517,7 +517,7 @@ function Header() {
               {/* DEVELOPER MENU - Ends */}
 
               {/* FAQ MENU - Starts */}
-              <HeaderLink title="FAQs" href="/faq" />
+              <HeaderLink title={t("header.faqs")} href="/faq" />
 
               {/* FAQ MENU - Ends */}
 
@@ -642,6 +642,10 @@ function Header() {
 
                         <Menu.Item>
                           <MobileLink title={t("header.about")} href="/about" />
+                        </Menu.Item>
+
+                        <Menu.Item>
+                          <MobileLink title={t("header.faqs")} href="/faq" />
                         </Menu.Item>
 
                         <Menu as={Fragment}>

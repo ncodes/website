@@ -1,8 +1,9 @@
-/* eslint-disable max-len */
-import type { NextPage } from "next"
+/* eslint-disable max-len, object-curly-newline */
+import type { NextPage, GetStaticProps } from "next"
 import Head from "next/head"
 import Image from "next/image"
 import { Tab } from "@headlessui/react"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useSpring, animated } from "@react-spring/web"
 import { useState } from "react"
 import Header from "../components/Header"
@@ -40,6 +41,11 @@ type FaqListItemType = {
   category: string
   questions: Questions
 }
+
+/* eslint-disable-next-line */
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: { ...(await serverSideTranslations(locale as string, ["common"])) },
+})
 
 function TabSelector({ label, selected }: TabSelectorProps) {
   return (
@@ -138,55 +144,62 @@ const FAQ: NextPage = function () {
         {
           id: 2,
           title: "What can I do with Joint Protocol?",
-          content: "You can use the Joint protocol to exchange any cryptocurrency for local currencies. For example, you can exchange ETH/USDT/BTC for fiat using any payment method.",
+          content:
+            "You can use the Joint protocol to exchange any cryptocurrency for local currencies. For example, you can exchange ETH/USDT/BTC for fiat using any payment method.",
         },
         {
           id: 3,
           title: "What trading pairs are supported?",
-          content: "Joint Protocol allows anyone to create a market for any two ERC20 tokens. Furthermore, unlike centralized exchanges, Joint protocol has no trading pair limitation.",
+          content:
+            "Joint Protocol allows anyone to create a market for any two ERC20 tokens. Furthermore, unlike centralized exchanges, Joint protocol has no trading pair limitation.",
         },
         {
           id: 4,
           title: "Who are the protocol participants?",
-          content:"Protocol participants are persons or entities that work together to keep the protocol lively. These are the protocol participants "  +
-          "1. Market Creator - They create markets that can be traded on. " +
-          "2. Liquidity Provider - Adds and manages liquidity in a market. " +
-          "3. Liquidity Manager - Optionally granted the power to set or update a liquidity's price." +
-          "4. Mediator - Responsible for resolving disputes. " +
-          "5. Miner - Executes public operations (ex: drafting, un-drafting, vote execution etc.). " +
-          "6. Interface developer - Provides and manages an interface that allows users quickly access and use the protocol."
-          ,
+          content:
+            "Protocol participants are persons or entities that work together to keep the protocol lively. These are the protocol participants " +
+            "1. Market Creator - They create markets that can be traded on. " +
+            "2. Liquidity Provider - Adds and manages liquidity in a market. " +
+            "3. Liquidity Manager - Optionally granted the power to set or update a liquidity's price." +
+            "4. Mediator - Responsible for resolving disputes. " +
+            "5. Miner - Executes public operations (ex: drafting, un-drafting, vote execution etc.). " +
+            "6. Interface developer - Provides and manages an interface that allows users quickly access and use the protocol.",
         },
         {
           id: 5,
           title: "Who is a taker?",
-          content:"A taker (or swapper) is a person who swaps a quote asset for the base asset of any market.",
+          content: "A taker (or swapper) is a person who swaps a quote asset for the base asset of any market.",
         },
         {
           id: 6,
           title: "What is an Interface?",
-          content:"An interface is a dApp built on top of the Joint protocol. It can be a web or mobile application. Anyone can build an interface for the Joint protocol with additional features. The beauty of Joint protocol is that all interfaces intrinsically adhere to the protocol's censorship-resistant and non-custodial qualities. ",
+          content:
+            "An interface is a dApp built on top of the Joint protocol. It can be a web or mobile application. Anyone can build an interface for the Joint protocol with additional features. The beauty of Joint protocol is that all interfaces intrinsically adhere to the protocol's censorship-resistant and non-custodial qualities. ",
         },
         {
           id: 7,
           title: "Is KYC required?",
-          content:"As a collection of smart contracts deployed on the blockchain, the protocol does not require KYC registration. However, interface developers incorporated in regions where KYC is mandatory may require KYC. ",
+          content:
+            "As a collection of smart contracts deployed on the blockchain, the protocol does not require KYC registration. However, interface developers incorporated in regions where KYC is mandatory may require KYC. ",
         },
         {
           id: 8,
           title: "How are disputes resolved?",
-          content:"The Joint protocol comes with a decentralized dispute system that is open, transparent and simple to understand. When a dispute is raised, a minimum of 3 dispute resolvers (a.k.a. Mediators) are randomly drafted to the dispute, where they collect evidence and vote on a verdict. Mediators are paid by the protocol when they vote with the majority and are slashed when they vote with the minority. ",
+          content:
+            "The Joint protocol comes with a decentralized dispute system that is open, transparent and simple to understand. When a dispute is raised, a minimum of 3 dispute resolvers (a.k.a. Mediators) are randomly drafted to the dispute, where they collect evidence and vote on a verdict. Mediators are paid by the protocol when they vote with the majority and are slashed when they vote with the minority. ",
         },
         {
           id: 9,
           title: "Can I appeal the outcome of a dispute?",
-          content:"Yes! The resolution of a dispute can be appealed within a duration. Therefore, trade participants can perpetually re-appeal a dispute as long the appeal duration has not elapsed. However, to prevent the appeal system from being abused, it will cost a fee to appeal a resolved dispute. In fact, for every re-appeal made, the number of mediators drafted and the fee are doubled.",
+          content:
+            "Yes! The resolution of a dispute can be appealed within a duration. Therefore, trade participants can perpetually re-appeal a dispute as long the appeal duration has not elapsed. However, to prevent the appeal system from being abused, it will cost a fee to appeal a resolved dispute. In fact, for every re-appeal made, the number of mediators drafted and the fee are doubled.",
         },
         {
           id: 10,
           title: "How will Joint protocol be governed?",
-          content:"The Joint Labs team will initially develop the Joint Protocol. When the protocol matures, a co-governance system between the protocol inventors and the community will be set up to manage the protocol. Before maturity, Joint Labs will use snapshot for temperature and consensus checks.",
-        }
+          content:
+            "The Joint Labs team will initially develop the Joint Protocol. When the protocol matures, a co-governance system between the protocol inventors and the community will be set up to manage the protocol. Before maturity, Joint Labs will use snapshot for temperature and consensus checks.",
+        },
       ],
     },
     {
@@ -197,7 +210,7 @@ const FAQ: NextPage = function () {
           title: "Is Joint Protocol non-custodian?",
           // eslint-disable-next-line
           content:
-            "Yes. You will always control your assets in both open and closed markets. No one can prevent you from leaving a market at any time. Your asset leaves your wallet only when you enter a trade, and the smart contract escrow locks your asset until the trade is completed."
+            "Yes. You will always control your assets in both open and closed markets. No one can prevent you from leaving a market at any time. Your asset leaves your wallet only when you enter a trade, and the smart contract escrow locks your asset until the trade is completed.",
         },
         {
           id: 2,
@@ -207,17 +220,20 @@ const FAQ: NextPage = function () {
         {
           id: 3,
           title: "What happens if a counterparty refuses to release an asset?",
-          content: "You can start a dispute if you have made the payment requested in the swap order. Joint Protocol’s dispute system brings real humans into a dispute to verify why an asset has not been released or a payment has not been made. The dispute system will release the asset to you if the evidence indicates that you made a payment.",
+          content:
+            "You can start a dispute if you have made the payment requested in the swap order. Joint Protocol’s dispute system brings real humans into a dispute to verify why an asset has not been released or a payment has not been made. The dispute system will release the asset to you if the evidence indicates that you made a payment.",
         },
         {
           id: 4,
           title: "What happens if a counterparty does not make a payment?",
-          content: "Suppose a counterparty does not make payment (or mark the swap order as paid). In that case, Joint Protocol will eventually allow the swap order to be cancelled by you or the counterparty after some time elapses. However, you can start a dispute if the counterparty marks the swap order as paid, but you did not receive the payment. Joint Protocol’s dispute system brings real humans into the dispute to verify whether the payment was sent and received. The swap order will be cancelled if payment is not made. However, if it was decided that payment was made, the asset is released to the counterparty.",
+          content:
+            "Suppose a counterparty does not make payment (or mark the swap order as paid). In that case, Joint Protocol will eventually allow the swap order to be cancelled by you or the counterparty after some time elapses. However, you can start a dispute if the counterparty marks the swap order as paid, but you did not receive the payment. Joint Protocol’s dispute system brings real humans into the dispute to verify whether the payment was sent and received. The swap order will be cancelled if payment is not made. However, if it was decided that payment was made, the asset is released to the counterparty.",
         },
         {
           id: 5,
           title: "Are users on Joint Protocol verified?",
-          content: "Joint Protocol includes a verification protocol that allows verification service providers to offer Joint Protocol different verification types. Users may use the verification system to get verified for KYC as a token holder, a DAO member, and so on. Market creators and users can filter users based on what verification matters to them. For example, if you wish to swap with KYC-verified users, you can filter markets and liquidity providers by such preference.",
+          content:
+            "Joint Protocol includes a verification protocol that allows verification service providers to offer Joint Protocol different verification types. Users may use the verification system to get verified for KYC as a token holder, a DAO member, and so on. Market creators and users can filter users based on what verification matters to them. For example, if you wish to swap with KYC-verified users, you can filter markets and liquidity providers by such preference.",
         },
       ],
     },
