@@ -128,4 +128,4 @@ const About: NextPage = function () {
   )
 }
 
-export default About
+export default about
