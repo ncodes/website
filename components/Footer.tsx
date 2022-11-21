@@ -81,7 +81,6 @@ function Footer() {
             <IconLink alt="linkedin" src="/icons/linkedin.png" width={18} height={18} href="https://www.linkedin.com/company/jointlabs/" />
             <IconLink alt="reddit" src="/icons/reddit.png" width={18} height={18} href="/" />
             <IconLink alt="twitter" src="/icons/twitter.png" width={18} height={21} href="https://twitter.com/0xJoint" />
-            <IconLink alt="wechat" src="/icons/wechat.png" width={18} height={21} href="/" />
             <IconLink alt="youtube" src="/icons/youtube.png" width={18} height={25} href="/" />
             <IconLink alt="discord" src="/icons/discord.png" width={18} height={16} href="https://discord.gg/jfAPEjQ3HD" />
           </div>
