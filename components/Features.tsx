@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { useTranslation } from "next-i18next"
 
 type FeaturesItemProps = {
   imageSrc: string
@@ -32,6 +33,7 @@ function FeaturesItem({ imageSrc, title, description }: FeaturesItemProps) {
 }
 
 function Features() {
+  const { t } = useTranslation()
   return (
     <section
       className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full
@@ -43,19 +45,19 @@ function Features() {
           className="font-mitr antialiased font-normal text-center text-white text-[14px]
           lg:text-[16px] leading-6 mb-0 lg:mb-[6px]"
         >
-          MOST POWERFUL P2P TRADING ENGINE
+          {t("features.most.powerful")}
         </p>
         <p
           className="font-mitr antialiased font-semibold text-center text-white text-[48px] lg:text-[72px]
           leading-[56px] lg:leading-[72px] w-auto mx-auto mb-4 sm:w-[316px] md:w-[410px] lg:mb-6 lg:w-[570px] xl:w-full"
         >
-          The future of P2P trading
+          {t("features.the.future")}
         </p>
         <p
           className="font-mitr antialiased font-light text-center
           text-white text-[16px] leading-6 mx-auto w-[293px] xl:w-auto"
         >
-          Joint protocol is designed to replace centralized P2P trading platforms
+          {t("features.joint.protocol")}
         </p>
       </div>
 
@@ -64,52 +66,40 @@ function Features() {
       {/*   w-auto xl:w-[1120px] justify-center md:justify-[unset] mx-auto mt-[100px] md:mt-[60px] lg:mt-[100px]" */}
       {/* > */}
       <div className="w-auto xl:w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-7 mt-10">
-        <FeaturesItem
-          imageSrc="/fees.webp"
-          title="Low Fees"
-          description="Trading fees are lower, predictable and subsidized via protocol trading rewards."
-        />
+        <FeaturesItem imageSrc="/fees.webp" title={t("features.low.fees")} description={t("features.low.fees.description")} />
 
-        <FeaturesItem
-          imageSrc="/multi-chain.webp"
-          title="Multi-chain"
-          description="We support multiple EVM-based chains via cross-chain P2P bridges."
-        />
+        <FeaturesItem imageSrc="/multi-chain.webp" title={t("features.multi.chain")} description={t("features.multi.chain.description")} />
 
         <FeaturesItem
           imageSrc="/uncapped-volume.webp"
-          title="Uncapped Volume"
-          description="No trade volume limitations are imposed by the protocol. Access unlimited liquidity."
+          title={t("features.uncapped.volume")}
+          description={t("features.uncapped.volume.description")}
         />
 
-        <FeaturesItem
-          imageSrc="/privacy.webp"
-          title="Privacy"
-          description="No KYC requirements are imposed by the protocol. Your right to privacy is protected."
-        />
+        <FeaturesItem imageSrc="/privacy.webp" title={t("features.privacy")} description={t("features.privacy.description")} />
 
         <FeaturesItem
           imageSrc="/unlimited-liquidity.webp"
-          title="Unlimited Liquidity"
-          description="Unlimited liquidity provided by users and accessible from anywhere in the world."
+          title={t("features.unlimited.liquidity")}
+          description={t("features.unlimited.liquidity.description")}
         />
 
         <FeaturesItem
           imageSrc="/no-platform-risk.webp"
-          title="No Platform-risk"
-          description="Joint Protocol is completely non-custodian. No one can control or lock your funds."
+          title={t("features.no.platform.risk")}
+          description={t("features.no.platform.risk.description")}
         />
 
         <FeaturesItem
           imageSrc="/encrypted-messaging.webp"
-          title="Encrypted Messaging"
-          description="Communicate with traders securely with end-to-end encryption messaging system."
+          title={t("features.encrypted.messaging")}
+          description={t("features.encrypted.messaging.description")}
         />
 
         <FeaturesItem
           imageSrc="/trading-reward.webp"
-          title="Trading Reward"
-          description="Earn rewards when you trade, provide liquidity or become a miner."
+          title={t("features.trading.reward")}
+          description={t("features.trading.reward.description")}
         />
       </div>
 

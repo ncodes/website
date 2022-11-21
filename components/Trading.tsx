@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useTranslation } from "next-i18next"
 
 type HeroLinkProps = {
   title: string
@@ -26,6 +27,7 @@ function TradingLink({ title, href, target }: HeroLinkProps) {
 }
 
 function Trading() {
+  const { t } = useTranslation()
   return (
     <section
       className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full
@@ -39,21 +41,19 @@ function Trading() {
           lg:text-left leading-[56px] lg:leading-[72px] mb-[24px]
           lg:mb-[30px] xl:mb-[30px] w-[265px] mx-auto sm:mx-[unset] sm:w-full"
           >
-            Unbounded P2P Trading
+            {t("trading.unbounded")}
           </p>
           <p
             className="font-mitr antialiased font-light text-[16px]
            text-white leading-6 mb-9 lg:mb-8 text-center
            lg:text-left w-full lg:w-[440px] px-10 xs:px-0 3xs:px-0 sm:px-6 lg:px-0"
           >
-            Joint is a decentralized peer-to-peer trading protocol that allows you to trade cryptocurrencies for cash or cash for
-            cryptocurrencies directly with liquidity providers. No middleperson. Joint is enabled by a series of smart contracts that
-            together create an unstoppable trading engine.
+            {t("trading.joint")}
           </p>
 
           <div className="flex flex-row gap-x-[30px] justify-center lg:justify-start">
-            <TradingLink title="Visit Exchange" href="https://app.joint.exchange" target="_blank" />
-            <TradingLink title="Join Discord" href="https://discord.gg/jfAPEjQ3HD" target="_blank" />
+            <TradingLink title={t("trading.visit.exchange")} href="https://app.joint.exchange" target="_blank" />
+            <TradingLink title={t("trading.join.discord")} href="https://discord.gg/jfAPEjQ3HD" target="_blank" />
           </div>
         </div>
 

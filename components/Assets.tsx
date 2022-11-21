@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useTranslation } from "next-i18next"
 
 function AssetItem() {
   return (
@@ -52,6 +53,7 @@ function AssetItem() {
 }
 
 function Assets() {
+  const { t } = useTranslation()
   return (
     <section
       className="hidden container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px]
@@ -62,19 +64,17 @@ function Assets() {
           className="font-mitr antialiased font-normal text-center text-white text-[14px]
           leading-[17.64px] mb-0 lg:mb-[6px]"
         >
-          FEATURED MARKETS
+          {t("assets.featured.markets")}
         </p>
         <Link href="/work-in-progress">
           <p
             className="font-mitr antialiased font-semibold text-center text-white text-[48px]
           lg:text-[72px] leading-[56px] lg:leading-[72px] mb-4 lg:mb-6"
           >
-            Start trading today
+            {t("assets.start.trading")}
           </p>
         </Link>
-        <p className="font-mitr antialiased font-light text-center text-white text-[16px] leading-6">
-          Pick an asset to begin trading without limits
-        </p>
+        <p className="font-mitr antialiased font-light text-center text-white text-[16px] leading-6">{t("assets.pick.an.asset")}</p>
       </div>
 
       <div

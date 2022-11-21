@@ -2,6 +2,7 @@
 import { useState, ReactFragment } from "react"
 import { Tab } from "@headlessui/react"
 import Image from "next/image"
+import { useTranslation } from "next-i18next"
 
 type TabSelectorProps = {
   label: string
@@ -100,59 +101,60 @@ function Swap({ instantSwapInformation, cashSwapInformation }: SwapProps) {
 }
 
 function HowItWorks() {
+  const { t } = useTranslation()
   const [selected, setSelected] = useState("buy")
 
   const buyInformation = [
     {
       icon: "/cart-icon.png",
-      title: "Find a market",
-      content: "Choose from a variety of market pairs between cryptocurrency and fiat currencies.",
+      title: t("howitworks.find.a.market"),
+      content: t("howitworks.find.a.market.content"),
     },
     {
       icon: "/seller-icon.png",
-      title: "Select Seller",
-      content: "Browse liquidity providers in the market and pick your choice based on their success rate.",
+      title: t("howitworks.select.seller"),
+      content: t("howitworks.select.seller.content"),
     },
     {
       icon: "/amount-icon.png",
-      title: "Set an Amount",
-      content: "Enter the amount of liquidity you want from the liquidity provider.",
+      title: t("howitworks.set.amount"),
+      content: t("howitworks.set.amount.content"),
     },
     {
       icon: "/swap-icon.png",
-      title: "Create Swap",
-      content: "Swap between on-chain assets is instantaneous, others will start a P2P order",
+      title: t("howitworks.create.swap"),
+      content: t("howitworks.create.swap.content"),
     },
   ]
 
   const sellInformation = [
     {
       icon: "/cart-icon.png",
-      title: "Find a market",
-      content: "Choose from a variety of market pairs between cryptocurrencies and fiat currencies.",
+      title: t("howitworks.find.a.market"),
+      content: t("howitworks.find.a.market.content"),
     },
     {
       icon: "/liquidity-icon.png",
-      title: "Add Liquidity",
-      content: "Connect your wallets and deposit any amount of the market's base asset (crypto or cash).",
+      title: t("howitworks.add.liquidity"),
+      content: t("howitworks.add.liquidity.content"),
     },
     {
       icon: "/swaps-icon.png",
-      title: "Accept Swaps",
-      content: "Swap between on-chain assets is instantaneous, others will start a P2P order.",
+      title: t("howitworks.accept.swaps"),
+      content: t("howitworks.accept.swaps.content"),
     },
   ]
 
   const instantSwapInformation = [
-    "Maker receives quote asset instantly",
-    "Buyer receives base asset instantly",
-    "Maker and Buyer receive trade reward",
+    t("howitworks.instantswapinformation.one"),
+    t("howitworks.instantswapinformation.two"),
+    t("howitworks.instantswapinformation.three"),
   ]
 
   const cashSwapInformation = [
-    "Party with cash sends payment and waits for confirmation",
-    "Party with on-chain asset verifies payment and release asset.",
-    "Both parties receive trade reward from the protocol.",
+    t("howitworks.cashswapinformation.one"),
+    t("howitworks.cashswapinformation.two"),
+    t("howitworks.cashswapinformation.three"),
   ]
 
   return (
@@ -165,14 +167,14 @@ function HowItWorks() {
           className="font-mitr antialiased font-light text-center text-white text-[14px]
           mb-[16px]"
         >
-          IT&apos;S FAMILIAR, BUT DECENTRALIZED AND BETTER
+          {t("howitworks.its.familiar")}
         </p>
         <p
           className="font-mitr antialiased font-semibold text-center text-white text-[48px]
           lg:text-[72px] leading-[56px] lg:leading-[72px] w-auto mx-auto
           sm:w-[316px] md:w-[410px] lg:w-[570px] xl:w-full"
         >
-          How it Works
+          {t("howitworks.how.it.works")}
         </p>
       </div>
 
