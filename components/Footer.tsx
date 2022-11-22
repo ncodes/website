@@ -94,11 +94,11 @@ function Footer() {
           <div className="flex flex-col mx-auto items-center md:items-start">
             <FooterTitle label={t("footer.section.company")} />
             <ul className="flex flex-col gap-y-[10px] list-none">
-              <FooterLink title={t("discord")} href="/about" />
+              <FooterLink title={t("discord")} href="https://discord.gg/jfAPEjQ3HD" />
               <FooterLink title={t("twitter")} href="https://twitter.com/0xJoint" />
-              <FooterLink title={t("footer.link.blog")} href="https://medium.com/0xjoint" />
+              <FooterLink title={t("footer.link.blog")} href="https://medium.com/0xJoint" />
               {/* <FooterLink title="Media" href="#" /> */}
-              {/* <FooterLink title="FAQ" href="/faq" /> */}
+               <FooterLink title="FAQ" href="/faq" />
             </ul>
           </div>
 
