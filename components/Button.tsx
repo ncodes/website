@@ -21,7 +21,6 @@ function Button({ small, label, variant, onClick, alignStyle = null, extraStyles
                 hover:shadow-[0px_11px_24px_-6px_rgba(131,164,34,1)]`
               : ""
           }`}
-        type="button"
         href={href}
         onClick={onClick}
       >
