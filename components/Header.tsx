@@ -780,11 +780,11 @@ function Header() {
                             <Menu.Items>
                               <ul className="bg-eerie-black backdrop-blur-[28px] py-2 capitalize">
                                 <Menu.Item>
-                                  <SubMobileLink title={t("discord")} href="https://twitter.com/0xJoint" />
+                                  <SubMobileLink title={t("discord")} href="https://discord.gg/jfAPEjQ3HD" />
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                  <SubMobileLink title={t("twitter")} href="https://discord.gg/jfAPEjQ3HD" />
+                                  <SubMobileLink title={t("twitter")} href="https://twitter.com/0xJoint" />
                                 </Menu.Item>
                               </ul>
                             </Menu.Items>

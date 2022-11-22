@@ -459,7 +459,7 @@ const FAQ: NextPage = function () {
             <Tab.List
               as="div"
               className="flex flex-row gap-x-[12px] sm:gap-x-[24px] overflow-x-auto no-scrollbar whitespace-nowrap
-               justify-center pl-[50px] md:pl-[30px] 2xs:pl-0 mb-[45px] lg:mb-[50px] gap-y-[15px] sm:gap-y-[25px] lg:px-10"
+              justify-start md:justify-center md:pl-[30px] mb-[45px] lg:mb-[50px] gap-y-[15px] sm:gap-y-[25px] lg:px-10"
             >
               {faqInformation?.map((item) => (
                 <Tab key={Math.random() * Math.random()} onClick={() => setSelectedFaq({ id: 0, open: false })}>
