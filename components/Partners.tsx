@@ -1,13 +1,17 @@
-import Image from 'next/image'
+import Image from "next/image"
+import { useTranslation } from "next-i18next"
 
 type IconLinkProps = {
   src: string
   alt: string
 }
 
-const IconLink = ({ src, alt }: IconLinkProps) => {
+function IconLink({ src, alt }: IconLinkProps) {
   return (
-    <div className="flex flex-[0_0_33.3%] sm:flex-[0_0_25%] md:flex-[0_0_16.6%] xl:flex-[0_0_10%] justify-center">
+    <div
+      className="flex flex-[0_0_33.3%] sm:flex-[0_0_25%]
+      md:flex-[0_0_16.6%] xl:flex-[0_0_10%] justify-center"
+    >
       <Image
         className="cursor-pointer opacity-[0.35] hover:opacity-100"
         alt={alt}
@@ -21,19 +25,33 @@ const IconLink = ({ src, alt }: IconLinkProps) => {
   )
 }
 
-const Partners = () => {
+function Partners() {
+  const { t } = useTranslation()
+
   return (
-    <section className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px] mx-auto mb-[100px] lg:mb-[150px]">
+    <section
+      className="hidden container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full
+      3xs:px-[10px] 2xs:px-[15px] mx-auto mb-[100px] lg:mb-[150px]"
+    >
       <div className="mb-[100px]">
-        <p className="font-['Satoshi'] antialiased font-bold text-center text-white text-[48px] lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-4 lg:mb-6">
-          Partners
+        <p
+          className="font-mitr antialiased font-semibold text-center text-white text-[48px] lg:text-[72px]
+         -tracking-[0.6px] lg:-tracking-[0.9px] leading-[56px] lg:leading-[72px] mb-4 lg:mb-6"
+        >
+          {t("about.partners.title")}
         </p>
-        <p className="font-['Raleway'] antialiased font-regular text-[16px] text-white tracking-[0.22px] text-center w-[325px] xl:w-auto mx-auto">
-          We are backed by the latest and best technology partners.
+        <p
+          className="font-mitr antialiased font-light text-[16px] text-white
+          tracking-[0.22px] text-center w-[325px] xl:w-auto mx-auto"
+        >
+          {t("about.partners.subtitle")}
         </p>
       </div>
 
-      <div className="flex flex-wrap mx-auto px-[50px] md:w-[750px] lg:w-[850px] xl:w-[1010px] gap-y-[62px] justify-start md:justify-center lg:justify-center">
+      <div
+        className="flex flex-wrap mx-auto px-[50px] md:w-[750px] lg:w-[850px]
+        xl:w-[1010px] gap-y-[62px] justify-start md:justify-center lg:justify-center"
+      >
         <IconLink alt="vechain" src="/icons/vechain.png" />
 
         <IconLink alt="neo" src="/icons/neo.png" />

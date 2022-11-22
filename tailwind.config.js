@@ -8,23 +8,29 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    colors: {
-      'rich-black': '#030507',
-      'eerie-black': '#0B1727',
-      'jet-black': '#060C13',
-      'rich-blue': '#07101D',
-      'blue-jeans': '#5AC1ED',
-      'chinese-green': '#C8ED5A',
-      'space-cadet': '#1B304B',
-      white: '#FFFFFF'
-    },
     screens: {
       '3xs': '320px',
       '2xs': '375px',
       xs: '425px',
       ...defaultTheme.screens
     },
-    extend: {}
+    extend: {
+      colors: {
+        'rich-black': '#030507',
+        'eerie-black': '#0B1727',
+        'jet-black': '#060C13',
+        'rich-blue': '#07101D',
+        'blue-jeans': '#5AC1ED',
+        'chinese-green': '#C8ED5A',
+        'chinese-green-border': 'rgba(200, 237, 90, 0.2)',
+        'space-cadet': '#1B304B',
+        white: '#FFFFFF',
+        'green-border-opacity': 'rgba(200, 237, 90, 0.2)'
+      },
+      fontFamily: {
+        'mitr': ['Mitr', ' sans-serif'],
+      },
+    }
   },
   plugins: []
 }

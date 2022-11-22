@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2431px" height="1751px" viewBox="0 0 2431 1751" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 3</title>
+    <defs>
+        <filter x="-12.4%" y="-25.8%" width="124.9%" height="151.6%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="60" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.4%" y="-25.8%" width="124.9%" height="151.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="60" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.4%" y="-25.8%" width="124.9%" height="151.6%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="60" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.4%" y="-25.8%" width="124.9%" height="151.6%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="60" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.0744389125">
+        <g id="Home" transform="translate(256.000000, -3990.000000)" fill-rule="nonzero">
+            <g id="Group-3" transform="translate(-76.000000, 4170.000000)">
+                <path d="M0,0 L153.69808,0 C569.135293,0 964.265592,170.810467 1237.30923,468.43314 L1447,697 L1447,697 L639.438565,697 L0,0 Z" id="Rectangle" fill="#00668E" filter="url(#filter-1)"></path>
+                <path d="M624,0 L777.698065,0 C1193.13529,0 1588.2656,170.810467 1861.30924,468.43314 L2071,697 L2071,697 L1263.43857,697 L624,0 Z" id="Rectangle-Copy" fill="#C8ED5A" filter="url(#filter-2)" transform="translate(1347.500000, 348.500000) scale(-1, 1) translate(-1347.500000, -348.500000) "></path>
+                <path d="M0,694 L153.69808,694 C569.135293,694 964.265592,864.810467 1237.30923,1162.43314 L1447,1391 L1447,1391 L639.438565,1391 L0,694 Z" id="Rectangle" fill="#EBA400" filter="url(#filter-3)" transform="translate(723.500000, 1042.500000) scale(-1, 1) rotate(-180.000000) translate(-723.500000, -1042.500000) "></path>
+                <path d="M624,694 L777.698065,694 C1193.13529,694 1588.2656,864.810467 1861.30924,1162.43314 L2071,1391 L2071,1391 L1263.43857,1391 L624,694 Z" id="Rectangle-Copy" fill="#1B304B" filter="url(#filter-4)" transform="translate(1347.500000, 1042.500000) rotate(180.000000) translate(-1347.500000, -1042.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

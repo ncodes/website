@@ -1,32 +1,38 @@
+// eslint-disable import/namespace, import/default
 type ButtonProps = {
   small?: boolean
   label: string
-  variant: 'primary'
-  onClick: () => void
+  variant: "primary"
+  onClick?: (e: any) => void
   extraStyles?: any
+  href?: string
 }
 
-const Button = ({
-  small,
-  label,
-  variant,
-  onClick,
-  extraStyles = null
-}: ButtonProps) => {
+function Button({ small, label, variant, onClick, extraStyles = null, href }: ButtonProps) {
   return (
-    <button
-      className={`border-0 ${extraStyles} ${small ? 'h-[45px]' : 'h-[50px]'}
+    <a
+      className={`border-0 ${extraStyles} ${small ? "h-[45px]" : "h-[50px]"}
         ${
-          variant === 'primary'
-            ? 'bg-chinese-green px-10 rounded-lg font-[Satoshi] antialiased text-[18px] tracking-[0.25px] text-eerie-black font-bold hover:shadow-[0px_11px_24px_-6px_rgba(131,164,34,1)]'
-            : ''
+          variant === "primary"
+            ? `px-10 text-center bg-chinese-green rounded-lg font-mitr antialiased text-[18px]
+            tracking-[0.25px] text-eerie-black font-semibold
+            hover:shadow-[0px_11px_24px_-6px_rgba(131,164,34,1)] pt-2.5`
+            : ""
         }`}
       type="button"
+      href={href}
       onClick={onClick}
     >
       {label}
-    </button>
+    </a>
   )
+}
+
+Button.defaultProps = {
+  small: null,
+  extraStyles: null,
+  onClick: () => {},
+  href: "",
 }
 
 export default Button

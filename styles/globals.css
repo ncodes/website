@@ -25,50 +25,43 @@ a {
   user-select: none;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.asset-item:nth-child(1n) {
+  border: 1px solid #5AA0DB;
+}
+.asset-item:nth-child(2n) {
+  border: 1px solid #1B304B;
+}
+.asset-item:nth-child(3n) {
+  border: 1px solid #6E2F9F;
+}
+.asset-item:nth-child(4n) {
+  border: 1px solid #BE4C50;
+}
+.asset-item:nth-child(5n) {
+  border: 1px solid #055613;
+}
+
+.break-word {
+  word-break: break-word
+}
+
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply bg-rich-black;
   }
-
-  @font-face {
-    font-family: 'Satoshi';
-    font-weight: 400;
-    font-style: normal;
-    src: url('/fonts/satoshi/regular.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Satoshi';
-    font-weight: 500;
-    font-style: normal;
-    src: url('/fonts/satoshi/medium.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Satoshi';
-    font-weight: 700;
-    font-style: normal;
-    src: url('/fonts/satoshi/bold.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Satoshi';
-    font-weight: 900;
-    font-style: normal;
-    src: url('/fonts/satoshi/black.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Raleway';
-    font-weight: 400;
-    font-style: normal;
-    src: url('/fonts/raleway/regular.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Raleway';
-    font-weight: 500;
-    font-style: normal;
-    src: url('/fonts/raleway/medium.ttf') format('truetype');
-  }
 }
+
