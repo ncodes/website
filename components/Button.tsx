@@ -11,7 +11,7 @@ type ButtonProps = {
 function Button({ small, label, variant, onClick, extraStyles = null, href }: ButtonProps) {
   return (
     <a
-      className={`border-0 ${extraStyles} ${small ? "h-[45px]" : "h-[50px]"}
+      className={`border-0 ${extraStyles} ${small ? "h-[45px]" : "h-auto"}
         ${
           variant === "primary"
             ? `px-10 text-center bg-chinese-green rounded-lg font-mitr antialiased text-[18px]
