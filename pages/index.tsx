@@ -3,6 +3,7 @@ import type { NextPage, GetStaticProps } from "next"
 import Head from "next/head"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
+import Script from "next/script"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
 import Statistics from "../components/Statistics"
@@ -27,6 +28,17 @@ const Home: NextPage = function () {
         <title>Home | Joint Protocol</title>
         <link rel="icon" href="./favicon.ico" />
       </Head>
+
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-9SX3SC9XGN" strategy="afterInteractive" />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-9SX3SC9XGN');
+        `}
+      </Script>
 
       <section id="page-header-hero">
         <div className="bg-repeat bg-[url('/mobile-stars.webp')] bg-contain bg-top xl:bg-bottom w-full">
