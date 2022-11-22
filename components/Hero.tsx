@@ -66,6 +66,7 @@ function Hero() {
             label={t("hero.start.trading")}
             variant="primary"
             onClick={() => undefined}
+            alignStyle="mx-auto xl:mx-0"
             extraStyles="w-[246px] px-0"
             href="/work-in-progress"
           />

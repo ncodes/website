@@ -262,6 +262,7 @@ function Rewards() {
           variant="primary"
           onClick={() => undefined}
           href="https://docs.joint.exchange/learn/rewards"
+          alignStyle="mx-auto"
           extraStyles={cn("w-[246px]", { "px-0": locale === "fr" || locale === "ru" })}
         />
       </div>
