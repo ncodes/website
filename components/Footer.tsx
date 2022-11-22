@@ -98,7 +98,7 @@ function Footer() {
               <FooterLink title={t("twitter")} href="https://twitter.com/0xJoint" />
               <FooterLink title={t("footer.link.blog")} href="https://medium.com/0xJoint" />
               {/* <FooterLink title="Media" href="#" /> */}
-               <FooterLink title="FAQ" href="/faq" />
+              <FooterLink title="FAQ" href="/faq" />
             </ul>
           </div>
 
