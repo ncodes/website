@@ -220,34 +220,202 @@ const FAQ: NextPage = function () {
       ],
     },
     {
-      category: t("faqs.nft"),
+      category: t("faqs.markets"),
       questions: [
         {
           id: 1,
-          title: t("faqs.nft.questions.one.title"),
+          title: t("faqs.markets.questions.one.title"),
           // eslint-disable-next-line
-          content: t("faqs.nft.questions.one.content"),
+          content: t("faqs.markets.questions.one.content"),
         },
         {
           id: 2,
-          title: t("faqs.nft.questions.two.title"),
-          content: t("faqs.nft.questions.two.content"),
+          title: t("faqs.markets.questions.two.title"),
+          content: t("faqs.markets.questions.two.content"),
+        },
+        {
+          id: 3,
+          title: t("faqs.markets.questions.three.title"),
+          // eslint-disable-next-line
+          content: t("faqs.markets.questions.three.content"),
+        },
+        {
+          id: 4,
+          title: t("faqs.markets.questions.four.title"),
+          content: t("faqs.markets.questions.four.content"),
+        },
+        {
+          id: 5,
+          title: t("faqs.markets.questions.five.title"),
+          content: t("faqs.markets.questions.five.content"),
         },
       ],
     },
     {
-      category: t("faqs.reward"),
+      category: t("faqs.liquidity"),
       questions: [
         {
           id: 1,
-          title: t("faqs.reward.questions.one.title"),
+          title: t("faqs.liquidity.questions.one.title"),
           // eslint-disable-next-line
-          content: t("faqs.reward.questions.one.content"),
+          content: t("faqs.liquidity.questions.one.content"),
         },
         {
           id: 2,
-          title: t("faqs.reward.questions.two.title"),
-          content: t("faqs.reward.questions.two.content"),
+          title: t("faqs.liquidity.questions.two.title"),
+          content: t("faqs.liquidity.questions.two.content"),
+        },
+        {
+          id: 3,
+          title: t("faqs.liquidity.questions.three.title"),
+          // eslint-disable-next-line
+          content: t("faqs.liquidity.questions.three.content"),
+        },
+        {
+          id: 4,
+          title: t("faqs.liquidity.questions.four.title"),
+          content: t("faqs.liquidity.questions.four.content"),
+        },
+        {
+          id: 5,
+          title: t("faqs.liquidity.questions.five.title"),
+          // eslint-disable-next-line
+          content: t("faqs.liquidity.questions.five.content"),
+        },
+        {
+          id: 6,
+          title: t("faqs.liquidity.questions.six.title"),
+          content: t("faqs.liquidity.questions.six.content"),
+        },
+        {
+          id: 7,
+          title: t("faqs.liquidity.questions.seven.title"),
+          // eslint-disable-next-line
+          content: t("faqs.liquidity.questions.seven.content"),
+        },
+        {
+          id: 8,
+          title: t("faqs.liquidity.questions.eight.title"),
+          content: t("faqs.liquidity.questions.eight.content"),
+        },
+        {
+          id: 9,
+          title: t("faqs.liquidity.questions.nine.title"),
+          content: t("faqs.liquidity.questions.nine.content"),
+        },
+      ],
+    },
+    {
+      category: t("faqs.mediation"),
+      questions: [
+        {
+          id: 1,
+          title: t("faqs.mediation.questions.one.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.one.content"),
+        },
+        {
+          id: 2,
+          title: t("faqs.mediation.questions.two.title"),
+          content: t("faqs.mediation.questions.two.content"),
+        },
+        {
+          id: 3,
+          title: t("faqs.mediation.questions.three.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.three.content"),
+        },
+        {
+          id: 4,
+          title: t("faqs.mediation.questions.four.title"),
+          content: t("faqs.mediation.questions.four.content"),
+        },
+        {
+          id: 5,
+          title: t("faqs.mediation.questions.five.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.five.content"),
+        },
+        {
+          id: 6,
+          title: t("faqs.mediation.questions.six.title"),
+          content: t("faqs.mediation.questions.six.content"),
+        },
+        {
+          id: 7,
+          title: t("faqs.mediation.questions.seven.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.seven.content"),
+        },
+        {
+          id: 8,
+          title: t("faqs.mediation.questions.eight.title"),
+          content: t("faqs.mediation.questions.eight.content"),
+        },
+        {
+          id: 9,
+          title: t("faqs.mediation.questions.nine.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.nine.content"),
+        },
+        {
+          id: 10,
+          title: t("faqs.mediation.questions.ten.title"),
+          content: t("faqs.mediation.questions.ten.content"),
+        },
+        {
+          id: 11,
+          title: t("faqs.mediation.questions.eleven.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.eleven.content"),
+        },
+        {
+          id: 12,
+          title: t("faqs.mediation.questions.twelve.title"),
+          content: t("faqs.mediation.questions.twelve.content"),
+        },
+        {
+          id: 13,
+          title: t("faqs.mediation.questions.thirteen.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.thirteen.content"),
+        },
+        {
+          id: 14,
+          title: t("faqs.mediation.questions.fourteen.title"),
+          content: t("faqs.mediation.questions.fourteen.content"),
+        },
+        {
+          id: 15,
+          title: t("faqs.mediation.questions.fiveteen.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.fiveteen.content"),
+        },
+        {
+          id: 16,
+          title: t("faqs.mediation.questions.sixteen.title"),
+          content: t("faqs.mediation.questions.sixteen.content"),
+        },
+      ],
+    },
+    {
+      category: t("faqs.miners"),
+      questions: [
+        {
+          id: 1,
+          title: t("faqs.miners.questions.one.title"),
+          // eslint-disable-next-line
+          content: t("faqs.miners.questions.one.content"),
+        },
+        {
+          id: 2,
+          title: t("faqs.miners.questions.two.title"),
+          content: t("faqs.miners.questions.two.content"),
+        },
+        {
+          id: 3,
+          title: t("faqs.miners.questions.three.title"),
+          content: t("faqs.miners.questions.three.content"),
         },
       ],
     },
