@@ -517,7 +517,7 @@ function Header() {
               {/* DEVELOPER MENU - Ends */}
 
               {/* FAQ MENU - Starts */}
-              {/* <HeaderLink title={t("header.faqs")} href="/faq" /> */}
+              <HeaderLink title={t("header.faqs")} href="/faq" />
 
               {/* FAQ MENU - Ends */}
 
@@ -644,9 +644,9 @@ function Header() {
                           <MobileLink title={t("header.about")} href="/about" />
                         </Menu.Item> */}
 
-                        {/*  <Menu.Item>
+                        <Menu.Item>
                           <MobileLink title={t("header.faqs")} href="/faq" />
-                        </Menu.Item> */}
+                        </Menu.Item>
 
                         <Menu as={Fragment}>
                           <Menu.Button>

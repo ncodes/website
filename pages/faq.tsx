@@ -3,6 +3,7 @@ import type { NextPage, GetStaticProps } from "next"
 import Head from "next/head"
 import Image from "next/image"
 import { Tab } from "@headlessui/react"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useSpring, animated } from "@react-spring/web"
 import { useState } from "react"
@@ -124,6 +125,7 @@ function AccordionContent({ children }: AccordionContentProps) {
 }
 
 const FAQ: NextPage = function () {
+  const { t } = useTranslation()
   const [selectedFaq, setSelectedFaq] = useState({
     id: 0,
     open: false,
@@ -131,145 +133,289 @@ const FAQ: NextPage = function () {
 
   const faqInformation: FaqListItemType[] = [
     {
-      category: "General",
+      category: t("faqs.general"),
       questions: [
         {
           id: 1,
-          title: "What is Joint Protocol?",
+          title: t("faqs.general.questions.one.title"),
           // eslint-disable-next-line
-          content:
-            "The Joint protocol is a collection of smart contracts that work together to allow users to trade cryptocurrencies for fiat." +
-            "The Joint protocol is the decentralized equivalent of P2P exchanges like Localbitcoin and Binance..",
+          content: t("faqs.general.questions.one.content"),
         },
         {
           id: 2,
-          title: "What can I do with Joint Protocol?",
-          content:
-            "You can use the Joint protocol to exchange any cryptocurrency for local currencies. For example, you can exchange ETH/USDT/BTC for fiat using any payment method.",
+          title: t("faqs.general.questions.two.title"),
+          content: t("faqs.general.questions.two.content"),
         },
         {
           id: 3,
-          title: "What trading pairs are supported?",
-          content:
-            "Joint Protocol allows anyone to create a market for any two ERC20 tokens. Furthermore, unlike centralized exchanges, Joint protocol has no trading pair limitation.",
+          title: t("faqs.general.questions.three.title"),
+          content: t("faqs.general.questions.three.content"),
         },
         {
           id: 4,
-          title: "Who are the protocol participants?",
-          content:
-            "Protocol participants are persons or entities that work together to keep the protocol lively. These are the protocol participants " +
-            "1. Market Creator - They create markets that can be traded on. " +
-            "2. Liquidity Provider - Adds and manages liquidity in a market. " +
-            "3. Liquidity Manager - Optionally granted the power to set or update a liquidity's price." +
-            "4. Mediator - Responsible for resolving disputes. " +
-            "5. Miner - Executes public operations (ex: drafting, un-drafting, vote execution etc.). " +
-            "6. Interface developer - Provides and manages an interface that allows users quickly access and use the protocol.",
+          title: t("faqs.general.questions.four.title"),
+          content: t("faqs.general.questions.four.content"),
         },
         {
           id: 5,
-          title: "Who is a taker?",
-          content: "A taker (or swapper) is a person who swaps a quote asset for the base asset of any market.",
+          title: t("faqs.general.questions.five.title"),
+          content: t("faqs.general.questions.five.content"),
         },
         {
           id: 6,
-          title: "What is an Interface?",
-          content:
-            "An interface is a dApp built on top of the Joint protocol. It can be a web or mobile application. Anyone can build an interface for the Joint protocol with additional features. The beauty of Joint protocol is that all interfaces intrinsically adhere to the protocol's censorship-resistant and non-custodial qualities. ",
+          title: t("faqs.general.questions.six.title"),
+          content: t("faqs.general.questions.six.content"),
         },
         {
           id: 7,
-          title: "Is KYC required?",
-          content:
-            "As a collection of smart contracts deployed on the blockchain, the protocol does not require KYC registration. However, interface developers incorporated in regions where KYC is mandatory may require KYC. ",
+          title: t("faqs.general.questions.seven.title"),
+          content: t("faqs.general.questions.seven.content"),
         },
         {
           id: 8,
-          title: "How are disputes resolved?",
-          content:
-            "The Joint protocol comes with a decentralized dispute system that is open, transparent and simple to understand. When a dispute is raised, a minimum of 3 dispute resolvers (a.k.a. Mediators) are randomly drafted to the dispute, where they collect evidence and vote on a verdict. Mediators are paid by the protocol when they vote with the majority and are slashed when they vote with the minority. ",
+          title: t("faqs.general.questions.eight.title"),
+          content: t("faqs.general.questions.eight.content"),
         },
         {
           id: 9,
-          title: "Can I appeal the outcome of a dispute?",
-          content:
-            "Yes! The resolution of a dispute can be appealed within a duration. Therefore, trade participants can perpetually re-appeal a dispute as long the appeal duration has not elapsed. However, to prevent the appeal system from being abused, it will cost a fee to appeal a resolved dispute. In fact, for every re-appeal made, the number of mediators drafted and the fee are doubled.",
+          title: t("faqs.general.questions.nine.title"),
+          content: t("faqs.general.questions.nine.content"),
         },
         {
           id: 10,
-          title: "How will Joint protocol be governed?",
-          content:
-            "The Joint Team will initially develop the Joint Protocol. When the protocol matures, a co-governance system between the protocol inventors and the community will be set up to manage the protocol. Before maturity, Joint Team will use snapshot for temperature and consensus checks.",
+          title: t("faqs.general.questions.ten.title"),
+          content: t("faqs.general.questions.ten.content"),
         },
       ],
     },
     {
-      category: "Security",
+      category: t("faqs.security"),
       questions: [
         {
           id: 1,
-          title: "Is Joint Protocol non-custodian?",
+          title: t("faqs.security.questions.one.title"),
           // eslint-disable-next-line
-          content:
-            "Yes. You will always control your assets in both open and closed markets. No one can prevent you from leaving a market at any time. Your asset leaves your wallet only when you enter a trade, and the smart contract escrow locks your asset until the trade is completed.",
+          content: t("faqs.security.questions.one.content"),
         },
         {
           id: 2,
-          title: "Is Joint Protocol Audited?",
-          content: "Joint Protocol will be audited before the mainnet launch.",
+          title: t("faqs.security.questions.two.title"),
+          content: t("faqs.security.questions.two.content"),
         },
         {
           id: 3,
-          title: "What happens if a counterparty refuses to release an asset?",
-          content:
-            "You can start a dispute if you have made the payment requested in the swap order. Joint Protocol’s dispute system brings real humans into a dispute to verify why an asset has not been released or a payment has not been made. The dispute system will release the asset to you if the evidence indicates that you made a payment.",
+          title: t("faqs.security.questions.three.title"),
+          content: t("faqs.security.questions.three.content"),
         },
         {
           id: 4,
-          title: "What happens if a counterparty does not make a payment?",
-          content:
-            "Suppose a counterparty does not make payment (or mark the swap order as paid). In that case, Joint Protocol will eventually allow the swap order to be cancelled by you or the counterparty after some time elapses. However, you can start a dispute if the counterparty marks the swap order as paid, but you did not receive the payment. Joint Protocol’s dispute system brings real humans into the dispute to verify whether the payment was sent and received. The swap order will be cancelled if payment is not made. However, if it was decided that payment was made, the asset is released to the counterparty.",
+          title: t("faqs.security.questions.four.title"),
+          content: t("faqs.security.questions.four.content"),
         },
         {
           id: 5,
-          title: "Are users on Joint Protocol verified?",
-          content:
-            "Joint Protocol includes a verification protocol that allows verification service providers to offer Joint Protocol different verification types. Users may use the verification system to get verified for KYC as a token holder, a DAO member, and so on. Market creators and users can filter users based on what verification matters to them. For example, if you wish to swap with KYC-verified users, you can filter markets and liquidity providers by such preference.",
+          title: t("faqs.security.questions.five.title"),
+          content: t("faqs.security.questions.five.content"),
         },
       ],
     },
     {
-      category: "NFT",
+      category: t("faqs.markets"),
       questions: [
         {
           id: 1,
-          title: "NFT - What are CosmoPet NFTs?",
+          title: t("faqs.markets.questions.one.title"),
           // eslint-disable-next-line
-          content:
-            "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason. Your liquidity" +
-            " and earnings are yours to keep and control. No one can confiscate your funds for any reason.",
+          content: t("faqs.markets.questions.one.content"),
         },
         {
           id: 2,
-          title: "What are CosmoPet NFTs?",
-          content: "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason.",
+          title: t("faqs.markets.questions.two.title"),
+          content: t("faqs.markets.questions.two.content"),
+        },
+        {
+          id: 3,
+          title: t("faqs.markets.questions.three.title"),
+          // eslint-disable-next-line
+          content: t("faqs.markets.questions.three.content"),
+        },
+        {
+          id: 4,
+          title: t("faqs.markets.questions.four.title"),
+          content: t("faqs.markets.questions.four.content"),
+        },
+        {
+          id: 5,
+          title: t("faqs.markets.questions.five.title"),
+          content: t("faqs.markets.questions.five.content"),
         },
       ],
     },
     {
-      category: "Reward",
+      category: t("faqs.liquidity"),
       questions: [
         {
           id: 1,
-          title: "Reward - What are CosmoPet NFTs?",
+          title: t("faqs.liquidity.questions.one.title"),
           // eslint-disable-next-line
-          content:
-            "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason. Your liquidity" +
-            " and earnings are yours to keep and control. No one can confiscate your funds for any reason.",
+          content: t("faqs.liquidity.questions.one.content"),
         },
         {
           id: 2,
-          title: "What are CosmoPet NFTs?",
-          content: "Your liquidity and earnings are yours to keep and control. No one can confiscate your funds for any reason.",
+          title: t("faqs.liquidity.questions.two.title"),
+          content: t("faqs.liquidity.questions.two.content"),
+        },
+        {
+          id: 3,
+          title: t("faqs.liquidity.questions.three.title"),
+          // eslint-disable-next-line
+          content: t("faqs.liquidity.questions.three.content"),
+        },
+        {
+          id: 4,
+          title: t("faqs.liquidity.questions.four.title"),
+          content: t("faqs.liquidity.questions.four.content"),
+        },
+        {
+          id: 5,
+          title: t("faqs.liquidity.questions.five.title"),
+          // eslint-disable-next-line
+          content: t("faqs.liquidity.questions.five.content"),
+        },
+        {
+          id: 6,
+          title: t("faqs.liquidity.questions.six.title"),
+          content: t("faqs.liquidity.questions.six.content"),
+        },
+        {
+          id: 7,
+          title: t("faqs.liquidity.questions.seven.title"),
+          // eslint-disable-next-line
+          content: t("faqs.liquidity.questions.seven.content"),
+        },
+        {
+          id: 8,
+          title: t("faqs.liquidity.questions.eight.title"),
+          content: t("faqs.liquidity.questions.eight.content"),
+        },
+        {
+          id: 9,
+          title: t("faqs.liquidity.questions.nine.title"),
+          content: t("faqs.liquidity.questions.nine.content"),
+        },
+      ],
+    },
+    {
+      category: t("faqs.mediation"),
+      questions: [
+        {
+          id: 1,
+          title: t("faqs.mediation.questions.one.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.one.content"),
+        },
+        {
+          id: 2,
+          title: t("faqs.mediation.questions.two.title"),
+          content: t("faqs.mediation.questions.two.content"),
+        },
+        {
+          id: 3,
+          title: t("faqs.mediation.questions.three.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.three.content"),
+        },
+        {
+          id: 4,
+          title: t("faqs.mediation.questions.four.title"),
+          content: t("faqs.mediation.questions.four.content"),
+        },
+        {
+          id: 5,
+          title: t("faqs.mediation.questions.five.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.five.content"),
+        },
+        {
+          id: 6,
+          title: t("faqs.mediation.questions.six.title"),
+          content: t("faqs.mediation.questions.six.content"),
+        },
+        {
+          id: 7,
+          title: t("faqs.mediation.questions.seven.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.seven.content"),
+        },
+        {
+          id: 8,
+          title: t("faqs.mediation.questions.eight.title"),
+          content: t("faqs.mediation.questions.eight.content"),
+        },
+        {
+          id: 9,
+          title: t("faqs.mediation.questions.nine.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.nine.content"),
+        },
+        {
+          id: 10,
+          title: t("faqs.mediation.questions.ten.title"),
+          content: t("faqs.mediation.questions.ten.content"),
+        },
+        {
+          id: 11,
+          title: t("faqs.mediation.questions.eleven.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.eleven.content"),
+        },
+        {
+          id: 12,
+          title: t("faqs.mediation.questions.twelve.title"),
+          content: t("faqs.mediation.questions.twelve.content"),
+        },
+        {
+          id: 13,
+          title: t("faqs.mediation.questions.thirteen.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.thirteen.content"),
+        },
+        {
+          id: 14,
+          title: t("faqs.mediation.questions.fourteen.title"),
+          content: t("faqs.mediation.questions.fourteen.content"),
+        },
+        {
+          id: 15,
+          title: t("faqs.mediation.questions.fiveteen.title"),
+          // eslint-disable-next-line
+          content: t("faqs.mediation.questions.fiveteen.content"),
+        },
+        {
+          id: 16,
+          title: t("faqs.mediation.questions.sixteen.title"),
+          content: t("faqs.mediation.questions.sixteen.content"),
+        },
+      ],
+    },
+    {
+      category: t("faqs.miners"),
+      questions: [
+        {
+          id: 1,
+          title: t("faqs.miners.questions.one.title"),
+          // eslint-disable-next-line
+          content: t("faqs.miners.questions.one.content"),
+        },
+        {
+          id: 2,
+          title: t("faqs.miners.questions.two.title"),
+          content: t("faqs.miners.questions.two.content"),
+        },
+        {
+          id: 3,
+          title: t("faqs.miners.questions.three.title"),
+          content: t("faqs.miners.questions.three.content"),
         },
       ],
     },
@@ -278,7 +424,7 @@ const FAQ: NextPage = function () {
   return (
     <>
       <Head>
-        <title>Joint - Decentralized P2P trading</title>
+        <title>{t("faqs.header")}</title>
         <link rel="icon" href="./favicon.ico" />
       </Head>
 
@@ -299,13 +445,13 @@ const FAQ: NextPage = function () {
               lg:text-[72px] -tracking-[0.6px] lg:-tracking-[0.9px] leading-[48px]
               md:leading-[56px] lg:leading-[72px] mb-[15px] lg:mb-[20px]"
             >
-              Frequently Asked Questions
+              {t("faqs.frequently.asked")}
             </p>
             <p
               className="font-['Mitr'] antialiased font-light text-[16px] text-white
              tracking-[0.22px] text-center xl:w-auto mx-auto px-5 md:px-0"
             >
-              Here’s what you may need to know about Joint.
+              {t("faqs.heres.what")}
             </p>
           </div>
 
