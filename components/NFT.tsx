@@ -37,8 +37,7 @@ function NFT() {
             <button
               type="button"
               className="bg-chinese-green px-10 rounded-lg font-mitr antialiased text-[18px]
-            tracking-[0.25px] text-eerie-black font-semibold
-             py-2.5"
+              tracking-[0.25px] text-eerie-black font-semibold py-2.5"
             >
               {t("nft.section.button")}
             </button>

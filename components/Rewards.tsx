@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { Tab } from "@headlessui/react"
+import cn from "classnames"
 import { useTranslation } from "next-i18next"
+import useLocale from "../shared/hooks/useLocale"
 import Button from "./Button"
 
 type TabSelectorProps = {
@@ -39,6 +41,7 @@ function CustomImage({ src }: CustomImageProps) {
 
 function Rewards() {
   const { t } = useTranslation()
+  const { locale } = useLocale()
 
   return (
     <section
@@ -259,7 +262,8 @@ function Rewards() {
           variant="primary"
           onClick={() => undefined}
           href="https://docs.joint.exchange/learn/rewards"
-          extraStyles="w-[246px]"
+          alignStyle="mx-auto"
+          extraStyles={cn("w-[246px]", { "px-0": locale === "fr" || locale === "ru" })}
         />
       </div>
     </section>
