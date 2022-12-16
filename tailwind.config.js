@@ -12,6 +12,7 @@ module.exports = {
       '3xs': '320px',
       '2xs': '375px',
       xs: '425px',
+      '2sm': '510px',
       ...defaultTheme.screens
     },
     extend: {
