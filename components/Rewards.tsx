@@ -73,7 +73,11 @@ function Rewards() {
 
       <div className="mt-[44px] mb-[50px] lg:mt-[54.5px] lg:mb-[90px]">
         <Tab.Group>
-          <Tab.List as="div" className="flex flex-row gap-x-[24px] justify-center mb-[40px] lg:mb-[64px] flex-wrap gap-y-[25px] px-10">
+          <Tab.List
+            as="div"
+            className="flex flex-row gap-x-[24px] justify-start 2sm:justify-center mb-[40px] lg:mb-[64px]
+            overflow-x-auto no-scrollbar whitespace-nowrap"
+          >
             <Tab>{({ selected }) => <TabSelector label={t("tab.trade")} selected={selected} />}</Tab>
 
             <Tab>{({ selected }) => <TabSelector label={t("tab.listing")} selected={selected} />}</Tab>
