@@ -307,7 +307,7 @@ const Invest: NextPage = function () {
 
         <div
           className="relative flex flex-col xl:flex-row justify-between items-center px-[12px] lg:px-[60px] py-[40px]
-          pb-[53px] mb-[100px] lg:mb-[140px] xl:mb-[160px] bg-gradient-to-r from-[#0C1828] to-[#030507] border-t-4
+          pb-[53px] mb-[100px] lg:mb-[140px] xl:mb-[160px] bg-gradient-to-b xl:bg-gradient-to-r from-[#0C1828] to-[#030507] border-t-4
           xl:border-t-0 xl:border-l-4 border-chinese-green rounded-[8px]"
         >
           <div className="max-w-[500px]">
