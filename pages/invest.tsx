@@ -249,10 +249,7 @@ const Invest: NextPage = function () {
                 <Button
                   label={t("invest.hero.btnText")}
                   variant="primary"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    window.location.href = "https://invest.joint.exchange/"
-                  }}
+                  href="https://invest.joint.exchange/"
                   extraStyles="w-[257px]"
                 />
                 {/* <HeroLink title={t("invest.hero.outerLink")} href="https://google.com" /> */}
@@ -299,13 +296,9 @@ const Invest: NextPage = function () {
             <p>{t("invest.sectionOne.paragraphOne")}</p>
             <p>{t("invest.sectionOne.paragraphTwo")}</p>
             <p>
-              {t("invest.sectionOne.with")}{" "}
-              <a href="https://fairmint.com" className="text-chinese-green hover:underline" target="_blank" rel="noreferrer">
-                Fairmint
-              </a>
-              &apos;s{" "}
+              {t("invest.sectionOne.with")} <a href="https://fairmint.com" className="text-chinese-green hover:underline" target="_blank" rel="noreferrer">Fairmint</a>
+              &apos;s{" "}{t("invest.sectionOne.paragraphThree")}
             </p>{" "}
-            {t("invest.sectionOne.paragraphThree")}
             <div className="text-lg">
               <span className="text-gray-500 text-lg">Useful links</span>
               <ul>
@@ -372,13 +365,9 @@ const Invest: NextPage = function () {
           <span className="text-white text-lg text-center xl:text-left">{t("invest.free.droid")}</span>
           <span>
             <Button
-              // label={t("invest.sectionThree.btnText")}
-              label="Invest Now"
+                label={t("invest.hero.btnText")}
               variant="primary"
-              onClick={(e) => {
-                e.preventDefault()
-                window.location.href = "https://invest.joint.exchange/"
-              }}
+              href="https://invest.joint.exchange/"
               extraStyles="flex justify-center items-center mx-auto xl:mx-0 w-[257px]"
             />
           </span>
