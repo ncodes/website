@@ -6,11 +6,11 @@ import Link from "next/link"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useTranslation } from "next-i18next"
 import { useSpring, animated } from "@react-spring/web"
-import {useRouter} from "next/router";
+import { useRouter } from "next/router"
 import Header from "../components/Header"
 import Button from "../components/Button"
 import Footer from "../components/Footer"
-import FMWidget from "../components/FMWidget";
+import FMWidget from "../components/FMWidget"
 
 /* eslint-disable-next-line */
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
@@ -117,7 +117,7 @@ function AccordionContent({ children }: AccordionContentProps) {
       text-[14px] leading-[19.69px] lg:leading-[24px] md:text-center lg:max-w-[905px] pb-10"
     >
       {/* eslint-disable-next-line react/no-danger */}
-      <span dangerouslySetInnerHTML={{__html: children as string}} />
+      <span dangerouslySetInnerHTML={{ __html: children as string }} />
     </p>
   )
 }
@@ -172,32 +172,32 @@ const Invest: NextPage = function () {
     {
       id: 1,
       title: t("invest.faq.q1"),
-      content: t("invest.faq.q1.a")
+      content: t("invest.faq.q1.a"),
     },
     {
       id: 2,
       title: t("invest.faq.q2"),
-      content: t("invest.faq.q2.a")
+      content: t("invest.faq.q2.a"),
     },
     {
       id: 3,
       title: t("invest.faq.q3"),
-      content: t("invest.faq.q3.a")
+      content: t("invest.faq.q3.a"),
     },
     {
       id: 4,
       title: t("invest.faq.q4"),
-      content: t("invest.faq.q4.a")
+      content: t("invest.faq.q4.a"),
     },
     {
       id: 5,
       title: t("invest.faq.q5"),
-      content: t("invest.faq.q5.a")
+      content: t("invest.faq.q5.a"),
     },
     {
       id: 6,
       title: t("invest.faq.q6"),
-      content: t("invest.faq.q6.a")
+      content: t("invest.faq.q6.a"),
     },
     {
       id: 7,
@@ -207,7 +207,7 @@ const Invest: NextPage = function () {
     {
       id: 8,
       title: t("invest.faq.q8"),
-      content: t("invest.faq.q8.a")
+      content: t("invest.faq.q8.a"),
     },
   ]
 
@@ -246,10 +246,15 @@ const Invest: NextPage = function () {
               </p>
 
               <div className="flex flex-wrap items-center justify-center xl:justify-start gap-[24px] sm:gap-[48px] mt-[34px]">
-                <Button label={t("invest.hero.btnText")} variant="primary" onClick={(e) => {
-                  e.preventDefault()
-                  window.location.href = "https://invest.joint.exchange/";
-                }} extraStyles="w-[257px]" />
+                <Button
+                  label={t("invest.hero.btnText")}
+                  variant="primary"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    window.location.href = "https://invest.joint.exchange/"
+                  }}
+                  extraStyles="w-[257px]"
+                />
                 {/* <HeroLink title={t("invest.hero.outerLink")} href="https://google.com" /> */}
               </div>
             </div>
@@ -282,26 +287,50 @@ const Invest: NextPage = function () {
             2xs:h-[550px] sm:h-[693px] border border-chinese-green
               rounded-[16px]"
           >
-            <div><FMWidget /></div>
+            <div>
+              <FMWidget />
+            </div>
           </div>
 
           <div
             className="flex flex-col gap-5 font-mitr antialiased md:text-center xl:text-left text-[18px] lg:text-[24px] leading-[28px]
               lg:leading-[32px] font-light text-white max-w-[650px]"
           >
+            <p>{t("invest.sectionOne.paragraphOne")}</p>
+            <p>{t("invest.sectionOne.paragraphTwo")}</p>
             <p>
-              {t("invest.sectionOne.paragraphOne")}
-            </p>
-            <p>
-              {t("invest.sectionOne.paragraphTwo")}
-            </p>
-            <p>{t("invest.sectionOne.with")} <a href="https://fairmint.com" className="text-chinese-green hover:underline" target="_blank" rel="noreferrer">Fairmint</a>&apos;s </p> {t("invest.sectionOne.paragraphThree")}
-
+              {t("invest.sectionOne.with")}{" "}
+              <a href="https://fairmint.com" className="text-chinese-green hover:underline" target="_blank" rel="noreferrer">
+                Fairmint
+              </a>
+              &apos;s{" "}
+            </p>{" "}
+            {t("invest.sectionOne.paragraphThree")}
             <div className="text-lg">
               <span className="text-gray-500 text-lg">Useful links</span>
               <ul>
-                <li>{">"} <a  href="https://blog.fairmint.co/reimagining-going-public-with-continuous-securities-offerings-cso-by-fairmint-66aa3d16c793" className="text-chinese-green hover:underline" target="_blank" rel="noreferrer">Introduction to Continuous Security Offering</a></li>
-                <li>{">"} <a  href="https://medium.com/0xjoint/joint-protocol-litepaper-58cefd6cad25" className="text-chinese-green hover:underline" target="_blank" rel="noreferrer">Joint Protocol Litepaper</a></li>
+                <li>
+                  {">"}{" "}
+                  <a
+                    href="https://blog.fairmint.co/reimagining-going-public-with-continuous-securities-offerings-cso-by-fairmint-66aa3d16c793"
+                    className="text-chinese-green hover:underline"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Introduction to Continuous Security Offering
+                  </a>
+                </li>
+                <li>
+                  {">"}{" "}
+                  <a
+                    href="https://medium.com/0xjoint/joint-protocol-litepaper-58cefd6cad25"
+                    className="text-chinese-green hover:underline"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Joint Protocol Litepaper
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -317,7 +346,7 @@ const Invest: NextPage = function () {
           <p className="font-mitr antialiased text-center text-[18px] leading-[18px] font-light text-white mb-20">
             {t("invest.benefit.subtitle")}
           </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {proposition?.map(({ id, image, title, description }) => (
               <div key={id} className="flex  xl:items-start gap-5">
                 <div className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] shrink-0 ">
@@ -332,8 +361,8 @@ const Invest: NextPage = function () {
                 </div>
               </div>
             ))}
-            </div>
           </div>
+        </div>
 
         <div
           className="relative flex flex-col xl:flex-row justify-between items-center px-[12px] lg:px-[60px] py-[40px]
@@ -343,14 +372,14 @@ const Invest: NextPage = function () {
           <span className="text-white text-lg text-center xl:text-left">{t("invest.free.droid")}</span>
           <span>
             <Button
-                // label={t("invest.sectionThree.btnText")}
-                label="Invest Now"
-                variant="primary"
-                onClick={(e) => {
-                  e.preventDefault()
-                  window.location.href = "https://invest.joint.exchange/";
-                }}
-                extraStyles="flex justify-center items-center mx-auto xl:mx-0 w-[257px]"
+              // label={t("invest.sectionThree.btnText")}
+              label="Invest Now"
+              variant="primary"
+              onClick={(e) => {
+                e.preventDefault()
+                window.location.href = "https://invest.joint.exchange/"
+              }}
+              extraStyles="flex justify-center items-center mx-auto xl:mx-0 w-[257px]"
             />
           </span>
         </div>

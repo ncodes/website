@@ -812,8 +812,12 @@ function Header() {
 
             {/* HEADER CTA BUTTON - Starts */}
             <div className="hidden lg:block capitalize">
-              <Button label={t("header.invest")} variant="primary"
-                      href="/invest" extraStyles="rounded-full bg-orange-500 hover:shadow-[0px_5px_10px_-6px_rgba(230,136,64,1)]" />
+              <Button
+                label={t("header.invest")}
+                variant="primary"
+                href="/invest"
+                extraStyles="rounded-full bg-orange-500 hover:shadow-[0px_5px_10px_-6px_rgba(230,136,64,1)]"
+              />
             </div>
             {/* HEADER CTA BUTTON - Ends */}
           </div>
