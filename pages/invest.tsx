@@ -246,12 +246,7 @@ const Invest: NextPage = function () {
               </p>
 
               <div className="flex flex-wrap items-center justify-center xl:justify-start gap-[24px] sm:gap-[48px] mt-[34px]">
-                <Button
-                  label={t("invest.hero.btnText")}
-                  variant="primary"
-                  href="https://invest.joint.exchange/"
-                  extraStyles="w-[257px]"
-                />
+                <Button label={t("invest.hero.btnText")} variant="primary" href="https://invest.joint.exchange/" extraStyles="w-[257px]" />
                 {/* <HeroLink title={t("invest.hero.outerLink")} href="https://google.com" /> */}
               </div>
             </div>
@@ -296,8 +291,11 @@ const Invest: NextPage = function () {
             <p>{t("invest.sectionOne.paragraphOne")}</p>
             <p>{t("invest.sectionOne.paragraphTwo")}</p>
             <p>
-              {t("invest.sectionOne.with")} <a href="https://fairmint.com" className="text-chinese-green hover:underline" target="_blank" rel="noreferrer">Fairmint</a>
-              &apos;s{" "}{t("invest.sectionOne.paragraphThree")}
+              {t("invest.sectionOne.with")}{" "}
+              <a href="https://fairmint.com" className="text-chinese-green hover:underline" target="_blank" rel="noreferrer">
+                Fairmint
+              </a>
+              &apos;s {t("invest.sectionOne.paragraphThree")}
             </p>{" "}
             <div className="text-lg">
               <span className="text-gray-500 text-lg">Useful links</span>
@@ -365,7 +363,7 @@ const Invest: NextPage = function () {
           <span className="text-white text-lg text-center xl:text-left">{t("invest.free.droid")}</span>
           <span>
             <Button
-                label={t("invest.hero.btnText")}
+              label={t("invest.hero.btnText")}
               variant="primary"
               href="https://invest.joint.exchange/"
               extraStyles="flex justify-center items-center mx-auto xl:mx-0 w-[257px]"
