@@ -6,9 +6,11 @@ import Link from "next/link"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useTranslation } from "next-i18next"
 import { useSpring, animated } from "@react-spring/web"
+import {useRouter} from "next/router";
 import Header from "../components/Header"
 import Button from "../components/Button"
 import Footer from "../components/Footer"
+import FMWidget from "../components/FMWidget";
 
 /* eslint-disable-next-line */
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
@@ -76,7 +78,7 @@ function Accordion({ selectedFaq, setSelectedFaq, id, title, children }: Accordi
   return (
     <div
       className="flex flex-col items-center justify-between border-b border-dashed last:border-none
-     border-gray-800 rounded-full px-4 lg:px-[unset]"
+     border-gray-800 lg:rounded-full px-4 lg:px-[unset]"
     >
       <div />
 
@@ -89,7 +91,7 @@ function Accordion({ selectedFaq, setSelectedFaq, id, title, children }: Accordi
         <div className="hidden lg:block" />
         <p
           className="font-['Mitr'] antialiased font-medium text-white break-word text-[16px]
-          lg:text-[24px] leading-[19.7px] lg:leading-[26.25px] py-[18px] text-left lg:text-center"
+          lg:text-[24px] leading-[19.7px] lg:leading-[26.25px] py-[18px] text-left lg:text-center cursor-pointer"
         >
           {title}
         </p>
@@ -112,15 +114,17 @@ function AccordionContent({ children }: AccordionContentProps) {
   return (
     <p
       className="font-['Mitr'] antialiased font-extralight text-white break-word lg:text-[16px]
-      text-[14px] leading-[19.69px] lg:leading-[24px] text-left lg:max-w-[905px] pb-10"
+      text-[14px] leading-[19.69px] lg:leading-[24px] md:text-center lg:max-w-[905px] pb-10"
     >
-      {children}
+      {/* eslint-disable-next-line react/no-danger */}
+      <span dangerouslySetInnerHTML={{__html: children as string}} />
     </p>
   )
 }
 
 const Invest: NextPage = function () {
   const { t } = useTranslation()
+  const router = useRouter()
   const [selectedFaq, setSelectedFaq] = useState({
     id: 0,
     open: false,
@@ -135,31 +139,25 @@ const Invest: NextPage = function () {
   const proposition: PropsitionProps = [
     {
       id: 1,
-      image: "/founders.png",
+      image: "/invest/founders.svg",
       title: t("invest.proposition.one.title"),
       description: t("invest.proposition.one.description"),
     },
     {
-      id: 2,
-      image: "/team.png",
-      title: t("invest.proposition.two.title"),
-      description: t("invest.proposition.two.description"),
-    },
-    {
       id: 3,
-      image: "/community.png",
+      image: "/invest/community.svg",
       title: t("invest.proposition.three.title"),
       description: t("invest.proposition.three.description"),
     },
     {
       id: 4,
-      image: "/investors.png",
+      image: "/invest/investor.svg",
       title: t("invest.proposition.four.title"),
       description: t("invest.proposition.four.description"),
     },
     {
       id: 5,
-      image: "/users.png",
+      image: "/invest/user.svg",
       title: t("invest.proposition.five.title"),
       description: t("invest.proposition.five.description"),
     },
@@ -173,13 +171,43 @@ const Invest: NextPage = function () {
   const faqInformation: Questions = [
     {
       id: 1,
-      title: t("invest.faq.one.title"),
-      content: t("invest.faq.one.content"),
+      title: t("invest.faq.q1"),
+      content: t("invest.faq.q1.a")
     },
     {
       id: 2,
-      title: t("invest.faq.two.title"),
-      content: t("invest.faq.two.content"),
+      title: t("invest.faq.q2"),
+      content: t("invest.faq.q2.a")
+    },
+    {
+      id: 3,
+      title: t("invest.faq.q3"),
+      content: t("invest.faq.q3.a")
+    },
+    {
+      id: 4,
+      title: t("invest.faq.q4"),
+      content: t("invest.faq.q4.a")
+    },
+    {
+      id: 5,
+      title: t("invest.faq.q5"),
+      content: t("invest.faq.q5.a")
+    },
+    {
+      id: 6,
+      title: t("invest.faq.q6"),
+      content: t("invest.faq.q6.a")
+    },
+    {
+      id: 7,
+      title: t("invest.faq.q7"),
+      content: `${t("invest.faq.q7.a")}<a href='https://invest.joint.exchange' style='color: #C8ED5A'>https://invest.joint.exchange</a>`,
+    },
+    {
+      id: 8,
+      title: t("invest.faq.q8"),
+      content: t("invest.faq.q8.a")
     },
   ]
 
@@ -202,35 +230,31 @@ const Invest: NextPage = function () {
             className="flex flex-col xl:flex-row justify-between items-center pt-[50px] xl:pt-0 mt-0 xl:-mt-[25px] mb-[50px]
             lg:mb-[70px]"
           >
-            <div className="md:w-[600px]">
+            <div className="md:w-[800px]">
               <p
                 className="font-mitr mx-auto xl:mx-0 antialiased text-center xl:text-left text-[14px]
               leading-[18px] tracking-[2.63px] sm:tracking-0 font-light text-white mb-[12px]"
               >
-                {t("invest.hero.investText")}
+                {t("invest.hero.investText")} JOINT LABS, INC
               </p>
 
               <p
                 className="font-mitr antialiased mx-auto xl:mx-0 text-center xl:text-left text-[32px] sm:text-[48px]
-              leading-[40px] sm:leading-[58px] text-white font-semibold mb-[29px] sm:mb-[16px]"
+              leading-[40px] sm:leading-[50px] text-white font-semibold mb-[29px] sm:mb-[16px]"
               >
                 {t("invest.hero.title")}
               </p>
 
-              <p
-                className="font-mitr mx-auto xl:mx-0 antialiased text-center xl:text-left text-[16px]
-              leading-[24px] font-light text-white"
-              >
-                {t("invest.hero.subTitle")}
-              </p>
-
               <div className="flex flex-wrap items-center justify-center xl:justify-start gap-[24px] sm:gap-[48px] mt-[34px]">
-                <Button label={t("invest.hero.btnText")} variant="primary" onClick={() => undefined} extraStyles="w-[257px]" />
-                <HeroLink title={t("invest.hero.outerLink")} href="https://google.com" />
+                <Button label={t("invest.hero.btnText")} variant="primary" onClick={(e) => {
+                  e.preventDefault()
+                  window.location.href = "https://invest.joint.exchange/";
+                }} extraStyles="w-[257px]" />
+                {/* <HeroLink title={t("invest.hero.outerLink")} href="https://google.com" /> */}
               </div>
             </div>
 
-            <div className="relative mx-auto w-full sm:w-[600px] 2xl:w-[700px] h-[400px] sm:h-[600px] 2xl:h-[700px] overflow-hidden">
+            <div className="relative mx-auto w-full sm:w-[500px] 2xl:w-[500px] h-[400px] sm:h-[600px] 2xl:h-[700px] overflow-hidden">
               <Image
                 className="!relative object-contain w-full h-full"
                 src="/unbounded-trading-illustration.webp"
@@ -254,108 +278,91 @@ const Invest: NextPage = function () {
             gap-[50px] xl:gap-[80px] mb-[100px] lg:mb-[140px]"
         >
           <div
-            className=" w-full sm:w-[513px] h-[450px] 2xs:h-[550px] sm:h-[693px] border border-chinese-green
+            className="flex bg-gradient-to-r to-chinese-green from-yellow-400 justify-center items-center w-full sm:w-[513px] h-[450px]
+            2xs:h-[550px] sm:h-[693px] border border-chinese-green
               rounded-[16px]"
           >
-            .
+            <div><FMWidget /></div>
           </div>
 
           <div
-            className="font-mitr antialiased text-center xl:text-left text-[18px] lg:text-[24px] leading-[28px]
+            className="flex flex-col gap-5 font-mitr antialiased md:text-center xl:text-left text-[18px] lg:text-[24px] leading-[28px]
               lg:leading-[32px] font-light text-white max-w-[650px]"
           >
-            {t("invest.sectionOne.paragraphOne")}
-            <br />
-            <br />
-            {t("invest.sectionOne.paragraphTwo")}
-            <br />
-            <br />
-            {t("invest.sectionOne.paragraphThree")}
+            <p>
+              {t("invest.sectionOne.paragraphOne")}
+            </p>
+            <p>
+              {t("invest.sectionOne.paragraphTwo")}
+            </p>
+            <p>{t("invest.sectionOne.with")} <a href="https://fairmint.com" className="text-chinese-green hover:underline" target="_blank" rel="noreferrer">Fairmint</a>&apos;s </p> {t("invest.sectionOne.paragraphThree")}
+
+            <div className="text-lg">
+              <span className="text-gray-500 text-lg">Useful links</span>
+              <ul>
+                <li>{">"} <a  href="https://blog.fairmint.co/reimagining-going-public-with-continuous-securities-offerings-cso-by-fairmint-66aa3d16c793" className="text-chinese-green hover:underline" target="_blank" rel="noreferrer">Introduction to Continuous Security Offering</a></li>
+                <li>{">"} <a  href="https://medium.com/0xjoint/joint-protocol-litepaper-58cefd6cad25" className="text-chinese-green hover:underline" target="_blank" rel="noreferrer">Joint Protocol Litepaper</a></li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div className="mb-[100px] lg:mb-[140px] xl:mb-[200px]">
           <p
             className="font-mitr antialiased text-center text-[48px] lg:text-[72px]
-              leading-[56px] sm:leading-[72px] text-white font-semibold mb-[45px] lg:mb-[65px]"
+              leading-[56px] sm:leading-[72px] text-white font-semibold mb-[45px] lg:mb-[30px]"
           >
             {t("invest.sectionTwo.title")}
           </p>
-
-          <div
-            className="flex flex-wrap justify-center gap-x-[50px] gap-y-[50px] lg:gap-y-[70px] lg:gap-x-[4.813rem]
-              xl:gap-x-[8.813rem] 2xl:gap-x-[4.813rem]"
-          >
+          <p className="font-mitr antialiased text-center text-[18px] leading-[18px] font-light text-white mb-20">
+            {t("invest.benefit.subtitle")}
+          </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {proposition?.map(({ id, image, title, description }) => (
-              <div key={id} className="flex flex-col items-center xl:items-start max-w-[190px]">
-                <div className="relative w-[70px] h-[70px] overflow-hidden">
-                  <Image className="!relative object-contain w-full h-full" src={image} alt="illustration" layout="fill" quality={100} />
+              <div key={id} className="flex  xl:items-start gap-5">
+                <div className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] shrink-0 ">
+                  <img src={image} alt="illustration" className="object-contain w-full h-full" />
                 </div>
 
-                <p className="font-mitr antialiased text-[18px] lg:text-[24px] font-medium text-white mt-[12px]">{title}</p>
-
-                <p
-                  className="font-mitr antialiased text-[14px] lg:text-[16px] text-center xl:text-left font-light
-                    text-white mt-[6px]"
-                >
-                  {description}
-                </p>
+                <div className="-mt-2">
+                  <p className="font-mitr antialiased text-[18px] lg:text-[24px] font-medium text-white">{title}</p>
+                  <p className="font-mitr antialiased text-[14px] lg:text-[16px] xl:text-left font-light text-white mt-[4px]">
+                    {description}
+                  </p>
+                </div>
               </div>
             ))}
+            </div>
           </div>
-        </div>
 
         <div
           className="relative flex flex-col xl:flex-row justify-between items-center px-[12px] lg:px-[60px] py-[40px]
-          pb-[53px] mb-[100px] lg:mb-[140px] xl:mb-[160px] bg-gradient-to-b xl:bg-gradient-to-r from-[#0C1828] to-[#030507] border-t-4
-          xl:border-t-0 xl:border-l-4 border-chinese-green rounded-[8px]"
+           mb-[100px] lg:mb-[140px] xl:mb-[160px] bg-gradient-to-b xl:bg-gradient-to-r from-[#0C1828] to-[#030507] border-t-4
+          xl:border-t-0 xl:border-l-4 border-chinese-green rounded-[8px] font-mitr gap-5 xl:gap-0"
         >
-          <div className="max-w-[500px]">
-            <p
-              className="font-mitr mx-auto xl:mx-0 antialiased text-center xl:text-left text-[24px]
-                font-medium text-white mb-[41px]"
-            >
-              {t("invest.sectionThree.title")}
-            </p>
-            <p
-              className="font-mitr mx-auto xl:mx-0 antialiased text-center xl:text-left text-[16px]
-                font-light text-white mb-[41px]"
-            >
-              {t("invest.sectionThree.contentOne")}{" "}
-              <span className="text-chinese-green underline">#{t("invest.sectionThree.contentTwo")}</span>{" "}
-              {t("invest.sectionThree.contentThree")}
-            </p>
-
+          <span className="text-white text-lg text-center xl:text-left">{t("invest.free.droid")}</span>
+          <span>
             <Button
-              label={t("invest.sectionThree.btnText")}
-              variant="primary"
-              onClick={() => undefined}
-              extraStyles="flex justify-center items-center mx-auto xl:mx-0 w-[257px]"
+                // label={t("invest.sectionThree.btnText")}
+                label="Invest Now"
+                variant="primary"
+                onClick={(e) => {
+                  e.preventDefault()
+                  window.location.href = "https://invest.joint.exchange/";
+                }}
+                extraStyles="flex justify-center items-center mx-auto xl:mx-0 w-[257px]"
             />
-          </div>
-
-          <div
-            className="relative xl:absolute xl:right-0 w-[300px] h-[430px] overflow-hidden
-              mt-[60px] xl:mt-0"
-          >
-            <Image
-              className="!relative object-contain w-full h-full"
-              src="/bot-guideline.svg"
-              alt="bot-guideline"
-              layout="fill"
-              quality={100}
-            />
-          </div>
+          </span>
         </div>
 
         <div className="mb-[100px] lg:mb-[140px]">
           <p
-            className="font-mitr antialiased text-center text-[40px] sm:text-[48px] lg:text-[72px]
+            className="font-mitr antialiased text-center text-[40px] sm:text-[48px] lg:text-[60px]
               leading-[40px] sm:leading-[48px] sm:leading-[72px] text-white font-semibold"
           >
             {t("invest.sectionFour.title")}
           </p>
-          <p className="font-mitr antialiased text-center text-[14px] leading-[18px] font-light text-white mt-[20px]">
+          <p className="font-mitr antialiased text-center text-[18px] leading-[18px] font-light text-white mt-[40px]">
             {t("invest.sectionFour.subTitle")}
           </p>
 
