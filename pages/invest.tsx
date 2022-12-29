@@ -191,6 +191,11 @@ const Invest: NextPage = function () {
       title: t("invest.faq.q8"),
       content: t("invest.faq.q8.a"),
     },
+    {
+      id: 9,
+      title: t("invest.faq.q9"),
+      content: t("invest.faq.q9.a"),
+    },
   ]
 
   return (
