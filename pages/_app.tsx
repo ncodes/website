@@ -2,6 +2,7 @@ import "../styles/globals.css"
 import { appWithTranslation } from "next-i18next"
 import Head from "next/head"
 import type { AppProps } from "next/app"
+import {CommunitySafeAlert} from "../components/CommunitySafeAlert";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
+        <CommunitySafeAlert />
       <Component {...pageProps} />
     </>
   )

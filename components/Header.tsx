@@ -163,7 +163,7 @@ function HeaderLink({ title, href }: LinkProps) {
     <li className="flex items-center cursor-pointer">
       <Link href={href}>
         <p
-          className={`font-mitr antialiased text-[16px] ${
+          className={`font-mitr antialiased text-[16px] cursor-pointer ${
             isActive
               ? `py-[3px] px-[25px] text-eerie-black font-medium
             bg-chinese-green rounded-[15px]`
@@ -353,7 +353,8 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-end capitalize">
-                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t("header.protocol")}</p>
+                      <p className="font-mitr cursor-pointer antialiased text-[16px] text-white font-light
+                      mt-[4px] cursor-pointer">{t("header.protocol")}</p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -462,7 +463,8 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-end capitalize">
-                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t("header.developers")}</p>
+                      <p className="font-mitr cursor-pointer antialiased
+                      text-[16px] text-white font-light mt-[4px]">{t("header.developers")}</p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -527,7 +529,8 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-end capitalize">
-                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t("header.community")}</p>
+                      <p className="font-mitr cursor-pointer antialiased
+                      text-[16px] text-white font-light mt-[4px]">{t("header.community")}</p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
