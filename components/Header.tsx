@@ -353,8 +353,12 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-end capitalize">
-                      <p className="font-mitr cursor-pointer antialiased text-[16px] text-white font-light
-                      mt-[4px] cursor-pointer">{t("header.protocol")}</p>
+                      <p
+                        className="font-mitr cursor-pointer antialiased text-[16px] text-white font-light
+                      mt-[4px] cursor-pointer"
+                      >
+                        {t("header.protocol")}
+                      </p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -463,8 +467,12 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-end capitalize">
-                      <p className="font-mitr cursor-pointer antialiased
-                      text-[16px] text-white font-light mt-[4px]">{t("header.developers")}</p>
+                      <p
+                        className="font-mitr cursor-pointer antialiased
+                      text-[16px] text-white font-light mt-[4px]"
+                      >
+                        {t("header.developers")}
+                      </p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -529,8 +537,12 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-end capitalize">
-                      <p className="font-mitr cursor-pointer antialiased
-                      text-[16px] text-white font-light mt-[4px]">{t("header.community")}</p>
+                      <p
+                        className="font-mitr cursor-pointer antialiased
+                      text-[16px] text-white font-light mt-[4px]"
+                      >
+                        {t("header.community")}
+                      </p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
