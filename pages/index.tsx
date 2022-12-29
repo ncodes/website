@@ -1,11 +1,12 @@
 /* eslint-disable @next/next/no-img-element, object-curly-newline */
-import type { NextPage, GetStaticProps } from "next"
+import type {GetStaticProps, NextPage} from "next"
 import Head from "next/head"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import {serverSideTranslations} from "next-i18next/serverSideTranslations"
 
-import { useState } from "react"
+import {useState} from "react"
 import Image from "next/image"
 import Script from "next/script"
+import {useTranslation} from "next-i18next";
 import Header from "../components/Header"
 import Hero from "../components/Hero"
 import Statistics from "../components/Statistics"
@@ -19,85 +20,98 @@ import Footer from "../components/Footer"
 import NFT from "../components/NFT"
 
 /* eslint-disable-next-line */
-export const getStaticProps: GetStaticProps = async ({ locale }) => ({
-  props: { ...(await serverSideTranslations(locale as string, ["common"])) },
+export const getStaticProps: GetStaticProps = async ({locale}) => ({
+    props: {...(await serverSideTranslations(locale as string, ["common"]))}
 })
 
 const Home: NextPage = function () {
-  const [reveal, setReveal] = useState(false)
+    const [reveal, setReveal] = useState(false)
+    const { t } = useTranslation();
 
-  setTimeout(() => {
-    setReveal(true)
-  }, 3000)
+    setTimeout(() => {
+        setReveal(true)
+    }, 3000)
 
-  return (
-    <>
-      <Head>
-        <title>Home | Joint Protocol</title>
-        <link rel="icon" href="./favicon.ico" />
-      </Head>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-9SX3SC9XGN" strategy="afterInteractive" />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
+    return (
+        <>
+            <Head>
+                <title>Home | Joint Protocol</title>
+                <link rel="icon" href="./favicon.ico"/>
+            </Head>
+            <Script src="https://www.googletagmanager.com/gtag/js?id=G-9SX3SC9XGN" strategy="afterInteractive"/>
+            <Script id="google-analytics" strategy="afterInteractive">
+                {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
           gtag('config', 'G-9SX3SC9XGN');
         `}
-      </Script>
-      {reveal || (
-        <div className="absolute w-full h-screen bg-rich-black z-40 justify-center items-center flex">
+            </Script>
+            {reveal || (
+                <div className="absolute w-full h-screen bg-rich-black z-40 justify-center items-center flex">
           <span className="animate-pulse">
-            <Image src="/logo-mark.svg" width="30" height="30" alt="loader" />
+            <Image src="/logo-mark.svg" width="30" height="30" alt="loader"/>
           </span>
-        </div>
-      )}
+                </div>
+            )}
 
-      <section id="page-header-hero">
-        <div className="bg-repeat bg-[url('/mobile-stars.webp')] bg-contain bg-top xl:bg-bottom w-full">
-          <div className="sticky z-[3]">
-            <Header />
+            {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
+            <div
+                className="bg-gradient-to-r from-chinese-green underline decoration-dotted underline-offset-2 to-orange-400
+            text-black p-1 text-center cursor-pointer hover:bg-chinese-green/90 transition-opacity duration-1000"
+                onClick={() => {
+                    window.open("https://joint.exchange/invest", "_blank");
+                }}
+            >
+                <b className="font-medium">[COMMUNITY SAFE]</b> - {t("join_com_safe")}
+            </div>
 
-            <Hero />
-          </div>
+            <section id="page-header-hero">
+                <div className="bg-repeat bg-[url('/mobile-stars.webp')] bg-contain bg-top xl:bg-bottom w-full">
+                    <div className="sticky z-[3]">
+                        <Header/>
 
-          <div
-            className="xl:absolute xl:bottom-0 xl:bg-[url('/hero-bg.webp')] mt-10 xl:mt-0 w-full h-[calc(100vw_*_0.356)]
+                        <Hero/>
+                    </div>
+
+                    <div
+                        className="xl:absolute xl:bottom-0 xl:bg-[url('/hero-bg.webp')] mt-10 xl:mt-0 w-full h-[calc(100vw_*_0.356)]
           xl:h-[calc(100vw_*_0.5)] bg-[url('/mobile-hero-bg.webp')] bg-no-repeat
           bg-top bg-[length:100%_auto] xl:bg-[length:100%_100%]"
-          >
-            <div className="relative h-full">
-              <div className="absolute bottom-0 w-full h-16 xl:h-52 bg-gradient-to-t from-rich-black to-transparent" />
+                    >
+                        <div className="relative h-full">
+                            <div
+                                className="absolute bottom-0 w-full h-16 xl:h-52 bg-gradient-to-t from-rich-black to-transparent"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <Statistics/>
+
+            <Trading/>
+
+            <Assets/>
+
+            <Features/>
+
+            <HowItWorks/>
+
+            <div className="bg-[url('/Group33.svg')] bg-cover">
+                <NFT/>
+                <Rewards/>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <Statistics />
+            <Partners/>
 
-      <Trading />
+            <div className="container mx-auto mt-[100px] px-4 lg:px-[60px] xl:px-[90px]">
+                <div className="w-full h-px bg-gradient-to-r from-rich-blue via-[#CEEF66] to-rich-blue"/>
+            </div>
 
-      <Assets />
-
-      <Features />
-
-      <HowItWorks />
-
-      <div className="bg-[url('/Group33.svg')] bg-cover">
-        <NFT />
-        <Rewards />
-      </div>
-
-      <Partners />
-
-      <div className="container mx-auto mt-[100px] px-4 lg:px-[60px] xl:px-[90px]">
-        <div className="w-full h-px bg-gradient-to-r from-rich-blue via-[#CEEF66] to-rich-blue" />
-      </div>
-
-      <Footer />
-    </>
-  )
+            <Footer/>
+        </>
+    )
 }
 
 export default Home
