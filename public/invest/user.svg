@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Stockholm-icons / Shopping / Money</title>
+    <g id="Invest-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Invest" transform="translate(-1459.000000, -1958.000000)">
+            <g id="Stockholm-icons-/-Shopping-/-Money" transform="translate(1450.000000, 1949.000000)">
+                <polygon id="Shape" points="0 0 75 0 75 75 0 75"></polygon>
+                <path d="M37.5,34.375 C30.5964406,34.375 25,28.7785594 25,21.875 C25,14.9714406 30.5964406,9.375 37.5,9.375 C44.4035594,9.375 50,14.9714406 50,21.875 C50,28.7785594 44.4035594,34.375 37.5,34.375 Z" id="Mask" fill="#C8ED5A" fill-rule="nonzero" opacity="0.3"></path>
+                <path d="M9.37703651,63.1225173 C10.5883079,48.2078621 22.6934761,40.625 37.4479417,40.625 C52.4100512,40.625 64.7027615,47.7912277 65.6184823,63.125 C65.6549622,63.7358565 65.6184823,65.625 63.2709373,65.625 C51.6910124,65.625 34.4835148,65.625 11.6484445,65.625 C10.8647255,65.625 9.31105703,63.9349374 9.37703651,63.1225173 Z" id="Mask-Copy" fill="#C8ED5A" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -794,11 +794,11 @@ function Header() {
 
                       <div className="max-w-[364px] 3xs:px-[40px] xs:px-[unset] w-full mx-auto mb-[50px] capitalize">
                         <Button
-                          label={t("header.start.trading")}
+                          label={t("header.invest")}
                           variant="primary"
                           onClick={() => undefined}
-                          extraStyles="w-full"
-                          href="/work-in-progress"
+                          extraStyles="w-full rounded-full bg-orange-500 hover:shadow-[0px_5px_10px_-6px_rgba(230,136,64,1)]"
+                          href="/invest"
                         />
                       </div>
                     </div>
@@ -812,7 +812,12 @@ function Header() {
 
             {/* HEADER CTA BUTTON - Starts */}
             <div className="hidden lg:block capitalize">
-              <Button label={t("header.trade")} variant="primary" href="/work-in-progress" />
+              <Button
+                label={t("header.invest")}
+                variant="primary"
+                href="/invest"
+                extraStyles="rounded-full bg-orange-500 hover:shadow-[0px_5px_10px_-6px_rgba(230,136,64,1)]"
+              />
             </div>
             {/* HEADER CTA BUTTON - Ends */}
           </div>
