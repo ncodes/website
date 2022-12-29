@@ -96,7 +96,7 @@ function Accordion({ selectedFaq, setSelectedFaq, id, title, children }: Accordi
 function AccordionContent({ children }: AccordionContentProps) {
   return (
     <p
-      className="font-['Mitr'] antialiased font-extralight text-white break-word lg:text-[16px]
+      className="font-['Mitr'] antialiased font-light text-gray-300 break-word lg:text-[16px]
       text-[14px] leading-[19.69px] lg:leading-[24px] md:text-center lg:max-w-[905px] pb-10"
     >
       {/* eslint-disable-next-line react/no-danger */}
