@@ -65,8 +65,8 @@
   "about.highlight.content-2": "Unlike other P2P trading platform, FiatX does not place a cap on your trading volume or activities.",
   "about.highlight.title-3": "Unlimited Liquidity",
   "about.highlight.content-3": "Access unlimited liquidity for open markets created by people across the world.",
-  "about.team.title": "Meet the Team",
-  "about.team.role.ceo": "CEO",
+  "about.team.title": "The Team",
+  "about.team.role.ceo": "CEO/Engineering",
   "about.team.role.coo": "COO",
   "about.team.role.designer": "Designer",
   "about.team.role.developer": "Developer",
@@ -317,5 +317,6 @@
   "invest.faq.q10.a": "Yes, you can follow our step-to-step ",
   "invest.free.droid": "Invest in our community equity round and get up to 3 DroidPD NFTs.",
   "guide": "guide",
-  "join_com_safe": "Invest in <span class='notranslate'>$JOINT</span>. Buy equity and get up to 3 DroidPD <span class='notranslate'>NFT</span> slots."
+  "join_com_safe": "Invest in <span class='notranslate'>$JOINT</span>. Buy equity and get up to 3 DroidPD <span class='notranslate'>NFT</span> slots.",
+  "team": "Team"
 }

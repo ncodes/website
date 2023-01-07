@@ -15,7 +15,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: { ...(await serverSideTranslations(locale as string, ["common"])) },
 })
 
-const About: NextPage = function () {
+export default function TeamPage() {
   const { t } = useTranslation()
 
   const highlights = [
@@ -51,7 +51,7 @@ const About: NextPage = function () {
 
         <section id="page-content">
           <section
-            className="container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px]
+            className="hidden container sm:max-w-full xs:max-w-full 2xs:max-w-full 3xs:max-w-full 3xs:px-[10px] 2xs:px-[15px]
             mx-auto px-4 md:px-[20px] lg:px-[30px] xl:px-[90px] mt-[52px] md:mt-[77px] mb-[40px]
             md:mb-[98px] md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
           >
@@ -127,5 +127,3 @@ const About: NextPage = function () {
     </>
   )
 }
-
-export default About
