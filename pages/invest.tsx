@@ -2,11 +2,10 @@ import React, { useState } from "react"
 import type { GetStaticProps, NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
-import Link from "next/link"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useTranslation } from "next-i18next"
 import { animated, useSpring } from "@react-spring/web"
-import { useRouter } from "next/router"
+import Link from "next/link"
 import Header from "../components/Header"
 import Button from "../components/Button"
 import Footer from "../components/Footer"
@@ -24,6 +23,25 @@ type HeroLinkProps = {
   href: string
 }
 /** HERO LINK ITEM PROP TYPES - Ends */
+
+/** HERO LINK ITEM - Starts */
+function HeroLink({ title, href }: HeroLinkProps) {
+  return (
+    <Link href={href} passHref>
+      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+      <a
+        target="_blank"
+        className="font-mitr antialiased text-[16px] tracking-[0.22px] text-chinese-green font-semibold
+        cursor-pointer hover:underline after:content-[' '] after:inline-block
+        after:bg-[length:24px_24px] after:w-6 after:h-6 after:bg-[url('/icons/caret-down.png')]
+        after:-scale-y-100 after:rotate-45 after:-ml-[7px] after:mb-0.5 after:relative after:z-[2]"
+      >
+        {title}
+      </a>
+    </Link>
+  )
+}
+/** HERO LINK ITEM - Ends */
 
 type SelectedFaq = {
   id: number
@@ -96,7 +114,7 @@ function Accordion({ selectedFaq, setSelectedFaq, id, title, children }: Accordi
 function AccordionContent({ children }: AccordionContentProps) {
   return (
     <p
-      className="font-['Mitr'] antialiased font-light text-gray-300 break-word lg:text-[16px]
+      className="faq-content font-['Mitr'] antialiased font-light text-gray-300 break-word lg:text-[16px]
       text-[14px] leading-[19.69px] lg:leading-[24px] md:text-center lg:max-w-[905px] pb-10"
     >
       {/* eslint-disable-next-line react/no-danger */}
@@ -196,6 +214,15 @@ const Invest: NextPage = function () {
       title: t("invest.faq.q9"),
       content: t("invest.faq.q9.a"),
     },
+    {
+      id: 10,
+      title: t("invest.faq.q10"),
+      content: `${t(
+        "invest.faq.q10.a"
+      )}<a style="color: greenyellow;" href='https://jointlabs.notion.site/jointlabs/Investment-Guide-b65e66afdac24ae1abab8c02868bef05'>${t(
+        "guide"
+      )}</a>`,
+    },
   ]
 
   return (
@@ -234,7 +261,10 @@ const Invest: NextPage = function () {
 
               <div className="flex flex-wrap items-center justify-center xl:justify-start gap-[24px] sm:gap-[48px] mt-[34px]">
                 <Button label={t("invest.hero.btnText")} variant="primary" href="https://invest.joint.exchange/" extraStyles="w-[257px]" />
-                {/* <HeroLink title={t("invest.hero.outerLink")} href="https://google.com" /> */}
+                <HeroLink
+                  title={t("invest.hero.outerLink")}
+                  href="https://jointlabs.notion.site/jointlabs/Investment-Guide-b65e66afdac24ae1abab8c02868bef05"
+                />
               </div>
             </div>
 
