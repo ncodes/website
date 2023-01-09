@@ -264,82 +264,83 @@ function Header() {
             className="flex flex-row w-full 3xs:ml-[10px] ml-[40px]
             xl:ml-[50px] items-center justify-end lg:justify-between"
           >
+            <div>&nbsp;</div>
             {/* LANGUAGE SELECTOR - Starts */}
-            <Menu as="div" className="flex flex-col z-[3]">
-              {/* LANGUAGE SELECTOR BUTTON - Starts */}
-              <Menu.Button className="outline-0">
-                {({ open }) => (
-                  <div className="flex w-[120px] 2xs:w-[185px] xl:w-52">
-                    <div
-                      className={`flex flex-row justify-between max-w-48 w-auto h-[40px] lg:h-[50px]
-                      pt-[8px] lg:pt-[11px] px-4 lg:px-5 rounded-lg ${open ? "bg-[#0d1c31]" : "bg-rich-blue"}`}
-                    >
-                      <p
-                        className="font-mitr antialiased text-[16px] lg:text-[18px]
-                        tracking-[0.18px] xl:tracking-[0.22px] text-white font-medium"
-                      >
-                        {/* English&nbsp;🇬🇧 */}
+            {/* <Menu as="div" className="flex flex-col z-[3]"> */}
+            {/*  /!* LANGUAGE SELECTOR BUTTON - Starts *!/ */}
+            {/*  <Menu.Button className="outline-0"> */}
+            {/*    {({ open }) => ( */}
+            {/*      <div className="flex w-[120px] 2xs:w-[185px] xl:w-52"> */}
+            {/*        <div */}
+            {/*          className={`flex flex-row justify-between max-w-48 w-auto h-[40px] lg:h-[50px] */}
+            {/*          pt-[8px] lg:pt-[11px] px-4 lg:px-5 rounded-lg ${open ? "bg-[#0d1c31]" : "bg-rich-blue"}`} */}
+            {/*        > */}
+            {/*          <p */}
+            {/*            className="font-mitr antialiased text-[16px] lg:text-[18px] */}
+            {/*            tracking-[0.18px] xl:tracking-[0.22px] text-white font-medium" */}
+            {/*          > */}
+            {/*            /!* English&nbsp;🇬🇧 *!/ */}
 
-                        {label()}
-                      </p>
-                      <div className="hidden 2xs:flex">
-                        &nbsp; &nbsp;
-                        <div className={`relative w-6 lg:w-7 h-6 lg:h-7 overflow-hidden ${open && "-scale-y-100"}`}>
-                          <Image
-                            className="!relative object-cover w-full h-full"
-                            src="/icons/caret-down.png"
-                            alt="caret-down"
-                            layout="fill"
-                            quality={100}
-                            priority
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </Menu.Button>
-              {/* LANGUAGE SELECTOR BUTTON - Ends */}
+            {/*            {label()} */}
+            {/*          </p> */}
+            {/*          <div className="hidden 2xs:flex"> */}
+            {/*            &nbsp; &nbsp; */}
+            {/*            <div className={`relative w-6 lg:w-7 h-6 lg:h-7 overflow-hidden ${open && "-scale-y-100"}`}> */}
+            {/*              <Image */}
+            {/*                className="!relative object-cover w-full h-full" */}
+            {/*                src="/icons/caret-down.png" */}
+            {/*                alt="caret-down" */}
+            {/*                layout="fill" */}
+            {/*                quality={100} */}
+            {/*                priority */}
+            {/*              /> */}
+            {/*            </div> */}
+            {/*          </div> */}
+            {/*        </div> */}
+            {/*      </div> */}
+            {/*    )} */}
+            {/*  </Menu.Button> */}
+            {/*  /!* LANGUAGE SELECTOR BUTTON - Ends *!/ */}
 
-              {/* LANGUAGE SELECTOR CONTENT TRANSITION - Starts */}
-              <Transition as={Fragment} {...PopupTransition}>
-                {/* LANGUAGE SELECTOR CONTENT - Starts */}
-                <Menu.Items className="outline-0">
-                  <div
-                    className="absolute flex flex-col mt-[12px] xl:mt-[18px] w-[128px] xl:w-40 bg-rich-blue
-                    rounded-lg border-[1px] border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)]"
-                  >
-                    {locales.map((language: string) => {
-                      if (localeInfo[language].key === locale) return null
-                      return (
-                        <Menu.Item key={localeInfo[language].key}>
-                          {({ active }) => (
-                            // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions
-                            <ul
-                              className={`px-5 py-4 cursor-pointer
-                          ${active || localeInfo[language].key === locale ? "hover:bg-[#0d1c31]" : "bg-none"}`}
-                              onClick={() => {
-                                setLocale(localeInfo[language].key)
-                                router.push(router.pathname, router.asPath, { locale: localeInfo[language].key })
-                              }}
-                            >
-                              <span
-                                className={`font-mitr antialiased text-[13px] xl:text-[16px] tracking-[0.18px]
-                              xl:tracking-[0.22px] text-white font-medium`}
-                              >
-                                <LocaleLink locale={localeInfo[language].key}>{label(localeInfo[language].key)}</LocaleLink>
-                              </span>
-                            </ul>
-                          )}
-                        </Menu.Item>
-                      )
-                    })}
-                  </div>
-                </Menu.Items>
-                {/* LANGUAGE SELECTOR CONTENT - Ends */}
-              </Transition>
-              {/* LANGUAGE SELECTOR CONTENT TRANSITION - Ends */}
-            </Menu>
+            {/*  /!* LANGUAGE SELECTOR CONTENT TRANSITION - Starts *!/ */}
+            {/*  <Transition as={Fragment} {...PopupTransition}> */}
+            {/*    /!* LANGUAGE SELECTOR CONTENT - Starts *!/ */}
+            {/*    <Menu.Items className="outline-0"> */}
+            {/*      <div */}
+            {/*        className="absolute flex flex-col mt-[12px] xl:mt-[18px] w-[128px] xl:w-40 bg-rich-blue */}
+            {/*        rounded-lg border-[1px] border-space-cadet shadow-[0_20px_20px_10px_rgba(0,10,25,0.63)]" */}
+            {/*      > */}
+            {/*        {locales.map((language: string) => { */}
+            {/*          if (localeInfo[language].key === locale) return null */}
+            {/*          return ( */}
+            {/*            <Menu.Item key={localeInfo[language].key}> */}
+            {/*              {({ active }) => ( */}
+            {/*                // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
+            {/*                <ul */}
+            {/*                  className={`px-5 py-4 cursor-pointer */}
+            {/*              ${active || localeInfo[language].key === locale ? "hover:bg-[#0d1c31]" : "bg-none"}`} */}
+            {/*                  onClick={() => { */}
+            {/*                    setLocale(localeInfo[language].key) */}
+            {/*                    router.push(router.pathname, router.asPath, { locale: localeInfo[language].key }) */}
+            {/*                  }} */}
+            {/*                > */}
+            {/*                  <span */}
+            {/*                    className={`font-mitr antialiased text-[13px] xl:text-[16px] tracking-[0.18px] */}
+            {/*                  xl:tracking-[0.22px] text-white font-medium`} */}
+            {/*                  > */}
+            {/*                    <LocaleLink locale={localeInfo[language].key}>{label(localeInfo[language].key)}</LocaleLink> */}
+            {/*                  </span> */}
+            {/*                </ul> */}
+            {/*              )} */}
+            {/*            </Menu.Item> */}
+            {/*          ) */}
+            {/*        })} */}
+            {/*      </div> */}
+            {/*    </Menu.Items> */}
+            {/*    /!* LANGUAGE SELECTOR CONTENT - Ends *!/ */}
+            {/*  </Transition> */}
+            {/*  /!* LANGUAGE SELECTOR CONTENT TRANSITION - Ends *!/ */}
+            {/* </Menu> */}
             {/* LANGUAGE SELECTOR - Ends */}
 
             {/* HEADER MENU ITEMS - Starts */}
