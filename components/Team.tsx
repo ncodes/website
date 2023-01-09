@@ -87,7 +87,7 @@ function Team() {
     {
       id: 14,
       image: "/team_droids/ju.png",
-      name: "Adigun",
+      name: "Juwon",
       role: t("about.team.role.community"),
       link: undefined,
     },
