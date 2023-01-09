@@ -73,7 +73,7 @@ function Team() {
     {
       id: 9,
       image: "/team_droids/ed.png",
-      name: "Edwin",
+      name: "Eddies",
       role: t("about.team.role.community"),
       link: undefined,
     },
@@ -87,7 +87,7 @@ function Team() {
     {
       id: 14,
       image: "/team_droids/ju.png",
-      name: "Adigun",
+      name: "Juwon",
       role: t("about.team.role.community"),
       link: undefined,
     },
