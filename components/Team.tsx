@@ -18,20 +18,14 @@ function TeamMember({ id, image, name, role, link }: TeamMemberProps) {
       </div>
       <p
         className="font-mitr antialiased font-medium text-[14px] text-white text-center
-        leading-[17.64px] tracking-[0.19px] mt-[24px]"
-      >
-        {name}
-      </p>
-      <p
-        className="font-mitr antialiased font-light text-[14px] text-white text-center
-       mt-[3.49px] leading-[17.64px]"
+        leading-[17.64px] tracking-[0.19px] mt-[5px]"
       >
         {link && (
           <a href={link} target="_blank" rel="noreferrer" className="hover:text-chinese-green">
-            {role}
+            {name}
           </a>
         )}
-        {!link && <span>{role}</span>}
+        {!link && <span>{name}</span>}
       </p>
     </div>
   )
@@ -43,99 +37,57 @@ function Team() {
   const teamMembers: TeamMemberProps[] = [
     {
       id: 1,
-      image: "/Kennedy.png",
-      name: "Kennedy Idialu",
+      image: "/team_droids/ki.png",
+      name: "Kennedy",
       role: t("about.team.role.ceo"),
-      link: "https://linktr.ee/ncodes",
+      link: "https://twitter.com/ncodes",
     },
     {
       id: 2,
-      image: "/Odion.png",
-      name: "Odion Olumhense",
+      image: "/team_droids/o.png",
+      name: "Odion",
       role: t("about.team.role.coo"),
-      link: undefined,
+      link: "https://twitter.com/ooodion",
     },
     {
       id: 3,
-      image: "/Vitalis.png",
-      name: "Vitalis Nwenyi",
-      role: t("about.team.role.designer"),
-      link: undefined,
-    },
-    {
-      id: 4,
-      image: "/Michael.png",
-      name: "Michael Azonobi",
-      role: t("about.team.role.engineering"),
-      link: undefined,
-    },
-    {
-      id: 5,
-      image: "/Marvin.png",
-      name: "Marvin Ogah",
+      image: "/team_droids/v.png",
+      name: "Vitalis",
       role: t("about.team.role.design"),
       link: undefined,
     },
     {
-      id: 6,
-      image: "/ChrisEzike.png",
-      name: "Chris Ezike",
-      role: t("about.team.role.engineering"),
-      link: undefined,
-    },
-    {
-      id: 7,
-      image: "/Frosty.png",
-      name: "Samuel Bolu",
-      role: t("about.team.role.marketing"),
+      id: 5,
+      image: "/team_droids/mav.png",
+      name: "Marvin",
+      role: t("about.team.role.design"),
       link: undefined,
     },
     {
       id: 8,
-      image: "/Ileke.png",
-      name: "Ileke Airende",
+      image: "/team_droids/il.png",
+      name: "Ileke",
       role: t("about.team.role.marketing"),
       link: undefined,
     },
     {
       id: 9,
-      image: "/Edwin.png",
-      name: "Edwin Achebo",
+      image: "/team_droids/ed.png",
+      name: "Eddies",
       role: t("about.team.role.community"),
-      link: undefined,
-    },
-    {
-      id: 10,
-      image: "/MonaFaith.png",
-      name: "Alumona Faith ",
-      role: t("about.team.role.content"),
       link: undefined,
     },
     {
       id: 11,
-      image: "/samg.png",
-      name: "Sammuel Godfrey",
+      image: "/team_droids/sa.png",
+      name: "Samuel",
       role: t("about.team.role.design"),
       link: undefined,
     },
     {
-      id: 12,
-      image: "/Coker.png",
-      name: "Coker Ayodeji",
-      role: t("about.team.role.community"),
-      link: undefined,
-    },
-    {
-      id: 13,
-      image: "/mercy.png",
-      name: "Ajayi Mercy",
-      role: t("about.team.role.community"),
-      link: undefined,
-    },
-    {
       id: 14,
-      image: "/Juwon.png",
-      name: "Adigun Olorunjuwon",
+      image: "/team_droids/ju.png",
+      name: "Juwon",
       role: t("about.team.role.community"),
       link: undefined,
     },
@@ -148,13 +100,13 @@ function Team() {
       md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
     >
       <p
-        className="font-mitr antialiased font-semibold text-[48px] lg:text-[72px] leading-[48px] lg:leading-[72px]
+        className="font-mitr antialiased font-semibold text-[48px] lg:text-[50px] leading-[48px] lg:leading-[72px]
        text-white text-center -tracking-[0.6px] lg:-tracking-[0.9px]"
       >
         {t("about.team.title")}
       </p>
 
-      <div className="flex flex-row flex-wrap mx-auto justify-start align-start space-y-[64px] lg:space-y-[90px] mt-[72px] sm:mt-[0px]">
+      <div className="flex flex-row flex-wrap mx-auto justify-start align-start space-y-[64px] lg:space-y-[30px] mt-[72px] sm:mt-[30px]">
         {teamMembers.map(({ id, image, name, role, link }) => (
           <TeamMember key={id} id={id} image={image} name={name} role={role} link={link} />
         ))}

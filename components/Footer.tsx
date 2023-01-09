@@ -93,7 +93,8 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-y-10 md:gap-y-0 flex-1 justify-end mt-14 xl:mt-0">
           <div className="flex flex-col mx-auto items-center md:items-start">
             <FooterTitle label={t("footer.section.company")} />
-            <ul className="flex flex-col gap-y-[10px] list-none">
+            <ul className="flex flex-col text-center md:text-left gap-y-[10px]">
+              <FooterLink title={t("team")} href="/team" />
               <FooterLink title={t("discord")} href="https://discord.gg/jfAPEjQ3HD" />
               <FooterLink title={t("twitter")} href="https://twitter.com/0xJoint" />
               <FooterLink title={t("footer.link.blog")} href="https://medium.com/0xJoint" />

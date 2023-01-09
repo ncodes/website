@@ -1,10 +1,8 @@
 /* eslint-disable @next/next/no-img-element, object-curly-newline */
-import type { NextPage, GetStaticProps } from "next"
+import type { GetStaticProps, NextPage } from "next"
 import Head from "next/head"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import { useState } from "react"
-import Image from "next/image"
 import Script from "next/script"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
@@ -24,12 +22,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => ({
 })
 
 const Home: NextPage = function () {
-  const [reveal, setReveal] = useState(false)
-
-  setTimeout(() => {
-    setReveal(true)
-  }, 3000)
-
   return (
     <>
       <Head>
@@ -46,13 +38,6 @@ const Home: NextPage = function () {
           gtag('config', 'G-9SX3SC9XGN');
         `}
       </Script>
-      {reveal || (
-        <div className="absolute w-full h-screen bg-rich-black z-40 justify-center items-center flex">
-          <span className="animate-pulse">
-            <Image src="/logo-mark.svg" width="30" height="30" alt="loader" />
-          </span>
-        </div>
-      )}
 
       <section id="page-header-hero">
         <div className="bg-repeat bg-[url('/mobile-stars.webp')] bg-contain bg-top xl:bg-bottom w-full">

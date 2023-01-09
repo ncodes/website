@@ -163,7 +163,7 @@ function HeaderLink({ title, href }: LinkProps) {
     <li className="flex items-center cursor-pointer">
       <Link href={href}>
         <p
-          className={`font-mitr antialiased text-[16px] ${
+          className={`font-mitr antialiased text-[16px] cursor-pointer ${
             isActive
               ? `py-[3px] px-[25px] text-eerie-black font-medium
             bg-chinese-green rounded-[15px]`
@@ -353,7 +353,12 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-end capitalize">
-                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t("header.protocol")}</p>
+                      <p
+                        className="font-mitr cursor-pointer antialiased text-[16px] text-white font-light
+                      mt-[4px] cursor-pointer"
+                      >
+                        {t("header.protocol")}
+                      </p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -462,7 +467,12 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-end capitalize">
-                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t("header.developers")}</p>
+                      <p
+                        className="font-mitr cursor-pointer antialiased
+                      text-[16px] text-white font-light mt-[4px]"
+                      >
+                        {t("header.developers")}
+                      </p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -527,7 +537,12 @@ function Header() {
                 <Menu.Button>
                   {({ open }) => (
                     <li className="flex flex-row items-end capitalize">
-                      <p className="font-mitr antialiased text-[16px] text-white font-light mt-[4px]">{t("header.community")}</p>
+                      <p
+                        className="font-mitr cursor-pointer antialiased
+                      text-[16px] text-white font-light mt-[4px]"
+                      >
+                        {t("header.community")}
+                      </p>
 
                       <div className={`relative w-6 h-6 overflow-hidden ml-[2px] ${open && "-scale-y-100"}`}>
                         <Image
@@ -794,11 +809,11 @@ function Header() {
 
                       <div className="max-w-[364px] 3xs:px-[40px] xs:px-[unset] w-full mx-auto mb-[50px] capitalize">
                         <Button
-                          label={t("header.start.trading")}
+                          label={t("header.invest")}
                           variant="primary"
                           onClick={() => undefined}
-                          extraStyles="w-full"
-                          href="/work-in-progress"
+                          extraStyles="w-full rounded-full bg-orange-500 hover:shadow-[0px_5px_10px_-6px_rgba(230,136,64,1)]"
+                          href="/invest"
                         />
                       </div>
                     </div>
@@ -812,7 +827,12 @@ function Header() {
 
             {/* HEADER CTA BUTTON - Starts */}
             <div className="hidden lg:block capitalize">
-              <Button label={t("header.trade")} variant="primary" href="/work-in-progress" />
+              <Button
+                label={t("header.invest")}
+                variant="primary"
+                href="/invest"
+                extraStyles="rounded-full bg-orange-500 hover:shadow-[0px_5px_10px_-6px_rgba(230,136,64,1)]"
+              />
             </div>
             {/* HEADER CTA BUTTON - Ends */}
           </div>
