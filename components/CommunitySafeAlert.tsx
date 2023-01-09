@@ -13,7 +13,7 @@ export function CommunitySafeAlert() {
           window.open("https://joint.exchange/invest", "_blank")
         }}
       >
-        <b className="font-medium">[COMMUNITY SAFE]</b> - {t("join_com_safe")}
+        <b className="font-medium">[CROWDFUNDING]</b> - {t("join_com_safe")}
       </div>
     </>
   )
