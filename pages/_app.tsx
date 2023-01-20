@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </span>
         </div>
       )}
-      <CommunitySafeAlert />
+      {/* <CommunitySafeAlert /> */}
       <Component {...pageProps} />
     </>
   )
