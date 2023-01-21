@@ -36,10 +36,13 @@ function NFT() {
           <div className="text-center lg:text-left">
             <button
               type="button"
+              onClick={() => {
+                window.open("https://droidpd.com", "_blank")
+              }}
               className="bg-chinese-green px-10 rounded-lg font-mitr antialiased text-[18px]
               tracking-[0.25px] text-eerie-black font-semibold py-2.5"
             >
-              {t("nft.section.button")}
+              Learn more
             </button>
             {/* <Button label={t("nft.section.button")} variant="primary" onClick={() => undefined} /> */}
           </div>
