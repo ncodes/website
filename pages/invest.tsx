@@ -184,11 +184,7 @@ const Invest: NextPage = function () {
       title: t("invest.faq.q3"),
       content: t("invest.faq.q3.a"),
     },
-    {
-      id: 4,
-      title: t("invest.faq.q4"),
-      content: t("invest.faq.q4.a"),
-    },
+
     {
       id: 5,
       title: t("invest.faq.q5"),
@@ -372,21 +368,21 @@ const Invest: NextPage = function () {
           </div>
         </div>
 
-        <div
-          className="relative flex flex-col xl:flex-row justify-between items-center px-[12px] lg:px-[60px] py-[40px]
-           mb-[100px] lg:mb-[140px] xl:mb-[160px] bg-gradient-to-b xl:bg-gradient-to-r from-[#0C1828] to-[#030507] border-t-4
-          xl:border-t-0 xl:border-l-4 border-chinese-green rounded-[8px] font-mitr gap-5 xl:gap-0"
-        >
-          <span className="text-white text-lg text-center xl:text-left">{t("invest.free.droid")}</span>
-          <span>
-            <Button
-              label={t("invest.hero.btnText")}
-              variant="primary"
-              href="https://invest.joint.exchange/"
-              extraStyles="flex justify-center items-center mx-auto xl:mx-0 w-[257px]"
-            />
-          </span>
-        </div>
+        {/* <div */}
+        {/*  className="relative flex flex-col xl:flex-row justify-between items-center px-[12px] lg:px-[60px] py-[40px] */}
+        {/*   mb-[100px] lg:mb-[140px] xl:mb-[160px] bg-gradient-to-b xl:bg-gradient-to-r from-[#0C1828] to-[#030507] border-t-4 */}
+        {/*  xl:border-t-0 xl:border-l-4 border-chinese-green rounded-[8px] font-mitr gap-5 xl:gap-0" */}
+        {/* > */}
+        {/*  <span className="text-white text-lg text-center xl:text-left">{t("invest.free.droid")}</span> */}
+        {/*  <span> */}
+        {/*    <Button */}
+        {/*      label={t("invest.hero.btnText")} */}
+        {/*      variant="primary" */}
+        {/*      href="https://invest.joint.exchange/" */}
+        {/*      extraStyles="flex justify-center items-center mx-auto xl:mx-0 w-[257px]" */}
+        {/*    /> */}
+        {/*  </span> */}
+        {/* </div> */}
 
         <div className="mb-[100px] lg:mb-[140px]">
           <p
