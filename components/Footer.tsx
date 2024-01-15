@@ -1,6 +1,6 @@
+import { useTranslation } from "next-i18next"
 import Image from "next/image"
 import Link from "next/link"
-import { useTranslation } from "next-i18next"
 
 type TitleProps = {
   label: string
@@ -106,13 +106,10 @@ function Footer() {
           <div className="flex flex-col mx-auto items-center md:items-start">
             <FooterTitle label={t("footer.section.protocol")} />
             <ul className="flex flex-col text-center md:text-left gap-y-[10px]">
-              <FooterLink title={t("footer.link.trade")} href="/work-in-progress" />
-              <FooterLink title={t("footer.link.markets")} href="/work-in-progress" />
-              <FooterLink title={t("footer.link.liquidity")} href="/work-in-progress" />
-              <FooterLink title={t("footer.link.mediation")} href="/work-in-progress" />
-              <FooterLink title={t("footer.link.disputes")} href="/work-in-progress" />
-              <FooterLink title={t("footer.link.mining")} href="/work-in-progress" />
-              <FooterLink title={t("footer.link.rewards")} href="/work-in-progress" />
+              <FooterLink title={t("footer.link.trade")} href="https://app.joint.exchange" />
+              <FooterLink title={t("footer.link.markets")} href="https://app.joint.exchange/markets" />
+              <FooterLink title={t("footer.link.disputes")} href="https://app.joint.exchange/disputes" />
+              <FooterLink title={t("footer.link.mediation")} href="https://app.joint.exchange/mediation" />
             </ul>
           </div>
 
