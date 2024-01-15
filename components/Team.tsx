@@ -1,5 +1,5 @@
-import Image from "next/image"
 import { useTranslation } from "next-i18next"
+import Image from "next/image"
 
 interface TeamMemberProps {
   id: number
@@ -77,20 +77,6 @@ function Team() {
       role: t("about.team.role.community"),
       link: undefined,
     },
-    {
-      id: 11,
-      image: "/team_droids/sa.png",
-      name: "Samuel",
-      role: t("about.team.role.design"),
-      link: undefined,
-    },
-    {
-      id: 14,
-      image: "/team_droids/ju.png",
-      name: "Juwon",
-      role: t("about.team.role.community"),
-      link: undefined,
-    },
   ]
 
   return (
@@ -106,7 +92,7 @@ function Team() {
         {t("about.team.title")}
       </p>
 
-      <div className="flex flex-row flex-wrap mx-auto justify-start align-start space-y-[64px] lg:space-y-[30px] mt-[72px] sm:mt-[30px]">
+      <div className="flex flex-row flex-wrap mx-auto justify-center align-start space-y-[64px] lg:space-y-[30px] mt-[72px] sm:mt-[30px]">
         {teamMembers.map(({ id, image, name, role, link }) => (
           <TeamMember key={id} id={id} image={image} name={name} role={role} link={link} />
         ))}

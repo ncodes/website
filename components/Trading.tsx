@@ -1,6 +1,6 @@
+import { useTranslation } from "next-i18next"
 import Image from "next/image"
 import Link from "next/link"
-import { useTranslation } from "next-i18next"
 
 type HeroLinkProps = {
   title: string
@@ -52,7 +52,7 @@ function Trading() {
           </p>
 
           <div className="flex flex-row gap-x-[30px] justify-center lg:justify-start">
-            <TradingLink title={t("trading.visit.exchange")} href="work-in-progress" target="_blank" />
+            <TradingLink title={t("trading.visit.exchange")} href="https://app.joint.exchange" target="_blank" />
             <TradingLink title={t("trading.join.discord")} href="https://discord.gg/jfAPEjQ3HD" target="_blank" />
           </div>
         </div>

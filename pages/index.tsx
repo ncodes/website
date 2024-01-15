@@ -1,20 +1,20 @@
 /* eslint-disable @next/next/no-img-element, object-curly-newline */
 import type { GetStaticProps, NextPage } from "next"
-import Head from "next/head"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import Head from "next/head"
 
 import Script from "next/script"
-import Header from "../components/Header"
-import Hero from "../components/Hero"
-import Statistics from "../components/Statistics"
-import Trading from "../components/Trading"
 import Assets from "../components/Assets"
 import Features from "../components/Features"
-import Rewards from "../components/Rewards"
-import HowItWorks from "../components/HowItWorks"
-import Partners from "../components/Partners"
 import Footer from "../components/Footer"
+import Header from "../components/Header"
+import Hero from "../components/Hero"
+import HowItWorks from "../components/HowItWorks"
 import NFT from "../components/NFT"
+import Partners from "../components/Partners"
+import Rewards from "../components/Rewards"
+import Statistics from "../components/Statistics"
+import Trading from "../components/Trading"
 
 /* eslint-disable-next-line */
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
@@ -69,7 +69,7 @@ const Home: NextPage = function () {
 
       <HowItWorks />
 
-      <div className="bg-[url('/Group33.svg')] bg-cover">
+      <div className="hidden bg-[url('/Group33.svg')] bg-cover">
         <NFT />
         <Rewards />
       </div>
