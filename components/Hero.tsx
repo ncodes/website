@@ -1,5 +1,5 @@
-import Link from "next/link"
 import { useTranslation } from "next-i18next"
+import Link from "next/link"
 import Button from "./Button"
 
 /** HERO LINK ITEM PROP TYPES - Starts */
@@ -68,7 +68,7 @@ function Hero() {
             onClick={() => undefined}
             alignStyle="mx-auto xl:mx-0"
             extraStyles="w-[246px] px-0"
-            href="/work-in-progress"
+            href="https://app.joint.exchange"
           />
         </div>
 
@@ -76,7 +76,7 @@ function Hero() {
           className="flex flex-row flex-wrap 3xs:w-full w-[280px] mx-auto xl:w-auto mt-[28px]
           xl:mt-[30px] justify-center xl:justify-start gap-x-[30px] gap-y-[20px]"
         >
-          <HeroLink title={t("hero.visit.exchange")} href="/work-in-progress" />
+          <HeroLink title={t("hero.visit.exchange")} href="https://app.joint.exchange" />
           <HeroLink title={t("hero.join.discord")} href="https://discord.gg/jfAPEjQ3HD" />
           <HeroLink title={t("hero.view.documentation")} href="https://docs.joint.exchange" />
         </div>
