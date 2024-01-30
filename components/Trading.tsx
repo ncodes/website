@@ -52,7 +52,7 @@ function Trading() {
           </p>
 
           <div className="flex flex-row gap-x-[30px] justify-center lg:justify-start">
-            <TradingLink title={t("trading.visit.exchange")} href="https://app.joint.exchange" target="_blank" />
+            <TradingLink title={t("trading.visit.exchange")} href="https://test.joint.exchange" target="_blank" />
             <TradingLink title={t("trading.join.discord")} href="https://discord.gg/jfAPEjQ3HD" target="_blank" />
           </div>
         </div>

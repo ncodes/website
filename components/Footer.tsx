@@ -106,10 +106,10 @@ function Footer() {
           <div className="flex flex-col mx-auto items-center md:items-start">
             <FooterTitle label={t("footer.section.protocol")} />
             <ul className="flex flex-col text-center md:text-left gap-y-[10px]">
-              <FooterLink title={t("footer.link.trade")} href="https://app.joint.exchange" />
-              <FooterLink title={t("footer.link.markets")} href="https://app.joint.exchange/markets" />
-              <FooterLink title={t("footer.link.disputes")} href="https://app.joint.exchange/disputes" />
-              <FooterLink title={t("footer.link.mediation")} href="https://app.joint.exchange/mediation" />
+              <FooterLink title={t("footer.link.trade")} href="https://test.joint.exchange" />
+              <FooterLink title={t("footer.link.markets")} href="https://test.joint.exchange/markets" />
+              <FooterLink title={t("footer.link.disputes")} href="https://test.joint.exchange/disputes" />
+              <FooterLink title={t("footer.link.mediation")} href="https://test.joint.exchange/mediation" />
             </ul>
           </div>
 
